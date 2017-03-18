@@ -56,7 +56,7 @@
 			$start.onclick = function onClickCall() {
 				p2pChat.requirePermission(true, function () {
 					console.log('permission grant');
-					p2pChat.start(true, $isCaller.checked);
+					p2pChat.start(true, $isCaller.checked, $relayOnly.checked);
 				}, function (err) {
 					console.log(err)
 				});
@@ -65,6 +65,23 @@
 			$stop.onclick = function onClickHangup() {
 				p2pChat.stop();
 			};
+
+			setInterval(function () {
+				switch (p2pChat.getStatus()) {
+					case 'notstart':
+						$start.disabled = false;
+						$stop.disabled = true;
+						break;
+					case 'starting':
+						$start.disabled = true;
+						$stop.disabled = true;
+						break;
+					case 'started':
+						$start.disabled = true;
+						$stop.disabled = false;
+						break;
+				}
+			}, 16.6);
 		};
 	</script>
 </head>

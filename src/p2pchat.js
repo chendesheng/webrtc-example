@@ -127,7 +127,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
         // iceServers.iceTransportPolicy = 'relay';
         pc = new RTCPeerConnection({
           iceServers: iceServers,
-          // iceTransportPolicy: 'relay'
+          iceTransportPolicy: relayOnly ? 'relay' : 'all',
         });
 
         // send any ice candidates to the other peer
