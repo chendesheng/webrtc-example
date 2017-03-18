@@ -18,7 +18,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
             function (err) {
               fireEvent('error', err);
             });
-        }, function () {
+        }, function (err) {
           fireEvent('error', err);
         });
       },
@@ -40,8 +40,8 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
       pc.addIceCandidate(new RTCIceCandidate(signal.candidate));
     }
 
-    if (signal.stop) {
-      stop();
+    if (signal.close) {
+      pc.close();
     }
   }
 
@@ -102,20 +102,26 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     return pc;
   }
 
-  var status = 'notstart';
+  function getStatus() {
+    if (pc == null)
+      return 'new';
+    else if (pc.iceConnectionState === 'completed' ||
+      pc.iceConnectionState === 'connected')
+      return 'started';
+    else if (pc.iceConnectionState === 'new' ||
+      pc.iceConnectionState === 'checking')
+      return 'starting';
+  }
 
-  this.getStatus = function () {
-    return status;
-  };
+  this.getStatus = getStatus;
 
   this.start = function (ifVideo, isCaller, relayOnly) {
-    if (status != 'notstart') return Promise.resolve();
-    status = 'starting';
+    if (getStatus() !== 'new') return;
 
     return new Promise(function (resolve, reject) {
       var timeout = setTimeout(function () {
-        reject();
-        status = 'notstart';
+        if (pc) pc.close();
+        reject('timeout');
       }, 2 * 60 * 1000);
       signalingChannel = new SignalingChannel(chatGuid);
       signalingChannel.onmessage(handleSignal);
@@ -135,19 +141,22 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           if (evt.candidate == null) return;
 
           signalingChannel.send({ "candidate": evt.candidate });
-          // var components = event.candidate.candidate.split(" ");
-          // if (components[7] == "relay") {
-          //     var candidateMsg = {
-          //         type: 'candidate',
-          //         label: event.candidate.sdpMLineIndex,
-          //         id: event.candidate.sdpMid,
-          //         candidate: event.candidate.candidate
-          //     };
-          //     signalingChannel.send({ "candidate": candidateMsg });
-          // } else {
-          //     console.log("Ignore local host.");
-          // }
         };
+
+        pc.oniceconnectionstatechange = function (evt) {
+          if (pc.iceConnectionState === 'closed') {
+            if (localStream) stopStream(localStream);
+            if (remoteStream) stopStream(remoteStream);
+            detachMediaStream(localVideo);
+            detachMediaStream(remoteVideo);
+            signalingChannel.close();
+            signalingChannel = null;
+
+            pc = null;
+          } else {
+            console.log(pc.iceConnectionState);
+          }
+        }
 
         // once remote stream arrives, show it in the remote video element
         pc.onaddstream = function (evt) {
@@ -155,8 +164,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           remoteStream = evt.stream;
           remoteVideo.autoplay = true;
           attachMediaStream(remoteVideo, remoteStream);
-
-          status = 'started';
+          clearTimeout(timeout);
           resolve();
         };
 
@@ -181,24 +189,12 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     });
   }
 
-  function stop() {
-    status = 'notstart';
-
-    pc.close();
-    pc = null;
-    if (localStream) stopStream(localStream);
-    if (remoteStream) stopStream(remoteStream);
-    detachMediaStream(localVideo);
-    detachMediaStream(remoteVideo);
-    signalingChannel.close();
-    signalingChannel = null;
-  };
-
   // stop video chat
   this.stop = function () {
-    if (signalingChannel) {
-      signalingChannel.send({ stop: true });
-    }
-    stop();
+    if (pc == null) return;
+    pc.close();
+
+    if (signalingChannel == null) return;
+    signalingChannel.send({ close: true });
   };
 }
