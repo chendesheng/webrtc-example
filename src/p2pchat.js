@@ -104,7 +104,11 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
 
   var status = 'notstart';
 
-  this.start = function (ifVideo, isCaller) {
+  this.getStatus = function () {
+    return status;
+  };
+
+  this.start = function (ifVideo, isCaller, relayOnly) {
     if (status != 'notstart') return Promise.resolve();
     status = 'starting';
 

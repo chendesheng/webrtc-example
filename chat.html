@@ -39,6 +39,7 @@
 			var $start = document.getElementById('start');
 			var $stop = document.getElementById('stop');
 			var $isCaller = document.getElementById('isCaller');
+			var $relayOnly = document.getElementById('relayOnly');
 			var $localVideo = document.getElementById('localVideo');
 			var $remoteVideo = document.getElementById('remoteVideo');
 
@@ -81,6 +82,9 @@
 	</p>
 	<p>
 		<label>Is caller: </label><input type="checkbox" id="isCaller" /> 两个人里必须要有且只有一个caller
+	</p>
+	<p>
+		<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转
 	</p>
 	<P>
 		<button id="start">Start</button>
