@@ -31,7 +31,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
       pc.setRemoteDescription(new RTCSessionDescription(signal.answer),
         function () {
           console.log('set answer success');
-        }, function () {
+        }, function (err) {
           fireEvent('error', err);
         });
     }
