@@ -34,6 +34,8 @@
 	<script src="src/p2pchat.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
+		var p2pChat;
+		var status;
 		window.onload = function () {
 			var $me = document.getElementById('me');
 			var $you = document.getElementById('you');
@@ -44,13 +46,15 @@
 			var $remoteVideo = document.getElementById('remoteVideo');
 			var $requirePermission = document.getElementById('requirePermission');
 
-			var p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
+			p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
+			status = 'new';
 
 			p2pChat.onevent(function onVideoChatEvent(type, data) {
 				console.log(type);
 				if (type === 'error') {
 					console.error(data);
-				} else if (type === 'disconnected') {
+				} else if (type === 'close') {
+					status = 'new';
 				}
 			});
 
@@ -63,7 +67,11 @@
 			};
 
 			$start.onclick = function onClickCall() {
-				p2pChat.start(true, $relayOnly.checked);
+				status = 'starting';
+				p2pChat.start(true, $relayOnly.checked).then(function () {
+					status = 'started';
+					return p2pChat.getPeerConnectionStats();
+				})
 			};
 
 			$stop.onclick = function onClickHangup() {
@@ -71,14 +79,14 @@
 			};
 
 			setInterval(function () {
-				switch (p2pChat.getStatus()) {
+				switch (status) {
 					case 'new':
 						$start.disabled = false;
 						$stop.disabled = true;
 						break;
 					case 'starting':
 						$start.disabled = true;
-						$stop.disabled = true;
+						$stop.disabled = false;
 						break;
 					case 'started':
 						$start.disabled = true;

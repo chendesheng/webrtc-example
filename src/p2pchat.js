@@ -82,18 +82,20 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
       })
   };
 
-  function getStatus() {
-    if (pc == null)
-      return 'new';
-    else if (pc.iceConnectionState === 'completed' ||
-      pc.iceConnectionState === 'connected')
-      return 'started';
-    else return 'starting';
+  function getStats() {
+    // var findSelected = o =>
+    //   Object.keys(o).find(i => o[i].type == "candidatepair" && o[i].selected);
+    if (pc) {
+      pc.getStats().then(console.log);
+      return pc.getStats();
+    } else {
+      return Promise.resolve();
+    }
   }
 
-  this.getStatus = getStatus;
+  this.getPeerConnectionStats = getStats;
 
-  this.start = function (isVideo, isCaller, relayOnly) {
+  this.start = function (isVideo, relayOnly) {
     return new Promise(function (resolve, reject) {
       if (signalingChannel == null) {
         signalingChannel = new SignalingChannel(chatGuid);
@@ -112,16 +114,27 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
           signalingChannel.send({ "candidate": evt.candidate });
         };
 
+        var onsuccess = resolve;
+
         pc.oniceconnectionstatechange = function (evt) {
-          if (pc.iceConnectionState === 'closed') {
+          if (pc.iceConnectionState === 'connected') {
+            if (onsuccess === resolve) {
+              onsuccess()
+              onsuccess = null;
+            }
+          } else if (pc.iceConnectionState === 'closed') {
             if (localStream) stopStream(localStream);
             if (remoteStream) stopStream(remoteStream);
             localVideo.srcObject = null;
             remoteVideo.srcObject = null;
-            signalingChannel.close();
-            signalingChannel = null;
+
+            if (signalingChannel) {
+              signalingChannel.close();
+              signalingChannel = null;
+            }
 
             pc = null;
+            fireEvent('close');
           } else {
             console.log(pc.iceConnectionState);
           }
@@ -138,7 +151,6 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
           remoteStream = evt.streams[0];
           remoteVideo.autoplay = true;
           remoteVideo.srcObject = remoteStream;
-          resolve();
         };
 
         if (localStream) pc.addStream(localStream);
@@ -169,10 +181,7 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
 
   // stop video chat
   this.stop = function () {
-    if (pc == null) return;
-    pc.close();
-
-    if (signalingChannel == null) return;
-    signalingChannel.send({ close: 1 });
+    if (signalingChannel != null) signalingChannel.send({ close: 1 });
+    if (pc != null) pc.close();
   };
 }
