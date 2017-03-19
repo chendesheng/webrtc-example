@@ -102,8 +102,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
         console.log('onclosed');
         fireEvent('closed');
       });
-      signalingChannel.onPeersReady(function (iceServers) {
-        // iceServers.iceTransportPolicy = 'relay';
+      signalingChannel.onRoomReady(function (iceServers) {
         pc = new RTCPeerConnection({
           iceServers: iceServers,
           iceTransportPolicy: relayOnly ? 'relay' : 'all',

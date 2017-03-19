@@ -1,7 +1,8 @@
 function SignalingChannel(chat) {
   var iceServers;
-  var peersCount = 0;
-  var peersReadyHandler;
+  var opponentReady = false;
+  var peersCount = 1;
+  var roomReadyHandler = null;
   var messageHandler;
   var pingTimer;
   var ws = new WebSocket('wss://hosted.comm100.com/webrtcSignalingService/signaling.ashx?chatId=' + chat);
@@ -15,7 +16,18 @@ function SignalingChannel(chat) {
   ws.onmessage = function (evt) {
     var resp = JSON.parse(evt.data);
     if (resp.count != null) {
+      if (resp.count > peersCount && resp.count > 1) {
+        send({ hello: true });
+      }
       peersCount = resp.count;
+      if (peersCount < 2) {
+        opponentReady = false;
+      }
+    } else if (resp.helloback) {
+      opponentReady = true;
+    } else if (resp.hello) {
+      opponentReady = true;
+      send({ helloback: true });
     } else if (resp.d && resp.d.iceServers) {
       iceServers = resp.d.iceServers;
     } else {
@@ -24,43 +36,36 @@ function SignalingChannel(chat) {
       return;
     }
 
-    if (peersCount > 1 && iceServers != null) {
-      if (peersReadyHandler)
-        peersReadyHandler(iceServers);
-    }
+    checkRoomReady();
   };
+
   ws.onclose = function () {
-    peersCount = 0;
+    opponentReady = false;
     iceServers = null;
   }
 
-  this.send = function send(data) {
+  function checkRoomReady() {
+    if (opponentReady && iceServers && roomReadyHandler) {
+      roomReadyHandler(iceServers);
+    }
+  }
+
+  function send(data) {
     ws.send(JSON.stringify(data));
-  };
+  }
+
+  this.send = send;
 
   this.close = function () {
     ws.close();
   };
 
-  this.peersReady = function () {
-    return peersCount > 1;
-  };
-
-  this.onPeersReady = function (fn) {
-    peersReadyHandler = fn;
-
-    if (iceServers != null && peersCount > 1 && fn) {
-      fn(iceServers);
-    }
+  this.onRoomReady = function (fn) {
+    roomReadyHandler = fn;
+    checkRoomReady();
   };
 
   this.onmessage = function (fn) {
     messageHandler = fn;
-  };
-
-  this.onclosed = function (fn) {
-    ws.onclose = function () {
-      if (pingTimer) clearInterval(pingTimer);
-    };
   };
 }
