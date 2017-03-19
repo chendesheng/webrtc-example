@@ -51,12 +51,14 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
   }
 
   function sendOffer() {
-    console.log('send offer');
+    console.log('sendOffer');
     pc.createOffer()
       .then(function (offer) {
+        console.log('create offer:', offer);
         return pc.setLocalDescription(offer);
       })
       .then(function () {
+        console.log('send offer:', pc.localDescription);
         signalingChannel.send({ offer: pc.localDescription });
       });
   }
