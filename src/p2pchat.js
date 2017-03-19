@@ -158,10 +158,12 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           }
         }
 
-        pc.onnegotiationneeded = function () {
-          console.log('onnegotiationneeded');
-          if (isCaller) sendOffer();
-        };
+        if (isCaller) {
+          pc.onnegotiationneeded = function () {
+            console.log('onnegotiationneeded');
+            sendOffer();
+          };
+        }
 
         // once remote stream arrives, show it in the remote video element
         pc.onaddstream = function (evt) {
