@@ -50,7 +50,7 @@
 			p2pChat.onevent(function onVideoChatEvent(type, data) {
 				console.log(type);
 				if (type === 'error') {
-					alert(data);
+					console.error(data);
 				} else if (type === 'disconnected') {
 				}
 			});
