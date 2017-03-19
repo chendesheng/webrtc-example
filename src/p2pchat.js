@@ -51,6 +51,7 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
   }
 
   function sendOffer() {
+    console.log('send offer');
     pc.createOffer()
       .then(function (offer) {
         return pc.setLocalDescription(offer);
