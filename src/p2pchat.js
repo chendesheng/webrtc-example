@@ -61,10 +61,6 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
   }
 
   this.requirePermission = function (isVideo) {
-    if (signalingChannel == null) {
-      signalingChannel = new SignalingChannel(chatGuid);
-    }
-
     return navigator.mediaDevices
       .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
       .then(function (stream) {
@@ -74,12 +70,8 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
         localVideo.autoplay = true;
         localVideo.muted = true;
         localVideo.srcObject = localStream;
-        if (pc) {
-          pc.addStream(localStream);
-          sendOffer();
-        }
         return Promise.resolve();
-      })
+      });
   };
 
   function getStats() {
@@ -97,10 +89,23 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
 
   this.start = function (isVideo, relayOnly) {
     return new Promise(function (resolve, reject) {
-      if (signalingChannel == null) {
-        signalingChannel = new SignalingChannel(chatGuid);
-      }
+      var onsuccess = resolve;
+
+      signalingChannel = new SignalingChannel(chatGuid);
       signalingChannel.onmessage(handleSignal);
+      signalingChannel.onclose(function () {
+        if (onsuccess === resolve) {
+          onsuccess = null;
+          reject('cancled');
+        }
+
+        if (localStream) stopStream(localStream);
+        if (remoteStream) stopStream(remoteStream);
+        localVideo.srcObject = null;
+        remoteVideo.srcObject = null;
+
+        signalingChannel = null;
+      })
       signalingChannel.onGetIceServers(function (iceServers) {
         pc = new RTCPeerConnection({
           iceServers: iceServers,
@@ -113,9 +118,6 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
 
           signalingChannel.send({ "candidate": evt.candidate });
         };
-
-        var onsuccess = resolve;
-
         pc.oniceconnectionstatechange = function (evt) {
           if (pc.iceConnectionState === 'connected') {
             if (onsuccess === resolve) {
@@ -123,17 +125,17 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
               onsuccess = null;
             }
           } else if (pc.iceConnectionState === 'closed') {
-            if (localStream) stopStream(localStream);
-            if (remoteStream) stopStream(remoteStream);
-            localVideo.srcObject = null;
-            remoteVideo.srcObject = null;
+            if (onsuccess === resolve) {
+              onsuccess = null;
+              reject('cancled');
+            }
 
             if (signalingChannel) {
               signalingChannel.close();
-              signalingChannel = null;
             }
 
             pc = null;
+
             fireEvent('close');
           } else {
             console.log(pc.iceConnectionState);
@@ -181,7 +183,11 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
 
   // stop video chat
   this.stop = function () {
-    if (signalingChannel != null) signalingChannel.send({ close: 1 });
+    if (signalingChannel != null) {
+      try { signalingChannel.send({ close: 1 }); }
+      catch (err) { }
+    }
+    if (signalingChannel != null) signalingChannel.close();
     if (pc != null) pc.close();
   };
 }

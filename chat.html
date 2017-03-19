@@ -44,7 +44,6 @@
 			var $relayOnly = document.getElementById('relayOnly');
 			var $localVideo = document.getElementById('localVideo');
 			var $remoteVideo = document.getElementById('remoteVideo');
-			var $requirePermission = document.getElementById('requirePermission');
 
 			p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
 			status = 'new';
@@ -58,20 +57,19 @@
 				}
 			});
 
-			$requirePermission.onclick = function () {
-				p2pChat.requirePermission(true).then(function () {
-					console.log('permission grant');
-				}).catch(function () {
-					console.log('permission deny');
-				});
-			};
-
 			$start.onclick = function onClickCall() {
-				status = 'starting';
-				p2pChat.start(true, $relayOnly.checked).then(function () {
-					status = 'started';
-					return p2pChat.getPeerConnectionStats();
-				})
+				p2pChat.requirePermission(true).then(function () {
+					status = 'starting';
+					console.log('permission grant');
+					return p2pChat.start(true, $relayOnly.checked);
+				}).then(function () {
+					p2pChat.getPeerConnectionStats();
+					return Promise.resolve();
+				}).catch(function (err) {
+					console.log(err);
+					status = 'new';
+					return Promise.resolve();
+				});
 			};
 
 			$stop.onclick = function onClickHangup() {
@@ -115,7 +113,6 @@
 	<p>
 	</p>
 	<P>
-		<button id="requirePermission">Require Permission</button>
 		<button id="start">Start</button>
 		<button id="stop">Stop</button>
 	</p>

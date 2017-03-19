@@ -2,10 +2,11 @@ function SignalingChannel(chat) {
   var iceServers;
   var opponentReady = false;
   var peersCount = 0;
-  var roomReadyHandler = null;
-  var messageHandler;
   var pingTimer;
+  var messageHandler;
+  var roomReadyHandler;
   var getIceServersHandler;
+  var oncloseHandler;
   var ws = new WebSocket('wss://hosted.comm100.com/webrtcSignalingService/signaling.ashx?chatId=' + chat);
   ws.onopen = function () {
     console.log('open');
@@ -18,6 +19,10 @@ function SignalingChannel(chat) {
     var resp = JSON.parse(evt.data);
     if (resp.count != null) {
       if (peersCount === 0 && resp.count > 1) {
+        if (iceServers == null) {
+          iceServers = [{ urls: 'stun:stun.l.google.com:19302' }]
+          if (getIceServersHandler) getIceServersHandler(iceServers);
+        }
         // say hello when some one alreay in room
         send({ hello: 1 });
       }
@@ -29,7 +34,11 @@ function SignalingChannel(chat) {
       opponentReady = true;
       if (roomReadyHandler) roomReadyHandler();
     } else if (resp.d && resp.d.iceServers) {
-      if (getIceServersHandler) getIceServersHandler(resp.d.iceServers);
+      if (iceServers == null) {
+        iceServers = resp.d.iceServers;
+        iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
+        if (getIceServersHandler) getIceServersHandler(iceServers);
+      }
     } else {
       if (messageHandler)
         messageHandler(resp);
@@ -44,6 +53,14 @@ function SignalingChannel(chat) {
     getIceServersHandler = null;
     messageHandler = null;
     roomReadyHandler = null;
+
+    var fn = oncloseHandler;
+    oncloseHandler = null;
+    if (fn) fn();
+  }
+
+  this.onclose = function (fn) {
+    oncloseHandler = fn;
   }
 
   function checkRoomReady() {
