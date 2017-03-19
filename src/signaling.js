@@ -34,7 +34,7 @@ function SignalingChannel(chat) {
     } else if (resp.hello) {
       console.log('receive hello');
       opponentReady = true;
-      if (roomReadyHandler) roomReadyHandler();
+      checkRoomReady();
     } else if (resp.d && resp.d.iceServers) {
       if (iceServers == null) {
         iceServers = resp.d.iceServers;
@@ -68,7 +68,7 @@ function SignalingChannel(chat) {
 
   function checkRoomReady() {
     if (opponentReady && roomReadyHandler) {
-      roomReadyHandler(iceServers);
+      roomReadyHandler();
     }
   }
 
