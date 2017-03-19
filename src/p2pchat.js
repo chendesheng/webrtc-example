@@ -50,8 +50,8 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     signalingChannel.send({ offer: desc });
   }
 
-  function sendOffer(ifVideo) {
-    pc.createOffer({ video: ifVideo, audio: true })
+  function sendOffer() {
+    pc.createOffer()
       .then(function (offer) {
         return pc.setLocalDescription(offer);
       })
@@ -60,8 +60,8 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
       });
   }
 
-  this.requirePermission = function (ifVideo, onsuccess, onfailed) {
-    getUserMedia({ "audio": true, "video": ifVideo },
+  this.requirePermission = function (isVideo, onsuccess, onfailed) {
+    getUserMedia({ "audio": true, "video": isVideo },
       function (stream) {
         localStream = stream;
 
@@ -115,7 +115,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
 
   this.getStatus = getStatus;
 
-  this.start = function (ifVideo, isCaller, relayOnly) {
+  this.start = function (isVideo, isCaller, relayOnly) {
     if (getStatus() !== 'new') return;
 
     return new Promise(function (resolve, reject) {
@@ -158,6 +158,11 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           }
         }
 
+        pc.onnegotiationneeded = function () {
+          console.log('onnegotiationneeded');
+          if (isCaller) sendOffer();
+        };
+
         // once remote stream arrives, show it in the remote video element
         pc.onaddstream = function (evt) {
           console.log('add remote stream');
@@ -169,7 +174,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
         };
 
         pc.addStream(localStream);
-        if (isCaller) sendOffer(ifVideo);
+        // if (isCaller) sendOffer(isVideo);
       });
     })
   }
@@ -180,7 +185,9 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
   };
 
   function fireEvent(message, obj) {
-    handlers.forEach(f => f(message, obj));
+    handlers.forEach(function (fn) {
+      fn(message, obj)
+    });
   };
 
   function stopStream(stream) {
