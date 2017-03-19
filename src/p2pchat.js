@@ -155,8 +155,7 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           resolve();
         };
 
-        pc.addStream(localStream);
-        // if (isCaller) sendOffer(isVideo);
+        if (localStream) pc.addStream(localStream);
       });
     })
   }
