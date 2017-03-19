@@ -1,4 +1,4 @@
-function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
+function P2PChat(chatGuid, localVideo, remoteVideo) {
   var handlers = [];
   var pc;
   var signalingChannel;
@@ -61,6 +61,10 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
   }
 
   this.requirePermission = function (isVideo) {
+    if (signalingChannel == null) {
+      signalingChannel = new SignalingChannel(chatGuid);
+    }
+
     return navigator.mediaDevices
       .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
       .then(function (stream) {
@@ -70,34 +74,32 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
         localVideo.autoplay = true;
         localVideo.muted = true;
         localVideo.srcObject = localStream;
-
+        if (pc) {
+          pc.addStream(localStream);
+          sendOffer();
+        }
         return Promise.resolve();
       })
   };
 
   function getStatus() {
-    if (pc == null) {
-      if (signalingChannel == null)
-        return 'new';
-      else
-        return 'starting';
-    } else if (pc.iceConnectionState === 'completed' ||
+    if (pc == null)
+      return 'new';
+    else if (pc.iceConnectionState === 'completed' ||
       pc.iceConnectionState === 'connected')
       return 'started';
-    else if (pc.iceConnectionState === 'new' ||
-      pc.iceConnectionState === 'checking')
-      return 'starting';
+    else return 'starting';
   }
 
   this.getStatus = getStatus;
 
   this.start = function (isVideo, isCaller, relayOnly) {
-    if (getStatus() !== 'new') return;
-
     return new Promise(function (resolve, reject) {
-      signalingChannel = new SignalingChannel(chatGuid);
+      if (signalingChannel == null) {
+        signalingChannel = new SignalingChannel(chatGuid);
+      }
       signalingChannel.onmessage(handleSignal);
-      signalingChannel.onRoomReady(function (iceServers) {
+      signalingChannel.onGetIceServers(function (iceServers) {
         pc = new RTCPeerConnection({
           iceServers: iceServers,
           iceTransportPolicy: relayOnly ? 'relay' : 'all',
@@ -125,13 +127,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           }
         }
 
-        if (isCaller) {
-          pc.onnegotiationneeded = function () {
-            console.log('onnegotiationneeded');
-            sendOffer();
-          };
-        }
-
         pc.ontrack = function (evt) {
           console.log('add remote stream');
           console.log(evt);
@@ -147,8 +142,12 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
         };
 
         if (localStream) pc.addStream(localStream);
+        // only one peer will fire room ready event (the first one enter room)
+        signalingChannel.onRoomReady(function () {
+          sendOffer();
+        });
       });
-    })
+    });
   }
 
   this.onevent = function onevent(f) {
@@ -174,6 +173,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     pc.close();
 
     if (signalingChannel == null) return;
-    signalingChannel.send({ close: true });
+    signalingChannel.send({ close: 1 });
   };
 }

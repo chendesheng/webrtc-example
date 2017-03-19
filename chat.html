@@ -39,13 +39,12 @@
 			var $you = document.getElementById('you');
 			var $start = document.getElementById('start');
 			var $stop = document.getElementById('stop');
-			var $isCaller = document.getElementById('isCaller');
 			var $relayOnly = document.getElementById('relayOnly');
 			var $localVideo = document.getElementById('localVideo');
 			var $remoteVideo = document.getElementById('remoteVideo');
 			var $requirePermission = document.getElementById('requirePermission');
 
-			var p2pChat = new P2PChat('default', false, $localVideo, $remoteVideo);
+			var p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
 
 			p2pChat.onevent(function onVideoChatEvent(type, data) {
 				console.log(type);
@@ -64,7 +63,7 @@
 			};
 
 			$start.onclick = function onClickCall() {
-				p2pChat.start(true, $isCaller.checked, $relayOnly.checked);
+				p2pChat.start(true, $relayOnly.checked);
 			};
 
 			$stop.onclick = function onClickHangup() {
@@ -101,9 +100,6 @@
 	<p>
 		<label>Room: </label><input type="text" id="room" value="default" />
 		<p>同一个room<strong>只能</strong>有两个人</p>
-	</p>
-	<p>
-		<label>Is caller: </label><input type="checkbox" id="isCaller" /> 两个人里必须要有且只有一个caller
 	</p>
 	<p>
 		<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转
