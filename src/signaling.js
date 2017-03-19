@@ -23,6 +23,7 @@ function SignalingChannel(chat) {
           iceServers = [{ urls: 'stun:stun.l.google.com:19302' }]
           if (getIceServersHandler) getIceServersHandler(iceServers);
         }
+        console.log('send hello');
         // say hello when some one alreay in room
         send({ hello: 1 });
       }
@@ -31,11 +32,13 @@ function SignalingChannel(chat) {
         opponentReady = false;
       }
     } else if (resp.hello) {
+      console.log('receive hello');
       opponentReady = true;
       if (roomReadyHandler) roomReadyHandler();
     } else if (resp.d && resp.d.iceServers) {
       if (iceServers == null) {
         iceServers = resp.d.iceServers;
+        console.log('get ice servers:', iceServers);
         iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
         if (getIceServersHandler) getIceServersHandler(iceServers);
       }
