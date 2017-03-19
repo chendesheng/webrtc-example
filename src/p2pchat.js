@@ -9,29 +9,29 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     console.log(signal);
 
     if (signal.offer) {
-      pc.setRemoteDescription(new RTCSessionDescription(signal.offer), function () {
-        pc.createAnswer(function (answer) {
-          pc.setLocalDescription(answer,
-            function () {
-              signalingChannel.send({ answer: pc.localDescription });
-            },
-            function (err) {
-              fireEvent('error', err);
-            });
-        }, function (err) {
-          fireEvent('error', err);
-        });
-      },
-        function (err) {
+      pc.setRemoteDescription(new RTCSessionDescription(signal.offer))
+        .then(function () {
+          return pc.createAnswer()
+        })
+        .then(function (answer) {
+          return pc.setLocalDescription(answer)
+        })
+        .then(function () {
+          signalingChannel.send({ answer: pc.localDescription });
+          return Promise.resolve();
+        })
+        .catch(function (err) {
           fireEvent('error', err);
         });
     }
 
     if (signal.answer) {
-      pc.setRemoteDescription(new RTCSessionDescription(signal.answer),
-        function () {
+      pc.setRemoteDescription(new RTCSessionDescription(signal.answer))
+        .then(function () {
           console.log('set answer success');
-        }, function (err) {
+          return Promise.resolve();
+        })
+        .catch(function (err) {
           fireEvent('error', err);
         });
     }
