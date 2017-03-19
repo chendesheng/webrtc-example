@@ -62,7 +62,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
 
   this.requirePermission = function (isVideo) {
     return new Promise(function (onresolve, onreject) {
-      var timeout = setTimeout(onreject.bind(null, 'require device permission timeout'), 60 * 1000);
       getUserMedia({ "audio": true, "video": isVideo },
         function (stream) {
           localStream = stream;
@@ -72,11 +71,9 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           localVideo.muted = true;
           attachMediaStream(localVideo, localStream);
 
-          clearTimeout(timeout);
           onresolve();
         }, function (err) {
           console.log('error', err);
-          clearTimeout(timeout);
           onreject(err);
         });
     });
@@ -99,10 +96,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     if (getStatus() !== 'new') return;
 
     return new Promise(function (resolve, reject) {
-      var timeout = setTimeout(function () {
-        if (pc) pc.close();
-        reject('timeout');
-      }, 2 * 60 * 1000);
       signalingChannel = new SignalingChannel(chatGuid);
       signalingChannel.onmessage(handleSignal);
       signalingChannel.onclosed(function () {
@@ -151,7 +144,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           remoteStream = evt.stream;
           remoteVideo.autoplay = true;
           attachMediaStream(remoteVideo, remoteStream);
-          clearTimeout(timeout);
           resolve();
         };
 
