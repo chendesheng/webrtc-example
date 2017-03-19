@@ -45,6 +45,7 @@
 			var $localVideo = document.getElementById('localVideo');
 			var $remoteVideo = document.getElementById('remoteVideo');
 			var $requirePermission = document.getElementById('requirePermission');
+			var $ifVideo = document.getElementById('ifVideo');
 
 			p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
 			status = 'new';
@@ -61,11 +62,11 @@
 			$start.onclick = function onClickCall() {
 				var p = Promise.resolve();
 				if ($requirePermission.checked) {
-					p = p2pChat.requirePermission(true)
+					p = p2pChat.requirePermission($ifVideo.checked)
 				}
 				p.then(function () {
 					status = 'starting';
-					return p2pChat.start(true, $relayOnly.checked);
+					return p2pChat.start($relayOnly.checked);
 				}).then(function () {
 					p2pChat.getPeerConnectionStats();
 					return Promise.resolve();
@@ -110,6 +111,9 @@
 	<p>
 		<label>Room: </label><input type="text" id="room" value="default" />
 		<p>同一个room<strong>只能</strong>有两个人</p>
+	</p>
+	<p>
+		<label>If video: </label><input type="checkbox" checked id="ifVideo" />
 	</p>
 	<p>
 		<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转

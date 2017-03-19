@@ -90,7 +90,7 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
 
   this.getPeerConnectionStats = getStats;
 
-  this.start = function (isVideo, relayOnly) {
+  this.start = function (relayOnly) {
     return new Promise(function (resolve, reject) {
       var onsuccess = resolve;
 
