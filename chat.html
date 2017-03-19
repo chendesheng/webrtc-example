@@ -43,6 +43,7 @@
 			var $relayOnly = document.getElementById('relayOnly');
 			var $localVideo = document.getElementById('localVideo');
 			var $remoteVideo = document.getElementById('remoteVideo');
+			var $requirePermission = document.getElementById('requirePermission');
 
 			var p2pChat = new P2PChat('default', false, $localVideo, $remoteVideo);
 
@@ -54,11 +55,16 @@
 				}
 			});
 
-			$start.onclick = function onClickCall() {
+			$requirePermission.onclick = function () {
 				p2pChat.requirePermission(true).then(function () {
 					console.log('permission grant');
-					p2pChat.start(true, $isCaller.checked, $relayOnly.checked);
+				}).catch(function () {
+					console.log('permission deny');
 				});
+			};
+
+			$start.onclick = function onClickCall() {
+				p2pChat.start(true, $isCaller.checked, $relayOnly.checked);
 			};
 
 			$stop.onclick = function onClickHangup() {
@@ -102,7 +108,10 @@
 	<p>
 		<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转
 	</p>
+	<p>
+	</p>
 	<P>
+		<button id="requirePermission">Require Permission</button>
 		<button id="start">Start</button>
 		<button id="stop">Stop</button>
 	</p>
