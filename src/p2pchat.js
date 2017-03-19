@@ -61,28 +61,27 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
   }
 
   this.requirePermission = function (isVideo) {
-    return new Promise(function (onresolve, onreject) {
-      getUserMedia({ "audio": true, "video": isVideo },
-        function (stream) {
-          localStream = stream;
+    return navigator.mediaDevices
+      .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
+      .then(function (stream) {
+        localStream = stream;
 
-          console.log('add local stream');
-          localVideo.autoplay = true;
-          localVideo.muted = true;
-          attachMediaStream(localVideo, localStream);
+        console.log('add local stream');
+        localVideo.autoplay = true;
+        localVideo.muted = true;
+        localVideo.srcObject = localStream;
 
-          onresolve();
-        }, function (err) {
-          console.log('error', err);
-          onreject(err);
-        });
-    });
+        return Promise.resolve();
+      })
   };
 
   function getStatus() {
-    if (pc == null)
-      return 'new';
-    else if (pc.iceConnectionState === 'completed' ||
+    if (pc == null) {
+      if (signalingChannel == null)
+        return 'new';
+      else
+        return 'starting';
+    } else if (pc.iceConnectionState === 'completed' ||
       pc.iceConnectionState === 'connected')
       return 'started';
     else if (pc.iceConnectionState === 'new' ||
@@ -98,10 +97,6 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
     return new Promise(function (resolve, reject) {
       signalingChannel = new SignalingChannel(chatGuid);
       signalingChannel.onmessage(handleSignal);
-      signalingChannel.onclosed(function () {
-        console.log('onclosed');
-        fireEvent('closed');
-      });
       signalingChannel.onRoomReady(function (iceServers) {
         pc = new RTCPeerConnection({
           iceServers: iceServers,
@@ -119,8 +114,8 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           if (pc.iceConnectionState === 'closed') {
             if (localStream) stopStream(localStream);
             if (remoteStream) stopStream(remoteStream);
-            detachMediaStream(localVideo);
-            detachMediaStream(remoteVideo);
+            localVideo.srcObject = null;
+            remoteVideo.srcObject = null;
             signalingChannel.close();
             signalingChannel = null;
 
@@ -137,12 +132,17 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
           };
         }
 
-        // once remote stream arrives, show it in the remote video element
-        pc.onaddstream = function (evt) {
+        pc.ontrack = function (evt) {
           console.log('add remote stream');
-          remoteStream = evt.stream;
+          console.log(evt);
+          if (remoteStream && remoteStream === evt.streams[0]) {
+            console.log('same stream');
+            return;
+          }
+
+          remoteStream = evt.streams[0];
           remoteVideo.autoplay = true;
-          attachMediaStream(remoteVideo, remoteStream);
+          remoteVideo.srcObject = remoteStream;
           resolve();
         };
 
