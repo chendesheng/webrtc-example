@@ -60,47 +60,27 @@ function P2PChat(chatGuid, isCaller, localVideo, remoteVideo) {
       });
   }
 
-  this.requirePermission = function (isVideo, onsuccess, onfailed) {
-    getUserMedia({ "audio": true, "video": isVideo },
-      function (stream) {
-        localStream = stream;
+  this.requirePermission = function (isVideo) {
+    return new Promise(function (onresolve, onreject) {
+      var timeout = setTimeout(onreject.bind(null, 'require device permission timeout'), 60 * 1000);
+      getUserMedia({ "audio": true, "video": isVideo },
+        function (stream) {
+          localStream = stream;
 
-        console.log('add local stream');
-        localVideo.autoplay = true;
-        localVideo.muted = true;
-        attachMediaStream(localVideo, localStream);
+          console.log('add local stream');
+          localVideo.autoplay = true;
+          localVideo.muted = true;
+          attachMediaStream(localVideo, localStream);
 
-        if (onsuccess) onsuccess();
-      }, function (err) {
-        console.log('error', error);
-        if (onfailed) onfailed();
-      });
+          clearTimeout(timeout);
+          onresolve();
+        }, function (err) {
+          console.log('error', err);
+          clearTimeout(timeout);
+          onreject(err);
+        });
+    });
   };
-
-  function createPeerConnection(iceServers, onconnected) {
-    var pc = new RTCPeerConnection(iceServers);
-
-    // send any ice candidates to the other peer
-    pc.onicecandidate = function (evt) {
-      if (evt.candidate == null) return;
-
-      signalingChannel.send({ "candidate": evt.candidate })
-    };
-
-    // once remote stream arrives, show it in the remote video element
-    pc.onaddstream = function (evt) {
-      console.log('add remote stream');
-      remoteStream = evt.stream;
-      attachMediaStream(remoteVideo, remoteStream);
-      if (onconnected) onconnected();
-    };
-
-    console.log('add local stream');
-    attachMediaStream(localVideo, localStream);
-    pc.addStream(localStream);
-
-    return pc;
-  }
 
   function getStatus() {
     if (pc == null)

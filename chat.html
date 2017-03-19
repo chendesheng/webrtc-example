@@ -55,11 +55,9 @@
 			});
 
 			$start.onclick = function onClickCall() {
-				p2pChat.requirePermission(true, function () {
+				p2pChat.requirePermission(true).then(function () {
 					console.log('permission grant');
 					p2pChat.start(true, $isCaller.checked, $relayOnly.checked);
-				}, function (err) {
-					console.log(err)
 				});
 			};
 
