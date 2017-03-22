@@ -1,4 +1,4 @@
-// import 'webrtc-adapter'
+// import 'webrtc-adapter';
 /* eslint-disable */
 
 function SignalingChannel(args) {
