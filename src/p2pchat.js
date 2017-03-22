@@ -314,11 +314,11 @@ function P2PChat(args) {
 
   this.getLocalVideo = function () {
     return localVideo;
-  }
+  };
 
   this.getRemoteVideo = function () {
     return remoteVideo;
-  }
+  };
 }
 
 function ifSupportWebrtc() {
