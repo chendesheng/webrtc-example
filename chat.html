@@ -36,6 +36,8 @@
 		var p2pChat;
 		var status;
 		window.onload = function () {
+			var $notsupport = document.getElementById('notsupport');
+			var $main = document.getElementById('main');
 			var $me = document.getElementById('me');
 			var $you = document.getElementById('you');
 			var $start = document.getElementById('start');
@@ -45,6 +47,14 @@
 			var $remoteVideo = document.getElementById('remoteVideo');
 			var $requirePermission = document.getElementById('requirePermission');
 			var $ifVideo = document.getElementById('ifVideo');
+
+			if (ifSupportWebrtc()) {
+				$main.style.display = '';
+				$notsupport.style.display = 'none';
+			} else {
+				$main.style.display = 'none';
+				$notsupport.style.display = '';
+			}
 
 			p2pChat = new P2PChat({
 				chatGuid: 'default',
@@ -106,38 +116,43 @@
 </head>
 
 <body>
-	<h3>
-		Audio &amp; Video Chat Example
-	</h3>
-	<p>
-		配置hosts：<br>120.199.9.10 hosted.comm100.com
-	</p>
-	<p>
-		<label>Room: </label><input type="text" id="room" value="default" />
-		<p>同一个room<strong>只能</strong>有两个人</p>
-	</p>
-	<p>
-		<label>If video: </label><input type="checkbox" checked id="ifVideo" />
-	</p>
-	<p>
-		<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转
-	</p>
-	<p>
-		<label>Require permission before start: </label><input type="checkbox" checked id="requirePermission" />
-	</p>
-	<p>
-	</p>
-	<P>
-		<button id="start">Start</button>
-		<button id="stop">Stop</button>
-	</p>
+	<div id="notsupport">
+		Browser not support
+	</div>
+	<div id="main">
+		<h3>
+			Audio &amp; Video Chat Example
+		</h3>
+		<p>
+			配置hosts：<br>120.199.9.10 hosted.comm100.com
+		</p>
+		<p>
+			<label>Room: </label><input type="text" id="room" value="default" />
+			<p>同一个room<strong>只能</strong>有两个人</p>
+		</p>
+		<p>
+			<label>If video: </label><input type="checkbox" checked id="ifVideo" />
+		</p>
+		<p>
+			<label>Relay only: </label><input type="checkbox" id="relayOnly" /> 总是使用TURN服务器中转
+		</p>
+		<p>
+			<label>Require permission before start: </label><input type="checkbox" checked id="requirePermission" />
+		</p>
+		<p>
+		</p>
+		<P>
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+		</p>
 
-	<div class="video">
-		<div id="me">
-			<video id="localVideo"></video>
-		</div>
-		<div id="you">
-			<video id="remoteVideo"></video>
+		<div class="video">
+			<div id="me">
+				<video id="localVideo"></video>
+			</div>
+			<div id="you">
+				<video id="remoteVideo"></video>
+			</div>
 		</div>
 	</div>
 </body>

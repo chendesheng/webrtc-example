@@ -1,3 +1,6 @@
+// import 'webrtc-adapter'
+/* eslint-disable */
+
 function SignalingChannel(args) {
   var url = args.url;
   var chat = args.chat;
@@ -308,4 +311,11 @@ function P2PChat(args) {
     if (signalingChannel != null) signalingChannel.close();
     if (pc != null) pc.close();
   };
+}
+
+function ifSupportWebrtc() {
+  var PC = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+  var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia;
+  var edge = navigator.userAgent.indexOf(' Edge') > 0;
+  return !!PC && !!getUserMedia && !edge;
 }
