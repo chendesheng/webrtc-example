@@ -1,4 +1,8 @@
-function P2PChat(chatGuid, localVideo, remoteVideo) {
+function P2PChat(args) {
+  var chatGuid = args.chatGuid;
+  var localVideo = args.localVideo;
+  var remoteVideo = args.remoteVideo;
+  var url = args.url;
   var handlers = [];
   var pc;
   var signalingChannel;
@@ -94,7 +98,10 @@ function P2PChat(chatGuid, localVideo, remoteVideo) {
     return new Promise(function (resolve, reject) {
       var onsuccess = resolve;
 
-      signalingChannel = new SignalingChannel(chatGuid);
+      signalingChannel = new SignalingChannel({
+        chat: chatGuid,
+        url: url,
+      });
       signalingChannel.onmessage(handleSignal);
       signalingChannel.onclose(function () {
         if (onsuccess === resolve) {

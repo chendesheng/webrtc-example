@@ -1,4 +1,6 @@
-function SignalingChannel(chat) {
+function SignalingChannel(args) {
+  var url = args.url;
+  var chat = args.chat;
   var iceServers;
   var opponentReady = false;
   var peersCount = 0;
@@ -7,7 +9,7 @@ function SignalingChannel(chat) {
   var roomReadyHandler;
   var getIceServersHandler;
   var oncloseHandler;
-  var ws = new WebSocket('wss://hosted.comm100.com/webrtcSignalingService/signaling.ashx?chatId=' + chat);
+  var ws = new WebSocket('wss://' + url + '?chatId=' + chat);
   ws.onopen = function () {
     console.log('open');
     pingTimer = setInterval(function () {

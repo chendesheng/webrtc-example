@@ -47,7 +47,12 @@
 			var $requirePermission = document.getElementById('requirePermission');
 			var $ifVideo = document.getElementById('ifVideo');
 
-			p2pChat = new P2PChat('default', $localVideo, $remoteVideo);
+			p2pChat = new P2PChat({
+				chatGuid: 'default',
+				localVideo: $localVideo,
+				remoteVideo: $remoteVideo,
+				url: 'ent.comm100.com/webrtcSignalingService/signaling.ashx',
+			});
 			status = 'new';
 
 			p2pChat.onevent(function onVideoChatEvent(type, data) {
