@@ -110,7 +110,7 @@ function SignalingChannel(args) {
 }
 
 function P2PChat(args) {
-  var chatGuid = args.chatGuid;
+  var chat = args.chat;
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
   var url = args.url;
@@ -210,7 +210,7 @@ function P2PChat(args) {
       var onsuccess = resolve;
 
       signalingChannel = new SignalingChannel({
-        chat: chatGuid,
+        chat: chat,
         url: url,
       });
       signalingChannel.onmessage(handleSignal);
