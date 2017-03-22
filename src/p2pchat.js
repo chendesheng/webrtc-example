@@ -319,3 +319,5 @@ function ifSupportWebrtc() {
   var edge = navigator.userAgent.indexOf(' Edge') > 0;
   return !!PC && !!getUserMedia && !edge;
 }
+
+// export default P2PChat
