@@ -311,6 +311,14 @@ function P2PChat(args) {
     if (signalingChannel != null) signalingChannel.close();
     if (pc != null) pc.close();
   };
+
+  this.getLocalVideo = function () {
+    return localVideo;
+  }
+
+  this.getRemoteVideo = function () {
+    return remoteVideo;
+  }
 }
 
 function ifSupportWebrtc() {
