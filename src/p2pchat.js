@@ -11,7 +11,6 @@ function SignalingChannel(args) {
   var messageHandler;
   var roomReadyHandler;
   var getIceServersHandler;
-  var oncloseHandler;
   var ws = new WebSocket('wss://' + url + '?chatId=' + chat);
   ws.onopen = function () {
     console.log('open');
@@ -52,6 +51,10 @@ function SignalingChannel(args) {
   };
 
   ws.onclose = function () {
+    reset();
+  };
+
+  function reset() {
     opponentReady = false;
     iceServers = null;
     peersCount = 0;
@@ -59,14 +62,6 @@ function SignalingChannel(args) {
     getIceServersHandler = null;
     messageHandler = null;
     roomReadyHandler = null;
-
-    var fn = oncloseHandler;
-    oncloseHandler = null;
-    if (fn) fn();
-  }
-
-  this.onclose = function (fn) {
-    oncloseHandler = fn;
   }
 
   function ensureGetIceServers() {
@@ -89,7 +84,12 @@ function SignalingChannel(args) {
   this.send = send;
 
   this.close = function () {
-    ws.close();
+    try {
+      reset();
+      ws.close();
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   this.onRoomReady = function (fn) {
@@ -97,7 +97,7 @@ function SignalingChannel(args) {
     checkRoomReady();
   };
 
-  this.onmessage = function (fn) {
+  this.onMessage = function (fn) {
     messageHandler = fn;
   };
 
@@ -115,13 +115,15 @@ function P2PChat(args) {
   var remoteVideo = args.remoteVideo;
   var url = args.url;
   var handlers = [];
-  var pc;
-  var signalingChannel;
+  var connection = null;
   var localStream;
   var remoteStream;
+  var useRelayOnly = false;
 
-  function handleSignal(signal) {
+  function handleSignal(conn, signal) {
     console.log(signal);
+    var pc = conn.peerConn;
+    var chan = conn.signalingChannel;
 
     if (signal.offer) {
       pc.setRemoteDescription(new RTCSessionDescription(signal.offer))
@@ -132,11 +134,12 @@ function P2PChat(args) {
           return pc.setLocalDescription(answer)
         })
         .then(function () {
-          signalingChannel.send({ answer: pc.localDescription });
+          chan.send({ answer: pc.localDescription });
           return Promise.resolve();
         })
         .catch(function (err) {
-          fireEvent('error', err);
+          console.error(err);
+          restart(conn);
         });
     }
 
@@ -147,25 +150,49 @@ function P2PChat(args) {
           return Promise.resolve();
         })
         .catch(function (err) {
-          fireEvent('error', err);
+          console.log(err);
+          restart(conn);
         });
     }
 
     if (signal.candidate) {
-      pc.addIceCandidate(new RTCIceCandidate(signal.candidate));
+      pc.addIceCandidate(new RTCIceCandidate(signal.candidate))
+        .catch(function () {
+          restart(conn);
+        });
     }
 
-    if (signal.close) {
-      pc.close();
+    if (signal.stop) {
+      this.stop();
+    }
+
+    if (signal.restart) {
+      restart(conn, true);
     }
   }
 
-  function gotDescription(desc) {
-    pc.setLocalDescription(desc);
-    signalingChannel.send({ offer: desc });
+  var restartCount = 0;
+  function restart(conn, signalRestart) {
+    restartCount++;
+    console.log('restart:', restartCount);
+
+    if (!signalRestart) {
+      conn.signalingChannel.send({ restart: 1 });
+    }
+    //避免重复不停地restart
+    if (restartCount <= 5) {
+      reset(conn);
+      start();
+    } else {
+      reset(conn);
+      resetLocal();
+      fireEvent('error', 'P2PChat Error: restart more than 5 times');
+    }
   }
 
-  function sendOffer() {
+  function sendOffer(conn) {
+    var pc = conn.peerConn;
+    var chan = conn.signalingChannel;
     console.log('sendOffer');
     pc.createOffer()
       .then(function (offer) {
@@ -174,13 +201,17 @@ function P2PChat(args) {
       })
       .then(function () {
         console.log('send offer:', pc.localDescription);
-        signalingChannel.send({ offer: pc.localDescription });
+        chan.send({ offer: pc.localDescription });
+        return Promise.resolve();
+      }).catch(function (e) {
+        console.error(e);
+        restart(conn);
       });
   }
 
-  this.requirePermission = function (isVideo) {
+  function requirePermission(isVideo) {
     return navigator.mediaDevices
-      .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
+      .getUserMedia({ "audio": false, "video": isVideo ? { facingMode: "user" } : false })
       .then(function (stream) {
         localStream = stream;
 
@@ -190,105 +221,119 @@ function P2PChat(args) {
         localVideo.srcObject = localStream;
         return Promise.resolve();
       });
-  };
+  }
 
   function getStats() {
     // var findSelected = o =>
     //   Object.keys(o).find(i => o[i].type == "candidatepair" && o[i].selected);
-    if (pc) {
-      pc.getStats().then(console.log);
-      return pc.getStats();
+    if (conn.peerConn) {
+      conn.peerConn.getStats().then(console.log);
+      return conn.peerConn.getStats();
     } else {
       return Promise.resolve();
     }
   }
 
-  this.getPeerConnectionStats = getStats;
-
-  this.start = function (relayOnly) {
-    return new Promise(function (resolve, reject) {
-      var onsuccess = resolve;
-
-      signalingChannel = new SignalingChannel({
-        chat: chat,
-        url: url,
-      });
-      signalingChannel.onmessage(handleSignal);
-      signalingChannel.onclose(function () {
-        if (onsuccess === resolve) {
-          onsuccess = null;
-          reject('cancled');
-        }
-
-        if (localStream) stopStream(localStream);
-        if (remoteStream) stopStream(remoteStream);
-        localVideo.srcObject = null;
-        remoteVideo.srcObject = null;
-
-        signalingChannel = null;
-      })
-      signalingChannel.onGetIceServers(function (iceServers) {
-        pc = new RTCPeerConnection({
-          iceServers: iceServers,
-          iceTransportPolicy: relayOnly ? 'relay' : 'all',
-        });
-
-        // send any ice candidates to the other peer
-        pc.onicecandidate = function (evt) {
-          if (evt.candidate == null) return;
-
-          signalingChannel.send({ "candidate": evt.candidate });
-        };
-        pc.oniceconnectionstatechange = function (evt) {
-          if (pc.iceConnectionState === 'connected') {
-            if (onsuccess === resolve) {
-              onsuccess()
-              onsuccess = null;
-            }
-          } else if (pc.iceConnectionState === 'closed') {
-            if (onsuccess === resolve) {
-              onsuccess = null;
-              reject('cancled');
-            }
-
-            if (signalingChannel) {
-              signalingChannel.close();
-            }
-
-            pc = null;
-
-            fireEvent('close');
-          } else {
-            console.log(pc.iceConnectionState);
-          }
-        }
-
-        pc.ontrack = function (evt) {
-          console.log('add remote stream');
-          console.log(evt);
-          if (remoteStream && remoteStream === evt.streams[0]) {
-            console.log('same stream');
-            return;
-          }
-
-          remoteStream = evt.streams[0];
-          remoteVideo.autoplay = true;
-          remoteVideo.srcObject = remoteStream;
-        };
-
-        if (localStream) pc.addStream(localStream);
-        // only one peer will fire room ready event (the first one enter room)
-        signalingChannel.onRoomReady(function () {
-          sendOffer();
-        });
-      });
-    });
+  function resetLocal() {
+    if (localStream) stopStream(localStream);
+    localStream = null;
+    localVideo.srcObject = null;
   }
 
-  this.onevent = function onevent(f) {
+  function resetRemote() {
+    if (remoteStream) stopStream(remoteStream);
+    remoteStream = null;
+    remoteVideo.srcObject = null;
+  }
+
+
+  function reset(conn) {
+    if (!conn.peerConn && !conn.signalingChannel) return;
+
+    resetRemote();
+
+    try {
+      var pc = conn.peerConn;
+      if (pc) {
+        pc.onicecandidate = null;
+        pc.oniceconnectionstatechange = null;
+        pc.ontrack = null;
+        pc.close();
+      }
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
+      conn.signalingChannel.close();
+    } catch (e) {
+      console.error(e);
+    }
+
+    conn.peerConn = null;
+    conn.signalingChannel = null;
+  }
+
+  function start(relayOnly) {
+    console.log('start');
+    useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
+    if (connection)
+      reset(connection);
+
+    var conn = {};
+    var chan = new SignalingChannel({
+      chat: chat,
+      url: url,
+    });
+    conn.signalingChannel = chan;
+    chan.onGetIceServers(function (iceServers) {
+      var pc = new RTCPeerConnection({
+        iceServers: iceServers,
+        iceTransportPolicy: useRelayOnly ? 'relay' : 'all',
+      });
+      conn.peerConn = pc;
+
+      // send any ice candidates to the other peer
+      pc.onicecandidate = function (evt) {
+        if (evt.candidate == null) return;
+        chan.send({ "candidate": evt.candidate });
+      };
+
+      pc.oniceconnectionstatechange = function (evt) {
+        console.log(pc.iceConnectionState);
+        if (pc.iceConnectionState === 'closed') {
+          reset(conn);
+        } else if (pc.iceConnectionState === 'failed') {
+          restart(conn);
+        }
+      }
+
+      pc.ontrack = function (evt) {
+        console.log('add remote stream');
+        console.log(evt);
+        if (remoteStream && remoteStream === evt.streams[0]) {
+          console.log('same stream');
+          return;
+        }
+
+        remoteStream = evt.streams[0];
+        remoteVideo.autoplay = true;
+        remoteVideo.srcObject = remoteStream;
+      };
+
+      if (localStream) pc.addStream(localStream);
+
+      chan.onMessage(handleSignal.bind(null, conn));
+      // only one peer will fire room ready event (the first one enter room)
+      chan.onRoomReady(sendOffer.bind(null, conn));
+    });
+    connection = conn;
+  }
+
+  function onevent(f) {
     if (handlers.indexOf(f) === -1)
       handlers.push(f);
-  };
+  }
 
   function fireEvent(message, obj) {
     handlers.forEach(function (fn) {
@@ -302,15 +347,17 @@ function P2PChat(args) {
     });
   }
 
-  // stop video chat
-  this.stop = function () {
-    if (signalingChannel != null) {
-      try { signalingChannel.send({ close: 1 }); }
-      catch (err) { }
-    }
-    if (signalingChannel != null) signalingChannel.close();
-    if (pc != null) pc.close();
-  };
+  function stop() {
+    restartCount = 0;
+    resetLocal();
+    reset(connection);
+  }
+
+  this.requirePermission = requirePermission;
+  this.getPeerConnectionStats = getStats;
+  this.start = start;
+  this.onevent = onevent;
+  this.stop = stop;
 
   this.getLocalVideo = function () {
     return localVideo;
@@ -319,13 +366,6 @@ function P2PChat(args) {
   this.getRemoteVideo = function () {
     return remoteVideo;
   };
-}
-
-function ifSupportWebrtc() {
-  var PC = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-  var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia;
-  var edge = navigator.userAgent.indexOf(' Edge') > 0;
-  return !!PC && !!getUserMedia && !edge;
 }
 
 // export default P2PChat

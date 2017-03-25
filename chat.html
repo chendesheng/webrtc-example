@@ -33,8 +33,16 @@
 	<script src="src/p2pchat.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
+		function ifSupportWebrtc() {
+			var PC = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+			var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia;
+			var edge = navigator.userAgent.indexOf(' Edge') > 0;
+			return !!PC && !!getUserMedia && !edge;
+		}
+	</script>
+
+	<script type="text/javascript">
 		var p2pChat;
-		var status;
 		window.onload = function () {
 			var $notsupport = document.getElementById('notsupport');
 			var $main = document.getElementById('main');
@@ -60,16 +68,14 @@
 				chat: 'default',
 				localVideo: $localVideo,
 				remoteVideo: $remoteVideo,
-				url: 'ent.comm100.com/webrtcSignalingService/signaling.ashx',
+				url: 'hosted.comm100.com/webrtcSignalingService/signaling.ashx',
 			});
-			status = 'new';
 
 			p2pChat.onevent(function onVideoChatEvent(type, data) {
 				console.log(type);
 				if (type === 'error') {
 					console.error(data);
 				} else if (type === 'close') {
-					status = 'new';
 				}
 			});
 
@@ -79,38 +85,13 @@
 					p = p2pChat.requirePermission($ifVideo.checked)
 				}
 				p.then(function () {
-					status = 'starting';
 					return p2pChat.start($relayOnly.checked);
-				}).then(function () {
-					p2pChat.getPeerConnectionStats();
-					return Promise.resolve();
-				}).catch(function (err) {
-					console.log(err);
-					status = 'new';
-					return Promise.resolve();
 				});
 			};
 
 			$stop.onclick = function onClickHangup() {
 				p2pChat.stop();
 			};
-
-			setInterval(function () {
-				switch (status) {
-					case 'new':
-						$start.disabled = false;
-						$stop.disabled = true;
-						break;
-					case 'starting':
-						$start.disabled = true;
-						$stop.disabled = false;
-						break;
-					case 'started':
-						$start.disabled = true;
-						$stop.disabled = false;
-						break;
-				}
-			}, 16.6);
 		};
 	</script>
 </head>
