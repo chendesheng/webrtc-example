@@ -11,54 +11,69 @@ function SignalingChannel(args) {
   var messageHandler;
   var roomReadyHandler;
   var getIceServersHandler;
-  var ws = new WebSocket('wss://' + url + '?chatId=' + chat);
-  ws.onopen = function () {
-    console.log('open');
-    pingTimer = setInterval(function () {
-      ws.send('ping');
-    }, 20 * 1000);
-  };
+  var ws;
+  function connect() {
+    ws = new WebSocket('wss://' + url + '?chatId=' + chat);
+    var pingTimes = 0;
+    ws.onopen = function () {
+      console.log('open');
+      pingTimer = setInterval(function () {
+        pingTimes++;
+        ws.send('ping');
+        if (pingTimes >= 3) {
+          clearInterval(pingTimer);
+        }
+      }, 20 * 1000);
+    };
 
-  ws.onmessage = function (evt) {
-    var resp = JSON.parse(evt.data);
-    if (resp.count != null) {
-      if (peersCount === 0 && resp.count > 1) {
+    ws.onmessage = function (evt) {
+      var resp = JSON.parse(evt.data);
+      if (resp.count != null) {
+        console.log(resp);
+        if (peersCount === 0 && resp.count > 1) {
+          ensureGetIceServers();
+          console.log('send hello');
+          // say hello when some one alreay in room
+          send({ hello: 1 });
+        }
+        peersCount = resp.count;
+        if (peersCount < 2) {
+          opponentReady = false;
+        }
+      } else if (resp.hello) {
+        console.log('receive hello');
+        opponentReady = true;
         ensureGetIceServers();
-        console.log('send hello');
-        // say hello when some one alreay in room
-        send({ hello: 1 });
+        checkRoomReady();
+      } else if (resp.d && resp.d.iceServers) {
+        if (iceServers == null) {
+          iceServers = resp.d.iceServers;
+          console.log('get ice servers:', iceServers);
+          iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
+          if (getIceServersHandler) getIceServersHandler(iceServers);
+        }
+      } else {
+        if (messageHandler)
+          messageHandler(resp);
       }
-      peersCount = resp.count;
-      if (peersCount < 2) {
-        opponentReady = false;
-      }
-    } else if (resp.hello) {
-      console.log('receive hello');
-      opponentReady = true;
-      ensureGetIceServers();
-      checkRoomReady();
-    } else if (resp.d && resp.d.iceServers) {
-      if (iceServers == null) {
-        iceServers = resp.d.iceServers;
-        console.log('get ice servers:', iceServers);
-        iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
-        if (getIceServersHandler) getIceServersHandler(iceServers);
-      }
-    } else {
-      if (messageHandler)
-        messageHandler(resp);
-    }
-  };
+    };
 
-  ws.onclose = function () {
-    reset();
-  };
+    ws.onclose = function () {
+      reset();
+    };
+  }
 
-  function reset() {
+  connect();
+
+  function resetState() {
+    clearInterval(pingTimer);
     opponentReady = false;
     iceServers = null;
     peersCount = 0;
-    clearInterval(pingTimer);
+  }
+
+  function reset() {
+    resetState();
     getIceServersHandler = null;
     messageHandler = null;
     roomReadyHandler = null;
@@ -81,16 +96,18 @@ function SignalingChannel(args) {
     ws.send(JSON.stringify(data));
   }
 
-  this.send = send;
-
-  this.close = function () {
+  function close() {
     try {
       reset();
+      ws.onerror = null;
       ws.close();
     } catch (e) {
       console.error(e);
     }
-  };
+  }
+
+  this.send = send;
+  this.close = close;
 
   this.onRoomReady = function (fn) {
     roomReadyHandler = fn;
