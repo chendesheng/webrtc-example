@@ -44,9 +44,13 @@ function SignalingChannel(args) {
         console.log('receive hello');
         opponentReady = true;
         checkRoomReady();
-      } else if (resp.d && resp.d.iceServers) {
+      } else if (resp.s) {
+        if (resp.s !== 200) {
+          console.error(resp);
+        }
+
         if (iceServers == null) {
-          iceServers = resp.d.iceServers;
+          iceServers = resp.d ? resp.d.iceServers || [] : [];
           console.log('get ice servers:', iceServers);
           iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
           if (getIceServersHandler) getIceServersHandler(iceServers);
