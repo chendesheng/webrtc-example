@@ -28,6 +28,10 @@
 			height: 100%;
 			background: black;
 		}
+		
+		#server {
+			width: 300px;
+		}
 	</style>
 	<script src="https://webrtc.github.io/adapter/adapter-latest.js" type="text/javascript"></script>
 	<script src="src/p2pchat.js" type="text/javascript"></script>
@@ -55,6 +59,8 @@
 			var $remoteVideo = document.getElementById('remoteVideo');
 			var $requirePermission = document.getElementById('requirePermission');
 			var $ifVideo = document.getElementById('ifVideo');
+			var $server = document.getElementById('server');
+			var $room = document.getElementById('room');
 
 			if (ifSupportWebrtc()) {
 				$main.style.display = '';
@@ -64,20 +70,27 @@
 				$notsupport.style.display = '';
 			}
 
-			p2pChat = new P2PChat({
-				chat: 'default',
-				localVideo: $localVideo,
-				remoteVideo: $remoteVideo,
-				url: 'hosted.comm100.com/webrtcSignalingService/signaling.ashx',
-			});
+			function createP2PChat() {
+				var p = new P2PChat({
+					chat: $room.value,
+					localVideo: $localVideo,
+					remoteVideo: $remoteVideo,
+					url: $server.value + '/signaling.ashx',
+				});
+				p.onevent(function onVideoChatEvent(type, data) {
+					console.log(type);
+					if (type === 'error') {
+						console.error(data);
+					}
+				});
+				return p;
+			}
 
-			p2pChat.onevent(function onVideoChatEvent(type, data) {
-				console.log(type);
-				if (type === 'error') {
-					console.error(data);
-				} else if (type === 'close') {
-				}
-			});
+			$server.onchange = $room.onchange = function () {
+				p2pChat = createP2PChat();
+			};
+
+			p2pChat = createP2PChat();
 
 			$start.onclick = function onClickCall() {
 				var p = Promise.resolve();
@@ -106,6 +119,10 @@
 		</h3>
 		<p>
 			配置hosts：<br>120.199.9.10 hosted.comm100.com
+		</p>
+		<p>
+			<label>Signaling Server: </label>
+			<input type="text" id="server" value="hosted.comm100.com/webrtcsignalingservice" />
 		</p>
 		<p>
 			<label>Room: </label><input type="text" id="room" value="default" />

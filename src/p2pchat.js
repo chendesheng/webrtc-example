@@ -13,7 +13,8 @@ function SignalingChannel(args) {
   var getIceServersHandler;
   var ws;
   function connect() {
-    ws = new WebSocket('wss://' + url + '?chatId=' + chat);
+    var schema = url.indexOf('localhost') !== -1 ? 'ws://' : 'wss://';
+    ws = new WebSocket(schema + url + '?chatId=' + chat);
     var pingTimes = 0;
     ws.onopen = function () {
       console.log('open');
