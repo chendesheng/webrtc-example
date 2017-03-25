@@ -32,7 +32,6 @@ function SignalingChannel(args) {
       if (resp.count != null) {
         console.log(resp);
         if (peersCount === 0 && resp.count > 1) {
-          ensureGetIceServers();
           console.log('send hello');
           // say hello when some one alreay in room
           send({ hello: 1 });
@@ -44,7 +43,6 @@ function SignalingChannel(args) {
       } else if (resp.hello) {
         console.log('receive hello');
         opponentReady = true;
-        ensureGetIceServers();
         checkRoomReady();
       } else if (resp.d && resp.d.iceServers) {
         if (iceServers == null) {
@@ -78,13 +76,6 @@ function SignalingChannel(args) {
     getIceServersHandler = null;
     messageHandler = null;
     roomReadyHandler = null;
-  }
-
-  function ensureGetIceServers() {
-    if (iceServers == null) {
-      iceServers = [{ urls: 'stun:stun.l.google.com:19302' }]
-      if (getIceServersHandler) getIceServersHandler(iceServers);
-    }
   }
 
   function checkRoomReady() {
