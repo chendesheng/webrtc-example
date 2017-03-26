@@ -350,6 +350,7 @@ function P2PChat(args) {
       chan.onRemoteStart(function() {
         //restart if already started
         if (remoteStream) {
+          restartCount = 0;   //对方重启，本地是好的，这时候重置restartCount
           restart(conn);
           return;
         }
