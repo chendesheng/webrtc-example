@@ -5,11 +5,11 @@ function SignalingChannel(args) {
   var url = args.url;
   var chat = args.chat;
   var iceServers;
-  var opponentReady = false;
   var peersCount = 0;
   var pingTimer;
   var messageHandler;
-  var roomReadyHandler;
+  var remoteStarted = false;
+  var remoteStartHandler;
   var getIceServersHandler;
   var schema = url.indexOf('localhost') === -1 ? 'wss://' : 'ws://';
   var ws;
@@ -38,13 +38,13 @@ function SignalingChannel(args) {
       }
       peersCount = resp.count;
       if (peersCount < 2) {
-        opponentReady = false;
+        remoteStarted = false;
       }
     } else if (resp.start) {
       ensureGetIceServers();
       console.log('receive start');
-      opponentReady = true;
-      checkRoomReady();
+      remoteStarted = true;
+      checkRemoteStart();
     } else if (resp.s) {
       if (resp.s !== 200) {
         console.error(resp);
@@ -77,7 +77,7 @@ function SignalingChannel(args) {
 
   function resetState() {
     clearInterval(pingTimer);
-    opponentReady = false;
+    remoteStarted = false;
     iceServers = null;
     peersCount = 0;
   }
@@ -86,12 +86,12 @@ function SignalingChannel(args) {
     resetState();
     getIceServersHandler = null;
     messageHandler = null;
-    roomReadyHandler = null;
+    remoteStartHandler = null;
   }
 
-  function checkRoomReady() {
-    if (opponentReady && roomReadyHandler) {
-      roomReadyHandler();
+  function checkRemoteStart() {
+    if (remoteStarted && remoteStartHandler) {
+      remoteStartHandler();
     }
   }
 
@@ -112,9 +112,9 @@ function SignalingChannel(args) {
   this.send = send;
   this.close = close;
 
-  this.onRoomReady = function (fn) {
-    roomReadyHandler = fn;
-    checkRoomReady();
+  this.onRemoteStart = function (fn) {
+    remoteStartHandler = fn;
+    checkRemoteStart();
   };
 
   this.onMessage = function (fn) {
