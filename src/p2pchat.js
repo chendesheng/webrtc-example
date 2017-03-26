@@ -222,12 +222,13 @@ function P2PChat(args) {
     return navigator.mediaDevices
       .getUserMedia({ "audio": false, "video": isVideo ? { facingMode: "user" } : false })
       .then(function (stream) {
-        localStream = stream;
-
+        resetLocal();
         console.log('add local stream');
+        localStream = stream;
         localVideo.autoplay = true;
         localVideo.muted = true;
         localVideo.srcObject = localStream;
+
         return Promise.resolve();
       });
   }
