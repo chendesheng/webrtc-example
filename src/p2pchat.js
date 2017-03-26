@@ -135,6 +135,8 @@ function P2PChat(args) {
     var chan = conn.signalingChannel;
 
     if (signal.offer) {
+      console.log('receive offer:', signal.offer);
+      console.log('pc.signalingState:', pc.signalingState)
       pc.setRemoteDescription(new RTCSessionDescription(signal.offer))
         .then(function () {
           return pc.createAnswer()
@@ -153,6 +155,8 @@ function P2PChat(args) {
     }
 
     if (signal.answer) {
+      console.log('receive answer:', signal.answer);
+      console.log('pc.signalingState:', pc.signalingState)
       pc.setRemoteDescription(new RTCSessionDescription(signal.answer))
         .then(function () {
           console.log('set answer success');
@@ -165,6 +169,8 @@ function P2PChat(args) {
     }
 
     if (signal.candidate) {
+      console.log('receive candidate:', signal.candidate);
+      console.log('pc.iceGatheringState', pc.iceGatheringState);
       pc.addIceCandidate(new RTCIceCandidate(signal.candidate))
         .catch(function () {
           restart(conn);
@@ -172,10 +178,12 @@ function P2PChat(args) {
     }
 
     if (signal.stop) {
+      console.log('receive stop');
       this.stop();
     }
 
     if (signal.restart) {
+      console.log('receive restart');
       restart(conn, true);
     }
   }
