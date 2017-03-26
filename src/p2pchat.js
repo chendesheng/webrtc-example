@@ -31,6 +31,7 @@ function SignalingChannel(args) {
     if (resp.count != null) {
       console.log(resp);
       if (peersCount === 0 && resp.count > 1) {
+        ensureGetIceServers();
         console.log('send hello');
         // say hello when some one alreay in room
         send({ hello: 1 });
@@ -40,6 +41,7 @@ function SignalingChannel(args) {
         opponentReady = false;
       }
     } else if (resp.hello) {
+      ensureGetIceServers();
       console.log('receive hello');
       opponentReady = true;
       checkRoomReady();
@@ -51,7 +53,7 @@ function SignalingChannel(args) {
       if (iceServers == null) {
         iceServers = resp.d ? resp.d.iceServers || [] : [];
         console.log('get ice servers:', iceServers);
-        iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
+        iceServers.push(DEFAULT_STUN_SERVER);
         if (getIceServersHandler) getIceServersHandler(iceServers);
       }
     } else {
@@ -63,6 +65,15 @@ function SignalingChannel(args) {
   ws.onclose = function () {
     reset();
   };
+
+  var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302'};
+
+  function ensureGetIceServers() {
+    if (iceServers == null) {
+      iceServers = [DEFAULT_STUN_SERVER];
+      if (getIceServersHandler) getIceServersHandler(iceServers);
+    }
+  }
 
   function resetState() {
     clearInterval(pingTimer);
