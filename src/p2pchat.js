@@ -11,62 +11,58 @@ function SignalingChannel(args) {
   var messageHandler;
   var roomReadyHandler;
   var getIceServersHandler;
+  var schema = url.indexOf('localhost') === -1 ? 'wss://' : 'ws://';
   var ws;
-  function connect() {
-    var schema = url.indexOf('localhost') === -1 ? 'wss://' : 'ws://';
-    ws = new WebSocket(schema + url + '?chatId=' + chat);
-    var pingTimes = 0;
-    ws.onopen = function () {
-      console.log('open');
-      pingTimer = setInterval(function () {
-        pingTimes++;
-        ws.send('ping');
-        if (pingTimes >= 3) {
-          clearInterval(pingTimer);
-        }
-      }, 20 * 1000);
-    };
-
-    ws.onmessage = function (evt) {
-      var resp = JSON.parse(evt.data);
-      if (resp.count != null) {
-        console.log(resp);
-        if (peersCount === 0 && resp.count > 1) {
-          console.log('send hello');
-          // say hello when some one alreay in room
-          send({ hello: 1 });
-        }
-        peersCount = resp.count;
-        if (peersCount < 2) {
-          opponentReady = false;
-        }
-      } else if (resp.hello) {
-        console.log('receive hello');
-        opponentReady = true;
-        checkRoomReady();
-      } else if (resp.s) {
-        if (resp.s !== 200) {
-          console.error(resp);
-        }
-
-        if (iceServers == null) {
-          iceServers = resp.d ? resp.d.iceServers || [] : [];
-          console.log('get ice servers:', iceServers);
-          iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
-          if (getIceServersHandler) getIceServersHandler(iceServers);
-        }
-      } else {
-        if (messageHandler)
-          messageHandler(resp);
+  ws = new WebSocket(schema + url + '?chatId=' + chat);
+  var pingTimes = 0;
+  ws.onopen = function () {
+    console.log('open');
+    pingTimer = setInterval(function () {
+      pingTimes++;
+      ws.send('ping');
+      if (pingTimes >= 3) {
+        clearInterval(pingTimer);
       }
-    };
+    }, 20 * 1000);
+  };
 
-    ws.onclose = function () {
-      reset();
-    };
-  }
+  ws.onmessage = function (evt) {
+    var resp = JSON.parse(evt.data);
+    if (resp.count != null) {
+      console.log(resp);
+      if (peersCount === 0 && resp.count > 1) {
+        console.log('send hello');
+        // say hello when some one alreay in room
+        send({ hello: 1 });
+      }
+      peersCount = resp.count;
+      if (peersCount < 2) {
+        opponentReady = false;
+      }
+    } else if (resp.hello) {
+      console.log('receive hello');
+      opponentReady = true;
+      checkRoomReady();
+    } else if (resp.s) {
+      if (resp.s !== 200) {
+        console.error(resp);
+      }
 
-  connect();
+      if (iceServers == null) {
+        iceServers = resp.d ? resp.d.iceServers || [] : [];
+        console.log('get ice servers:', iceServers);
+        iceServers.push({ urls: 'stun:stun.l.google.com:19302' });
+        if (getIceServersHandler) getIceServersHandler(iceServers);
+      }
+    } else {
+      if (messageHandler)
+        messageHandler(resp);
+    }
+  };
+
+  ws.onclose = function () {
+    reset();
+  };
 
   function resetState() {
     clearInterval(pingTimer);
