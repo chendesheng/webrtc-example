@@ -346,8 +346,15 @@ function P2PChat(args) {
       };
 
       chan.onMessage(handleSignal.bind(null, conn));
-      // only one peer will fire room ready event (the first one enter room)
-      chan.onRoomReady(sendOffer.bind(null, conn));
+      // only one peer will fire start event (the first one enter room)
+      chan.onRemoteStart(function() {
+        //restart if already started
+        if (remoteStream) {
+          restart(conn);
+          return;
+        }
+        sendOffer(conn);
+      });
     });
     connection = conn;
   }
