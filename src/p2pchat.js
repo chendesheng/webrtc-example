@@ -32,17 +32,17 @@ function SignalingChannel(args) {
       console.log(resp);
       if (peersCount === 0 && resp.count > 1) {
         ensureGetIceServers();
-        console.log('send hello');
-        // say hello when some one alreay in room
-        send({ hello: 1 });
+        console.log('send start');
+        // say start when some one alreay in room
+        send({ start: 1 });
       }
       peersCount = resp.count;
       if (peersCount < 2) {
         opponentReady = false;
       }
-    } else if (resp.hello) {
+    } else if (resp.start) {
       ensureGetIceServers();
-      console.log('receive hello');
+      console.log('receive start');
       opponentReady = true;
       checkRoomReady();
     } else if (resp.s) {
@@ -221,6 +221,7 @@ function P2PChat(args) {
   function sendOffer(conn) {
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
+
     console.log('sendOffer');
     pc.createOffer()
       .then(function (offer) {
