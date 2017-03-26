@@ -234,8 +234,6 @@ function P2PChat(args) {
   }
 
   function getStats() {
-    // var findSelected = o =>
-    //   Object.keys(o).find(i => o[i].type == "candidatepair" && o[i].selected);
     if (conn.peerConn) {
       conn.peerConn.getStats().then(console.log);
       return conn.peerConn.getStats();
