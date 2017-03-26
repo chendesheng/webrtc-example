@@ -336,20 +336,14 @@ function P2PChat(args) {
         }
       }
 
-      pc.ontrack = function (evt) {
-        console.log('add remote stream');
-        console.log(evt);
-        if (remoteStream && remoteStream === evt.streams[0]) {
-          console.log('same stream');
-          return;
-        }
+      if (localStream) pc.addStream(localStream);
 
-        remoteStream = evt.streams[0];
+      pc.onaddstream = function (evt) {
+        console.log('add remote stream');
+        remoteStream = evt.stream;
         remoteVideo.autoplay = true;
         remoteVideo.srcObject = remoteStream;
       };
-
-      if (localStream) pc.addStream(localStream);
 
       chan.onMessage(handleSignal.bind(null, conn));
       // only one peer will fire room ready event (the first one enter room)
