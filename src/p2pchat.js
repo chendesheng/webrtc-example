@@ -240,7 +240,7 @@ function P2PChat(args) {
 
   function requirePermission(isVideo) {
     return navigator.mediaDevices
-      .getUserMedia({ "audio": false, "video": isVideo ? { facingMode: "user" } : false })
+      .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
       .then(function (stream) {
         resetLocal();
         console.log('add local stream');
