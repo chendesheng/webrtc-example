@@ -276,6 +276,7 @@ function P2PChat(args) {
 
 
   function reset(conn) {
+    if (!conn) return;
     if (!conn.peerConn && !conn.signalingChannel) return;
 
     resetRemote();
