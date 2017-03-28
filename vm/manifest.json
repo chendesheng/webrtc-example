@@ -1,0 +1,16 @@
+{
+  "short_name": "Comm100 Live Chat",
+  "name": "Comm100 Live Chat - Agent Console",
+  "icons": [
+    {
+      "src": "logo256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#ffffff",
+  "theme_color": "#329fd9"
+}
