@@ -20,7 +20,7 @@ function SignalingChannel(args) {
     pingTimer = setInterval(function () {
       pingTimes++;
       ws.send('ping');
-      if (pingTimes >= 3) {
+      if (pingTimes >= 100) {
         clearInterval(pingTimer);
       }
     }, 20 * 1000);
@@ -335,7 +335,7 @@ function P2PChat(args) {
         })
         .catch(function (err) {
           console.error(err);
-          restart(conn);
+          restart(conn, true, true);
         });
     }
 
@@ -349,7 +349,7 @@ function P2PChat(args) {
         })
         .catch(function (err) {
           console.log(err);
-          restart(conn);
+          restart(conn, true, true);
         });
     }
 
@@ -358,7 +358,7 @@ function P2PChat(args) {
       // console.log('pc.iceGatheringState', pc.iceGatheringState);
       pc.addIceCandidate(new RTCIceCandidate(signal.candidate))
         .catch(function () {
-          restart(conn);
+          restart(conn, true, true);
         });
     }
 
@@ -369,20 +369,24 @@ function P2PChat(args) {
 
     if (signal.restart) {
       console.log('receive restart');
-      restart(conn, true);
+      restart(conn, false, false);
     }
   }
 
   var restartCount = 0;
-  function restart(conn, notSignalRestart) {
-    restartCount++;
+  function restart(conn, signalRestart, checkRestartCount) {
+    if (checkRestartCount) restartCount++;
+
     console.log('restart:', restartCount);
 
-    if (!notSignalRestart) {
+    if (!signalRestart) {
       conn.signalingChannel.send({ restart: 1 });
     }
-    //避免重复不停地restart
-    if (restartCount <= 5) {
+
+    // catch到exception时checkRestartCount为true
+    // checkRestartCount为true的时候控制restart次数
+    // 避免由于异常导致不停的restart
+    if (!checkRestartCount || restartCount <= 5) {
       reset(conn);
       start();
     } else {
@@ -408,7 +412,7 @@ function P2PChat(args) {
         return Promise.resolve();
       }).catch(function (e) {
         console.error(e);
-        restart(conn);
+        restart(conn, true, true);
       });
   }
 
@@ -515,14 +519,14 @@ function P2PChat(args) {
         if (pc.iceConnectionState === 'closed') {
           reset(conn);
         } else if (pc.iceConnectionState === 'failed') {
-          restart(conn);
+          restart(conn, true, true);
         }
       }
 
       var localStream = deviceRequester.getStream();
       deviceRequester.onGetDevice(function (stream) {
         initLocalVideo(stream);
-        restart(conn);
+        restart(conn, true, false);
       });
       if (localStream) pc.addStream(localStream);
 
@@ -538,8 +542,7 @@ function P2PChat(args) {
       chan.onRemoteStart(function () {
         //restart if already started
         if (remoteStream) {
-          restartCount = 0;   //对方重启，本地是好的，这时候重置restartCount
-          restart(conn);
+          restart(conn, true, false);
           return;
         }
         sendOffer(conn);
