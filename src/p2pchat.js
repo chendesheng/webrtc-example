@@ -379,14 +379,13 @@ function P2PChat(args) {
 
     console.log('restart:', restartCount);
 
-    if (!signalRestart) {
-      conn.signalingChannel.send({ restart: 1 });
-    }
-
     // catch到exception时checkRestartCount为true
     // checkRestartCount为true的时候控制restart次数
     // 避免由于异常导致不停的restart
     if (!checkRestartCount || restartCount <= 5) {
+      if (signalRestart) {
+        conn.signalingChannel.send({ restart: 1 });
+      }
       reset(conn);
       start();
     } else {
