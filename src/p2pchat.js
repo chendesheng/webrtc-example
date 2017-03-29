@@ -219,7 +219,7 @@ function DeviceRequester(requestDevices) {
     if (fn) {
       monitor.onDeviceChange(function (currentDevices) {
         // 去掉设备后退成false，这样再插上会重连
-        if (allowedDevices.auido && !currentDevices.auido) {
+        if (allowedDevices.audio && !currentDevices.audio) {
           allowedDevices.audio = false;
         }
         if (allowedDevices.video && !currentDevices.video) {
