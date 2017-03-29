@@ -301,6 +301,10 @@ function DeviceRequester(requestDevices) {
     return localStream;
   };
 
+  this.getDevices = function () {
+    return monitor.getDevices();
+  };
+
   this.reset = reset;
 }
 
@@ -362,14 +366,23 @@ function P2PChat(args) {
         });
     }
 
-    if (signal.stop) {
-      console.log('receive stop');
-      this.stop();
-    }
-
     if (signal.restart) {
       console.log('receive restart');
       restart(conn, false, false);
+    }
+
+    // 对方发送offer时发现没有device就发送nodevice
+    // 由有device的一方发送offer
+    // 双方都没有device就停住
+    if (signal.nodevice) {
+      console.log('receive nodevice');
+      deviceRequester.getDevices().then(function (devices) {
+        if (devices.audio || devices.video) {
+          sendOffer(conn);
+        } else {
+          console.log('both nodevice');
+        }
+      });
     }
   }
 
@@ -399,20 +412,29 @@ function P2PChat(args) {
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
 
-    console.log('sendOffer');
-    pc.createOffer()
-      .then(function (offer) {
-        console.log('create offer:', offer);
-        return pc.setLocalDescription(offer);
-      })
-      .then(function () {
-        console.log('send offer:', pc.localDescription);
-        chan.send({ offer: pc.localDescription });
-        return Promise.resolve();
-      }).catch(function (e) {
-        console.error(e);
-        restart(conn, true, true);
-      });
+    deviceRequester.getDevices().then(function (devices) {
+      // 没有设备发送nodevice
+      if (!devices.audio && !devices.video) {
+        console.log('send nodevice');
+        chan.send({ nodevice: 1 });
+        return;
+      }
+
+      console.log('sendOffer');
+      pc.createOffer()
+        .then(function (offer) {
+          console.log('create offer:', offer);
+          return pc.setLocalDescription(offer);
+        })
+        .then(function () {
+          console.log('send offer:', pc.localDescription);
+          chan.send({ offer: pc.localDescription });
+          return Promise.resolve();
+        }).catch(function (e) {
+          console.error(e);
+          restart(conn, true, true);
+        });
+    })
   }
 
   function initLocalVideo(stream) {
