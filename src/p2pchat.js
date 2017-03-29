@@ -66,7 +66,7 @@ function SignalingChannel(args) {
     reset();
   };
 
-  var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302'};
+  var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302' };
 
   function ensureGetIceServers() {
     if (iceServers == null) {
@@ -129,6 +129,181 @@ function SignalingChannel(args) {
   };
 }
 
+function DeviceMonitor() {
+  var pollTimer;
+  var currentDevices;
+  var deviceChangeHandler;
+
+  function onDeviceChange(fn) {
+    deviceChangeHandler = fn;
+
+    if (deviceChangeHandler) {
+      // firefox只有在getUserMedia允许后才会触发ondevicechange
+      // chrome的ondevicechange可能会同时有多次
+      // 其他浏览器未知
+      getDevices().then(function (devices) {
+        currentDevices = devices;
+        resetPollTimer();
+        pollTimer = setInterval(function () {
+          getDevices().then(checkDevices);
+        }, 1000);
+      });
+    } else {
+      resetPollTimer();
+    }
+  }
+
+  function resetPollTimer() {
+    if (pollTimer) {
+      clearInterval(pollTimer);
+      pollTimer = null;
+    }
+  }
+
+  function hasDevice(devices, kind) {
+    for (var i = 0; i < devices.length; i++) {
+      var d = devices[i];
+      if (d.kind == kind) return true;
+    }
+    return false;
+  }
+
+  function checkDevices(devices) {
+    try {
+      if (!currentDevices) currentDevices = devices;
+
+      if (devices.audio == currentDevices.audio && devices.video == currentDevices.video) return;
+      currentDevices = devices;
+      if (deviceChangeHandler) deviceChangeHandler(devices);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function getDevices() {
+    return navigator.mediaDevices.enumerateDevices()
+      .then(function (devices) {
+        return Promise.resolve({
+          audio: hasDevice(devices, 'audioinput'),
+          video: hasDevice(devices, 'videoinput')
+        });
+      });
+  }
+
+  function reset() {
+    deviceChangeHandler = null;
+    navigator.mediaDevices.ondevicechange = null;
+    resetPollTimer();
+  }
+
+  this.onDeviceChange = onDeviceChange;
+  this.getDevices = function () {
+    return getDevices().then(function (devices) {
+      checkDevices(devices);
+      return Promise.resolve(devices);
+    });
+  };
+  this.reset = reset;
+}
+
+function DeviceRequester(requestDevices) {
+  // 已允许的设备
+  var allowedDevices = {
+    audio: false,
+    video: false,
+  };
+
+  var monitor = new DeviceMonitor();
+
+  function onGetDevice(fn) {
+    if (fn) {
+      monitor.onDeviceChange(function (currentDevices) {
+        // 去掉设备后退成false，这样再插上会重连
+        if (allowedDevices.auido && !currentDevices.auido) {
+          allowedDevices.audio = false;
+        }
+        if (allowedDevices.video && !currentDevices.video) {
+          allowedDevices.video = false;
+        }
+        console.log('allowedDevices: ', allowedDevices);
+        console.log('currentDevices: ', currentDevices);
+        // 已经满足设备要求了
+        if (allowedDevices.audio == requestDevices.audio
+          && allowedDevices.video == requestDevices.video) return;
+
+        // 只有设备比原来变多了才会再请求
+        if ((currentDevices.audio && !allowedDevices.audio)
+          || (currentDevices.video && !allowedDevices.video)) {
+          dorequest(currentDevices).then(fn);
+        }
+      });
+    } else {
+      monitor.onDeviceChange(null);
+    }
+  }
+
+  var localStream;
+  function getUserMedia(devices) {
+    stopStream(localStream);
+    // 总是请求前置摄像头
+    return navigator.mediaDevices.getUserMedia({
+      audio: devices.audio,
+      video: devices.video ? { facingMode: 'user' } : false,
+    }).then(function (stream) {
+      localStream = stream;
+      return Promise.resolve(stream);
+    });
+  }
+
+  function dorequest(currentDevices) {
+    // 只请求存在的设备
+    var devices = {
+      audio: requestDevices.audio && currentDevices.audio,
+      video: requestDevices.video && currentDevices.video
+    };
+
+    // 没有请求的设备视为成功
+    if (!devices.audio && !devices.video) {
+      allowedDevices = devices;
+      return Promise.resolve();
+    }
+
+    // 允许后更新allowedDevices，拒绝了allowedDevices不变
+    return getUserMedia(devices).then(function (stream) {
+      allowedDevices = devices;
+      console.log('get stream:', stream);
+      return Promise.resolve(stream);
+    });
+  }
+
+  function stopStream(stream) {
+    if (stream) {
+      stream.getTracks().forEach(function (t) {
+        t.stop();
+      });
+    }
+  }
+
+  function reset() {
+    allowedDevices = { audio: false, video: false };
+    stopStream(localStream);
+    localStream = null;
+    monitor.reset();
+  }
+
+  this.request = function () {
+    return monitor.getDevices().then(dorequest);
+  };
+
+  this.onGetDevice = onGetDevice;
+
+  this.getStream = function () {
+    return localStream;
+  };
+
+  this.reset = reset;
+}
+
 function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
@@ -136,18 +311,17 @@ function P2PChat(args) {
   var url = args.url;
   var handlers = [];
   var connection = null;
-  var localStream;
   var remoteStream;
   var useRelayOnly = false;
 
   function handleSignal(conn, signal) {
-    console.log(signal);
+    // console.log(signal);
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
 
     if (signal.offer) {
-      console.log('receive offer:', signal.offer);
-      console.log('pc.signalingState:', pc.signalingState)
+      // console.log('receive offer:', signal.offer);
+      // console.log('pc.signalingState:', pc.signalingState)
       pc.setRemoteDescription(new RTCSessionDescription(signal.offer))
         .then(function () {
           return pc.createAnswer()
@@ -166,8 +340,8 @@ function P2PChat(args) {
     }
 
     if (signal.answer) {
-      console.log('receive answer:', signal.answer);
-      console.log('pc.signalingState:', pc.signalingState)
+      // console.log('receive answer:', signal.answer);
+      // console.log('pc.signalingState:', pc.signalingState)
       pc.setRemoteDescription(new RTCSessionDescription(signal.answer))
         .then(function () {
           console.log('set answer success');
@@ -180,8 +354,8 @@ function P2PChat(args) {
     }
 
     if (signal.candidate) {
-      console.log('receive candidate:', signal.candidate);
-      console.log('pc.iceGatheringState', pc.iceGatheringState);
+      // console.log('receive candidate:', signal.candidate);
+      // console.log('pc.iceGatheringState', pc.iceGatheringState);
       pc.addIceCandidate(new RTCIceCandidate(signal.candidate))
         .catch(function () {
           restart(conn);
@@ -200,11 +374,11 @@ function P2PChat(args) {
   }
 
   var restartCount = 0;
-  function restart(conn, signalRestart) {
+  function restart(conn, notSignalRestart) {
     restartCount++;
     console.log('restart:', restartCount);
 
-    if (!signalRestart) {
+    if (!notSignalRestart) {
       conn.signalingChannel.send({ restart: 1 });
     }
     //避免重复不停地restart
@@ -212,8 +386,8 @@ function P2PChat(args) {
       reset(conn);
       start();
     } else {
-      reset(conn);
       resetLocal();
+      reset(conn);
       fireEvent('error', 'P2PChat Error: restart more than 5 times');
     }
   }
@@ -238,17 +412,24 @@ function P2PChat(args) {
       });
   }
 
-  function requirePermission(isVideo) {
-    return navigator.mediaDevices
-      .getUserMedia({ "audio": true, "video": isVideo ? { facingMode: "user" } : false })
-      .then(function (stream) {
-        resetLocal();
-        console.log('add local stream');
-        localStream = stream;
-        localVideo.autoplay = true;
-        localVideo.muted = true;
-        localVideo.srcObject = localStream;
+  function initLocalVideo(stream) {
+    console.log('add local stream: ', stream);
+    localVideo.autoplay = true;
+    localVideo.muted = true;
+    localVideo.srcObject = stream;
+  }
 
+  var deviceRequester;
+  function requirePermission(isVideo) {
+    resetLocal();
+
+    deviceRequester = new DeviceRequester({
+      audio: true,
+      video: isVideo,
+    });
+    return deviceRequester.request()
+      .then(function (stream) {
+        initLocalVideo(stream);
         return Promise.resolve();
       });
   }
@@ -263,8 +444,7 @@ function P2PChat(args) {
   }
 
   function resetLocal() {
-    if (localStream) stopStream(localStream);
-    localStream = null;
+    if (deviceRequester) deviceRequester.reset();
     localVideo.srcObject = null;
   }
 
@@ -274,8 +454,9 @@ function P2PChat(args) {
     remoteVideo.srcObject = null;
   }
 
-
   function reset(conn) {
+    if (deviceRequester) deviceRequester.onGetDevice(null);
+
     if (!conn) return;
     if (!conn.peerConn && !conn.signalingChannel) return;
 
@@ -301,6 +482,7 @@ function P2PChat(args) {
 
     conn.peerConn = null;
     conn.signalingChannel = null;
+    connection = null;
   }
 
   function start(relayOnly) {
@@ -337,6 +519,11 @@ function P2PChat(args) {
         }
       }
 
+      var localStream = deviceRequester.getStream();
+      deviceRequester.onGetDevice(function (stream) {
+        initLocalVideo(stream);
+        restart(conn);
+      });
       if (localStream) pc.addStream(localStream);
 
       pc.onaddstream = function (evt) {
@@ -348,7 +535,7 @@ function P2PChat(args) {
 
       chan.onMessage(handleSignal.bind(null, conn));
       // only one peer will fire start event (the first one enter room)
-      chan.onRemoteStart(function() {
+      chan.onRemoteStart(function () {
         //restart if already started
         if (remoteStream) {
           restartCount = 0;   //对方重启，本地是好的，这时候重置restartCount

@@ -61,6 +61,14 @@
 			var $ifVideo = document.getElementById('ifVideo');
 			var $server = document.getElementById('server');
 			var $room = document.getElementById('room');
+			var $devices = document.getElementById('devices');
+			var dm = new DeviceMonitor();
+			dm.getDevices().then(function (devices) {
+				$devices.textContent = JSON.stringify(devices);
+			});
+			dm.onDeviceChange(function (devices) {
+				$devices.textContent = JSON.stringify(devices);
+			});
 
 			if (ifSupportWebrtc()) {
 				$main.style.display = '';
@@ -138,6 +146,7 @@
 			<label>Require permission before start: </label><input type="checkbox" checked id="requirePermission" />
 		</p>
 		<p>
+			<label>Current devices:</label><span id="devices"></span>
 		</p>
 		<P>
 			<button id="start">Start</button>
