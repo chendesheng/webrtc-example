@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function url_query(param, defaultValue) {
+		var url = location.href;
+		var paramString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+		var paramObj = {};
+		for (var i = 0; j = paramString[i]; i++) {
+			paramObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+		}
+		var returnValue = paramObj[param.toLowerCase()];
+		if (typeof(returnValue) == "undefined") {
+			return defaultValue;
+		} else {
+			return returnValue;
+		}
+	}
+
+	var siteId = parseInt(url_query('siteId'));
+	var planId = parseInt(url_query('planId'));
+
+	window.onload = function() {
+		var $siteId = document.getElementById('siteIdInput');
+		var $planId = document.getElementById('planIdInput');
+		var $open = document.getElementById('open');
+
+		$siteId.value = siteId;
+		$planId.value = planId;
+
+		$open.onclick = function() {
+			window.location.href = 'chatbutton.html?siteId=' + siteIdInput.value + '&planId=' + planIdInput.value+'&comm100IsTesting=1';
+		}
+	}
+	</script>
+</head>
+<body>
+Site ID:<input id="siteIdInput" type="text" value="" />
+Plan ID:<input id="planIdInput" type="text" value="" />
+<button id="open">Open Chat Button</button>
+
+
+                <!--Begin Comm100 Live Chat Code-->
+<div id="comm100-button-3740"></div>
+<script type="text/javascript">
+  var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:planId,div_id:"comm100-button-"+planId}),t.site_id=siteId,t.main_code_plan=planId,e("newlivechatjs/newlivechat.js?siteId="),setTimeout(function(){t.loaded||e("https://entmax.comm100.com/chatserver/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
+</script>
+<!--End Comm100 Live Chat Code-->
+
+</body>
+</html>
