@@ -5,7 +5,7 @@ var Comm100API = (Comm100API || { loaded: false });
 
     var isTesting = window.location.href.indexOf('comm100IsTesting') != -1;
     if (isTesting) {
-        comm100_server='http://ent.comm100.com/chatserver';
+        comm100_server='https://ent.comm100.com/chatserver';
     }
 
     var $l = function () { };
