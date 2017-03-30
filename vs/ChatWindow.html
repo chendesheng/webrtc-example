@@ -17,11 +17,10 @@
 <!--<![endif]-->
 <head>
     <title></title>
-	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <style type="text/css">body {display: none;}</style>
 
-    <link href="css/chat7_4.css?v=20170209" rel="stylesheet" type="text/css" />
+    <link href="https://ent.comm100.com/chatserver/css/chat7_4.css?v=20170209" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/main.js?v20170112"></script>
 
@@ -40,45 +39,11 @@
             document.write('<scr' + 'ipt defer type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + ifembedded + popupfromembedded + '"></scr' + 'ipt>');
         })();
     </script>
-	<!--<style type="text/css">.icon-audio-chat, .icon-video-chat{display: block !important;}</style>-->
 </head>
 
 <body class="ui-loading">
 <div class="whole-window">
-    <div id="media-chat-window" class="media-chat-window hidden">
-		<div class="requesting">
-			<div class="agentAvatar"><img class="avatarImg" src="" /></div><div class="agentName"></div>
-            <div class="waiting">
-				<div class="textAudio">
-					<span class="iconfont icon-audio"></span><div class="chatTypeText LanguageAudioChatCalling"></div>
-				</div>
-				<div class="textVideo">
-					<span class="iconfont icon-video"></span><div class="chatTypeText LanguageVideoChatCalling"></div>
-				</div>
-				<div class="waitingAni"><span>.</span><span>.</span><span>.</span></div>
-			</div>
-			<div class="buttons">
-				<div class="button accept" onclick="MediaChat.accept();"><span class="iconfont icon-accept"></span></div>
-				<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
-			</div>
-		</div>
-		<div class="chatting">
-			<div class="chattingAgent">
-				<div class="agentImg"><img class="avatarImg" src="" /></div>
-				<div class="agentName"></div>
-				<div class="chattingTime">
-					<span class="iconfont icon-audio"></span>
-					<div class="chatTypeText LanguageAudioChatCalling"></div>
-					<div class="chattingDuration">00:00</div>
-				</div>
-			</div>
-			<video id="remoteVideo"></video>
-			<video id="localVideo"></video>
-			<div class="buttons">
-				<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
-			</div>
-		</div>
-	</div>
+    <div id="media-chat-window" class="media-chat-window hidden"></div>
     <div id="main">
 	    <div class="title end-chat-top">
 		    <span id="embedded-window-title" class="title-text embedded-only"></span>

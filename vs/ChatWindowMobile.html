@@ -1,8 +1,7 @@
-<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng"> 
 <head> 
 	<title>Comm100 Chat Window</title> 
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no"> 
 	<link rel="stylesheet" href="mobile/themes/custom.min.css" />
 	<link rel="stylesheet" href="mobile/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="mobile/jquery.mobile.structure-1.4.5.min.css" />
@@ -26,7 +25,7 @@
 	        var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
 	        chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
 
-	        document.write('<link href="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
+	        document.write('<link href="livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
 	    })();
 	</script>
 </head> 
@@ -276,7 +275,7 @@
 	<script type="text/javascript">
 	    var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
 	    chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
-	    document.write('<scr' + 'ipt type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
+	    document.write('<scr' + 'ipt type="text/javascript" src="livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
 	</script>
 </body>
 </html>

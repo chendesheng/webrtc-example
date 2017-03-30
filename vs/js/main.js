@@ -694,16 +694,8 @@ function update_dropdownlist_selected(ele, val) {
     var sp = ele.parentNode.lastChild;
     var selected = ele.options[ele.selectedIndex];
     if (selected) set_text(sp, inner_text(selected));
-}﻿function soundManager(btn_id, sound_resources) {
-    this.soundUrls = sound_resources;
-    this.players = sound_resources.map(function(resource) {        
-        return {
-            type: resource.type,
-            src: resource.url,
-            player: new window.Audio(resource.url)
-        };
-    });
-
+}﻿
+function soundManager(btn_id, sound_url) {
     function setStatus(status) {
         replace_class($(btn_id), /sound-on|sound-off/, 'sound-' + status);
         cookie.set('sound', status);
@@ -718,52 +710,21 @@ function update_dropdownlist_selected(ele, val) {
     setStatus(getStatus());  // 初始化界面
     this.toggle = function () {
         setStatus(isStatusOn() ? 'off' : 'on');
-        this.stop();
     };
 
-    // try {
-    //     this.play = playByHTML5(type, ifLoop);
-    // } catch (e) {
-    //     this.play = playByFlash();
-    // }
+    try {
+        this.play = playByHTML5();
+    } catch (e) {
+        this.play = playByFlash();
+    }
 
-    this.play = function(type, ifLoop) {
-        var tmp;
-        this.players.forEach(function(item) {
-            if(item.type === type) {
-                tmp = item;
-                return false;
-            }
-        });
-        if(typeof tmp !== 'undefined') {
+    function playByHTML5() {
+        var player = new window.Audio(sound_url);
+        return function () {
             if (isStatusOn()) {
-                tmp.player.loop = ifLoop ? 'loop' : '';
-                tmp.player.play();
+                player.play();
             }
-        }
-    };
-
-    this.stop = function() {
-        this.players.forEach(function(item) {            
-            item.player.loop = '';
-        });
-    };
-
-    function playByHTML5(type, ifLoop) {
-        var tmp;
-        this.players.forEach(function(item) {
-            if(item.type === type) {
-                tmp = item;
-                return false;
-            }
-        });
-        console.log('normal: ', sound_type.normal);
-        if(typeof tmp !== 'undefined') {
-            if (isStatusOn()) {
-                tmp.player.loop = ifLoop ? 'loop' : '';
-                tmp.player.play();
-            }
-        }
+        };
     }
 
     function playByFlash() {
@@ -775,7 +736,7 @@ function update_dropdownlist_selected(ele, val) {
         function safePlay(success) {
             if (isStatusOn()) {
                 try {
-                    getFlashMovie('div-sound-player').playMP3(this.src, 'soundPlayerIOError');
+                    getFlashMovie('div-sound-player').playMP3(sound_url, 'soundPlayerIOError');
                 } catch (e) {
                     return; //wait until it's working
                 }
@@ -856,12 +817,6 @@ var login_window_type = {
     'noLogin': 1,
     'canLogin': 2,
     'needLogin': 3
-};
-
-var sound_type = {
-    'normal': 0,
-    'mediaChatWaiting': 1,
-    'mediaChatEnd': 2
 };
 
 var message_code = {
@@ -953,7 +908,6 @@ var visitorGuid = url_query('visitorGuid', '');
 var sessionId = 0;
 var chatId = 0;
 var chatGuid = url_query('guid', '');
-var ifSupportWebrtc = ifSupportWebrtc();
 var nav_params = {
     'requesting_page_title': decodeURIComponent(url_query('pageTitle', '')),
     'requesting_page_url': decodeURIComponent(url_query('pageUrl', '')),
@@ -973,7 +927,7 @@ var nav_params = {
         url_query('ssoInfo', null) === null ? null : url_query('ssoInfo').replace(/\+/g, '%20'))
         ),
     'chatGroup': url_query('chatGroup', ''),
-    'ifSupportWebrtc': ifSupportWebrtc,
+    'ifSupportWebrtc': false
 };
 
 nav_params.chatGroup = (+nav_params.chatGroup >= 0 && Math.floor(+nav_params.chatGroup) === +nav_params.chatGroup) ? nav_params.chatGroup : null;
@@ -1066,8 +1020,6 @@ function initialize(data) {
 
     snapshot_params = data.snapshot_params;
 
-    init_data.audio_video_waiting_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=1';
-    init_data.audio_video_end_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=2';
     init_sound_alert();
 }
 
@@ -1161,11 +1113,10 @@ function initconfigs(configs) {
         }
     }
 
-    // var media_chat;
-    //TESTCODE
-    init_data.if_can_audio_chat = true;
-    init_data.if_can_video_chat = true;
-    if (ifSupportWebrtc && (init_data.if_can_audio_chat || init_data.if_can_video_chat)) {
+    main();
+
+    var media_chat;
+    if (init_data.if_can_audio_chat || init_data.if_can_video_chat) {
         var script = document.createElement('script');
         script.src = 'js/mediachat.js';
         script.type = 'text/javascript';
@@ -1177,57 +1128,35 @@ function initconfigs(configs) {
         style.type = 'text/css';
         document.head.appendChild(style);
 
-        window.main = main;
-        window.chat_window = chat_window;
-        window.embedded_window = embedded_window;
-        window.if_can_audio_chat = init_data.if_can_audio_chat;
-        window.if_can_video_chat = init_data.if_can_video_chat;
-        window.if_popup_window = is_popup_window;
-        window.server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
-    }
-    else {
-        main();
-        hide_element($('btn-audio-chat'));
-        hide_element($('btn-video-chat'));
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState == 'loaded' || script.readyState == 'complete') {
+                    media_chat = MediaChat.initialize(chat_window, init_data.if_can_audio_chat, init_data.if_can_video_chat,
+                        is_popup_window, embedded_window, languages_data.LanguageAudioChatCalling, languages_data.LanguageVideoChatCalling);
+                    nav_params.ifSupportWebrtc = MediaChat.ifSupportWebrtc();
+                }
+            }
+        } else {
+            script.onload = function () {
+                media_chat = MediaChat.initialize(chat_window, init_data.if_can_audio_chat, init_data.if_can_video_chat,
+                    is_popup_window, embedded_window, languages_data.LanguageAudioChatCalling, languages_data.LanguageVideoChatCalling);
+                nav_params.ifSupportWebrtc = MediaChat.ifSupportWebrtc();
+            }
+        }
     }
 }
 
 var sound;
 function init_sound_alert() {
-    var sound_urls = [];
     if (init_data.sound_url) {
-        sound_urls.push({
-            type: sound_type.normal,
-            url: init_data.sound_url
-        });
+        sound = new soundManager('btn-sound', init_data.sound_url);
     }
-    if (ifSupportWebrtc)
-    {
-        sound_urls.push({
-            type: sound_type.mediaChatWaiting,
-            url: init_data.audio_video_waiting_soundUrl
-        });
-        sound_urls.push({
-            type: sound_type.mediaChatEnd,
-            url: init_data.audio_video_end_soundUrl
-        });
-    }
-    sound = new soundManager('btn-sound', sound_urls);
 }
 
 function get_snapshot_params() {
     snapshot_params.UploadURL = server.get_url('/FileUpload.aspx?isImage=true&siteId=' + siteId + '&sessionId=' + sessionId + '&visitorId=' + visitorId + '&planId=' + planId);
     return snapshot_params;
 }
-
-
-function ifSupportWebrtc() {
-  var PC = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-  var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia;
-  var edge = navigator.userAgent.indexOf(' Edge') > 0;
-  return !!PC && !!getUserMedia && !edge;
-}
-
 ﻿// ajax html载入5s超时
 // 每次网络错误后开始计时20s，20s内没有任何成功的记录就check moderator, report main server disconnect
 // check moderator 操作10s超时
@@ -4100,7 +4029,6 @@ var chat_window = (function () {
 
     function send_action_chat_heartbeat() {
         var input = { l: latest_received_message_id, m: message_queue.get(), cg: chatGuid };
-        if (input.m.length > 0 && input.m[0].c === 339) console.log('action send');
         send_action(current_visitor_status == visitor_status.invited ? visitor_action.heartbeat_for_manual_invitation : visitor_action.heartbeat_for_chat, input, heartbeat_callback);
     }
 
@@ -4143,10 +4071,6 @@ var chat_window = (function () {
         notification.request_permission();
 
         focus_chat_input();
-
-        // if(ifSupportWebrtc && MediaChat){
-        //     MediaChat.setChatGuid(chatGuid);
-        // }
     }
 
     function init_dropupload() {
@@ -4372,31 +4296,7 @@ var chat_window = (function () {
                     || code == message_code.operator_transfer_chat_to_department
                     || code == message_code.operator_accept_transfer
                     || code == message_code.operator_refuse_transfer
-                    || code == message_code.system_visitor_not_respond_and_end_chat
-                    || code == message_code.agent_video_chat_request
-                    || code == message_code.agent_video_chat_cancel_request
-                    || code == message_code.agent_video_chat_accept
-                    || code == message_code.agent_video_chat_refuse
-                    || code == message_code.agent_video_chat_stop
-                    || code == message_code.visitor_video_chat_request
-                    || code == message_code.visitor_video_chat_cancel_request
-                    || code == message_code.visitor_video_chat_accept
-                    || code == message_code.visitor_video_chat_refuse
-                    || code == message_code.visitor_video_chat_stop
-                    || code == message_code.server_video_chat_no_answer
-                    || code == message_code.server_video_chat_end
-                    || code == message_code.agent_audio_chat_request
-                    || code == message_code.agent_audio_chat_cancel_request
-                    || code == message_code.agent_audio_chat_accept
-                    || code == message_code.agent_audio_chat_refuse
-                    || code == message_code.agent_audio_chat_stop
-                    || code == message_code.visitor_audio_chat_request
-                    || code == message_code.visitor_audio_chat_cancel_request
-                    || code == message_code.visitor_audio_chat_accept
-                    || code == message_code.visitor_audio_chat_refuse
-                    || code == message_code.visitor_audio_chat_stop
-                    || code == message_code.server_audio_chat_no_answer
-                    || code == message_code.server_audio_chat_end) {
+                    || code == message_code.system_visitor_not_respond_and_end_chat) {
 
                     if (code != message_code.operator_accept_chat) {
                         embedded_window.notification(notification_type.new_response, message_id);
@@ -4408,38 +4308,8 @@ var chat_window = (function () {
                         var lastPlaySoundMessageId = parseInt(cookie.get(lastPlaySoundMessageId_key) || 0);
 
                         if (message_id > lastPlaySoundMessageId) {
-                            cookie.setSessionCookie(lastPlaySoundMessageId_key, message_id);                      
-                            if(ifSupportWebrtc && (code == message_code.visitor_audio_chat_request ||
-                                code == message_code.agent_audio_chat_request ||
-                                code == message_code.visitor_video_chat_request ||
-                                code == message_code.agent_video_chat_request)) {
-                                sound.play(sound_type.mediaChatWaiting, true);
-                            }
-                            else if (ifSupportWebrtc && (code == message_code.server_audio_chat_end ||
-                                code == message_code.server_video_chat_end ||
-                                code == message_code.server_audio_chat_no_answer ||
-                                code == message_code.server_video_chat_no_answer ||
-                                code == message_code.visitor_audio_chat_accept ||
-                                code == message_code.visitor_audio_chat_cancel_request ||
-                                code == message_code.visitor_audio_chat_refuse ||
-                                code == message_code.visitor_audio_chat_stop ||
-                                code == message_code.agent_audio_chat_accept ||
-                                code == message_code.agent_audio_chat_cancel_request ||
-                                code == message_code.agent_audio_chat_refuse ||
-                                code == message_code.agent_audio_chat_stop ||
-                                code == message_code.visitor_video_chat_accept ||
-                                code == message_code.visitor_video_chat_cancel_request ||
-                                code == message_code.visitor_video_chat_refuse ||
-                                code == message_code.visitor_video_chat_stop ||
-                                code == message_code.agent_video_chat_accept ||
-                                code == message_code.agent_video_chat_cancel_request ||
-                                code == message_code.agent_video_chat_refuse ||
-                                code == message_code.agent_video_chat_stop)) {
-                                    sound.stop();
-                                    sound.play(sound_type.mediaChatEnd);
-                                }
-                            else
-                                sound.play(sound_type.normal);
+                            cookie.setSessionCookie(lastPlaySoundMessageId_key, message_id);
+                            sound.play();
                         }
                     }
                 }
@@ -4538,7 +4408,7 @@ var chat_window = (function () {
                 default:
                     break;
             }
-            if( ifSupportWebrtc && MediaChat && (code >= message_code.agent_video_chat_request && code <= message_code.system_if_supportWebrtc)) {
+            if( MediaChat && (code >= message_code.agent_video_chat_request && code <= message_code.system_if_supportWebrtc)) {
                 MediaChat.handleMessages(code, sender, time, message, message_id, info);
             }
         } catch (e) {
@@ -5352,9 +5222,6 @@ var chat_window = (function () {
             }
         },
         'add_message': add_message,
-        'get_chatguid': function() {
-            return chatGuid;
-        },
     };
 })();
 
