@@ -20,7 +20,7 @@
         }
         window.beta = true;
 
-        ["./agent-console/style.7524f.css"].forEach(function (css) {
+        ["./agent-console/style.c8b4d.css"].forEach(function (css) {
             var link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = css;
@@ -41,4 +41,4 @@
             CoverDiv.style.display = "";
             noteInfo.style.display = "";
             app.style.display = "none";
-        }</script><script src=dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/bundle.430c2.js type=text/javascript></script></body></html>
+        }</script><script src=dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/bundle.ebd0a.js type=text/javascript></script></body></html>

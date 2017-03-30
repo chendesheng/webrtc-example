@@ -2243,7 +2243,7 @@ module.exports = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"chatContainer":"ChatContent__chatContainer--1oxtQ","chatContentContainer":"ChatContent__chatContentContainer--3fAaw","chatVideoContainer":"ChatContent__chatVideoContainer--2Q872","chatVideoItem":"ChatContent__chatVideoItem--C1bJl","chatContent":"ChatContent__chatContent--3lHVq","directionRTL":"ChatContent__directionRTL--y-RND","systemMeg":"ChatContent__systemMeg--1akET","chatMeg":"ChatContent__chatMeg--1xqJM","translationMsg":"ChatContent__translationMsg--34tcn","attachment":"ChatContent__attachment--1ONEF","chatContentInfo":"ChatContent__chatContentInfo--17_KL","name":"ChatContent__name--2_SRW","time":"ChatContent__time--3BqgY","operator":"ChatContent__operator--13jwF","visitor":"ChatContent__visitor--1vjfa","secureForm":"ChatContent__secureForm--LAEtE","typingIndicator":"ChatContent__typingIndicator--Njccd","chatContentsmall":"ChatContent__chatContentsmall--2nRGa","chatContentmiddle":"ChatContent__chatContentmiddle--1j4wB","chatContentlarge":"ChatContent__chatContentlarge--u101R","notify":"ChatContent__notify--3IFoV","notifyG2M":"ChatContent__notifyG2M--2Kneq","notifyName":"ChatContent__notifyName--2eGs0","error":"ChatContent__error--31HZ8","errorContent":"ChatContent__errorContent--1sK1Q","action":"ChatContent__action--3JAej","avatarContainer":"ChatContent__avatarContainer--1iP34","visitorName":"ChatContent__visitorName--XjBhL","notice":"ChatContent__notice--1NI9M","accept":"ChatContent__accept--2nUzs","refuse":"ChatContent__refuse--1fghu","chattingInfo":"ChatContent__chattingInfo--3Z8YS","videoContainer":"ChatContent__videoContainer--3rse-","localVideo":"ChatContent__localVideo--3H6-Z","remoteVideo":"ChatContent__remoteVideo--ZJRKg","videoChatting":"ChatContent__videoChatting--3JKjR"};
+module.exports = {"chatContainer":"ChatContent__chatContainer--1oxtQ","chatContentContainer":"ChatContent__chatContentContainer--3fAaw","chatVideoContainer":"ChatContent__chatVideoContainer--2Q872","chatVideoItem":"ChatContent__chatVideoItem--C1bJl","chatContent":"ChatContent__chatContent--3lHVq","directionRTL":"ChatContent__directionRTL--y-RND","systemMeg":"ChatContent__systemMeg--1akET","chatMeg":"ChatContent__chatMeg--1xqJM","translationMsg":"ChatContent__translationMsg--34tcn","attachment":"ChatContent__attachment--1ONEF","chatContentInfo":"ChatContent__chatContentInfo--17_KL","name":"ChatContent__name--2_SRW","time":"ChatContent__time--3BqgY","operator":"ChatContent__operator--13jwF","visitor":"ChatContent__visitor--1vjfa","secureForm":"ChatContent__secureForm--LAEtE","typingIndicator":"ChatContent__typingIndicator--Njccd","chatContentsmall":"ChatContent__chatContentsmall--2nRGa","chatContentmiddle":"ChatContent__chatContentmiddle--1j4wB","chatContentlarge":"ChatContent__chatContentlarge--u101R","notify":"ChatContent__notify--3IFoV","notifyG2M":"ChatContent__notifyG2M--2Kneq","notifyName":"ChatContent__notifyName--2eGs0","error":"ChatContent__error--31HZ8","errorContent":"ChatContent__errorContent--1sK1Q","action":"ChatContent__action--3JAej","avatarContainer":"ChatContent__avatarContainer--1iP34","visitorName":"ChatContent__visitorName--XjBhL","notice":"ChatContent__notice--1NI9M","incoming":"ChatContent__incoming--2VMSc","accept":"ChatContent__accept--2nUzs","refuse":"ChatContent__refuse--1fghu","chattingInfo":"ChatContent__chattingInfo--3Z8YS","videoContainer":"ChatContent__videoContainer--3rse-","localVideo":"ChatContent__localVideo--3H6-Z","remoteVideo":"ChatContent__remoteVideo--ZJRKg","videoChatting":"ChatContent__videoChatting--3JKjR"};
 
 /***/ }),
 /* 883 */,
@@ -2936,57 +2936,47 @@ var AudioVideoChatContent = function (_React$Component) {
   __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(AudioVideoChatContent, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      if (isChatting(this.props.audioVideoChatStatus)) {
-        this.startClock();
-      }
+      this.startClock();
     }
   }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(newProps) {
-      var oldAVStatus = this.props.audioVideoChatStatus;
-      var newAVStatus = newProps.audioVideoChatStatus;
-      if (oldAVStatus !== newAVStatus) {
-        if (isChatting(oldAVStatus) && !isChatting(newAVStatus)) {
-          clearInterval(this.clock);
-        }
-
-        if (!isChatting(oldAVStatus) && isChatting(newAVStatus)) {
-          this.startClock();
-        }
-      }
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.insertVideoObject(this.props);
     }
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
-      var props = this.props;
-      var p2pChat = props.p2pChat;
-      if (p2pChat != null && isVideoChatting(props.audioVideoChatStatus) && this.videoContainer) {
-        var localVideo = p2pChat.getLocalVideo();
-        if (localVideo) {
-          localVideo.id = 'localVideo';
-          localVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.localVideo;
-          if (document.getElementById(localVideo.id) == null) {
-            this.videoContainer.appendChild(localVideo);
-          }
-        }
-
-        var remoteVideo = p2pChat.getRemoteVideo();
-        if (remoteVideo) {
-          remoteVideo.id = 'remoteVideo';
-          remoteVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.remoteVideo;
-          if (document.getElementById(remoteVideo.id) == null) {
-            this.videoContainer.appendChild(remoteVideo);
-          }
-        }
-      }
+      this.insertVideoObject(this.props);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       clearInterval(this.clock);
-      if (this.props.p2pChat) {
-        this.props.p2pChat.getLocalVideo().remove();
-        this.props.p2pChat.getRemoteVideo().remove();
+    }
+  }, {
+    key: 'insertVideoObject',
+    value: function insertVideoObject(props) {
+      var p2pChat = props.p2pChat;
+      if (p2pChat != null && isVideoChatting(props.audioVideoChatStatus) && this.videoContainer) {
+        var localVideo = p2pChat.getLocalVideo();
+        if (localVideo) {
+          localVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.localVideo;
+          if (document.getElementById('localVideo') == null) {
+            localVideo.id = 'localVideo';
+            this.videoContainer.appendChild(localVideo);
+          }
+          localVideo.play();
+        }
+
+        var remoteVideo = p2pChat.getRemoteVideo();
+        if (remoteVideo) {
+          remoteVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.remoteVideo;
+          if (document.getElementById('remoteVideo') == null) {
+            remoteVideo.id = 'remoteVideo';
+            this.videoContainer.appendChild(remoteVideo);
+          }
+          remoteVideo.play();
+        }
       }
     }
   }, {
@@ -3014,17 +3004,18 @@ var AudioVideoChatContent = function (_React$Component) {
       // console.log('showAcceptButton:', showAcceptButton(props.audioVideoChatStatus));
       // console.log('showRefuseButton:', showRefuseButton(props.audioVideoChatStatus));
       var timespan = this.state.timespan;
+      var incoming = showAcceptButton(props.audioVideoChatStatus);
       // console.log('p2pChat:', p2pChat);
       return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
         className: __WEBPACK_IMPORTED_MODULE_9_classnames___default()(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chatVideoContainer, videoChatting && __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.videoChatting)
-      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chatVideoItem
       }, void 0, videoChatting && __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', {
         className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.videoContainer,
         ref: function ref(element) {
           _this3.videoContainer = element;
         }
-      }), videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
+      }), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
+        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chatVideoItem
+      }, void 0, videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
         className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chattingInfo
       }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
         className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.time
@@ -3041,8 +3032,8 @@ var AudioVideoChatContent = function (_React$Component) {
       }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_10__Icon_Icon__["a" /* default */], {
         type: audioVideoIcon(props.audioVideoChatStatus)
       }), statusText(props.audioVideoChatStatus) + ' ' + timespan), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.action
-      }, void 0, showAcceptButton(props.audioVideoChatStatus) && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__["a" /* default */], {
+        className: __WEBPACK_IMPORTED_MODULE_9_classnames___default()(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.action, incoming ? __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.incoming : null)
+      }, void 0, incoming && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__["a" /* default */], {
         className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.accept,
         onClick: props.onAcceptClick,
         type: 'noborder'
@@ -16449,4 +16440,4 @@ module.exports = {
 
 /***/ })
 ]));
-//# sourceMappingURL=chat.08437.js.map
+//# sourceMappingURL=chat.1afa1.js.map
