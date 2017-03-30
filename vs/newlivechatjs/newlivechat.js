@@ -5,7 +5,7 @@ var Comm100API = (Comm100API || { loaded: false });
 
     var isTesting = window.location.href.indexOf('comm100IsTesting') != -1;
     if (isTesting) {
-        comm100_server='http://ent.comm100.com/chatserver';
+        comm100_server='https://ent.comm100.com/chatserver';
     }
 
     var $l = function () { };
@@ -2440,7 +2440,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-03-30T19:57:23.852Z
+ * compiled: 2017-03-30T19:59:56.352Z
  */
  
  
