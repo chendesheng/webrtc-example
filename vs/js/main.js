@@ -1066,8 +1066,8 @@ function initialize(data) {
 
     snapshot_params = data.snapshot_params;
 
-    init_data.audio_video_waiting_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=1';
-    init_data.audio_video_end_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=2';
+    init_data.audio_video_waiting_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=13';
+    init_data.audio_video_end_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=14';
     init_sound_alert();
 }
 
