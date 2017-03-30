@@ -1327,7 +1327,7 @@ function initServer() {
 
     function setup(main, standby, fnswitch) {
         main_server = main;
-        standby_server = null;
+        standby_server = standby;
         onSwitchServer = fnswitch;
         if (standby_server) {
             moderator = scheme + standby_server + '/moderator.aspx?siteId=' + siteId;
