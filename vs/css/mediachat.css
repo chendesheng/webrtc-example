@@ -1,8 +1,8 @@
-﻿#agentAvatar {
+﻿.avatarImg {
     width: 100px;
     height: 100px;
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 100%;
     border: none;
 }
 .requesting .agentName {
@@ -41,9 +41,12 @@
     animation-delay: .4s;
     -webkit-animation-delay: .4s;
 }
-.waiting .iconfont {
-    font-size: 18px;
+.waiting .iconfont,
+.chattingTime .iconfont {
+    font-size: 14px;
     padding-right: 10px;
+    position: relative;
+    top: 2px;
 }
 .textVideo, .textAudio {
     display: flex;
@@ -51,16 +54,11 @@
 .buttons {
     margin-top: 40px;
 }
-.videoChatting .buttons {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-}
 .button{
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    font-size: 40px;
+    font-size: 34px;
     color: #fff;
     display: inline-block;
     margin: 0 48px;
@@ -119,9 +117,18 @@
     display: none;
 }
 
+.audioIncoming .waitingAni,
+.videoIncoming .waitingAni {
+    display: none;
+}
+
 .requesting .agentAvatar {
     display: flex;
     justify-content: center;
+}
+
+.audioChatting .agentAvatar {
+    display: block;
 }
 
 .chatting {
@@ -133,24 +140,81 @@
 .chattingAgent {
     color: #fff;
     float: left;
-    padding: 20px 0 0 20px;
 }
 .chatting .agentName {
-    font-size: 18px;
-}
-.chattingAgentName {
     font-size: 18px;
     color: #fff;
     max-width: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.videoChatting .chatting {
+    display: flex;
+}
+.videoChatting .chattingAgent {
+    position: absolute;
+    left: 20px;
+    top: 8%;
+}
+.videoChatting .buttons {
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+}
+.videoChatting .agentImg,
+.videoChatting .chatTypeText,
+.videoChatting .icon-audio {
+    display: none;
+}
 .chattingDuration{
     font-size: 14px;
     float: left;
 }
-
-.chatting video:hover .buttons {
+.audioChatting .chatting {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-direction: column;
+}
+.audioChatting .chattingAgent {
+    position: static;
+}
+.audioChatting .agentName {
+    padding: 20px 0 15px;
+}
+.chattingTime {
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+    height: 18px;
+}
+.audioChatting .chattingDuration {
+    float: none;
+}
+.audioChatting .chatTypeText {
+    font-size: 14px;
+    padding-right: 10px;
+}
+.audioChatting video {
+    display: none;
+}
+.videoChatting .chatting .buttons {
+    /*display: none;*/
+}
+#remoteVideo:hover .buttons {
     display: block;
 }
-
+#remoteVideo {
+    width: 100%;
+}
+#localVideo {
+    position: absolute;
+    right: 20px;
+    top: 8%;
+    width: 80px;
+    /* height: 55px; */
+    border: 1px solid #ddd;
+}
+.loading {
+    background: url(../images/loading-large.gif) no-repeat center;
+}

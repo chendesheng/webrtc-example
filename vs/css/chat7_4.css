@@ -1632,5 +1632,9 @@ object {
 #main {
     position: relative;
     height: 100%;
-    width: 450px;
+    width: 100%;
+}
+
+.icon-audio-chat, .icon-video-chat {
+    display: '' !important;
 }

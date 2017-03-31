@@ -3767,10 +3767,11 @@ var MediaChat = {
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
         var now = (new Date).getTime();
-        if (seconds > (new Date).getTime())
+        if (seconds > now)
             this.startTime = new Date(now);
         else
-           this.startTime = new Date(seconds);      
+           this.startTime = new Date(seconds);     
+        console.log('startTime: ', this.startTime); 
         this.p2pChat.start();
     },
 
@@ -3816,9 +3817,11 @@ var MediaChat = {
         else {
             if(ifEnlarge && !this.ifLargeWindow) {
                 window.resizeTo(window.outerWidth + 500, window.outerHeight);
+                this.ifLargeWindow = true;
             }
             else if(!ifEnlarge && this.ifLargeWindow) {
                 window.resizeTo(window.outerWidth - 500, window.outerHeight);
+                this.ifLargeWindow = false;
             }
         }
     },
@@ -3913,7 +3916,7 @@ var MediaChat = {
                 this.setAgentInfo(agentName, agentAvatar);
                 this.remove_class(this.window, 'hidden');
                 this.add_class(this.window, this.enumStatus[this.currentStatus]);
-                this.setWindowSize(true);
+                //this.setWindowSize(true);
                 this.startTimer(document.getElementsByClassName('chattingDuration')[0]);
                 break;
         }
@@ -4001,8 +4004,11 @@ var MediaChat = {
                 default:
                     break;
             }
-            clearTimeout(this.actionTimer);
-            this.actionTimer = setTimeout(MediaChat.update(time, agentName, agentAvatar), 100);
+            console.log('clearTimeout', Date.now());
+            clearTimeout(MediaChat.actionTimer);
+            MediaChat.actionTimer = setTimeout(function() {
+                MediaChat.update(time, agentName, agentAvatar);
+            }, 100);
         }
         else {
             if (message === 'True')
@@ -4012,7 +4018,8 @@ var MediaChat = {
         }
     },
 
-    update: function(actionTime, agentName, agentAvatar) {        
+    update: function(actionTime, agentName, agentAvatar) {
+        console.log('update', Date.now());      
         if (MediaChat.p2pChat === null) {
             if (MediaChat.currentStatus === MediaChat.enumStatus.audioChatting ||
                 MediaChat.currentStatus === MediaChat.enumStatus.videoChatting) {
@@ -4051,6 +4058,6 @@ var MediaChat = {
 };
 
 var media_chat = MediaChat.initialize(window.chat_window, window.if_can_audio_chat, window.if_can_video_chat,
-                    window.is_popup_window, window.embedded_window, window.server_origin);
+                    window.if_popup_window, window.embedded_window, window.server_origin);
 
 window.main();
