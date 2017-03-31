@@ -3,9 +3,9 @@ var Comm100API = (Comm100API || { loaded: false });
 (function ($c) {
     if ($c.loaded) return;
 
-    var isLocalhost = /^https?:\/\/localhost/.test(window.location.href);
-    if (isLocalhost) {
-        comm100_server='http://ent.comm100.com/chatserver';
+    var isTesting = window.location.href.indexOf('comm100IsTesting') != -1;
+    if (isTesting) {
+        comm100_server='https://ent.comm100.com/chatserver';
     }
 
     var $l = function () { };
@@ -24,7 +24,7 @@ var Comm100API = (Comm100API || { loaded: false });
     }
 
     var js_url = server + '/livechat.ashx';
-    var window_url = isLocalhost ? 'chatwindow.html' : server + '/chatwindow.aspx';
+    var window_url = isTesting ? 'chatwindow.html' : server + '/chatwindow.aspx';
     var current_server = -1;  //unknown server
     var sending_requests = {};
     var fault_count = 0;
@@ -72,7 +72,7 @@ var Comm100API = (Comm100API || { loaded: false });
                 // bind the callback to the actual event associated with window.postMessage
                 if (callback) {
                     attached_callback = function (e) {
-                        if (isLocalhost) {
+                        if (isTesting) {
                             callback(e);
                             return;
                         }
@@ -2440,7 +2440,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-03-30T17:12:10.055Z
+ * compiled: 2017-03-31T20:27:26.227Z
  */
  
  
