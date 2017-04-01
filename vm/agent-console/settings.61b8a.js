@@ -1563,12 +1563,12 @@ var Settings = function (_React$Component) {
           ifSegmentationSoundOn: true,
 
           // imcoming audio/video chat
-          audioVideoChatRequestSoundId: 1,
+          audioVideoChatRequestSoundId: 13,
           audioVideoChatRequestSoundVolume: 50,
           ifAudioVideoChatRequestPopup: true,
           ifAudioVideoChatRequestSoundOn: true,
           // audio/video chat ended
-          audioVideoChatEndSoundId: 1,
+          audioVideoChatEndSoundId: 14,
           audioVideoChatEndSoundVolume: 50,
           ifAudioVideoChatEndPopup: true,
           ifAudioVideoChatEndSoundOn: true
@@ -2191,7 +2191,7 @@ var SoundItem = function (_React$Component) {
         className: __WEBPACK_IMPORTED_MODULE_8_classnames___default()(__WEBPACK_IMPORTED_MODULE_9__style_css___default.a.soundSelector, __WEBPACK_IMPORTED_MODULE_9__style_css___default.a.configCols)
       }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_13__Select_Select__["a" /* default */], {
         options: soundList(this.props.systemSounds),
-        width: 90,
+        width: 98,
         input: {
           value: this.props.soundInfo.id,
           onChange: this.handleSoundIdChange
@@ -2969,7 +2969,7 @@ var getValidColumns = function getValidColumns(columns, variables, siteInfo) {
 };
 
 var mapStateToProps = function mapStateToProps(state) {
-  var ifCanNotification = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_71" /* getIfSupportNotification */]();
+  var ifCanNotification = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_72" /* getIfSupportNotification */]();
   return {
     ifOpen: state.ui.preference.ifOpen,
     selectedTab: state.ui.preference.selectedTab,
@@ -3029,13 +3029,13 @@ var mapStateToProps = function mapStateToProps(state) {
       ifAutoLogin: __WEBPACK_IMPORTED_MODULE_11__utils_localStorage__["f" /* getBool */](__WEBPACK_IMPORTED_MODULE_12__constants_localStorage__["c" /* rememberMe */]),
       ifExitCloseWindow: __WEBPACK_IMPORTED_MODULE_11__utils_localStorage__["g" /* get */](__WEBPACK_IMPORTED_MODULE_12__constants_localStorage__["h" /* ifExitCloseWindow */], true) === 'true',
       ifEnableAutoMonitor: state.config.preference.others.ifEnableAutoMonitor,
-      ifMonitorChatPermission: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_72" /* ifHavePermissionMonitorChat */](state),
+      ifMonitorChatPermission: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_73" /* ifHavePermissionMonitorChat */](state),
       autoCloseChatDelayMinutes: state.config.preference.others.autoCloseChatDelayMinutes,
       autoCloseChatWindow: state.config.preference.others.autoCloseChatWindow,
       g2mEmail: state.config.preference.g2mEmail,
       g2mPassword: state.config.preference.g2mPassword,
       ifG2MConnected: state.config.preference.ifG2MConnected,
-      joinMeIntegrationServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_73" /* getJoinMeIntegrationServer */](state),
+      joinMeIntegrationServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_74" /* getJoinMeIntegrationServer */](state),
       agentInfo: {
         siteId: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["F" /* getSiteId */](state),
         agentId: state.agent.id,
@@ -3251,4 +3251,4 @@ module.exports = {"tab":"style__tab--1Xwp7","selected":"style__selected--2SB81"}
 /***/ })
 
 });
-//# sourceMappingURL=settings.1af69.js.map
+//# sourceMappingURL=settings.61b8a.js.map

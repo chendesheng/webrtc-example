@@ -1527,8 +1527,8 @@ var mapStateToProps = function mapStateToProps(state) {
     newState.disabled = true;
     return newState;
   }
-  var uploadUrl = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_78" /* getFileUploadUrl */](state);
-  var sessionId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_55" /* getCurrentAgentSession */](state);
+  var uploadUrl = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_79" /* getFileUploadUrl */](state);
+  var sessionId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
   var siteId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["F" /* getSiteId */](state);
   var sendFileUploadUrl = getUploadUrl(uploadUrl, sessionId, siteId);
 
@@ -1544,7 +1544,7 @@ var mapStateToProps = function mapStateToProps(state) {
       siteId: siteId,
       privateMessage: 1,
       sendToIds: __WEBPACK_IMPORTED_MODULE_6__Business_agentChat__["d" /* getSendToIds */](state, isAgent, id),
-      downloadUrl: __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_79" /* getFileDownloadUrl */](state),
+      downloadUrl: __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_80" /* getFileDownloadUrl */](state),
       maxFileSize: __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["Y" /* getAgentChatFileSize */](state)
     }
   };
@@ -1608,7 +1608,7 @@ var mapStateToProps = function mapStateToProps(state) {
       typingMessage: '',
       scrollTop: -1,
       messages: __WEBPACK_IMPORTED_MODULE_3_immutable___default.a.List(),
-      textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_76" /* textDirectionIfRTL */](state),
+      textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_77" /* textDirectionIfRTL */](state),
       errorMessageForChat: ''
     };
   }
@@ -2057,7 +2057,7 @@ function getMessages(state, chat) {
       var newMessage = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, msg, {
         id: msg.agentId + '_' + i,
         type: msg.agentId === currentAgent.id ? __WEBPACK_IMPORTED_MODULE_8__constants_enums_messageType__["c" /* agent */] : __WEBPACK_IMPORTED_MODULE_8__constants_enums_messageType__["a" /* visitor */],
-        sender: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, msg.agentId).name
+        sender: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, msg.agentId).name
       });
       return newMessage;
     });
@@ -2093,13 +2093,13 @@ function mapToChatContentState(state) {
     typingMessage: '',
     scrollTop: -1,
     messages: __WEBPACK_IMPORTED_MODULE_5_immutable___default.a.List(),
-    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_76" /* textDirectionIfRTL */](state),
+    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_77" /* textDirectionIfRTL */](state),
     errorMessageForChat: ''
   };
   var selectedInfo = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_41" /* getSelectedIdForAgents */](state).toString().split('_');
   if (selectedInfo.length > 1) {
     /* agentId */
-    var selectedAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(selectedInfo[1]));
+    var selectedAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(selectedInfo[1]));
     return generateContentObject(state, contentState, selectedAgent);
   } else if (selectedInfo[0] !== '0') {
     var selectedDpt = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(selectedInfo[0]));
@@ -2113,13 +2113,13 @@ function mapToChatContentState(state) {
 }
 
 function getAgentAvatarUrl(state, agentId) {
-  return __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAdminAgentAvatarUrl */](state) + '?siteId=' + __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["F" /* getSiteId */](state) + '&operatorId=' + agentId;
+  return __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_82" /* getAdminAgentAvatarUrl */](state) + '?siteId=' + __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["F" /* getSiteId */](state) + '&operatorId=' + agentId;
 }
 
 function mapToChatHeader(state) {
   var strId = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_41" /* getSelectedIdForAgents */](state).toString();
   var ids = strId.split('_');
-  var agentOrDepartment = ids.length > 1 ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(ids[1])) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(ids[0]));
+  var agentOrDepartment = ids.length > 1 ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(ids[1])) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(ids[0]));
   if (!__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(previousState.header) && __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(agentOrDepartment) && (ids.length !== 1 || Math.abs(ids[0]) !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["m" /* allAvailableId */])) {
     var newState = { agent: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, previousState.header.agent) };
     newState.agent.ifDisableKickOff = true;
@@ -2133,8 +2133,8 @@ function mapToChatHeader(state) {
       ifCurrentAgent: intId === __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state),
       avatarLink: ids.length > 1 ? getAgentAvatarUrl(state, ids[1]) : '',
       name: __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(agentOrDepartment) ? 'All Available' : agentOrDepartment.name,
-      ifDisableKickOff: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["h" /* logOff */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, intId).status === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline,
-      ifDisableSetAway: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["i" /* setAway */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, intId).status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].online
+      ifDisableKickOff: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["h" /* logOff */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, intId).status === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline,
+      ifDisableSetAway: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["i" /* setAway */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, intId).status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].online
     }
   };
   return previousState.header;
@@ -2152,7 +2152,7 @@ var getAgentOrDepartmentId = function getAgentOrDepartmentId(state) {
 var ifChatIsAvalable = function ifChatIsAvalable(state, isAgent, id) {
   if (isAgent) {
     if (!__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["j" /* chatWithOtherAgents */])) return false;
-    var agent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, id);
+    var agent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, id);
     if (agent && id !== __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state)) {
       return agent.status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline;
     }
@@ -2177,7 +2177,7 @@ var getSendToIds = function getSendToIds(state, isAgent, id) {
   var department = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, id);
   if (!department) return [];
   __WEBPACK_IMPORTED_MODULE_1_lodash_each___default()(department.agentIds, function (agentId) {
-    var temp = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, agentId);
+    var temp = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, agentId);
     if (!temp) return;
     if (currentAgentId !== temp.id && temp.status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline) {
       ids.push(agentId);
@@ -2195,7 +2195,7 @@ var filterSendToIds = function filterSendToIds(chatId, ids, isAgent) {
 
 var isActiveStatus = function isActiveStatus(state, isAgent, id) {
   var currId = Math.abs(id);
-  var obj = isAgent ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, currId) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, currId);
+  var obj = isAgent ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, currId) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, currId);
   if (__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(obj) && currId === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["m" /* allAvailableId */]) return true;
   return !__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(obj);
 };
@@ -2674,7 +2674,7 @@ var ChatContent = function (_React$Component) {
   }, {
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps, nextState) {
-      return nextProps.id !== this.props.id || nextProps.selectedFontSize !== this.props.selectedFontSize || nextProps.typingMessage !== this.props.typingMessage || nextProps.textDirectionIfRTL !== this.props.textDirectionIfRTL || nextProps.errorMessageForChat !== this.props.errorMessageForChat || nextProps.g2mStartUrl !== this.props.g2mStartUrl || nextProps.ifShowNotify !== this.props.ifShowNotify || nextProps.audioVideoChatWidth !== this.props.audioVideoChatWidth || nextProps.audioVideoChatStatus !== this.props.audioVideoChatStatus || nextProps.audioVideoChatStartTime.getTime() !== this.props.audioVideoChatStartTime.getTime() || nextState.ifShowGotoMeetingNotify !== this.state.ifShowGotoMeetingNotify || !__WEBPACK_IMPORTED_MODULE_7_lodash_isEqual___default()(this.props.messages.toJS(), nextProps.messages.toJS());
+      return nextProps.id !== this.props.id || nextProps.selectedFontSize !== this.props.selectedFontSize || nextProps.typingMessage !== this.props.typingMessage || nextProps.textDirectionIfRTL !== this.props.textDirectionIfRTL || nextProps.errorMessageForChat !== this.props.errorMessageForChat || nextProps.g2mStartUrl !== this.props.g2mStartUrl || nextProps.ifShowNotify !== this.props.ifShowNotify || nextProps.audioVideoChatWidth !== this.props.audioVideoChatWidth || nextProps.audioVideoChatStatus !== this.props.audioVideoChatStatus || (nextProps.audioVideoChatStartTime && nextProps.audioVideoChatStartTime.getTime()) !== (this.props.audioVideoChatStartTime && this.props.audioVideoChatStartTime.getTime()) || nextState.ifShowGotoMeetingNotify !== this.state.ifShowGotoMeetingNotify || !__WEBPACK_IMPORTED_MODULE_7_lodash_isEqual___default()(this.props.messages.toJS(), nextProps.messages.toJS());
     }
   }, {
     key: 'componentDidUpdate',
@@ -3315,4 +3315,4 @@ module.exports = {"uploadProgressContainer":"FileUploadProgress__uploadProgressC
 /***/ })
 
 });
-//# sourceMappingURL=agent-chat.45040.js.map
+//# sourceMappingURL=agent-chat.fef59.js.map

@@ -1,6 +1,6 @@
 /*
  * version: 1.0.0
- * compiled: 2017-03-31 23:01:51.444
+ * compiled: 2017-04-01 16:28:43.610
  */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","1":"chat","2":"agent-chat","3":"settings","4":"beta","5":"editor","6":"details-tab","7":"secure-form","8":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"f01af","1":"57d1d","2":"45040","3":"1af69","4":"3765e","5":"c3a9d","6":"58598","7":"8d468","8":"b7c9a"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","1":"chat","2":"agent-chat","3":"settings","4":"beta","5":"editor","6":"details-tab","7":"secure-form","8":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"bf50c","1":"f06de","2":"fef59","3":"61b8a","4":"3765e","5":"3d10f","6":"675a9","7":"8d468","8":"b7c9a"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -770,11 +770,11 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["p"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["q"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_50", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["r"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_58", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["s"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_59", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["e"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_107", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["t"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_111", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["u"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_112", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_53", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_59", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["s"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_60", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["e"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_108", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["t"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_112", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["u"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_126", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["v"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_127", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["w"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_128", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["x"]; });
@@ -789,30 +789,30 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "V", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "W", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_97", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["h"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_98", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["i"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_99", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["j"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_108", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["k"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_110", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["l"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_98", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["h"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_99", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["i"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_100", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["j"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_109", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["k"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_111", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["l"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_130", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["m"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_140", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["n"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agentChats__ = __webpack_require__(356);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "X", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_47", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_74", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_75", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["d"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agents__ = __webpack_require__(91);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "u", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["e"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_46", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["f"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_55", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_64", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["g"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_82", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_86", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["h"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_87", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["i"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_88", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["j"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_92", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["k"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_56", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_65", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["g"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_83", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_87", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["h"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_88", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["i"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_89", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["j"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_93", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["k"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_114", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["l"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ui__ = __webpack_require__(222);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["e"]; });
@@ -831,16 +831,16 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_44", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["p"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_48", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["q"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_49", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["r"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_63", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["s"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_66", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["t"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_67", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["u"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_68", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["v"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_69", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["w"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_70", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["x"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_71", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["y"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_85", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["z"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_101", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["A"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_102", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["B"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_64", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["s"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_67", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["t"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_68", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["u"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_69", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["v"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_70", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["w"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_71", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["x"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_72", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["y"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_86", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["z"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_102", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["A"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_103", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["B"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_118", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["C"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_119", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["D"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_120", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["E"]; });
@@ -885,29 +885,29 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["p"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["i"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["R"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_53", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["S"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_54", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["T"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_57", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["U"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_60", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["V"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_61", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["W"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_62", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["X"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_65", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["Y"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_72", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["Z"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_73", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_0"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_75", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_1"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_76", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_2"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_80", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_3"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_83", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_4"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_84", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_5"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_93", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_6"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_95", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_7"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_96", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_8"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_100", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_9"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_103", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_10"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_104", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_11"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_105", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_12"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_106", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_13"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_109", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_14"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_54", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["S"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_55", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["T"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_58", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["U"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_61", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["V"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_62", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["W"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_63", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["X"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_66", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["Y"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_73", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["Z"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_74", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_0"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_76", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_1"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_77", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_2"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_81", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_3"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_84", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_4"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_85", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_5"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_94", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_6"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_96", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_7"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_97", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_8"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_101", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_9"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_104", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_10"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_105", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_11"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_106", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_12"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_107", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_13"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_110", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_14"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_113", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_15"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_116", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_16"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_117", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_17"]; });
@@ -938,10 +938,10 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["l"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_51", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["m"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_52", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["n"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_77", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["o"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_89", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["p"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_90", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["q"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_91", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["r"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_78", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["o"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_90", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["p"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_91", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["q"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_92", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["r"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_115", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["s"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_134", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["t"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_137", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["u"]; });
@@ -957,11 +957,11 @@ exports.default = function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["h"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["j"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["k"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_56", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["l"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_78", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["m"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_79", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["n"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_81", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["o"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_94", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["p"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_57", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["l"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_79", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["m"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_80", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["n"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_82", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["o"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_95", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["p"]; });
 
 
 
@@ -4592,6 +4592,26 @@ function getIn(o, path) {
       throw 'too deep';
   }
 }
+
+/* eslint-disable */
+// Console-polyfill. MIT license.
+// https://github.com/paulmillr/console-polyfill
+// Make it safe to do console.log() always.
+(function (global) {
+  if (!global.console) {
+    global.console = {};
+  }
+  var con = global.console;
+  var prop, method;
+  var dummy = function dummy() {};
+  var properties = ['memory'];
+  var methods = 'assert,clear,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profiles,profileEnd,show,table,time,timeEnd,timeline,timelineEnd,timeStamp,trace,warn'.split(',');
+  while (prop = properties.pop()) {
+    if (!con[prop]) con[prop] = {};
+  }while (method = methods.pop()) {
+    if (!con[method]) con[method] = dummy;
+  } // Using `this` for web workers & supports Browserify / Webpack.
+})(typeof window === 'undefined' ? this : window);
 
 /***/ }),
 /* 62 */
@@ -20200,12 +20220,12 @@ var defaultOtherPreference = {
   ifSegmentationPopup: true,
   customFilterSettings: [],
   // imcoming audio/video chat
-  audioVideoChatRequestSoundId: 1,
+  audioVideoChatRequestSoundId: 13,
   audioVideoChatRequestSoundVolume: 50,
   ifAudioVideoChatRequestPopup: true,
   ifAudioVideoChatRequestSoundOn: true,
   // audio/video chat ended
-  audioVideoChatEndSoundId: 1,
+  audioVideoChatEndSoundId: 14,
   audioVideoChatEndSoundVolume: 50,
   ifAudioVideoChatEndPopup: true,
   ifAudioVideoChatEndSoundOn: true
@@ -21190,7 +21210,6 @@ var defaultChat = function defaultChat(id) {
     scrollTop: -1,
     ifShowNotify: false,
     audioVideoChatWidth: 500,
-    p2pChat: null,
     ifVisitorSupportWebrtc: true
   };
 };
@@ -32849,7 +32868,7 @@ var showNotification = function showNotification(_ref, onClick) {
     var unsubscribe = store.subscribe(function () {
       var state = store.getState();
       if ("development" !== 'production' && state.debug.isReplaying) return;
-      if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_64" /* getIsAuthenticated */])(state)) {
+      if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_65" /* getIsAuthenticated */])(state)) {
         var newInterval = getPeriod(state);
         if (interval !== newInterval) {
           interval = newInterval;
@@ -44903,20 +44922,20 @@ var App = function (_React$Component) {
 var mapStateToProps = function mapStateToProps(state) {
   return {
     siteId: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["F" /* getSiteId */](state),
-    agentId: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_65" /* getAgentId */](state),
+    agentId: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_66" /* getAgentId */](state),
     hasVisitors: (__WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["o" /* getVisitorList */](state) || []).length > 0,
     page: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["p" /* getPage */](state),
     agentNumber: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_33" /* getAgents */](state).length,
     visitorListShowDetails: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["n" /* getIfShowDetailsInVisitorList */](state),
     selectedChatId: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_40" /* getSelectedChatId */](state),
     selectedAgentChatId: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_41" /* getSelectedIdForAgents */](state),
-    chatItemWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_66" /* getListVisitorsWidth */](state),
-    agentsWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_67" /* getAgentsListWidth */](state),
-    chatDetailWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_68" /* getChatDetailsWidth */](state),
+    chatItemWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_67" /* getListVisitorsWidth */](state),
+    agentsWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_68" /* getAgentsListWidth */](state),
+    chatDetailWidth: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_69" /* getChatDetailsWidth */](state),
     modalLoading: state.ui.modalLoading,
     isOpenPreference: state.ui.preference.ifOpen,
-    ifShowErrorOnHeader: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_69" /* getShowErrorOnHeaderFlag */](state),
-    ifOpenDashboardWindow: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_70" /* getDashboardWindowFlag */](state)
+    ifShowErrorOnHeader: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_70" /* getShowErrorOnHeaderFlag */](state),
+    ifOpenDashboardWindow: __WEBPACK_IMPORTED_MODULE_19__reducers_selectors__["_71" /* getDashboardWindowFlag */](state)
   };
 };
 
@@ -45071,7 +45090,7 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    ifOpen: __WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["_70" /* getDashboardWindowFlag */](state),
+    ifOpen: __WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["_71" /* getDashboardWindowFlag */](state),
     messages: __WEBPACK_IMPORTED_MODULE_1__reducers_selectors__["_117" /* getDashboardMessages */](state)
   };
 };
@@ -45212,10 +45231,10 @@ var mapStateToProps = function mapStateToProps(state) {
     token: ligInInfo.token,
     agentStatus: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_115" /* getAgentStatus */](state),
     settings: [{ desc: 'Chat', type: __WEBPACK_IMPORTED_MODULE_6__constants_enums_preference__["b" /* preferenceTabs */].chat }, { desc: 'Language', type: __WEBPACK_IMPORTED_MODULE_6__constants_enums_preference__["b" /* preferenceTabs */].language }, {
-      desc: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_71" /* getIfSupportNotification */]() ? 'Sound & Popup' : 'Sound',
+      desc: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_72" /* getIfSupportNotification */]() ? 'Sound & Popup' : 'Sound',
       type: __WEBPACK_IMPORTED_MODULE_6__constants_enums_preference__["b" /* preferenceTabs */].soundpopup
     }, { desc: 'Columns', type: __WEBPACK_IMPORTED_MODULE_6__constants_enums_preference__["b" /* preferenceTabs */].columns }, { desc: 'Others', type: __WEBPACK_IMPORTED_MODULE_6__constants_enums_preference__["b" /* preferenceTabs */].others }],
-    agentName: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_82" /* getCurrentAgentName */](state),
+    agentName: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_83" /* getCurrentAgentName */](state),
     statusCode: statusCode,
     agentInfo: {
       isWeb: isWeb,
@@ -47057,7 +47076,7 @@ var checkIfCreateChat = function checkIfCreateChat(state, v, department, agentId
   var status = v.status;
   var isWaiting = __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["_126" /* isWaitingStatus */](state, v, agentId);
   var isChatting = __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["_127" /* isChattingWithAgent */](v, agentId);
-  var isWaitingAcceptInvitationFromMe = __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["_58" /* checkIfWaitingVisitorAcceptInvitationFromMe */](v, agentId);
+  var isWaitingAcceptInvitationFromMe = __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["_59" /* checkIfWaitingVisitorAcceptInvitationFromMe */](v, agentId);
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4__reducers_selectors__["_128" /* isMonitoringChat */](v, agentId);
   var isHavePermission = __WEBPACK_IMPORTED_MODULE_7__utils_common__["f" /* isHavePermissionDealChat */](status, v.chatInvolvedAgents, department, agentId);
   return isWaiting && isHavePermission || isChatting || isWaitingAcceptInvitationFromMe || isMonitoring;
@@ -47230,7 +47249,7 @@ function getExtraActions(oldState, state, action) {
 
 
 
-var showErrorType = [__WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["o" /* agentSaveG2MAccount */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["y" /* agentTransferChatToDepartment */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["x" /* agentTransferChat */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_5" /* agentAudioChatAccept */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_6" /* agentVideoChatAccept */]];
+var showErrorType = [__WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["o" /* agentSaveG2MAccount */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["y" /* agentTransferChatToDepartment */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["x" /* agentTransferChat */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_5" /* agentAudioChatAccept */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_6" /* agentVideoChatAccept */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_4" /* agentAudioChatRequest */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_3" /* agentVideoChatRequest */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_11" /* agentAudioChatStop */], __WEBPACK_IMPORTED_MODULE_0__constants_web__["a" /* webError */] + '/' + __WEBPACK_IMPORTED_MODULE_1__constants_enums_chatAction__["_12" /* agentVideoChatStop */]];
 /* harmony default export */ __webpack_exports__["a"] = (function () {
   return function (next) {
     return function (action) {
@@ -47325,8 +47344,8 @@ var commonTimer = null;
 
 function repeatSound(soundType, volumne, store) {
   var state = store.getState();
-  var session = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getCurrentAgentSession */](state);
-  if ((__WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_122" /* getIfEnableAutoAcceptChat */](state) || __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_123" /* getIfEnableAutoAllocation */](state) || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(waitingIds).length === 0 || !__WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, soundType) || !session) && timer) {
+  var session = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
+  if ((__WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_122" /* getIfEnableAutoAcceptChat */](state) || __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_123" /* getIfEnableAutoAllocation */](state) || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(waitingIds).length === 0 || !__WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, soundType) || !session) && timer) {
     clearTimeout(timer);
     timer = null;
   } else {
@@ -47344,13 +47363,13 @@ function formatAgentChatMessage(sender, message, alterMessage) {
 }
 
 function getAgentchatOptions(state, action, dispatch) {
-  var agent = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_80" /* getAgentById */](state, action.payload.agentId);
+  var agent = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_81" /* getAgentById */](state, action.payload.agentId);
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */],
-    volume: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */]),
+    volume: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["e" /* agentMessage */]),
     message: formatAgentChatMessage(agent.name, action.payload.message, action.payload.fileName)
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_19__actions_ui__["y" /* showAgent */]());
@@ -47370,9 +47389,9 @@ function getNewResponseNotificationOption(state, _ref, dispatch) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["d" /* newResponse */]),
     message: message
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_20__actions_chatList__["a" /* setSelected */](chatId));
@@ -47386,9 +47405,9 @@ function getChatEndNotificationOption(state, _ref2, dispatch) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["f" /* chatEnded */]),
     message: message
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_20__actions_chatList__["a" /* setSelected */](chatId));
@@ -47402,9 +47421,9 @@ function getAudioVideoChatEndNotificationOption(state, _ref3, dispatch) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["k" /* audioVideoChatEnd */]),
     message: message
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_20__actions_chatList__["a" /* setSelected */](chatId));
@@ -47418,9 +47437,9 @@ function getChatTransferNotificationOption(state, _ref4, dispatch) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["c" /* transferingChat */]),
     message: message
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_20__actions_chatList__["a" /* setSelected */](chatId));
@@ -47455,7 +47474,7 @@ function selectInComingChat(dispatch, chatId) {
 }
 
 function getChatInQueueNotificationOption(state, action, dispatch, store) {
-  var volumne = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */]);
+  var volumne = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */]);
   var visitorId = action.payload;
   if (!waitingIds[visitorId]) {
     waitingIds[visitorId] = true;
@@ -47469,7 +47488,7 @@ function getChatInQueueNotificationOption(state, action, dispatch, store) {
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */],
     volumn: volumne,
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["i" /* chatInQueue */]),
     message: 'You‘ve got a new chat request.' }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_19__actions_ui__["z" /* showChat */]());
     selectInComingChat(dispatch, action.meta);
@@ -47477,7 +47496,7 @@ function getChatInQueueNotificationOption(state, action, dispatch, store) {
 }
 
 function getWaitingForChatNotificationOption(state, action, dispatch, store) {
-  var volumne = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */]);
+  var volumne = __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */]);
   var visitorId = action.payload;
   if (!waitingIds[visitorId]) {
     waitingIds[visitorId] = true;
@@ -47491,7 +47510,7 @@ function getWaitingForChatNotificationOption(state, action, dispatch, store) {
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */],
     volumn: volumne,
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["b" /* incomingChat */]),
     message: 'You‘ve got a new chat request.' }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_19__actions_ui__["z" /* showChat */]());
     selectInComingChat(dispatch, action.meta);
@@ -47502,9 +47521,9 @@ function getNewVisitor(state, action, dispatch) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["a" /* visitorEnterSite */]),
     message: 'A new visitor lands on your site.'
   }, function () {
     dispatch(__WEBPACK_IMPORTED_MODULE_19__actions_ui__["p" /* showVisitor */]());
@@ -47515,9 +47534,9 @@ function getSegmentChanges(state, visitorObject, dispatch, getSegmentsByIds) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["h" /* segmentation */]),
     message: 'A visitor with segment(s) below has arrived: ',
     segments: getSegmentsByIds(visitorObject.segmentIds)
   }, function () {
@@ -47529,9 +47548,9 @@ function getException(state) {
   __WEBPACK_IMPORTED_MODULE_13__services_notifyManager__["b" /* showNotification */]({
     needNotify: true,
     soundType: __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */],
-    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */]),
+    volumn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */]),
     popupOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_124" /* getNotificationIfPopupOnBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */]),
-    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */]),
+    soundOn: __WEBPACK_IMPORTED_MODULE_16__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_14__constants_soundType__["g" /* exception */]),
     message: 'An exception occured.'
   });
 }
@@ -48173,7 +48192,7 @@ var ConnectionErrorReporter = function () {
 function createQueue(store, timeout) {
   var state = store.getState();
   var siteId = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["F" /* getSiteId */](state);
-  var session = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_55" /* getCurrentAgentSession */](state);
+  var session = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
   var chatServerUrl = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_133" /* getLiveChatHandler3 */](state);
 
   return new __WEBPACK_IMPORTED_MODULE_3__queue__["a" /* default */]({
@@ -48422,7 +48441,7 @@ var switchServerCommands = function switchServerCommands(state) {
 var switchServer = function switchServer(state) {
   var server = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_146" /* getModeratorServer */](state);
   var siteId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["F" /* getSiteId */](state);
-  var isUseMainServer = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_105" /* getIfUseMainServer */](state);
+  var isUseMainServer = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_106" /* getIfUseMainServer */](state);
   var switchResult = {};
   return new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a(function (resolve) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__services_moderator__["a" /* default */])(server, siteId).then(function (isCurrentUseMainServer) {
@@ -48682,10 +48701,10 @@ var chatMessageFilter = function chatMessageFilter(store, dispatchCommands, msg)
     if (!__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_127" /* isChattingWithAgent */](visitor, agentId)) return;
 
     var chatId = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_50" /* getVisitorChatId */](state, visitorId);
-    if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_98" /* getIfChatEnableTransaltion */](state, chatId)) return;
+    if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_99" /* getIfChatEnableTransaltion */](state, chatId)) return;
 
-    var visitorLanguage = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_99" /* getVisitorLanguage */](state, chatId);
-    var agentLanguage = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_100" /* getAgentTranslationLanguage */](state);
+    var visitorLanguage = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_100" /* getVisitorLanguage */](state, chatId);
+    var agentLanguage = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_101" /* getAgentTranslationLanguage */](state);
     var detected = visitorLanguage !== 0 && visitorLanguage !== agentLanguage;
     var countVisitorMessage = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_140" /* getVisitorMessageCount */](state, chatId);
     if (countVisitorMessage < 5 && !detected) {
@@ -48700,7 +48719,7 @@ var chatMessageFilter = function chatMessageFilter(store, dispatchCommands, msg)
 
 var checkIfHaveMonitorPermission = function checkIfHaveMonitorPermission(state) {
   if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_141" /* ifEnableAutoMonitor */](state)) {
-    if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_72" /* ifHavePermissionMonitorChat */](state)) {
+    if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_73" /* ifHavePermissionMonitorChat */](state)) {
       return { enable: true, isMonitorChat: true };
     } else if (__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["v" /* getifDepartmentEnabled */](state) && __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_142" /* ifHavePermissionMonitorDepartment */](state)) {
       return { enable: true, isMonitorChat: false };
@@ -48739,7 +48758,7 @@ var autoMonitorChat = function autoMonitorChat(store, dispatchCommands, _ref) {
           return false;
         }
         var oldVisitor = __WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["s" /* getVisitor */](state, v.id);
-        var oldVistiorNotChatting = oldVisitor === undefined || !__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_59" /* checkIfVisitorStatusChatting */](oldVisitor.get('status'));
+        var oldVistiorNotChatting = oldVisitor === undefined || !__WEBPACK_IMPORTED_MODULE_6__reducers_selectors__["_60" /* checkIfVisitorStatusChatting */](oldVisitor.get('status'));
         if (!oldVistiorNotChatting) return false;
         /** checkVisitorCanMonitor API accepts immutable, use following workaround to mock API */
         var fakeVisitor = {
@@ -49220,15 +49239,19 @@ var Queue = function () {
 
 
 
-var getAgentAudioVideoChatting = function getAgentAudioVideoChatting(state) {
-  var currentAgentId = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["u" /* getCurrentAgentId */](state);
-  var v1 = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_52" /* getChattingVisitors */](state).find(function (v) {
-    var avStatus = v.get('audioVideoChatStatus');
-    var avChatAgentId = v.get('audioVideoChatAgentId');
-    return (avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */]) && currentAgentId === avChatAgentId;
-  });
+function checkIfAgentAudioVideoChating(state, agentId, visitor) {
+  var avStatus = visitor.get('audioVideoChatStatus');
+  if (avStatus !== __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] && avStatus !== __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */]) return false;
+  var avChatAgentId = visitor.get('audioVideoChatAgentId');
+  if (agentId !== avChatAgentId) return false;
+  var activeAgents = visitor.get('chatActiveAgents') || [];
+  return activeAgents.indexOf(agentId) !== -1;
+}
 
-  if (v1) {
+var getAgentAudioVideoChatting = function getAgentAudioVideoChatting(state, agentId) {
+  var v1 = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_52" /* getChattingVisitors */](state).find(checkIfAgentAudioVideoChating.bind(null, state, agentId));
+
+  if (v1 && __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_53" /* isVisitorExists */](state, v1.get('id'))) {
     return {
       avStatus: v1.get('audioVideoChatStatus'),
       chatGuid: v1.get('chatGuid')
@@ -49240,21 +49263,28 @@ var getAgentAudioVideoChatting = function getAgentAudioVideoChatting(state) {
   };
 };
 
-var checkIfAgentAudioVideoRequesting = function checkIfAgentAudioVideoRequesting(state) {
-  var currentAgentId = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["u" /* getCurrentAgentId */](state);
+var checkIfAgentAudioVideoRequesting = function checkIfAgentAudioVideoRequesting(state, agentId) {
   return __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_52" /* getChattingVisitors */](state).some(function (v) {
+    var activeAgents = v.get('chatActiveAgents') || [];
+    if (activeAgents.indexOf(agentId) === -1) return false;
+
     var avStatus = v.get('audioVideoChatStatus');
     var avChatAgentId = v.get('audioVideoChatAgentId');
-    return (avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */]) && currentAgentId === avChatAgentId || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */];
+    return (avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */]) && agentId === avChatAgentId || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */];
   });
 };
 
 function playAudioVideoRequestSound(state) {
-  var soundOn = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_53" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_3__constants_soundType__["j" /* audioVideoChatRequest */]);
-  var volumne = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_54" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_3__constants_soundType__["j" /* audioVideoChatRequest */]);
+  var soundOn = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_54" /* getNotificationIfSoundOnVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_3__constants_soundType__["j" /* audioVideoChatRequest */]);
+  var volumne = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_55" /* getVolumeBySoundType */](state, __WEBPACK_IMPORTED_MODULE_3__constants_soundType__["j" /* audioVideoChatRequest */]);
   if (soundOn) {
     __WEBPACK_IMPORTED_MODULE_4__services_notifyManager__["a" /* playSound */](__WEBPACK_IMPORTED_MODULE_3__constants_soundType__["j" /* audioVideoChatRequest */], volumne);
   }
+}
+
+function stopP2PChat() {
+  var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__services_p2pChat__["a" /* getP2PChat */])();
+  if (p2pChat) p2pChat.stop();
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (function (store) {
@@ -49264,10 +49294,15 @@ function playAudioVideoRequestSound(state) {
   var soundTimer = void 0;
 
   var handleStateChange = function handleStateChange(state) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_55" /* getCurrentAgentSession */](state)) return;
+    if (!__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_56" /* getCurrentAgentSession */](state)) {
+      stopP2PChat();
+      return;
+    }
+
     if (__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["m" /* getVisitors */](previousState) === __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["m" /* getVisitors */](state) && __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["U" /* getChats */](previousState) === __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["U" /* getChats */](state)) return;
 
-    if (checkIfAgentAudioVideoRequesting(state)) {
+    var currentAgentId = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["u" /* getCurrentAgentId */](state);
+    if (checkIfAgentAudioVideoRequesting(state, currentAgentId)) {
       if (soundTimer == null) {
         playAudioVideoRequestSound(state);
         soundTimer = setInterval(playAudioVideoRequestSound.bind(null, state), 4000);
@@ -49277,23 +49312,23 @@ function playAudioVideoRequestSound(state) {
       soundTimer = null;
     }
 
-    var _getAgentAudioVideoCh = getAgentAudioVideoChatting(state),
+    var _getAgentAudioVideoCh = getAgentAudioVideoChatting(state, currentAgentId),
         avStatus = _getAgentAudioVideoCh.avStatus,
         chatGuid = _getAgentAudioVideoCh.chatGuid;
 
-    var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__services_p2pChat__["a" /* getP2PChat */])();
     if (avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */]) {
-      if (p2pChat != null) p2pChat.stop();
+      stopP2PChat();
     }
 
     if (previousAVStatus === avStatus) return;
     previousAVStatus = avStatus;
 
     if (avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || avStatus === __WEBPACK_IMPORTED_MODULE_1__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */]) {
+      var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__services_p2pChat__["a" /* getP2PChat */])();
       if (p2pChat == null) {
         // happens when force login
         p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__services_p2pChat__["b" /* newP2PChat */])({
-          url: __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_56" /* getWebrtcSignalingServiceUrl */](state),
+          url: __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_57" /* getWebrtcSignalingServiceUrl */](state),
           chat: chatGuid,
           localVideo: document.createElement('VIDEO'),
           remoteVideo: document.createElement('VIDEO')
@@ -49354,7 +49389,7 @@ var cursor = 0;
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__heartbeatSubscriber__["a" /* default */])({
   onHeartbeat: function onHeartbeat(store) {
     cursor = (cursor + 1) % 6;
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_63" /* getIsAgentTab */])(store.getState()) || cursor === 0) {
+    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_64" /* getIsAgentTab */])(store.getState()) || cursor === 0) {
       store.dispatch(__WEBPACK_IMPORTED_MODULE_1__actions_agent__["n" /* getAgents */]());
     }
   },
@@ -49523,7 +49558,7 @@ if (true) {
     var previousChats = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["U" /* getChats */](previousState);
     var chats = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["U" /* getChats */](state);
     if (previousChats !== chats) {
-      var enableSalesforce = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_57" /* ifEnableSFIntegration */](state);
+      var enableSalesforce = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_58" /* ifEnableSFIntegration */](state);
       if (!enableSalesforce) return;
 
       var ifManually = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["K" /* getIfSalesforceManually */](state);
@@ -49532,7 +49567,7 @@ if (true) {
         return chats.get(chat.get('id')) === undefined;
       }).forEach(function (chat, id) {
         var visitor = __WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["r" /* getVisitorByChatId */](previousState, id);
-        if (!__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_58" /* checkIfWaitingVisitorAcceptInvitationFromMe */](visitor, agentId) && __WEBPACK_IMPORTED_MODULE_1__utils_common__["h" /* isAgentInInvolvedList */](visitor, agentId) && (!ifManually || visitor.get('salesforcePurposeInManualMode') !== 0)) {
+        if (!__WEBPACK_IMPORTED_MODULE_0__reducers_selectors__["_59" /* checkIfWaitingVisitorAcceptInvitationFromMe */](visitor, agentId) && __WEBPACK_IMPORTED_MODULE_1__utils_common__["h" /* isAgentInInvolvedList */](visitor, agentId) && (!ifManually || visitor.get('salesforcePurposeInManualMode') !== 0)) {
           store.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__actions_salesforce__["m" /* agentCheckSFAutoIntegrationResult */])(visitor.get('id')));
         }
       });
@@ -49596,7 +49631,7 @@ var currentKeydownHandler = void 0;
 var checkOnGoingChat = function checkOnGoingChat(state, chatId) {
   var visitor = __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["r" /* getVisitorByChatId */](state, chatId);
   var status = visitor.get('status');
-  if (status === __WEBPACK_IMPORTED_MODULE_12__constants_enums__["d" /* chatStatus */].chatting || status === __WEBPACK_IMPORTED_MODULE_12__constants_enums__["d" /* chatStatus */].transferring && __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_59" /* checkIfVisitorStatusChatting */](status) && __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["u" /* getCurrentAgentId */](state))) {
+  if (status === __WEBPACK_IMPORTED_MODULE_12__constants_enums__["d" /* chatStatus */].chatting || status === __WEBPACK_IMPORTED_MODULE_12__constants_enums__["d" /* chatStatus */].transferring && __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_60" /* checkIfVisitorStatusChatting */](status) && __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["u" /* getCurrentAgentId */](state))) {
     return true;
   }
   return false;
@@ -49705,9 +49740,9 @@ function convertShortcut(config) {
 }
 
 function getShortcutConfig(state) {
-  var cannedMessage = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_60" /* getCannedMessageShortcut */](state));
-  var nextChat = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getNextChatShortcut */](state));
-  var nextResponse = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextResponseShortcut */](state));
+  var cannedMessage = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getCannedMessageShortcut */](state));
+  var nextChat = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextChatShortcut */](state));
+  var nextResponse = convertShortcut(__WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_63" /* getNextResponseShortcut */](state));
   return {
     cannedMessage: cannedMessage,
     nextChat: nextChat,
@@ -49716,7 +49751,7 @@ function getShortcutConfig(state) {
 }
 
 function shouldShortcutUpdate(prevState, state) {
-  return __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_60" /* getCannedMessageShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_60" /* getCannedMessageShortcut */](state) || __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getNextChatShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getNextChatShortcut */](state) || __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextResponseShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextResponseShortcut */](state);
+  return __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getCannedMessageShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_61" /* getCannedMessageShortcut */](state) || __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextChatShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_62" /* getNextChatShortcut */](state) || __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_63" /* getNextResponseShortcut */](prevState) !== __WEBPACK_IMPORTED_MODULE_7_src_reducers_selectors__["_63" /* getNextResponseShortcut */](state);
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (function (store) {
@@ -54144,4 +54179,4 @@ module.exports = (__webpack_require__(0))("./node_modules/redux-logger/lib/index
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.ab7d5.js.map
+//# sourceMappingURL=bundle.116c8.js.map

@@ -951,12 +951,12 @@ var mapStateToProps = function mapStateToProps(state) {
       id: __WEBPACK_IMPORTED_MODULE_19__constants_enums__["l" /* noSelectedForAgent */],
       isAgent: false,
       sendToIds: [],
-      editorState: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_74" /* getAgentChatEditorState */](state, __WEBPACK_IMPORTED_MODULE_19__constants_enums__["l" /* noSelectedForAgent */]) || emptyEditorState,
-      sendType: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_75" /* getSendType */](state),
+      editorState: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_75" /* getAgentChatEditorState */](state, __WEBPACK_IMPORTED_MODULE_19__constants_enums__["l" /* noSelectedForAgent */]) || emptyEditorState,
+      sendType: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_76" /* getSendType */](state),
       cannedMessages: [],
       disabled: true,
       siteInfo: {},
-      textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_76" /* textDirectionIfRTL */](state),
+      textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_77" /* textDirectionIfRTL */](state),
       selectedFontSize: __WEBPACK_IMPORTED_MODULE_7__constants_enums_fontSize__["a" /* middle */],
       disablePaste: true
     };
@@ -975,7 +975,7 @@ var mapStateToProps = function mapStateToProps(state) {
   var disabled = !__WEBPACK_IMPORTED_MODULE_12__Business_agentChat__["c" /* ifChatIsAvalable */](state, isAgent, id);
   var editorState = emptyEditorState;
   if (!disabled) {
-    editorState = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_74" /* getAgentChatEditorState */](state, id);
+    editorState = __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_75" /* getAgentChatEditorState */](state, id);
     if (!editorState) editorState = emptyEditorStateFocused;
   }
   previousState = {
@@ -983,16 +983,16 @@ var mapStateToProps = function mapStateToProps(state) {
     isAgent: isAgent,
     sendToIds: __WEBPACK_IMPORTED_MODULE_12__Business_agentChat__["d" /* getSendToIds */](state, isAgent, id),
     editorState: editorState,
-    sendType: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_75" /* getSendType */](state),
-    cannedMessages: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_77" /* getCannedMessagesWithShortcuts */](state),
+    sendType: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_76" /* getSendType */](state),
+    cannedMessages: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_78" /* getCannedMessagesWithShortcuts */](state),
     disabled: disabled,
     siteInfo: {
-      uploadUrl: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_78" /* getFileUploadUrl */](state),
-      downloadUrl: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_79" /* getFileDownloadUrl */](state),
+      uploadUrl: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_79" /* getFileUploadUrl */](state),
+      downloadUrl: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_80" /* getFileDownloadUrl */](state),
       siteId: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["F" /* getSiteId */](state),
-      sessionId: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_55" /* getCurrentAgentSession */](state)
+      sessionId: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_56" /* getCurrentAgentSession */](state)
     },
-    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_76" /* textDirectionIfRTL */](state),
+    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_9__reducers_selectors__["_77" /* textDirectionIfRTL */](state),
     selectedFontSize: __WEBPACK_IMPORTED_MODULE_7__constants_enums_fontSize__["a" /* middle */],
     disablePaste: true
   };
@@ -1138,24 +1138,24 @@ var mapStateToProps = function mapStateToProps(state) {
     disabled: disabled,
     sendToIds: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["M" /* getVisitorIdByChatId */](state, id),
     editorState: editorState,
-    sendType: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_75" /* getSendType */](state),
-    cannedMessages: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_77" /* getCannedMessagesWithShortcuts */](state),
+    sendType: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_76" /* getSendType */](state),
+    cannedMessages: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_78" /* getCannedMessagesWithShortcuts */](state),
     visitor: visitor,
     agent: {
-      name: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_82" /* getCurrentAgentName */](state),
+      name: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_83" /* getCurrentAgentName */](state),
       email: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_14" /* getCurrentAgentEmail */](state)
     },
     siteInfo: {
-      uploadUrl: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_78" /* getFileUploadUrl */](state),
-      downloadUrl: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_79" /* getFileDownloadUrl */](state),
+      uploadUrl: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_79" /* getFileUploadUrl */](state),
+      downloadUrl: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_80" /* getFileDownloadUrl */](state),
       siteId: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["F" /* getSiteId */](state),
       agentId: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["u" /* getCurrentAgentId */](state),
-      sessionId: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_55" /* getCurrentAgentSession */](state),
-      maxFileSize: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_83" /* getMaxFileSize */](state),
-      maxFileNum: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_84" /* getMaxFileNum */](state)
+      sessionId: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_56" /* getCurrentAgentSession */](state),
+      maxFileSize: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_84" /* getMaxFileSize */](state),
+      maxFileNum: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_85" /* getMaxFileNum */](state)
     },
-    selectedFontSize: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_85" /* getFontSize */](state),
-    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_76" /* textDirectionIfRTL */](state)
+    selectedFontSize: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_86" /* getFontSize */](state),
+    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_14__reducers_selectors__["_77" /* textDirectionIfRTL */](state)
   };
 };
 
@@ -15887,7 +15887,7 @@ function getMessages(state, chat) {
       var newMessage = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, msg, {
         id: msg.agentId + '_' + i,
         type: msg.agentId === currentAgent.id ? __WEBPACK_IMPORTED_MODULE_8__constants_enums_messageType__["c" /* agent */] : __WEBPACK_IMPORTED_MODULE_8__constants_enums_messageType__["a" /* visitor */],
-        sender: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, msg.agentId).name
+        sender: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, msg.agentId).name
       });
       return newMessage;
     });
@@ -15923,13 +15923,13 @@ function mapToChatContentState(state) {
     typingMessage: '',
     scrollTop: -1,
     messages: __WEBPACK_IMPORTED_MODULE_5_immutable___default.a.List(),
-    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_76" /* textDirectionIfRTL */](state),
+    textDirectionIfRTL: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_77" /* textDirectionIfRTL */](state),
     errorMessageForChat: ''
   };
   var selectedInfo = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_41" /* getSelectedIdForAgents */](state).toString().split('_');
   if (selectedInfo.length > 1) {
     /* agentId */
-    var selectedAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(selectedInfo[1]));
+    var selectedAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(selectedInfo[1]));
     return generateContentObject(state, contentState, selectedAgent);
   } else if (selectedInfo[0] !== '0') {
     var selectedDpt = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(selectedInfo[0]));
@@ -15943,13 +15943,13 @@ function mapToChatContentState(state) {
 }
 
 function getAgentAvatarUrl(state, agentId) {
-  return __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAdminAgentAvatarUrl */](state) + '?siteId=' + __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["F" /* getSiteId */](state) + '&operatorId=' + agentId;
+  return __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_82" /* getAdminAgentAvatarUrl */](state) + '?siteId=' + __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["F" /* getSiteId */](state) + '&operatorId=' + agentId;
 }
 
 function mapToChatHeader(state) {
   var strId = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_41" /* getSelectedIdForAgents */](state).toString();
   var ids = strId.split('_');
-  var agentOrDepartment = ids.length > 1 ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(ids[1])) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(ids[0]));
+  var agentOrDepartment = ids.length > 1 ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, __WEBPACK_IMPORTED_MODULE_2_lodash_parseInt___default()(ids[1])) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, Math.abs(ids[0]));
   if (!__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(previousState.header) && __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(agentOrDepartment) && (ids.length !== 1 || Math.abs(ids[0]) !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["m" /* allAvailableId */])) {
     var newState = { agent: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({}, previousState.header.agent) };
     newState.agent.ifDisableKickOff = true;
@@ -15963,8 +15963,8 @@ function mapToChatHeader(state) {
       ifCurrentAgent: intId === __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state),
       avatarLink: ids.length > 1 ? getAgentAvatarUrl(state, ids[1]) : '',
       name: __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(agentOrDepartment) ? 'All Available' : agentOrDepartment.name,
-      ifDisableKickOff: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["h" /* logOff */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, intId).status === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline,
-      ifDisableSetAway: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["i" /* setAway */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, intId).status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].online
+      ifDisableKickOff: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["h" /* logOff */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, intId).status === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline,
+      ifDisableSetAway: !__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["i" /* setAway */]) || ids.length === 1 || ids.length > 1 && __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, intId).status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].online
     }
   };
   return previousState.header;
@@ -15982,7 +15982,7 @@ var getAgentOrDepartmentId = function getAgentOrDepartmentId(state) {
 var ifChatIsAvalable = function ifChatIsAvalable(state, isAgent, id) {
   if (isAgent) {
     if (!__WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_10__constants_enums_liveChatPermission__["j" /* chatWithOtherAgents */])) return false;
-    var agent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, id);
+    var agent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, id);
     if (agent && id !== __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state)) {
       return agent.status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline;
     }
@@ -16007,7 +16007,7 @@ var getSendToIds = function getSendToIds(state, isAgent, id) {
   var department = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, id);
   if (!department) return [];
   __WEBPACK_IMPORTED_MODULE_1_lodash_each___default()(department.agentIds, function (agentId) {
-    var temp = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, agentId);
+    var temp = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, agentId);
     if (!temp) return;
     if (currentAgentId !== temp.id && temp.status !== __WEBPACK_IMPORTED_MODULE_9__constants_enums__["a" /* agentStatus */].offline) {
       ids.push(agentId);
@@ -16025,7 +16025,7 @@ var filterSendToIds = function filterSendToIds(chatId, ids, isAgent) {
 
 var isActiveStatus = function isActiveStatus(state, isAgent, id) {
   var currId = Math.abs(id);
-  var obj = isAgent ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_80" /* getAgentById */](state, currId) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, currId);
+  var obj = isAgent ? __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_81" /* getAgentById */](state, currId) : __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["h" /* getDepartmentById */](state, currId);
   if (__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(obj) && currId === __WEBPACK_IMPORTED_MODULE_9__constants_enums__["m" /* allAvailableId */]) return true;
   return !__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default()(obj);
 };
@@ -17470,4 +17470,4 @@ module.exports = getScrollPosition;
 /***/ })
 
 });
-//# sourceMappingURL=editor.c3a9d.js.map
+//# sourceMappingURL=editor.3d10f.js.map

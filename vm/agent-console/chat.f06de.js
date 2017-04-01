@@ -3031,7 +3031,7 @@ var ChatContent = function (_React$Component) {
   }, {
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps, nextState) {
-      return nextProps.id !== this.props.id || nextProps.selectedFontSize !== this.props.selectedFontSize || nextProps.typingMessage !== this.props.typingMessage || nextProps.textDirectionIfRTL !== this.props.textDirectionIfRTL || nextProps.errorMessageForChat !== this.props.errorMessageForChat || nextProps.g2mStartUrl !== this.props.g2mStartUrl || nextProps.ifShowNotify !== this.props.ifShowNotify || nextProps.audioVideoChatWidth !== this.props.audioVideoChatWidth || nextProps.audioVideoChatStatus !== this.props.audioVideoChatStatus || nextProps.audioVideoChatStartTime.getTime() !== this.props.audioVideoChatStartTime.getTime() || nextState.ifShowGotoMeetingNotify !== this.state.ifShowGotoMeetingNotify || !__WEBPACK_IMPORTED_MODULE_7_lodash_isEqual___default()(this.props.messages.toJS(), nextProps.messages.toJS());
+      return nextProps.id !== this.props.id || nextProps.selectedFontSize !== this.props.selectedFontSize || nextProps.typingMessage !== this.props.typingMessage || nextProps.textDirectionIfRTL !== this.props.textDirectionIfRTL || nextProps.errorMessageForChat !== this.props.errorMessageForChat || nextProps.g2mStartUrl !== this.props.g2mStartUrl || nextProps.ifShowNotify !== this.props.ifShowNotify || nextProps.audioVideoChatWidth !== this.props.audioVideoChatWidth || nextProps.audioVideoChatStatus !== this.props.audioVideoChatStatus || (nextProps.audioVideoChatStartTime && nextProps.audioVideoChatStartTime.getTime()) !== (this.props.audioVideoChatStartTime && this.props.audioVideoChatStartTime.getTime()) || nextState.ifShowGotoMeetingNotify !== this.state.ifShowGotoMeetingNotify || !__WEBPACK_IMPORTED_MODULE_7_lodash_isEqual___default()(this.props.messages.toJS(), nextProps.messages.toJS());
     }
   }, {
     key: 'componentDidUpdate',
@@ -11299,15 +11299,15 @@ var getOnlineDepartmentComponent = function getOnlineDepartmentComponent(state) 
     var id = _ref.id,
         name = _ref.name;
 
-    var availableAgentNumberByDepartmentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_86" /* getAvailableAgentsNumberByDepartmentId */](state, id, visitor);
+    var availableAgentNumberByDepartmentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_87" /* getAvailableAgentsNumberByDepartmentId */](state, id, visitor);
     return {
       /** @todo notice that following two lines are not actually aligned, could be an issue */
       text: name + ' (Online: ' + availableAgentNumberByDepartmentId.onlineAgentNumber + ',\n                          Away: ' + availableAgentNumberByDepartmentId.awayAgentNumber + ')',
       value: id
     };
   });
-  var onlineAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_87" /* getOnlineAvailableAgents */](state, visitor).length;
-  var awayAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_88" /* getAwayAvailableAgents */](state, visitor).length;
+  var onlineAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_88" /* getOnlineAvailableAgents */](state, visitor).length;
+  var awayAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_89" /* getAwayAvailableAgents */](state, visitor).length;
   var defaultSelectOption = [{
     text: 'All Available (Online: ' + onlineAgentNumber + ', Away: ' + awayAgentNumber + ')',
     value: -1
@@ -11421,11 +11421,11 @@ function ifEnableAudioVideoChatButton(state, chat, currentAgentId) {
     return false;
   }
 
-  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_89" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
+  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_90" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
     return false;
   }
 
-  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_90" /* getIfAgentRequestAudioVideoChat */](state, currentAgentId)) {
+  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_91" /* getIfAgentRequestAudioVideoChat */](state, currentAgentId)) {
     return false;
   }
 
@@ -11444,16 +11444,16 @@ var mapStateToProps = function mapStateToProps(state) {
   var visitorId = visitor.get('id');
   var ifDepartmentEnabled = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["v" /* getifDepartmentEnabled */](state);
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["u" /* getCurrentAgentId */](state);
-  var onlineDepartments = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_91" /* getTransferOnlineDepartments */](state, visitorId);
-  var allAvailableAgents = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_92" /* getAllAvailableAgents */](state, visitor);
-  var currentAgentName = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_82" /* getCurrentAgentName */](state);
+  var onlineDepartments = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_92" /* getTransferOnlineDepartments */](state, visitorId);
+  var allAvailableAgents = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_93" /* getAllAvailableAgents */](state, visitor);
+  var currentAgentName = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_83" /* getCurrentAgentName */](state);
   var currentAgentEmail = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_14" /* getCurrentAgentEmail */](state);
-  var agentSession = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_55" /* getCurrentAgentSession */](state);
-  var joinMeIntegrationServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_73" /* getJoinMeIntegrationServer */](state);
+  var agentSession = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
+  var joinMeIntegrationServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_74" /* getJoinMeIntegrationServer */](state);
   var chat = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["q" /* getSelectedChat */](state);
-  var secureFormServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_93" /* getSecureFormServer */](state);
+  var secureFormServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_94" /* getSecureFormServer */](state);
   var campaign = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'));
-  var ifUseMainServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_94" /* ifUseMainServer */](state);
+  var ifUseMainServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_95" /* ifUseMainServer */](state);
   var chatDetails = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_10" /* getChatDetails */](state, visitorId, chatId);
   var dateTimeFormat = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_26" /* getDateTimeFormat */](state);
   var siteInfo = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_37" /* getSiteInfo */](state);
@@ -11464,9 +11464,9 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var onlineDepartmentComponent = getOnlineDepartmentComponent(state);
 
-  var authProvider = ifUseMainServer ? __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_95" /* getChatServerUrl */](state).replace('https://', '').replace('http://', '') : __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_96" /* getStandbyChatServer */](state).replace('https://', '').replace('http://', '');
-  var ifAutoPopTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_97" /* ifPopTranslation */](state, chatId);
-  var enableChatTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_98" /* getIfChatEnableTransaltion */](state, chatId);
+  var authProvider = ifUseMainServer ? __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_96" /* getChatServerUrl */](state).replace('https://', '').replace('http://', '') : __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_97" /* getStandbyChatServer */](state).replace('https://', '').replace('http://', '');
+  var ifAutoPopTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_98" /* ifPopTranslation */](state, chatId);
+  var enableChatTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getIfChatEnableTransaltion */](state, chatId);
 
   var secureFormConfig = {
     siteId: siteId,
@@ -11475,9 +11475,9 @@ var mapStateToProps = function mapStateToProps(state) {
     authProvider: authProvider,
     themeColor: campaign ? campaign.themeColor : ''
   };
-  var detectedVisitorLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getVisitorLanguage */](state, chatId).toString();
-  var agentTranslationLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getAgentTranslationLanguage */](state).toString();
-  var fileUploadUrl = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_78" /* getFileUploadUrl */](state);
+  var detectedVisitorLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getVisitorLanguage */](state, chatId).toString();
+  var agentTranslationLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* getAgentTranslationLanguage */](state).toString();
+  var fileUploadUrl = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getFileUploadUrl */](state);
   var sendFileUploadUrl = fileUploadUrl + '?sessionId=' + agentSession + '&visitorId=' + visitorId + '&siteId=' + siteId;
 
   var _common$getAttachTick = __WEBPACK_IMPORTED_MODULE_18__Business_common__["f" /* getAttachTicketURL */](state, visitor.get('ticketId').split('-T')[1]),
@@ -11486,29 +11486,29 @@ var mapStateToProps = function mapStateToProps(state) {
       loginUrl = _common$getAttachTick.loginUrl,
       autoLoginUrl = _common$getAttachTick.autoLoginUrl;
 
-  var responseErrorMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* getResponseErrorMessage */](state);
-  var sendEmailSuccessMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getSendEmailSuccessMessage */](state);
+  var responseErrorMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getResponseErrorMessage */](state);
+  var sendEmailSuccessMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_103" /* getSendEmailSuccessMessage */](state);
 
   var transcriptInfo = getTranscriptInfo(visitor, chatId, chat.get('messages'), currentAgentName, currentAgentEmail, sessionInfo, chatInfo, dateTimeFormat, ifDepartmentEnabled);
 
   var ret = {
     responseErrorMessage: responseErrorMessage,
     sendEmailSuccessMessage: sendEmailSuccessMessage,
-    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_103" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_104" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'))),
-    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_105" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
+    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_104" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_105" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'))),
+    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_106" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
     siteId: siteId,
     agentSession: agentSession,
     ifUseMainServer: ifUseMainServer,
-    selectedFontSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_85" /* getFontSize */](state),
+    selectedFontSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_86" /* getFontSize */](state),
     siteInfo: {
       visitorId: visitorId,
-      uploadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_78" /* getFileUploadUrl */](state),
-      downloadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getFileDownloadUrl */](state),
-      sessionId: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_55" /* getCurrentAgentSession */](state),
+      uploadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getFileUploadUrl */](state),
+      downloadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_80" /* getFileDownloadUrl */](state),
+      sessionId: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_56" /* getCurrentAgentSession */](state),
       siteId: siteId,
       privateMessage: 1,
-      maxFileSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_83" /* getMaxFileSize */](state),
-      maxFileNum: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_84" /* getMaxFileNum */](state),
+      maxFileSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_84" /* getMaxFileSize */](state),
+      maxFileNum: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_85" /* getMaxFileNum */](state),
       sendFileUploadUrl: sendFileUploadUrl
     },
     visitorId: visitorId,
@@ -11518,7 +11518,7 @@ var mapStateToProps = function mapStateToProps(state) {
     currentAgentId: currentAgentId,
     transfer: getTransfer(ifDepartmentEnabled, onlineDepartments, onlineDepartmentComponent, allAvailableAgents),
     transcriptInfo: transcriptInfo,
-    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_106" /* getPCIForms */](state)),
+    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_107" /* getPCIForms */](state)),
     autoTranslateInfo: getAutoTranslateInfo(detectedVisitorLanguage, ifAutoPopTranslation, enableChatTranslation, agentTranslationLanguage),
     gotoAttachTicket: function gotoAttachTicket() {
       __WEBPACK_IMPORTED_MODULE_18__Business_common__["g" /* gotoAttachTicket */]({
@@ -11687,7 +11687,11 @@ var getIsContactOrUserOpen = function getIsContactOrUserOpen(state) {
 };
 
 function getAVStatusForUI(state, visitor, currentAgentId) {
-  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_107" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_53" /* isVisitorExists */](state, visitor.get('id'))) {
+    return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
+  }
+
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_108" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
     return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
   }
 
@@ -11705,7 +11709,7 @@ function getAVStatusForUI(state, visitor, currentAgentId) {
     var activeAgents = visitor.get('chatActiveAgents');
     // 当聊天里有多个agent时，当前agent如果正在语音视频，不显示访客请求语音视频界面
     if (activeAgents && activeAgents.length > 1) {
-      if (__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_89" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
+      if (__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_90" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
         return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
       }
     }
@@ -11727,16 +11731,16 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
   var visitorId = chat.get('visitorId');
   var visitor = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["r" /* getVisitorByChatId */](state, chatId);
   var chatGuid = visitor.get('chatGuid');
-  var secureFormServer = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_93" /* getSecureFormServer */](state);
+  var secureFormServer = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_94" /* getSecureFormServer */](state);
   var siteId = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["F" /* getSiteId */](state);
-  var agentSession = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_55" /* getCurrentAgentSession */](state);
+  var agentSession = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
   var timezone = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_24" /* getTimezone */](state);
   var timezoneOffset = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_25" /* getTimezoneOffset */](state);
-  var textDirectionIfRTL = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_76" /* textDirectionIfRTL */](state);
-  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_108" /* getErrorMessageForChat */](state, chat && chat.get('id'));
+  var textDirectionIfRTL = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_77" /* textDirectionIfRTL */](state);
+  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_109" /* getErrorMessageForChat */](state, chat && chat.get('id'));
   var ifShowNotify = chat.get('ifShowNotify');
   var audioVideoChatWidth = chat.get('audioVideoChatWidth');
-  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_109" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
+  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_110" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["u" /* getCurrentAgentId */](state);
   var avStatus = getAVStatusForUI(state, visitor, currentAgentId);
   if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__utils_common__["b" /* isChattingWithAgent */])(visitor, currentAgentId)) {
@@ -11750,8 +11754,8 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
     visitorId: visitorId,
     chatGuid: chatGuid,
     agentSession: agentSession,
-    selectedFontSize: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_85" /* getFontSize */](state),
-    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_110" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
+    selectedFontSize: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_86" /* getFontSize */](state),
+    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_111" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
     typingMessage: chat.get('typingMessage'),
     isContactOrUserOpen: getIsContactOrUserOpen(state),
     chatTo: visitor.get('latestName'),
@@ -11911,7 +11915,7 @@ var ifDisplayLeaveChat = function ifDisplayLeaveChat(state) {
   var visitor = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["r" /* getVisitorByChatId */](state, chat.get('id'));
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state);
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["c" /* isMonitorWithAgent */](visitor, currentAgentId);
-  var isChattingWithAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_59" /* checkIfVisitorStatusChatting */](visitor.get('status')) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, currentAgentId);
+  var isChattingWithAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_60" /* checkIfVisitorStatusChatting */](visitor.get('status')) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, currentAgentId);
 
   if (isMonitoring || isChattingWithAgent) {
     return true;
@@ -11928,7 +11932,7 @@ var isDisplayCloseChat = function isDisplayCloseChat(state) {
   var status = visitor.get('status');
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["c" /* isMonitorWithAgent */](visitor, agentId);
 
-  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_111" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
+  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_112" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
   var isTransferring = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["b" /* transferring */];
 
   var isMonitorEnded = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["e" /* chatEnded */] && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["g" /* isAgentInMonitorList */](visitor, agentId);
@@ -11972,7 +11976,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var saleforceURL = getSalesforceURL(state, visitor);
   var checkChatExisted = chat.get('id') !== visitor.get('chatId');
-  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_112" /* isVisitorExists */](state, visitor.get('id'));
+  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_53" /* isVisitorExists */](state, visitor.get('id'));
 
   var isContactOrUserOpen = getIsContactOrUserOpen(state);
   var ret = {
@@ -12006,7 +12010,7 @@ var mapStateToProps = function mapStateToProps(state) {
       displayLeave: ifDisplayLeaveChat(state),
       displayCloseChat: isDisplayCloseChat(state)
     },
-    ifUseMainServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_94" /* ifUseMainServer */](state)
+    ifUseMainServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_95" /* ifUseMainServer */](state)
   };
   /* perf.markEnd('ChatHeader: mapStateToProps'); */
 
@@ -12673,4 +12677,4 @@ module.exports = chunk;
 
 /***/ })
 ]));
-//# sourceMappingURL=chat.57d1d.js.map
+//# sourceMappingURL=chat.f06de.js.map
