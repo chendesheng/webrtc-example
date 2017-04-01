@@ -3763,13 +3763,10 @@ var MediaChat = {
     },
 
     startP2PChat: function (time){
+        console.log(time);
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
-        var now = (new Date).getTime();
-        if (seconds < now)
-            this.startTime = new Date(now);
-        else
-           this.startTime = new Date(seconds);     
+        this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
         console.log('startTime: ', this.startTime); 
         this.p2pChat.start();
         this.startTimer(document.getElementsByClassName('chattingDuration')[0]);

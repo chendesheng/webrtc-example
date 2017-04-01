@@ -728,19 +728,21 @@ function update_dropdownlist_selected(ele, val) {
     // }
 
     this.play = function(type, ifLoop) {
-        var tmp;
-        this.players.forEach(function(item) {
-            if(item.type === type) {
-                tmp = item;
-                return false;
+        try {
+            var tmp;
+            this.players.forEach(function(item) {
+                if(item.type === type) {
+                    tmp = item;
+                    return false;
+                }
+            });
+            if(typeof tmp !== 'undefined') {
+                if (isStatusOn()) {
+                    tmp.player.loop = ifLoop ? 'loop' : '';
+                    tmp.player.play();
+                }
             }
-        });
-        if(typeof tmp !== 'undefined') {
-            if (isStatusOn()) {
-                tmp.player.loop = ifLoop ? 'loop' : '';
-                tmp.player.play();
-            }
-        }
+        } catch (e) {}
     };
 
     this.stop = function() {
@@ -1041,6 +1043,7 @@ function url_query(param, defaultValue) {
 var snapshot_params;
 var init_data;
 var languages_data;
+var time_delay = 0;
 
 function initlanguages(languages) {
     languages_data = {};
@@ -1061,13 +1064,10 @@ function initialize(data) {
         add_class(document.body, "embedded-window");
     }
 
-
     initlanguages(init_data.languages);
 
-    snapshot_params = data.snapshot_params;
+    snapshot_params = data.snapshot_params;    
 
-    init_data.audio_video_waiting_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=13';
-    init_data.audio_video_end_soundUrl = 'https://ent.comm100.com/chatserver/dbresource/dbsound.ashx?soundId=14';
     init_sound_alert();
 }
 
@@ -1203,6 +1203,9 @@ function init_sound_alert() {
     }
     if (ifSupportWebrtc)
     {
+        var soundHandler = init_data.sound_url.substring(0, init_data.sound_url.indexOf('?'));
+        init_data.audio_video_waiting_soundUrl = soundHandler + '?soundName=Notifier_10.mp3';
+        init_data.audio_video_end_soundUrl = soundHandler + '?soundName=Notifier_11.mp3';
         sound_urls.push({
             type: sound_type.mediaChatWaiting,
             url: init_data.audio_video_waiting_soundUrl
@@ -3973,6 +3976,13 @@ function request_chat_handler(fncomplete, fnerror) {
             if (fnerror) fnerror(res);
             return;
         }
+        
+        if(typeof res.server_current_time !== 'undefined') {
+            var seconds = parseInt(res.server_current_time.match(/Date\((\d+)\)/)[1]);
+            seconds -= (new Date).getTimezoneOffset() * 60;
+            time_delay = seconds - Date.now();
+            console.log('time_delay: ', time_delay);
+        }
 
         function complete_request_chat(res) {
             if (res.chat_id > 0) {
@@ -5354,6 +5364,9 @@ var chat_window = (function () {
         'add_message': add_message,
         'get_chatguid': function() {
             return chatGuid;
+        },
+        'get_time_delay': function() {
+            return time_delay;
         },
     };
 })();
