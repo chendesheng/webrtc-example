@@ -1,5 +1,5 @@
-webpackJsonp([1],Array(761).concat([
-/* 761 */
+webpackJsonp([1],Array(758).concat([
+/* 758 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,20 +8,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_tooltip__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_CommonResources_common_css__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_CommonResources_common_css__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_CommonResources_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_CommonResources_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Resizer_ResizeContainer__ = __webpack_require__(693);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ChatList__ = __webpack_require__(1513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ChatHeader__ = __webpack_require__(1512);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ChatContent__ = __webpack_require__(1511);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatAction__ = __webpack_require__(1510);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__SplitterChatTextEditor__ = __webpack_require__(1520);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__NoChat__ = __webpack_require__(1516);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Default_css__ = __webpack_require__(1647);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Resizer_ResizeContainer__ = __webpack_require__(691);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ChatList__ = __webpack_require__(1503);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ChatHeader__ = __webpack_require__(1502);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ChatContent__ = __webpack_require__(1501);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatAction__ = __webpack_require__(1500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__SplitterChatTextEditor__ = __webpack_require__(1510);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__NoChat__ = __webpack_require__(1506);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Default_css__ = __webpack_require__(1637);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Default_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__Default_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__SplitterVisitorDetailsTab__ = __webpack_require__(964);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__SplitterVisitorDetailsTab__ = __webpack_require__(953);
 
 
 
@@ -95,6 +95,9 @@ var SplitterChat = function SplitterChat(_ref) {
 /* harmony default export */ __webpack_exports__["default"] = (SplitterChat);
 
 /***/ }),
+/* 759 */,
+/* 760 */,
+/* 761 */,
 /* 762 */,
 /* 763 */,
 /* 764 */,
@@ -189,19 +192,7 @@ var SplitterChat = function SplitterChat(_ref) {
 /* 853 */,
 /* 854 */,
 /* 855 */,
-/* 856 */,
-/* 857 */,
-/* 858 */,
-/* 859 */,
-/* 860 */,
-/* 861 */,
-/* 862 */,
-/* 863 */,
-/* 864 */,
-/* 865 */,
-/* 866 */,
-/* 867 */,
-/* 868 */
+/* 856 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -215,9 +206,9 @@ var SplitterChat = function SplitterChat(_ref) {
 
 
 
-var base64 = __webpack_require__(1526)
-var ieee754 = __webpack_require__(1671)
-var isArray = __webpack_require__(1536)
+var base64 = __webpack_require__(1516)
+var ieee754 = __webpack_require__(1661)
+var isArray = __webpack_require__(1526)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -1995,32 +1986,32 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(541)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(540)))
 
 /***/ }),
-/* 869 */,
-/* 870 */,
-/* 871 */,
-/* 872 */,
-/* 873 */,
-/* 874 */,
-/* 875 */,
-/* 876 */,
-/* 877 */,
-/* 878 */,
-/* 879 */,
-/* 880 */
+/* 857 */,
+/* 858 */,
+/* 859 */,
+/* 860 */,
+/* 861 */,
+/* 862 */,
+/* 863 */,
+/* 864 */,
+/* 865 */,
+/* 866 */,
+/* 867 */,
+/* 868 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"chatAction":"ChatAction__chatAction--2avGg","chatActionIcon":"ChatAction__chatActionIcon--WDUxk","iconActive":"ChatAction__iconActive--2eXsX","chatActionIconDisabled":"ChatAction__chatActionIconDisabled--3wdpU"};
 
 /***/ }),
-/* 881 */,
-/* 882 */,
-/* 883 */,
-/* 884 */,
-/* 885 */
+/* 869 */,
+/* 870 */,
+/* 871 */,
+/* 872 */,
+/* 873 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2030,7 +2021,7 @@ module.exports = {"chatAction":"ChatAction__chatAction--2avGg","chatActionIcon":
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TextArea_css__ = __webpack_require__(917);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TextArea_css__ = __webpack_require__(906);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TextArea_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__TextArea_css__);
 
 
@@ -2062,46 +2053,220 @@ var TextArea = function TextArea(props) {
 /* harmony default export */ __webpack_exports__["a"] = (TextArea);
 
 /***/ }),
-/* 886 */,
-/* 887 */
+/* 874 */,
+/* 875 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"chatitemcontainer":"ChatItem__chatitemcontainer--3vaYa","acceptStyle":"ChatItem__acceptStyle--8iD0p","selected":"ChatItem__selected--3tHXg","captureitem":"ChatItem__captureitem--2P6yE","statusitem":"ChatItem__statusitem--1sZXs","detailitem":"ChatItem__detailitem--39Qkw","infoitem":"ChatItem__infoitem--iKpEA","segmentitem":"ChatItem__segmentitem--2MEGr","pinnStyle":"ChatItem__pinnStyle--3S_e8","pinned":"ChatItem__pinned--3K6vH","nopinned":"ChatItem__nopinned--9EuB_","deleteIcon":"ChatItem__deleteIcon--yBJ47","nobutton":"ChatItem__nobutton--J4KGQ","chatItemDetail":"ChatItem__chatItemDetail--CsTN4","chatItemPrompt":"ChatItem__chatItemPrompt--1r4Y6","visitorName":"ChatItem__visitorName--hjA5p","visitorDepartment":"ChatItem__visitorDepartment--3nz8W","refuseBtn":"ChatItem__refuseBtn--3WP-K","acceptBtn":"ChatItem__acceptBtn--1IHiU","wrapupbtn":"ChatItem__wrapupbtn--3G4nl","actioncontainer":"ChatItem__actioncontainer--usX52","promptNumber":"ChatItem__promptNumber--1L3Zb","chatItemSegment":"ChatItem__chatItemSegment--3qLnK","chatItemConfig":"ChatItem__chatItemConfig--3EoD2","configitem":"ChatItem__configitem--1lgRL","selectedicon":"ChatItem__selectedicon--1l-hw","chatconfigpanel":"ChatItem__chatconfigpanel--2XWd5","itemContainer":"ChatItem__itemContainer--3Uyme","configPanel":"ChatItem__configPanel--2344w","configicon":"ChatItem__configicon--7WIYr","idleStyle":"ChatItem__idleStyle--37Eqo","idleUnderProptNum":"ChatItem__idleUnderProptNum--1Wopt","showChatViaList":"ChatItem__showChatViaList--2lBhv","showChatViaGroup":"ChatItem__showChatViaGroup--1MV56","groupNameWraper":"ChatItem__groupNameWraper--3TdpC","groupSection":"ChatItem__groupSection--3xKcD","groupSpread":"ChatItem__groupSpread--2X8v4","opened":"ChatItem__opened--2Us0v","noChatSection":"ChatItem__noChatSection--2g_GD"};
 
 /***/ }),
-/* 888 */,
-/* 889 */,
-/* 890 */,
-/* 891 */,
-/* 892 */
+/* 876 */,
+/* 877 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+var logDisabled_ = true;
+
+// Utility methods.
+var utils = {
+  disableLog: function(bool) {
+    if (typeof bool !== 'boolean') {
+      return new Error('Argument type: ' + typeof bool +
+          '. Please use a boolean.');
+    }
+    logDisabled_ = bool;
+    return (bool) ? 'adapter.js logging disabled' :
+        'adapter.js logging enabled';
+  },
+
+  log: function() {
+    if (typeof window === 'object') {
+      if (logDisabled_) {
+        return;
+      }
+      if (typeof console !== 'undefined' && typeof console.log === 'function') {
+        console.log.apply(console, arguments);
+      }
+    }
+  },
+
+  /**
+   * Extract browser version out of the provided user agent string.
+   *
+   * @param {!string} uastring userAgent string.
+   * @param {!string} expr Regular expression used as match criteria.
+   * @param {!number} pos position in the version string to be returned.
+   * @return {!number} browser version.
+   */
+  extractVersion: function(uastring, expr, pos) {
+    var match = uastring.match(expr);
+    return match && match.length >= pos && parseInt(match[pos], 10);
+  },
+
+  /**
+   * Browser detector.
+   *
+   * @return {object} result containing browser and version
+   *     properties.
+   */
+  detectBrowser: function() {
+    // Returned result object.
+    var result = {};
+    result.browser = null;
+    result.version = null;
+
+    // Fail early if it's not a browser
+    if (typeof window === 'undefined' || !window.navigator) {
+      result.browser = 'Not a browser.';
+      return result;
+    }
+
+    // Firefox.
+    if (navigator.mozGetUserMedia) {
+      result.browser = 'firefox';
+      result.version = this.extractVersion(navigator.userAgent,
+          /Firefox\/(\d+)\./, 1);
+    } else if (navigator.webkitGetUserMedia) {
+      // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+      if (window.webkitRTCPeerConnection) {
+        result.browser = 'chrome';
+        result.version = this.extractVersion(navigator.userAgent,
+          /Chrom(e|ium)\/(\d+)\./, 2);
+      } else { // Safari (in an unpublished version) or unknown webkit-based.
+        if (navigator.userAgent.match(/Version\/(\d+).(\d+)/)) {
+          result.browser = 'safari';
+          result.version = this.extractVersion(navigator.userAgent,
+            /AppleWebKit\/(\d+)\./, 1);
+        } else { // unknown webkit-based browser.
+          result.browser = 'Unsupported webkit-based browser ' +
+              'with GUM support but no WebRTC support.';
+          return result;
+        }
+      }
+    } else if (navigator.mediaDevices &&
+        navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)) { // Edge.
+      result.browser = 'edge';
+      result.version = this.extractVersion(navigator.userAgent,
+          /Edge\/(\d+).(\d+)$/, 2);
+    } else if (navigator.mediaDevices &&
+        navigator.userAgent.match(/AppleWebKit\/(\d+)\./)) {
+        // Safari, with webkitGetUserMedia removed.
+      result.browser = 'safari';
+      result.version = this.extractVersion(navigator.userAgent,
+          /AppleWebKit\/(\d+)\./, 1);
+    } else { // Default fallthrough: not supported.
+      result.browser = 'Not a supported browser.';
+      return result;
+    }
+
+    return result;
+  },
+
+  // shimCreateObjectURL must be called before shimSourceObject to avoid loop.
+
+  shimCreateObjectURL: function() {
+    if (!(typeof window === 'object' && window.HTMLMediaElement &&
+          'srcObject' in window.HTMLMediaElement.prototype)) {
+      // Only shim CreateObjectURL using srcObject if srcObject exists.
+      return undefined;
+    }
+
+    var nativeCreateObjectURL = URL.createObjectURL.bind(URL);
+    var nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+    var streams = new Map(), newId = 0;
+
+    URL.createObjectURL = function(stream) {
+      if ('getTracks' in stream) {
+        var url = 'polyblob:' + (++newId);
+        streams.set(url, stream);
+        console.log('URL.createObjectURL(stream) is deprecated! ' +
+                    'Use elem.srcObject = stream instead!');
+        return url;
+      }
+      return nativeCreateObjectURL(stream);
+    };
+    URL.revokeObjectURL = function(url) {
+      nativeRevokeObjectURL(url);
+      streams.delete(url);
+    };
+
+    var dsc = Object.getOwnPropertyDescriptor(window.HTMLMediaElement.prototype,
+                                              'src');
+    Object.defineProperty(window.HTMLMediaElement.prototype, 'src', {
+      get: function() {
+        return dsc.get.apply(this);
+      },
+      set: function(url) {
+        this.srcObject = streams.get(url) || null;
+        return dsc.set.apply(this, [url]);
+      }
+    });
+
+    var nativeSetAttribute = HTMLMediaElement.prototype.setAttribute;
+    HTMLMediaElement.prototype.setAttribute = function() {
+      if (arguments.length === 2 &&
+          ('' + arguments[0]).toLowerCase() === 'src') {
+        this.srcObject = streams.get(arguments[1]) || null;
+      }
+      return nativeSetAttribute.apply(this, arguments);
+    };
+  }
+};
+
+// Export.
+module.exports = {
+  log: utils.log,
+  disableLog: utils.disableLog,
+  browserDetails: utils.detectBrowser(),
+  extractVersion: utils.extractVersion,
+  shimCreateObjectURL: utils.shimCreateObjectURL,
+  detectBrowser: utils.detectBrowser.bind(utils)
+};
+
+
+/***/ }),
+/* 878 */,
+/* 879 */,
+/* 880 */,
+/* 881 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"chatContainer":"ChatContent__chatContainer--1oxtQ","chatContentContainer":"ChatContent__chatContentContainer--3fAaw","chatVideoContainer":"ChatContent__chatVideoContainer--2Q872","chatVideoItem":"ChatContent__chatVideoItem--C1bJl","chatContent":"ChatContent__chatContent--3lHVq","directionRTL":"ChatContent__directionRTL--y-RND","systemMeg":"ChatContent__systemMeg--1akET","chatMeg":"ChatContent__chatMeg--1xqJM","translationMsg":"ChatContent__translationMsg--34tcn","attachment":"ChatContent__attachment--1ONEF","chatContentInfo":"ChatContent__chatContentInfo--17_KL","name":"ChatContent__name--2_SRW","time":"ChatContent__time--3BqgY","operator":"ChatContent__operator--13jwF","visitor":"ChatContent__visitor--1vjfa","secureForm":"ChatContent__secureForm--LAEtE","typingIndicator":"ChatContent__typingIndicator--Njccd","chatContentsmall":"ChatContent__chatContentsmall--2nRGa","chatContentmiddle":"ChatContent__chatContentmiddle--1j4wB","chatContentlarge":"ChatContent__chatContentlarge--u101R","notify":"ChatContent__notify--3IFoV","notifyG2M":"ChatContent__notifyG2M--2Kneq","notifyName":"ChatContent__notifyName--2eGs0","error":"ChatContent__error--31HZ8","errorContent":"ChatContent__errorContent--1sK1Q","action":"ChatContent__action--3JAej","avatarContainer":"ChatContent__avatarContainer--1iP34","visitorName":"ChatContent__visitorName--XjBhL","notice":"ChatContent__notice--1NI9M","incoming":"ChatContent__incoming--2VMSc","accept":"ChatContent__accept--2nUzs","refuse":"ChatContent__refuse--1fghu","chattingInfo":"ChatContent__chattingInfo--3Z8YS","videoContainer":"ChatContent__videoContainer--3rse-","localVideo":"ChatContent__localVideo--3H6-Z","remoteVideo":"ChatContent__remoteVideo--ZJRKg","videoChatting":"ChatContent__videoChatting--3JKjR"};
 
 /***/ }),
-/* 893 */,
-/* 894 */,
-/* 895 */,
-/* 896 */,
-/* 897 */
+/* 882 */,
+/* 883 */,
+/* 884 */,
+/* 885 */,
+/* 886 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAPFBMVEW0tLSxsbGjoqKsrKy/v7+op6fS0tL4+Pj8/Pzz8/Po6Oi7urvY19fu7u7////ExMTLy8u3t7fc3Nzh4eFYEd3tAAACPElEQVR4XuzNRxEAIBAEQX57gYx/r7igeEwb6PIJAAAAYI16mqybPPbMV+0t1lyXZAVhIGyiyEWIoO//rufPqUptzc4gs0n4XqAr0B0DWFOgH5S8GRSbPf1COpV1d09vSJpVn4XeE7Kabg70kaJjs3ZTD39q6BbqE6q1Livb6jJBeLVveooXddhOzylNTncLNMAlJ1yIsdzmncYoUo72NIhQpjKNEmWEPQ0jssuVxkkSwom+QKCLHPQNu22WmAK2K82AkKftfb3Rd2TbMDEJTNsW41edCaCPszU1s84SBp0ZoM8Ck4Xtl3qW8Aqz4gSTGgjCpJaJkz4SFy5/JNBXnG7WIMDCpu6KuM6ZBDKb2rZpNpwzZhZcLc9sTEWYcmjzzi0CHH684HXKwTw6XGSINMTGBZtm+Uacct0UHYKYMCR6SmjoFjmg0ENOxEUSiE+ThLBYKrPuusgCa6Ee4WRdOcBdPT831hXFnZ4+cDnWla75Q9HlQPaVOIDtvas6+VW69tqwe3TQGfBrZ3fVpoKrV6/WmF20Kw4CVw+yZ7hqu9JM0S/YvuSN67V8uj5u6hDuQ0H2CtQn5KbzS0Ifvyv9ktAnirmsRhqjnOaybHC1HzD6BlcJrq7Bt5v+hN9lg6tr8CYgywYX6Be6Bt89CRKuQye4fXxuAsHVMfiZSIlYR4Or6TIOri6/t9HasbLaVicyoAi8jEs97jYyAV6DRCa82msnE+pLyReZkMHU1ExaO6Y2tLVDE9yLMBrxX+4fqbwdFs0D+1MAAAAASUVORK5CYII="
 
 /***/ }),
-/* 898 */,
-/* 899 */,
-/* 900 */,
-/* 901 */,
-/* 902 */,
-/* 903 */,
-/* 904 */,
-/* 905 */,
-/* 906 */,
-/* 907 */,
-/* 908 */
+/* 887 */,
+/* 888 */,
+/* 889 */,
+/* 890 */,
+/* 891 */,
+/* 892 */,
+/* 893 */,
+/* 894 */,
+/* 895 */,
+/* 896 */,
+/* 897 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2109,38 +2274,38 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAO
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants_enums_visitorType__ = __webpack_require__(962);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants_enums_visitorType__ = __webpack_require__(951);
 
 
 
 
 var Avatar = function Avatar(props) {
   var identityType = props.identityType;
-  var avatarLink = __webpack_require__(897); // eslint-disable-line
+  var avatarLink = __webpack_require__(886); // eslint-disable-line
   var tooltip = 'Visitor';
   if (props.isContactOrUserOpen) {
     switch (identityType) {
       case __WEBPACK_IMPORTED_MODULE_2__constants_enums_visitorType__["a" /* visitorIdentityTypeUser */]:
         {
-          avatarLink = __webpack_require__(1261); // eslint-disable-line
+          avatarLink = __webpack_require__(1250); // eslint-disable-line
           tooltip = 'User';
           break;
         }
       case __WEBPACK_IMPORTED_MODULE_2__constants_enums_visitorType__["b" /* visitorIdentityTypeContact */]:
         {
-          avatarLink = __webpack_require__(1260); // eslint-disable-line
+          avatarLink = __webpack_require__(1249); // eslint-disable-line
           tooltip = 'Contact';
           break;
         }
       case __WEBPACK_IMPORTED_MODULE_2__constants_enums_visitorType__["c" /* visitorIdentityTypeVisitor */]:
         {
-          avatarLink = __webpack_require__(897); // eslint-disable-line
+          avatarLink = __webpack_require__(886); // eslint-disable-line
           tooltip = 'Visitor';
           break;
         }
       default:
         {
-          avatarLink = __webpack_require__(897); // eslint-disable-line
+          avatarLink = __webpack_require__(886); // eslint-disable-line
           tooltip = '';
           break;
         }
@@ -2157,16 +2322,16 @@ var Avatar = function Avatar(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Avatar);
 
 /***/ }),
-/* 909 */
+/* 898 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_find__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_find___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_find__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_salesforce__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_salesforce__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_time__ = __webpack_require__(74);
 /* unused harmony export isSystem */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getDisplayText; });
@@ -2459,7 +2624,7 @@ var getSFObjectId = function getSFObjectId(fields) {
 };
 
 /***/ }),
-/* 910 */
+/* 899 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2467,10 +2632,10 @@ var getSFObjectId = function getSFObjectId(fields) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_tooltip__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_utils_func__ = __webpack_require__(700);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Tooltip_css__ = __webpack_require__(984);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_utils_func__ = __webpack_require__(697);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Tooltip_css__ = __webpack_require__(973);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Tooltip_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Tooltip_css__);
 
 
@@ -2508,31 +2673,31 @@ Tooltip.hide = __WEBPACK_IMPORTED_MODULE_3_src_utils_func__["a" /* onceEachTick 
 /* harmony default export */ __webpack_exports__["a"] = (Tooltip);
 
 /***/ }),
-/* 911 */,
-/* 912 */,
-/* 913 */,
-/* 914 */,
-/* 915 */,
-/* 916 */
+/* 900 */,
+/* 901 */,
+/* 902 */,
+/* 903 */,
+/* 904 */,
+/* 905 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"chatHeader":"ChatHeader__chatHeader--2Px8C","visitorDetails":"ChatHeader__visitorDetails--2nE2E","avatar":"ChatHeader__avatar--3teOQ","details":"ChatHeader__details--98r8e","name":"ChatHeader__name--1dwu_","others":"ChatHeader__others--1ml66","action":"ChatHeader__action--ODKC9","btnAction":"ChatHeader__btnAction--3J-NO","btnAaction":"ChatHeader__btnAaction--1bGJL","tooltip":"ChatHeader__tooltip--2cHr7","marginRight10":"ChatHeader__marginRight10--1GaZY"};
 
 /***/ }),
-/* 917 */
+/* 906 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"multipleText":"TextArea__multipleText--1J3OF","error":"TextArea__error--3le0n"};
 
 /***/ }),
-/* 918 */,
-/* 919 */,
-/* 920 */,
-/* 921 */,
-/* 922 */,
-/* 923 */
+/* 907 */,
+/* 908 */,
+/* 909 */,
+/* 910 */,
+/* 911 */,
+/* 912 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2551,9 +2716,9 @@ function uid() {
 module.exports = exports['default'];
 
 /***/ }),
-/* 924 */,
-/* 925 */,
-/* 926 */
+/* 913 */,
+/* 914 */,
+/* 915 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2561,8 +2726,8 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Modal_css__);
 
 
@@ -2585,8 +2750,8 @@ var StandbyNotice = function StandbyNotice(props) {
 /* harmony default export */ __webpack_exports__["a"] = (StandbyNotice);
 
 /***/ }),
-/* 927 */,
-/* 928 */
+/* 916 */,
+/* 917 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2636,6 +2801,17 @@ var audioChatting = 'Audio Chatting';
 var videoChatting = 'Video Chatting';
 
 /***/ }),
+/* 918 */,
+/* 919 */,
+/* 920 */,
+/* 921 */,
+/* 922 */,
+/* 923 */,
+/* 924 */,
+/* 925 */,
+/* 926 */,
+/* 927 */,
+/* 928 */,
 /* 929 */,
 /* 930 */,
 /* 931 */,
@@ -2648,18 +2824,7 @@ var videoChatting = 'Video Chatting';
 /* 938 */,
 /* 939 */,
 /* 940 */,
-/* 941 */,
-/* 942 */,
-/* 943 */,
-/* 944 */,
-/* 945 */,
-/* 946 */,
-/* 947 */,
-/* 948 */,
-/* 949 */,
-/* 950 */,
-/* 951 */,
-/* 952 */
+/* 941 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2677,18 +2842,16 @@ var videoChatting = 'Video Chatting';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatContent_css__ = __webpack_require__(892);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatContent_css__ = __webpack_require__(881);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Avatar__ = __webpack_require__(908);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_p2pChat__ = __webpack_require__(698);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Avatar__ = __webpack_require__(897);
 
 
 
@@ -2796,7 +2959,7 @@ var AudioVideoChatContent = function (_React$Component) {
   }, {
     key: 'insertVideoObject',
     value: function insertVideoObject(props) {
-      var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_15__services_p2pChat__["a" /* getP2PChat */])();
+      var p2pChat = props.p2pChat;
       if (p2pChat != null && isVideoChatting(props.audioVideoChatStatus) && this.videoContainer) {
         var localVideo = p2pChat.getLocalVideo();
         if (localVideo) {
@@ -2896,7 +3059,7 @@ var AudioVideoChatContent = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (AudioVideoChatContent);
 
 /***/ }),
-/* 953 */
+/* 942 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2922,19 +3085,19 @@ var AudioVideoChatContent = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_immutable__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_immutable__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_immutable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_immutable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_constants_enums_fontSize__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_constants_enums_fontSize__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ChatContent_css__ = __webpack_require__(892);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ChatContent_css__ = __webpack_require__(881);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ChatContent_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__ChatContent_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Link_Link__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ChatContentMsg__ = __webpack_require__(954);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Link_Link__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ChatContentMsg__ = __webpack_require__(943);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Icon_Icon__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__AudioVideoChatContent__ = __webpack_require__(952);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__Resizer_ResizeContainer__ = __webpack_require__(693);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Icon_Icon__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__AudioVideoChatContent__ = __webpack_require__(941);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__Resizer_ResizeContainer__ = __webpack_require__(691);
 
 
 
@@ -3225,7 +3388,7 @@ var ChatContent = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatContent);
 
 /***/ }),
-/* 954 */
+/* 943 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3246,12 +3409,12 @@ var ChatContent = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_utils_time__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_Link_Link__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_messageType__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_str__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatContent_css__ = __webpack_require__(892);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_Link_Link__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_messageType__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_str__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatContent_css__ = __webpack_require__(881);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__ChatContent_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums__ = __webpack_require__(3);
 
 
@@ -3395,7 +3558,7 @@ var ChatContentMsg = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatContentMsg);
 
 /***/ }),
-/* 955 */
+/* 944 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3403,7 +3566,7 @@ var ChatContentMsg = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FileUploadProgress_css__ = __webpack_require__(979);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FileUploadProgress_css__ = __webpack_require__(968);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FileUploadProgress_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__FileUploadProgress_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Button_Button__ = __webpack_require__(47);
 
@@ -3431,7 +3594,7 @@ var FileUploadProgress = function FileUploadProgress(props) {
 /* harmony default export */ __webpack_exports__["a"] = (FileUploadProgress);
 
 /***/ }),
-/* 956 */
+/* 945 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3441,8 +3604,8 @@ var FileUploadProgress = function FileUploadProgress(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Icon_css__);
 
 
@@ -3480,7 +3643,7 @@ var Browser = function Browser(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Browser);
 
 /***/ }),
-/* 957 */
+/* 946 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3498,20 +3661,20 @@ var Browser = function Browser(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_noop__ = __webpack_require__(1246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_noop__ = __webpack_require__(1235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_noop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_lodash_noop__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rc_upload__ = __webpack_require__(1252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rc_upload__ = __webpack_require__(1241);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rc_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rc_upload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__Icon_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_helper__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__FileUploadProgress_FileUploadProgress__ = __webpack_require__(955);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__FileUploadProgress_FileUploadProgress__ = __webpack_require__(944);
 
 
 
@@ -3687,7 +3850,7 @@ var SendFile = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SendFile);
 
 /***/ }),
-/* 958 */
+/* 947 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3697,9 +3860,9 @@ var SendFile = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Icon_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_jsx__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_jsx__ = __webpack_require__(316);
 
 
 
@@ -3710,7 +3873,7 @@ var Country = function Country(props) {
   var tooltip = props.city + ', ' + props.state + ', ' + props.countryName;
   if (!props.countryCode) return null;
   var nameLowerCase = props.countryCode.toLowerCase();
-  var imgCountry = __webpack_require__(1263)("./" + nameLowerCase + '.svg');
+  var imgCountry = __webpack_require__(1252)("./" + nameLowerCase + '.svg');
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('span', {
     'data-tip': tooltip,
     'data-for': props['data-for'] || 'chatContainer'
@@ -3723,7 +3886,7 @@ var Country = function Country(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Country);
 
 /***/ }),
-/* 959 */
+/* 948 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3733,8 +3896,8 @@ var Country = function Country(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Icon__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Icon_css__);
 
 
@@ -3774,8 +3937,8 @@ var OS = function OS(props) {
 /* harmony default export */ __webpack_exports__["a"] = (OS);
 
 /***/ }),
-/* 960 */,
-/* 961 */
+/* 949 */,
+/* 950 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3793,9 +3956,9 @@ var OS = function OS(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__TextArea_TextArea__ = __webpack_require__(885);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__TextArea_TextArea__ = __webpack_require__(873);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(684);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_helper__ = __webpack_require__(16);
 
 
@@ -3906,7 +4069,7 @@ var ModalBanChat = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ModalBanChat);
 
 /***/ }),
-/* 962 */
+/* 951 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3926,20 +4089,20 @@ var visitorIdentityTypeCookie = 5;
 var visitorIdentityTypeVisitor = 6;
 
 /***/ }),
-/* 963 */,
-/* 964 */
+/* 952 */,
+/* 953 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_components_Icons_LoadingComponent__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_Widget_Reload__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_components_Icons_LoadingComponent__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_Widget_Reload__ = __webpack_require__(293);
 
 
 
@@ -3952,7 +4115,7 @@ var visitorIdentityTypeVisitor = 6;
     modules: { VisitorDetailsTab: function VisitorDetailsTab() {
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__["b" /* importLazy */])(new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
           __webpack_require__.e/* require.ensure */(6).then((function (require) {
-            resolve(__webpack_require__(929));
+            resolve(__webpack_require__(918));
           }).bind(null, __webpack_require__)).catch(__webpack_require__.oe).catch(reject);
         }));
       } },
@@ -3965,1586 +4128,1586 @@ var visitorIdentityTypeVisitor = 6;
 });
 
 /***/ }),
+/* 954 */,
+/* 955 */,
+/* 956 */,
+/* 957 */,
+/* 958 */,
+/* 959 */,
+/* 960 */,
+/* 961 */,
+/* 962 */,
+/* 963 */,
+/* 964 */,
 /* 965 */,
 /* 966 */,
 /* 967 */,
-/* 968 */,
-/* 969 */,
-/* 970 */,
-/* 971 */,
-/* 972 */,
-/* 973 */,
-/* 974 */,
-/* 975 */,
-/* 976 */,
-/* 977 */,
-/* 978 */,
-/* 979 */
+/* 968 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"uploadProgressContainer":"FileUploadProgress__uploadProgressContainer--2X8I6","uploadProgress":"FileUploadProgress__uploadProgress--z1S5B","uploadProgressPercent":"FileUploadProgress__uploadProgressPercent--2Kuai","uploadProgressBarContainer":"FileUploadProgress__uploadProgressBarContainer--1y0Vz","uploadProgressBar":"FileUploadProgress__uploadProgressBar--1Y9LY","cancelUpload":"FileUploadProgress__cancelUpload--1YVmG","uploadFileName":"FileUploadProgress__uploadFileName--3j-Sc"};
 
 /***/ }),
-/* 980 */,
-/* 981 */
+/* 969 */,
+/* 970 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"promptWindow":"Prompt__promptWindow--1pSIE","close":"Prompt__close--1armJ","action":"Prompt__action--8U9t9","dropdown":"Prompt__dropdown--dWvdQ"};
 
 /***/ }),
-/* 982 */,
-/* 983 */,
-/* 984 */
+/* 971 */,
+/* 972 */,
+/* 973 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"container":"Tooltip__container--202Gq"};
 
 /***/ }),
-/* 985 */,
-/* 986 */,
-/* 987 */,
-/* 988 */,
-/* 989 */
+/* 974 */,
+/* 975 */,
+/* 976 */,
+/* 977 */,
+/* 978 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ad.2w4fR.svg";
 
 /***/ }),
-/* 990 */
+/* 979 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ae.QKKnW.svg";
 
 /***/ }),
-/* 991 */
+/* 980 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/af.34HyY.svg";
 
 /***/ }),
-/* 992 */
+/* 981 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ag.3oxDo.svg";
 
 /***/ }),
-/* 993 */
+/* 982 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ai.1ePWR.svg";
 
 /***/ }),
-/* 994 */
+/* 983 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/al.1vueq.svg";
 
 /***/ }),
-/* 995 */
+/* 984 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/am.47rmP.svg";
 
 /***/ }),
-/* 996 */
+/* 985 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ao.3jr2Q.svg";
 
 /***/ }),
-/* 997 */
+/* 986 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/aq.3EaFW.svg";
 
 /***/ }),
-/* 998 */
+/* 987 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ar.2ETX6.svg";
 
 /***/ }),
-/* 999 */
+/* 988 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/as.1p0xc.svg";
 
 /***/ }),
-/* 1000 */
+/* 989 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/at.2q7_9.svg";
 
 /***/ }),
-/* 1001 */
+/* 990 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/au.3DiLj.svg";
 
 /***/ }),
-/* 1002 */
+/* 991 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/aw.4BBWc.svg";
 
 /***/ }),
-/* 1003 */
+/* 992 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ax.36jxg.svg";
 
 /***/ }),
-/* 1004 */
+/* 993 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/az.1qUdn.svg";
 
 /***/ }),
-/* 1005 */
+/* 994 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ba.25bIN.svg";
 
 /***/ }),
-/* 1006 */
+/* 995 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bb.BcX82.svg";
 
 /***/ }),
-/* 1007 */
+/* 996 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bd.2fEO9.svg";
 
 /***/ }),
-/* 1008 */
+/* 997 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/be.26Thv.svg";
 
 /***/ }),
-/* 1009 */
+/* 998 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bf.2lL_M.svg";
 
 /***/ }),
-/* 1010 */
+/* 999 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bg.3FL0Z.svg";
 
 /***/ }),
-/* 1011 */
+/* 1000 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bh.2P2db.svg";
 
 /***/ }),
-/* 1012 */
+/* 1001 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bi.xNOIF.svg";
 
 /***/ }),
-/* 1013 */
+/* 1002 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bj.2RzLF.svg";
 
 /***/ }),
-/* 1014 */
+/* 1003 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bl.AXPio.svg";
 
 /***/ }),
-/* 1015 */
+/* 1004 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bm.9mtgH.svg";
 
 /***/ }),
-/* 1016 */
+/* 1005 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bn.3SkJy.svg";
 
 /***/ }),
-/* 1017 */
+/* 1006 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bo.3Pn4G.svg";
 
 /***/ }),
-/* 1018 */
+/* 1007 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bq.2b5iS.svg";
 
 /***/ }),
-/* 1019 */
+/* 1008 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/br.31kAh.svg";
 
 /***/ }),
-/* 1020 */
+/* 1009 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bs.3x6BN.svg";
 
 /***/ }),
-/* 1021 */
+/* 1010 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bt.BqUXg.svg";
 
 /***/ }),
-/* 1022 */
+/* 1011 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bv.1omMS.svg";
 
 /***/ }),
-/* 1023 */
+/* 1012 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bw.fXfB3.svg";
 
 /***/ }),
-/* 1024 */
+/* 1013 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/by.fkEtY.svg";
 
 /***/ }),
-/* 1025 */
+/* 1014 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/bz.3zcxn.svg";
 
 /***/ }),
-/* 1026 */
+/* 1015 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ca.3yloD.svg";
 
 /***/ }),
-/* 1027 */
+/* 1016 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cc.1BE1c.svg";
 
 /***/ }),
-/* 1028 */
+/* 1017 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cd.1aL94.svg";
 
 /***/ }),
-/* 1029 */
+/* 1018 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cf.1KZPZ.svg";
 
 /***/ }),
-/* 1030 */
+/* 1019 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cg.5-Xxi.svg";
 
 /***/ }),
-/* 1031 */
+/* 1020 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ch.WYetg.svg";
 
 /***/ }),
-/* 1032 */
+/* 1021 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ci.1IYx6.svg";
 
 /***/ }),
-/* 1033 */
+/* 1022 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ck.3tyQv.svg";
 
 /***/ }),
-/* 1034 */
+/* 1023 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cl.2NI88.svg";
 
 /***/ }),
-/* 1035 */
+/* 1024 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cm.9MohG.svg";
 
 /***/ }),
-/* 1036 */
+/* 1025 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cn.1N1to.svg";
 
 /***/ }),
-/* 1037 */
+/* 1026 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/co.1RsuP.svg";
 
 /***/ }),
-/* 1038 */
+/* 1027 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cr.3Yju6.svg";
 
 /***/ }),
-/* 1039 */
+/* 1028 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cu.3p081.svg";
 
 /***/ }),
-/* 1040 */
+/* 1029 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cv.1ygJ9.svg";
 
 /***/ }),
-/* 1041 */
+/* 1030 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cw.1RthL.svg";
 
 /***/ }),
-/* 1042 */
+/* 1031 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cx.38aoS.svg";
 
 /***/ }),
-/* 1043 */
+/* 1032 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cy.uMX3m.svg";
 
 /***/ }),
-/* 1044 */
+/* 1033 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/cz.eJUf5.svg";
 
 /***/ }),
-/* 1045 */
+/* 1034 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/de.2Ts3w.svg";
 
 /***/ }),
-/* 1046 */
+/* 1035 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/dj.1fpHg.svg";
 
 /***/ }),
-/* 1047 */
+/* 1036 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/dk.3juVM.svg";
 
 /***/ }),
-/* 1048 */
+/* 1037 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/dm.1rpAy.svg";
 
 /***/ }),
-/* 1049 */
+/* 1038 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/do.1DAN7.svg";
 
 /***/ }),
-/* 1050 */
+/* 1039 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/dz.1vHVr.svg";
 
 /***/ }),
-/* 1051 */
+/* 1040 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ec.hwbbX.svg";
 
 /***/ }),
-/* 1052 */
+/* 1041 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ee.KILMu.svg";
 
 /***/ }),
-/* 1053 */
+/* 1042 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/eg.3U_QX.svg";
 
 /***/ }),
-/* 1054 */
+/* 1043 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/eh.2skcW.svg";
 
 /***/ }),
-/* 1055 */
+/* 1044 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/er.3T2BO.svg";
 
 /***/ }),
-/* 1056 */
+/* 1045 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/es.1iqTD.svg";
 
 /***/ }),
-/* 1057 */
+/* 1046 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/et.17Ajh.svg";
 
 /***/ }),
-/* 1058 */
+/* 1047 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/eu.3bw_3.svg";
 
 /***/ }),
-/* 1059 */
+/* 1048 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fi.3ztSq.svg";
 
 /***/ }),
-/* 1060 */
+/* 1049 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fj.1cU11.svg";
 
 /***/ }),
-/* 1061 */
+/* 1050 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fk.2QJ47.svg";
 
 /***/ }),
-/* 1062 */
+/* 1051 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fm.1CfPN.svg";
 
 /***/ }),
-/* 1063 */
+/* 1052 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fo.3iKwE.svg";
 
 /***/ }),
-/* 1064 */
+/* 1053 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/fr.2piL-.svg";
 
 /***/ }),
-/* 1065 */
+/* 1054 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ga.3NQKi.svg";
 
 /***/ }),
-/* 1066 */
+/* 1055 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gb-eng.3CFDF.svg";
 
 /***/ }),
-/* 1067 */
+/* 1056 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gb-nir.36y8P.svg";
 
 /***/ }),
-/* 1068 */
+/* 1057 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gb-sct.1ByLH.svg";
 
 /***/ }),
-/* 1069 */
+/* 1058 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gb-wls._syZw.svg";
 
 /***/ }),
-/* 1070 */
+/* 1059 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gb.14AVo.svg";
 
 /***/ }),
-/* 1071 */
+/* 1060 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gd.1Stf-.svg";
 
 /***/ }),
-/* 1072 */
+/* 1061 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ge.2zNqV.svg";
 
 /***/ }),
-/* 1073 */
+/* 1062 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gf.qc_td.svg";
 
 /***/ }),
-/* 1074 */
+/* 1063 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gg.31NRj.svg";
 
 /***/ }),
-/* 1075 */
+/* 1064 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gh.1Tgnf.svg";
 
 /***/ }),
-/* 1076 */
+/* 1065 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gi.1nA7a.svg";
 
 /***/ }),
-/* 1077 */
+/* 1066 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gl.hATVw.svg";
 
 /***/ }),
-/* 1078 */
+/* 1067 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gm.xpnyt.svg";
 
 /***/ }),
-/* 1079 */
+/* 1068 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gn.1aCvk.svg";
 
 /***/ }),
-/* 1080 */
+/* 1069 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gp.2piL-.svg";
 
 /***/ }),
-/* 1081 */
+/* 1070 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gq.1oDwE.svg";
 
 /***/ }),
-/* 1082 */
+/* 1071 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gr.4ZgKs.svg";
 
 /***/ }),
-/* 1083 */
+/* 1072 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gs.2543W.svg";
 
 /***/ }),
-/* 1084 */
+/* 1073 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gt.35oze.svg";
 
 /***/ }),
-/* 1085 */
+/* 1074 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gu.2dYTQ.svg";
 
 /***/ }),
-/* 1086 */
+/* 1075 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gw.1LVc9.svg";
 
 /***/ }),
-/* 1087 */
+/* 1076 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/gy.2vj9x.svg";
 
 /***/ }),
-/* 1088 */
+/* 1077 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/hk.2v-pS.svg";
 
 /***/ }),
-/* 1089 */
+/* 1078 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/hm.2wnFl.svg";
 
 /***/ }),
-/* 1090 */
+/* 1079 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/hn.2ttXd.svg";
 
 /***/ }),
-/* 1091 */
+/* 1080 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/hr.2lFUr.svg";
 
 /***/ }),
-/* 1092 */
+/* 1081 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ht.3E_g7.svg";
 
 /***/ }),
-/* 1093 */
+/* 1082 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/hu.3JCUx.svg";
 
 /***/ }),
-/* 1094 */
+/* 1083 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/id.ZZ8zx.svg";
 
 /***/ }),
-/* 1095 */
+/* 1084 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ie.3jKk2.svg";
 
 /***/ }),
-/* 1096 */
+/* 1085 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/il.2IR-H.svg";
 
 /***/ }),
-/* 1097 */
+/* 1086 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/im.2T3ee.svg";
 
 /***/ }),
-/* 1098 */
+/* 1087 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/in.zCN5C.svg";
 
 /***/ }),
-/* 1099 */
+/* 1088 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/io.3Hueg.svg";
 
 /***/ }),
-/* 1100 */
+/* 1089 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/iq.2-x9U.svg";
 
 /***/ }),
-/* 1101 */
+/* 1090 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ir.1FkmY.svg";
 
 /***/ }),
-/* 1102 */
+/* 1091 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/is.2-htH.svg";
 
 /***/ }),
-/* 1103 */
+/* 1092 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/it.1pZzK.svg";
 
 /***/ }),
-/* 1104 */
+/* 1093 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/je.1BsCZ.svg";
 
 /***/ }),
-/* 1105 */
+/* 1094 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/jm.2Ls7t.svg";
 
 /***/ }),
-/* 1106 */
+/* 1095 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/jo.1f_fj.svg";
 
 /***/ }),
-/* 1107 */
+/* 1096 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/jp.UXaTU.svg";
 
 /***/ }),
-/* 1108 */
+/* 1097 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ke.hvJXJ.svg";
 
 /***/ }),
-/* 1109 */
+/* 1098 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kg.2mryN.svg";
 
 /***/ }),
-/* 1110 */
+/* 1099 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kh.2fKfl.svg";
 
 /***/ }),
-/* 1111 */
+/* 1100 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ki.rop2G.svg";
 
 /***/ }),
-/* 1112 */
+/* 1101 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/km.DTOdx.svg";
 
 /***/ }),
-/* 1113 */
+/* 1102 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kn.EftCL.svg";
 
 /***/ }),
-/* 1114 */
+/* 1103 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kp.4J00M.svg";
 
 /***/ }),
-/* 1115 */
+/* 1104 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kr.pR_NP.svg";
 
 /***/ }),
-/* 1116 */
+/* 1105 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kw.2obiU.svg";
 
 /***/ }),
-/* 1117 */
+/* 1106 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ky.z-Miu.svg";
 
 /***/ }),
-/* 1118 */
+/* 1107 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/kz.DQkxo.svg";
 
 /***/ }),
-/* 1119 */
+/* 1108 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/la.2eB4J.svg";
 
 /***/ }),
-/* 1120 */
+/* 1109 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lb.30pnU.svg";
 
 /***/ }),
-/* 1121 */
+/* 1110 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lc.EKPVR.svg";
 
 /***/ }),
-/* 1122 */
+/* 1111 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/li.2WpEC.svg";
 
 /***/ }),
-/* 1123 */
+/* 1112 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lk.k1C0H.svg";
 
 /***/ }),
-/* 1124 */
+/* 1113 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lr.2Uw0P.svg";
 
 /***/ }),
-/* 1125 */
+/* 1114 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ls.VBEQt.svg";
 
 /***/ }),
-/* 1126 */
+/* 1115 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lt.-y825.svg";
 
 /***/ }),
-/* 1127 */
+/* 1116 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lu.3uxLI.svg";
 
 /***/ }),
-/* 1128 */
+/* 1117 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/lv.ZvSWw.svg";
 
 /***/ }),
-/* 1129 */
+/* 1118 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ly.3sE_g.svg";
 
 /***/ }),
-/* 1130 */
+/* 1119 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ma.1EL7B.svg";
 
 /***/ }),
-/* 1131 */
+/* 1120 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mc.2WhRw.svg";
 
 /***/ }),
-/* 1132 */
+/* 1121 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/md.vsh0e.svg";
 
 /***/ }),
-/* 1133 */
+/* 1122 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/me.1qPvt.svg";
 
 /***/ }),
-/* 1134 */
+/* 1123 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mf.2piL-.svg";
 
 /***/ }),
-/* 1135 */
+/* 1124 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mg.3xRR5.svg";
 
 /***/ }),
-/* 1136 */
+/* 1125 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mh.2wUrT.svg";
 
 /***/ }),
-/* 1137 */
+/* 1126 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mk.2BczB.svg";
 
 /***/ }),
-/* 1138 */
+/* 1127 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ml.1kv7-.svg";
 
 /***/ }),
-/* 1139 */
+/* 1128 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mm.2ffBN.svg";
 
 /***/ }),
-/* 1140 */
+/* 1129 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mn.lruf-.svg";
 
 /***/ }),
-/* 1141 */
+/* 1130 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mo.3sSWi.svg";
 
 /***/ }),
-/* 1142 */
+/* 1131 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mp.1O98X.svg";
 
 /***/ }),
-/* 1143 */
+/* 1132 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mq.1j0c-.svg";
 
 /***/ }),
-/* 1144 */
+/* 1133 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mr.2nSlc.svg";
 
 /***/ }),
-/* 1145 */
+/* 1134 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ms.2S4dH.svg";
 
 /***/ }),
-/* 1146 */
+/* 1135 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mt.3YVu7.svg";
 
 /***/ }),
-/* 1147 */
+/* 1136 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mu.2xe4w.svg";
 
 /***/ }),
-/* 1148 */
+/* 1137 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mv.1pAcK.svg";
 
 /***/ }),
-/* 1149 */
+/* 1138 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mw.2u2G-.svg";
 
 /***/ }),
-/* 1150 */
+/* 1139 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mx.3HHm5.svg";
 
 /***/ }),
-/* 1151 */
+/* 1140 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/my.2ROqC.svg";
 
 /***/ }),
-/* 1152 */
+/* 1141 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/mz.1madv.svg";
 
 /***/ }),
-/* 1153 */
+/* 1142 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/na.3b9ka.svg";
 
 /***/ }),
-/* 1154 */
+/* 1143 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nc.2SMtj.svg";
 
 /***/ }),
-/* 1155 */
+/* 1144 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ne.2AJeB.svg";
 
 /***/ }),
-/* 1156 */
+/* 1145 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nf.3jVrH.svg";
 
 /***/ }),
-/* 1157 */
+/* 1146 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ng.1m-Ff.svg";
 
 /***/ }),
-/* 1158 */
+/* 1147 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ni.3edd4.svg";
 
 /***/ }),
-/* 1159 */
+/* 1148 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nl.2bwMS.svg";
 
 /***/ }),
-/* 1160 */
+/* 1149 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/no.1IabM.svg";
 
 /***/ }),
-/* 1161 */
+/* 1150 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/np.IB5s7.svg";
 
 /***/ }),
-/* 1162 */
+/* 1151 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nr.3s4iU.svg";
 
 /***/ }),
-/* 1163 */
+/* 1152 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nu.2WiGe.svg";
 
 /***/ }),
-/* 1164 */
+/* 1153 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/nz.gV5t6.svg";
 
 /***/ }),
-/* 1165 */
+/* 1154 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/om.2IQ-j.svg";
 
 /***/ }),
-/* 1166 */
+/* 1155 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pa.22K2M.svg";
 
 /***/ }),
-/* 1167 */
+/* 1156 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pe.1_GS_.svg";
 
 /***/ }),
-/* 1168 */
+/* 1157 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pf.3tk8E.svg";
 
 /***/ }),
-/* 1169 */
+/* 1158 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pg.3w7D2.svg";
 
 /***/ }),
-/* 1170 */
+/* 1159 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ph.1K-EN.svg";
 
 /***/ }),
-/* 1171 */
+/* 1160 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pk.7QViU.svg";
 
 /***/ }),
-/* 1172 */
+/* 1161 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pl.2a9yb.svg";
 
 /***/ }),
-/* 1173 */
+/* 1162 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pm.2SMtj.svg";
 
 /***/ }),
-/* 1174 */
+/* 1163 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pn.3mRNc.svg";
 
 /***/ }),
-/* 1175 */
+/* 1164 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pr.TkG0b.svg";
 
 /***/ }),
-/* 1176 */
+/* 1165 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ps.BcoId.svg";
 
 /***/ }),
-/* 1177 */
+/* 1166 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pt.3XLbQ.svg";
 
 /***/ }),
-/* 1178 */
+/* 1167 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/pw.3J0Gx.svg";
 
 /***/ }),
-/* 1179 */
+/* 1168 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/py.2SA6U.svg";
 
 /***/ }),
-/* 1180 */
+/* 1169 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/qa.3CXHK.svg";
 
 /***/ }),
-/* 1181 */
+/* 1170 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/re.2SMtj.svg";
 
 /***/ }),
-/* 1182 */
+/* 1171 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ro.1xgq6.svg";
 
 /***/ }),
-/* 1183 */
+/* 1172 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/rs.28IQy.svg";
 
 /***/ }),
-/* 1184 */
+/* 1173 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ru.3RAq4.svg";
 
 /***/ }),
-/* 1185 */
+/* 1174 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/rw.34cXU.svg";
 
 /***/ }),
-/* 1186 */
+/* 1175 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sa.2bh1V.svg";
 
 /***/ }),
-/* 1187 */
+/* 1176 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sb.2zDCO.svg";
 
 /***/ }),
-/* 1188 */
+/* 1177 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sc.1AnTz.svg";
 
 /***/ }),
-/* 1189 */
+/* 1178 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sd.c8kmJ.svg";
 
 /***/ }),
-/* 1190 */
+/* 1179 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/se.31NU3.svg";
 
 /***/ }),
-/* 1191 */
+/* 1180 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sg.8o5QE.svg";
 
 /***/ }),
-/* 1192 */
+/* 1181 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sh.1nwc1.svg";
 
 /***/ }),
-/* 1193 */
+/* 1182 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/si.s4x5x.svg";
 
 /***/ }),
-/* 1194 */
+/* 1183 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sj.2HjXs.svg";
 
 /***/ }),
-/* 1195 */
+/* 1184 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sk.1xk77.svg";
 
 /***/ }),
-/* 1196 */
+/* 1185 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sl.DGVaX.svg";
 
 /***/ }),
-/* 1197 */
+/* 1186 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sm.2jefN.svg";
 
 /***/ }),
-/* 1198 */
+/* 1187 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sn.1N8aE.svg";
 
 /***/ }),
-/* 1199 */
+/* 1188 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/so.2wReU.svg";
 
 /***/ }),
-/* 1200 */
+/* 1189 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sr.tPEMt.svg";
 
 /***/ }),
-/* 1201 */
+/* 1190 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ss.3Geds.svg";
 
 /***/ }),
-/* 1202 */
+/* 1191 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/st.1gBcE.svg";
 
 /***/ }),
-/* 1203 */
+/* 1192 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sv.3MFAg.svg";
 
 /***/ }),
-/* 1204 */
+/* 1193 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sx.1QgmA.svg";
 
 /***/ }),
-/* 1205 */
+/* 1194 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sy.EZ4pb.svg";
 
 /***/ }),
-/* 1206 */
+/* 1195 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/sz.3eOag.svg";
 
 /***/ }),
-/* 1207 */
+/* 1196 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tc.2Q-RA.svg";
 
 /***/ }),
-/* 1208 */
+/* 1197 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/td.XwVK8.svg";
 
 /***/ }),
-/* 1209 */
+/* 1198 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tf.3xaTz.svg";
 
 /***/ }),
-/* 1210 */
+/* 1199 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tg.Jykqh.svg";
 
 /***/ }),
-/* 1211 */
+/* 1200 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/th.3ETCo.svg";
 
 /***/ }),
-/* 1212 */
+/* 1201 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tj.3zkP-.svg";
 
 /***/ }),
-/* 1213 */
+/* 1202 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tk.1YQsC.svg";
 
 /***/ }),
-/* 1214 */
+/* 1203 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tl.1GOaM.svg";
 
 /***/ }),
-/* 1215 */
+/* 1204 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tm.2Ekpc.svg";
 
 /***/ }),
-/* 1216 */
+/* 1205 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tn.3KaBy.svg";
 
 /***/ }),
-/* 1217 */
+/* 1206 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/to.WnJJp.svg";
 
 /***/ }),
-/* 1218 */
+/* 1207 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tr.2NjR_.svg";
 
 /***/ }),
-/* 1219 */
+/* 1208 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tt.TUf9C.svg";
 
 /***/ }),
-/* 1220 */
+/* 1209 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tv.36m3F.svg";
 
 /***/ }),
-/* 1221 */
+/* 1210 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tw.2wleo.svg";
 
 /***/ }),
-/* 1222 */
+/* 1211 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/tz.V_aqs.svg";
 
 /***/ }),
-/* 1223 */
+/* 1212 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ua.2llWW.svg";
 
 /***/ }),
-/* 1224 */
+/* 1213 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ug.3XVhp.svg";
 
 /***/ }),
-/* 1225 */
+/* 1214 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/um.1Qc3K.svg";
 
 /***/ }),
-/* 1226 */
+/* 1215 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/un.2zA6C.svg";
 
 /***/ }),
-/* 1227 */
+/* 1216 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/us.1Qc3K.svg";
 
 /***/ }),
-/* 1228 */
+/* 1217 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/uy.1Y1mC.svg";
 
 /***/ }),
-/* 1229 */
+/* 1218 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/uz.2nIPH.svg";
 
 /***/ }),
-/* 1230 */
+/* 1219 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/va.H-TnN.svg";
 
 /***/ }),
-/* 1231 */
+/* 1220 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/vc.cEOJq.svg";
 
 /***/ }),
-/* 1232 */
+/* 1221 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ve.1-rAI.svg";
 
 /***/ }),
-/* 1233 */
+/* 1222 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/vg.27WC7.svg";
 
 /***/ }),
-/* 1234 */
+/* 1223 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/vi.j0S1B.svg";
 
 /***/ }),
-/* 1235 */
+/* 1224 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/vn.2F_Zc.svg";
 
 /***/ }),
-/* 1236 */
+/* 1225 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/vu.3UgNZ.svg";
 
 /***/ }),
-/* 1237 */
+/* 1226 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/wf.3Mk2v.svg";
 
 /***/ }),
-/* 1238 */
+/* 1227 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ws.3o3sr.svg";
 
 /***/ }),
-/* 1239 */
+/* 1228 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/ye.2ilYd.svg";
 
 /***/ }),
-/* 1240 */
+/* 1229 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/yt.2SMtj.svg";
 
 /***/ }),
-/* 1241 */
+/* 1230 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/za.3BjEA.svg";
 
 /***/ }),
-/* 1242 */
+/* 1231 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/zm.lNiy4.svg";
 
 /***/ }),
-/* 1243 */
+/* 1232 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/zw.2-n04.svg";
 
 /***/ }),
-/* 1244 */
+/* 1233 */
 /***/ (function(module, exports) {
 
 module.exports = "agent-console/./resources/flags/zz.1ITA-.svg";
 
 /***/ }),
-/* 1245 */,
-/* 1246 */
+/* 1234 */,
+/* 1235 */
 /***/ (function(module, exports) {
 
 /**
@@ -5567,9 +5730,9 @@ module.exports = noop;
 
 
 /***/ }),
-/* 1247 */,
-/* 1248 */,
-/* 1249 */
+/* 1236 */,
+/* 1237 */,
+/* 1238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5595,11 +5758,11 @@ var _classnames = __webpack_require__(32);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _request = __webpack_require__(1253);
+var _request = __webpack_require__(1242);
 
 var _request2 = _interopRequireDefault(_request);
 
-var _uid = __webpack_require__(923);
+var _uid = __webpack_require__(912);
 
 var _uid2 = _interopRequireDefault(_uid);
 
@@ -5815,7 +5978,7 @@ exports["default"] = AjaxUploader;
 module.exports = exports['default'];
 
 /***/ }),
-/* 1250 */
+/* 1239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5845,11 +6008,11 @@ var _classnames = __webpack_require__(32);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _uid = __webpack_require__(923);
+var _uid = __webpack_require__(912);
 
 var _uid2 = _interopRequireDefault(_uid);
 
-var _warning = __webpack_require__(1262);
+var _warning = __webpack_require__(1251);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -6093,7 +6256,7 @@ exports["default"] = IframeUploader;
 module.exports = exports['default'];
 
 /***/ }),
-/* 1251 */
+/* 1240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6111,11 +6274,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _AjaxUploader = __webpack_require__(1249);
+var _AjaxUploader = __webpack_require__(1238);
 
 var _AjaxUploader2 = _interopRequireDefault(_AjaxUploader);
 
-var _IframeUploader = __webpack_require__(1250);
+var _IframeUploader = __webpack_require__(1239);
 
 var _IframeUploader2 = _interopRequireDefault(_IframeUploader);
 
@@ -6205,17 +6368,17 @@ exports["default"] = Upload;
 module.exports = exports['default'];
 
 /***/ }),
-/* 1252 */
+/* 1241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 // export this package's api
-module.exports = __webpack_require__(1251);
+module.exports = __webpack_require__(1240);
 
 /***/ }),
-/* 1253 */
+/* 1242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6325,25 +6488,25 @@ function upload(option) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 1254 */,
-/* 1255 */,
-/* 1256 */,
-/* 1257 */,
-/* 1258 */,
-/* 1259 */,
-/* 1260 */
+/* 1243 */,
+/* 1244 */,
+/* 1245 */,
+/* 1246 */,
+/* 1247 */,
+/* 1248 */,
+/* 1249 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkU4OUI5NzlFNTIyMTFFMjkzRDY5M0EzRUFGNUY4ODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkU4OUI5N0FFNTIyMTFFMjkzRDY5M0EzRUFGNUY4ODciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRTg5Qjk3N0U1MjIxMUUyOTNENjkzQTNFQUY1Rjg4NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRTg5Qjk3OEU1MjIxMUUyOTNENjkzQTNFQUY1Rjg4NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjKuj5kAAAZ+SURBVHjazJlbbBRVGMf3zG13Lp2dvdNuS1sWKZe0QYFwTUw0CvggkYvGRIkoMRK5PPkkJvigIG01PggP+iA+UF9IeCDRFxN4oaCJoZhigkVLo2gv0m13d3Zn5+Y3e9rptnSXmelWONlOzmznnPM7//Odb873LTJN0/f4FQr+bvX/QpIUQSCCIB4himEVU9e11WvaLSxgoigSyiPH0nV9Ri3QiSwVhNAjxMKjA5yNZRX4diFqlduot+kBECaZwlpgMcsKnqRnMrssSB5sDbjIsnzk6LHDh49qmmaZ7sI2OLUQJijZbLan59u2thUffXxyYGCAIMi+vpsdHe14A6FS+Z+wMBCocv58z+nOrkwmIwh8NpuDf+m6sXvP3l27Xjx29Ehzc7Ntsm7hEMz7zsBtmqZtc3PCND4+fujQu73XrlV6zO/3JxKJ7q7O9evXEdPFSc+qqqaWryA8rN3IyMievfuqMEFRFGVoaGjfy68cePPg2NgYHnJRTB4zgWm/ceCtO3d+d9jq8uXL23e8cPv2b67IXGN1dXX39/e70hjUeu31/WNj/9pOpGYmj5kGBwe/PncOf8PQ1PF3Xt393NZEWIJ9pxSLY+lMfTQk8CzyoYJS7O379cDxT/8euQ8PDw8Pd3Z2njp10uHedGry8Bg4p09Od545cxZun1qVuvJNZ8DPVO9d0/Udb39w5aebUIchfrzeG4lEYA41M3ms1o0bfVBf2dp0teezhzJZa0GSl86c4NgA1GE82CUO19HdThwdHYXrpbMfko7fnkDf/d5BXB+6O7QoJq8UCm0tjc0NcVeTWbtqGa7cu3fPoVruvDzP8/t3bnb7VmhJLsGVXC5Xe7VgB0XC0ob2FW6xopLY2miRhSMRh4cLd7YVj0VjUtDDazTVVA/XbVu3OHw5ulMrtayVZRkPWEvr49C8o6OjxmrhvlKplJxXPGA1N8Q2rG0XRbHGauHt075mdf/AXU9YiWe2rCNMp+9EypWDWB/R0qLgAaslmYjHE4yR133+2mMhn7mpY6UHrOVLGzieyyGy9mqBWWiIFAXOA1YiIpk+lCYD1GL4rTzioHdvx38FMXB+rrHJ4wOJTAc1H+mByfChDCU5P9S7wIJONZrPEYInqfwFRnIeaLhbRCCTadED1iQdtkO0RcEyaE5GnFurKtJ1rmJGd+9ETAZTd9UqTUfdpoNcY0FRaT6DnFpYFvEKJbgNr13nIPAAkzqjmg9vq5pkRqM8RNWusaaPl0jOF/WqzXWTkGWFIEjncZhHLDthVCfwhmFmc0XNmF8GVfdlZMUwTTG6xDB0t2TuIh+IyTRNC9cJjGidM2HUjFzMK7pRNiLc5Ap6Nq+WNCWoYFxiCAh7oK3zBBPlXCGMFeJZPhSDIQiGNYp5eKCgGvAhCct8YNhyRH+sifYHpOTywOTo8PgkLKedXapubUR1GjuxBtNlGH+ysSkYT5ZiUYpLzjrUg0iaMYsJESTf2IY9AyfFmppaWI4DsXGHWLlK4lHVk45WY5+P4/hgMMQwDJ4haSlDsEtaCyODWm6i0sS45BOknyt1aF0oiozFEpIUnpycyOWywFeesJ0jHjWvQvgK8ohBEYKwaeXLXYRVE9s2jt/4wTT0B5loMcIl26Yb4KyCNQKE/OFwNBSKyHIO+IpKAWe45zhb6kEm6ILnRUGoIykSoTmWMGtWIIa0Zlv61lVTV2cx1YWDq7b4ZgsAd9Y50mdiSlgBluWKxWI6fV8p5HFiwl5TYs5GY5hAPNEg1IkEOZdpXjOlhFB47bNMMGYPztangBUMaz5XbF1wpfRBYBjRaCIcgTAdwegz6epyLJYTpFCkJCnCzXD76lEUwQSCq7eSrRuHVQG1bBJa2sHaK78kbLKZIQIBNhavp2gGk00tImYCdwx2DX6JpKiyZSu/Viwn3u+6eOF7XN+4+ckvvjwFBl6FDK9mqVsTDwUA4XBs+J+/DEObwsLbNRQOlX4LMpFhlASbicTgtooXzExmLl74zr693vtzenw8KAUr5bHKIzy8aJazg0EJgmX5QiE/gwUbAfYd/iVIKRQCbMA0ka1zhSyZZbx5WQ6w7NKWxrt//DmVPhFY2L/ZTJYX+CqLP02FE0EKRdPgMhh/YOY3H3CVvCDCFTsCVStSGmUDVepYVaEfDRYLJrPrpec/7/4Kf79959OlAZiJ9AT4T+jyoYKpahHWEztagqSmkpS+x6/8J8AAhsiCQV+tXy4AAAAASUVORK5CYII="
 
 /***/ }),
-/* 1261 */
+/* 1250 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzFEM0MwQURFNTIyMTFFMkEzODlDQjFGNjhGMUJFRTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzFEM0MwQUVFNTIyMTFFMkEzODlDQjFGNjhGMUJFRTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozMUQzQzBBQkU1MjIxMUUyQTM4OUNCMUY2OEYxQkVFMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozMUQzQzBBQ0U1MjIxMUUyQTM4OUNCMUY2OEYxQkVFMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuYSkgMAAAiiSURBVHjazJl7UFTXHcfv++7rsrssLCuggK7hYYrio1WCbSYREjKjtHViJ3bSatI/bJ2knWnTSf5oaGNqZprWTjKTRk3sH6mJYwL+IcTJKAnt2AYD6KhABJ+8kl1YHsK+7969t797z927gBHuAo453D3e9/nc7+93fuf8jrgkSdi3r1Dw+7KrgyQpgsAJgriPKKJcpHhcKFn1HRkLmCiKhHLfseLxeFIt0IlUCo7j9xELtQ5wGpZc4OzC1QJPnfe3ARAiUbEWXiSlaFioLOSFxAJpkEOg0tHRUX/ihOy3CcoF9cSFMEF97dr1UCg47PO98867X3zRumzZsrVlZchT5y0bNW+TAZMgCHV19X96Zd+qVSWTE35/wA9Xd+165o03/r65ooKmaeSv84DDoYEb16/CKzR308l0q7f3d799of38eaPRGBfFdHu6wWgIBAKyWQXBZDZXVVW++PsX4KrWpXTELTEWi61wP0DMQydwo89bWrZu3QZMLMsCAU3RNEPDR+bl5ZlMpmX5+XBbc/N/nt717MFDh3meh0dQz78nLo90am1tA0tFItHsnByLxaL0PvhWaWjIO+n3Z7lcIz4fwzBOpxN2zjR9tvOnTw8MDCAxFt+ISKfh4eGqx6pB6mAw6FqyZGx0FOJgNBLh0tLgjnA4DKwD/f2swQADh9VmCwYCNps9FuM/+uh4Tnb2LEF7qhGpVKV6Zd+r4+PjdrsdDr0ejzs385F1hRk2LhCOdtwYzLSlVaxebuce9Y37T53ramq9ApR9fb0Wjvv18785fvwYMAHZovVExNTX39/Y+DEc+v3+HY+u/+Mz1WlG5m6PPPmD0vFAZMfL//xKkvyTk23t7Z81N1du2aJnJEjNt06fPoPiZO3u6gN7a+5kwgkSJykQBFMatlsMp17f43JY0dWTJxt0RloiJSN6PB7YAavtrv7utLfQDGWxsunOxJbFOlx0mo1gWJok3nv55+i2S5cu64z+KRgR6vHx21Dv31OTlAcmRWaOoFlQSJZKmbUpXytJNEsazPFoqBAnjCwTjvLQVRdfLVTSzIZcB6c+DGKk2aEmYBYJG0UTFEMCDWugWBNlMFGskTJYjLb09SX5Sl+T7knccqTbN5e6NSbKxCkKkbJU4FIESciOJfORjIE0mOSaYUnaUPpAHjwCYWiRx0Q0rjkcDufKXPkQGjaakcnkDVc2MF9iH8PlP8X9KZyiilcshafcbrfO8TG1oTovP0+I9UNzlMmstE0ovHKN4Qr8lHCCdpTrZF62E46Kigp1jtmpGXF5QQHM+ME6WAIF4SAmbdAEKEmMyxvsKO6U68qAetPGjTrVSg2roKDgdogHr0qioCYk9JOAC1OZ1BoO4Vq2084y9Pcf2nhPXJ6NDNsdDs3fEkAYApJRZCZRZYqrggEZRRKV5aszBc/ixy0oTOCrNe4c7ZTyQwrJIoF0sjy4pPpYYmqm4ErbKzdhQlhnGpKay4sYmZtlnwqLgDAJgCSMUMgkzbIISxXs4bWFAs7iicRrcYyIXFU0WJOPKEwJFxeTLiUlHStRyxsBwNZcnT0xRbVMmTQ9gGGCQiWLhMu14mCiEh+SFlTjhIZFUXTc5Fjknqgmt0a7yLmmGFFUpVKcHdOcPbklzsA/ZiehO3FPoSciMiEtf9r4rWaFqO242gHj03YwMS4SDJ9Roj8FolLFEllzzJBBR0YSZCIOYGp0xZOBA9M8D6wsRS1LSYrWk//Mx7cQGW/N17BUzaQ4XJFwjSmJJe8RtGhdRulmSjmcqumoycEbM+8IbDMcS9QiZ8S2EiY8KSWxKc+3EFmEyxdxXUpHSZNgyU41sZ7n0kg8Fh4baJtzHIG0dezW2SmWvWdYKAUyEJLIhyc8neLdxzg+GpwYaLM4CnB+ItU1HCJVIMhgo+FQb7/XsuRBKS76h3oEPnTnnYAc9N2kKJN1RUVTY4MgCCg71QlH6AdCTD7fyN5n955uuWbMr2AYC0Uw0dve0Gh/5LYnOjEUmfCGxwZDI71iNMwwZoMlkyv43qHj//trbW0kEkErEXrgCD2LM2hVLRQKvXvkWGXVzk/PdXu8I3b3BqM1h2E42GAGTWIUIRGkBDN5mFlZ0HlbSRVrNIbD4YMffLpt2+6GhjMIDvHNYllqFiANy+Md/vDDhqNHT4yMjKEbQDOGZZniqmhn411DIpdhWVmupOBBqHuu3nzu+T9kZjpqaqp+/KPqoiL31KW5Gf105tKIhgJ1MBhqbv68rq7x7H9b4fOmPrZ2ben5801y5thxJvp15zfEEcjI1mznHFlyDpe23O8PzLhhw/rVO3f+8IknHmFZVmtaWxqZhiVPXZRy61b/P95+r7GxKRyOfKMSGRnpPl830tXf/e/I119O8wzGZCh+zJKRDfvwbRxXcDdjuVzOX/3yZ089VcMwDHobdI5pWEhGsPqRI8f+8vrbPB+b3SsnJ29ynAXth4Zu8IMX45FJkIl1upncMsZoRpcuXLi8bt2W2V9VXOR+7bWXSkuLgQGw3CsLiRndrbb2b6/++c05maB0dFzR9k1ZK9jiai9ZGHKVG5dv0pigdHX1zPmqK93Xn9yxp67uYxAF6UpN9fH29kv/OlrP0DQfmxsLZCgv34D2PYOeY/sOXmm5CAPT5p9UP/6L7eDaieWQLp1x8cWX9i9duqSs7EE1QGgh4MCBwwCnZ1kMSmvrBeSIXu/wW8/t72m7bLZxMFaffOuDyGRgdHQcXQX6OV8lt6jkIocOv4/+20fGiiv+39nZ3XLuAhyCdVlm7sUCkBbuDAQC4BAWq7yCCkOfkTNBG/aMdLgE3QXqixc75nyVgWVjAkzEpbNnz3k8wyqWEIOTQn39KZSCxoQYIyeo0uzb1avXfb7Rvr5BjjNv3PowQVMw3+Kj/KqH1hA0CSf7+gZ6em4oa0+zvQfHUH4mKR1O/OSTZjVuYd++8n8BBgAdGp8vDEHQhQAAAABJRU5ErkJggg=="
 
 /***/ }),
-/* 1262 */
+/* 1251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6410,266 +6573,266 @@ module.exports = warning;
 
 
 /***/ }),
-/* 1263 */
+/* 1252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./ad.svg": 989,
-	"./ae.svg": 990,
-	"./af.svg": 991,
-	"./ag.svg": 992,
-	"./ai.svg": 993,
-	"./al.svg": 994,
-	"./am.svg": 995,
-	"./ao.svg": 996,
-	"./aq.svg": 997,
-	"./ar.svg": 998,
-	"./as.svg": 999,
-	"./at.svg": 1000,
-	"./au.svg": 1001,
-	"./aw.svg": 1002,
-	"./ax.svg": 1003,
-	"./az.svg": 1004,
-	"./ba.svg": 1005,
-	"./bb.svg": 1006,
-	"./bd.svg": 1007,
-	"./be.svg": 1008,
-	"./bf.svg": 1009,
-	"./bg.svg": 1010,
-	"./bh.svg": 1011,
-	"./bi.svg": 1012,
-	"./bj.svg": 1013,
-	"./bl.svg": 1014,
-	"./bm.svg": 1015,
-	"./bn.svg": 1016,
-	"./bo.svg": 1017,
-	"./bq.svg": 1018,
-	"./br.svg": 1019,
-	"./bs.svg": 1020,
-	"./bt.svg": 1021,
-	"./bv.svg": 1022,
-	"./bw.svg": 1023,
-	"./by.svg": 1024,
-	"./bz.svg": 1025,
-	"./ca.svg": 1026,
-	"./cc.svg": 1027,
-	"./cd.svg": 1028,
-	"./cf.svg": 1029,
-	"./cg.svg": 1030,
-	"./ch.svg": 1031,
-	"./ci.svg": 1032,
-	"./ck.svg": 1033,
-	"./cl.svg": 1034,
-	"./cm.svg": 1035,
-	"./cn.svg": 1036,
-	"./co.svg": 1037,
-	"./cr.svg": 1038,
-	"./cu.svg": 1039,
-	"./cv.svg": 1040,
-	"./cw.svg": 1041,
-	"./cx.svg": 1042,
-	"./cy.svg": 1043,
-	"./cz.svg": 1044,
-	"./de.svg": 1045,
-	"./dj.svg": 1046,
-	"./dk.svg": 1047,
-	"./dm.svg": 1048,
-	"./do.svg": 1049,
-	"./dz.svg": 1050,
-	"./ec.svg": 1051,
-	"./ee.svg": 1052,
-	"./eg.svg": 1053,
-	"./eh.svg": 1054,
-	"./er.svg": 1055,
-	"./es.svg": 1056,
-	"./et.svg": 1057,
-	"./eu.svg": 1058,
-	"./fi.svg": 1059,
-	"./fj.svg": 1060,
-	"./fk.svg": 1061,
-	"./fm.svg": 1062,
-	"./fo.svg": 1063,
-	"./fr.svg": 1064,
-	"./ga.svg": 1065,
-	"./gb-eng.svg": 1066,
-	"./gb-nir.svg": 1067,
-	"./gb-sct.svg": 1068,
-	"./gb-wls.svg": 1069,
-	"./gb.svg": 1070,
-	"./gd.svg": 1071,
-	"./ge.svg": 1072,
-	"./gf.svg": 1073,
-	"./gg.svg": 1074,
-	"./gh.svg": 1075,
-	"./gi.svg": 1076,
-	"./gl.svg": 1077,
-	"./gm.svg": 1078,
-	"./gn.svg": 1079,
-	"./gp.svg": 1080,
-	"./gq.svg": 1081,
-	"./gr.svg": 1082,
-	"./gs.svg": 1083,
-	"./gt.svg": 1084,
-	"./gu.svg": 1085,
-	"./gw.svg": 1086,
-	"./gy.svg": 1087,
-	"./hk.svg": 1088,
-	"./hm.svg": 1089,
-	"./hn.svg": 1090,
-	"./hr.svg": 1091,
-	"./ht.svg": 1092,
-	"./hu.svg": 1093,
-	"./id.svg": 1094,
-	"./ie.svg": 1095,
-	"./il.svg": 1096,
-	"./im.svg": 1097,
-	"./in.svg": 1098,
-	"./io.svg": 1099,
-	"./iq.svg": 1100,
-	"./ir.svg": 1101,
-	"./is.svg": 1102,
-	"./it.svg": 1103,
-	"./je.svg": 1104,
-	"./jm.svg": 1105,
-	"./jo.svg": 1106,
-	"./jp.svg": 1107,
-	"./ke.svg": 1108,
-	"./kg.svg": 1109,
-	"./kh.svg": 1110,
-	"./ki.svg": 1111,
-	"./km.svg": 1112,
-	"./kn.svg": 1113,
-	"./kp.svg": 1114,
-	"./kr.svg": 1115,
-	"./kw.svg": 1116,
-	"./ky.svg": 1117,
-	"./kz.svg": 1118,
-	"./la.svg": 1119,
-	"./lb.svg": 1120,
-	"./lc.svg": 1121,
-	"./li.svg": 1122,
-	"./lk.svg": 1123,
-	"./lr.svg": 1124,
-	"./ls.svg": 1125,
-	"./lt.svg": 1126,
-	"./lu.svg": 1127,
-	"./lv.svg": 1128,
-	"./ly.svg": 1129,
-	"./ma.svg": 1130,
-	"./mc.svg": 1131,
-	"./md.svg": 1132,
-	"./me.svg": 1133,
-	"./mf.svg": 1134,
-	"./mg.svg": 1135,
-	"./mh.svg": 1136,
-	"./mk.svg": 1137,
-	"./ml.svg": 1138,
-	"./mm.svg": 1139,
-	"./mn.svg": 1140,
-	"./mo.svg": 1141,
-	"./mp.svg": 1142,
-	"./mq.svg": 1143,
-	"./mr.svg": 1144,
-	"./ms.svg": 1145,
-	"./mt.svg": 1146,
-	"./mu.svg": 1147,
-	"./mv.svg": 1148,
-	"./mw.svg": 1149,
-	"./mx.svg": 1150,
-	"./my.svg": 1151,
-	"./mz.svg": 1152,
-	"./na.svg": 1153,
-	"./nc.svg": 1154,
-	"./ne.svg": 1155,
-	"./nf.svg": 1156,
-	"./ng.svg": 1157,
-	"./ni.svg": 1158,
-	"./nl.svg": 1159,
-	"./no.svg": 1160,
-	"./np.svg": 1161,
-	"./nr.svg": 1162,
-	"./nu.svg": 1163,
-	"./nz.svg": 1164,
-	"./om.svg": 1165,
-	"./pa.svg": 1166,
-	"./pe.svg": 1167,
-	"./pf.svg": 1168,
-	"./pg.svg": 1169,
-	"./ph.svg": 1170,
-	"./pk.svg": 1171,
-	"./pl.svg": 1172,
-	"./pm.svg": 1173,
-	"./pn.svg": 1174,
-	"./pr.svg": 1175,
-	"./ps.svg": 1176,
-	"./pt.svg": 1177,
-	"./pw.svg": 1178,
-	"./py.svg": 1179,
-	"./qa.svg": 1180,
-	"./re.svg": 1181,
-	"./ro.svg": 1182,
-	"./rs.svg": 1183,
-	"./ru.svg": 1184,
-	"./rw.svg": 1185,
-	"./sa.svg": 1186,
-	"./sb.svg": 1187,
-	"./sc.svg": 1188,
-	"./sd.svg": 1189,
-	"./se.svg": 1190,
-	"./sg.svg": 1191,
-	"./sh.svg": 1192,
-	"./si.svg": 1193,
-	"./sj.svg": 1194,
-	"./sk.svg": 1195,
-	"./sl.svg": 1196,
-	"./sm.svg": 1197,
-	"./sn.svg": 1198,
-	"./so.svg": 1199,
-	"./sr.svg": 1200,
-	"./ss.svg": 1201,
-	"./st.svg": 1202,
-	"./sv.svg": 1203,
-	"./sx.svg": 1204,
-	"./sy.svg": 1205,
-	"./sz.svg": 1206,
-	"./tc.svg": 1207,
-	"./td.svg": 1208,
-	"./tf.svg": 1209,
-	"./tg.svg": 1210,
-	"./th.svg": 1211,
-	"./tj.svg": 1212,
-	"./tk.svg": 1213,
-	"./tl.svg": 1214,
-	"./tm.svg": 1215,
-	"./tn.svg": 1216,
-	"./to.svg": 1217,
-	"./tr.svg": 1218,
-	"./tt.svg": 1219,
-	"./tv.svg": 1220,
-	"./tw.svg": 1221,
-	"./tz.svg": 1222,
-	"./ua.svg": 1223,
-	"./ug.svg": 1224,
-	"./um.svg": 1225,
-	"./un.svg": 1226,
-	"./us.svg": 1227,
-	"./uy.svg": 1228,
-	"./uz.svg": 1229,
-	"./va.svg": 1230,
-	"./vc.svg": 1231,
-	"./ve.svg": 1232,
-	"./vg.svg": 1233,
-	"./vi.svg": 1234,
-	"./vn.svg": 1235,
-	"./vu.svg": 1236,
-	"./wf.svg": 1237,
-	"./ws.svg": 1238,
-	"./ye.svg": 1239,
-	"./yt.svg": 1240,
-	"./za.svg": 1241,
-	"./zm.svg": 1242,
-	"./zw.svg": 1243,
-	"./zz.svg": 1244
+	"./ad.svg": 978,
+	"./ae.svg": 979,
+	"./af.svg": 980,
+	"./ag.svg": 981,
+	"./ai.svg": 982,
+	"./al.svg": 983,
+	"./am.svg": 984,
+	"./ao.svg": 985,
+	"./aq.svg": 986,
+	"./ar.svg": 987,
+	"./as.svg": 988,
+	"./at.svg": 989,
+	"./au.svg": 990,
+	"./aw.svg": 991,
+	"./ax.svg": 992,
+	"./az.svg": 993,
+	"./ba.svg": 994,
+	"./bb.svg": 995,
+	"./bd.svg": 996,
+	"./be.svg": 997,
+	"./bf.svg": 998,
+	"./bg.svg": 999,
+	"./bh.svg": 1000,
+	"./bi.svg": 1001,
+	"./bj.svg": 1002,
+	"./bl.svg": 1003,
+	"./bm.svg": 1004,
+	"./bn.svg": 1005,
+	"./bo.svg": 1006,
+	"./bq.svg": 1007,
+	"./br.svg": 1008,
+	"./bs.svg": 1009,
+	"./bt.svg": 1010,
+	"./bv.svg": 1011,
+	"./bw.svg": 1012,
+	"./by.svg": 1013,
+	"./bz.svg": 1014,
+	"./ca.svg": 1015,
+	"./cc.svg": 1016,
+	"./cd.svg": 1017,
+	"./cf.svg": 1018,
+	"./cg.svg": 1019,
+	"./ch.svg": 1020,
+	"./ci.svg": 1021,
+	"./ck.svg": 1022,
+	"./cl.svg": 1023,
+	"./cm.svg": 1024,
+	"./cn.svg": 1025,
+	"./co.svg": 1026,
+	"./cr.svg": 1027,
+	"./cu.svg": 1028,
+	"./cv.svg": 1029,
+	"./cw.svg": 1030,
+	"./cx.svg": 1031,
+	"./cy.svg": 1032,
+	"./cz.svg": 1033,
+	"./de.svg": 1034,
+	"./dj.svg": 1035,
+	"./dk.svg": 1036,
+	"./dm.svg": 1037,
+	"./do.svg": 1038,
+	"./dz.svg": 1039,
+	"./ec.svg": 1040,
+	"./ee.svg": 1041,
+	"./eg.svg": 1042,
+	"./eh.svg": 1043,
+	"./er.svg": 1044,
+	"./es.svg": 1045,
+	"./et.svg": 1046,
+	"./eu.svg": 1047,
+	"./fi.svg": 1048,
+	"./fj.svg": 1049,
+	"./fk.svg": 1050,
+	"./fm.svg": 1051,
+	"./fo.svg": 1052,
+	"./fr.svg": 1053,
+	"./ga.svg": 1054,
+	"./gb-eng.svg": 1055,
+	"./gb-nir.svg": 1056,
+	"./gb-sct.svg": 1057,
+	"./gb-wls.svg": 1058,
+	"./gb.svg": 1059,
+	"./gd.svg": 1060,
+	"./ge.svg": 1061,
+	"./gf.svg": 1062,
+	"./gg.svg": 1063,
+	"./gh.svg": 1064,
+	"./gi.svg": 1065,
+	"./gl.svg": 1066,
+	"./gm.svg": 1067,
+	"./gn.svg": 1068,
+	"./gp.svg": 1069,
+	"./gq.svg": 1070,
+	"./gr.svg": 1071,
+	"./gs.svg": 1072,
+	"./gt.svg": 1073,
+	"./gu.svg": 1074,
+	"./gw.svg": 1075,
+	"./gy.svg": 1076,
+	"./hk.svg": 1077,
+	"./hm.svg": 1078,
+	"./hn.svg": 1079,
+	"./hr.svg": 1080,
+	"./ht.svg": 1081,
+	"./hu.svg": 1082,
+	"./id.svg": 1083,
+	"./ie.svg": 1084,
+	"./il.svg": 1085,
+	"./im.svg": 1086,
+	"./in.svg": 1087,
+	"./io.svg": 1088,
+	"./iq.svg": 1089,
+	"./ir.svg": 1090,
+	"./is.svg": 1091,
+	"./it.svg": 1092,
+	"./je.svg": 1093,
+	"./jm.svg": 1094,
+	"./jo.svg": 1095,
+	"./jp.svg": 1096,
+	"./ke.svg": 1097,
+	"./kg.svg": 1098,
+	"./kh.svg": 1099,
+	"./ki.svg": 1100,
+	"./km.svg": 1101,
+	"./kn.svg": 1102,
+	"./kp.svg": 1103,
+	"./kr.svg": 1104,
+	"./kw.svg": 1105,
+	"./ky.svg": 1106,
+	"./kz.svg": 1107,
+	"./la.svg": 1108,
+	"./lb.svg": 1109,
+	"./lc.svg": 1110,
+	"./li.svg": 1111,
+	"./lk.svg": 1112,
+	"./lr.svg": 1113,
+	"./ls.svg": 1114,
+	"./lt.svg": 1115,
+	"./lu.svg": 1116,
+	"./lv.svg": 1117,
+	"./ly.svg": 1118,
+	"./ma.svg": 1119,
+	"./mc.svg": 1120,
+	"./md.svg": 1121,
+	"./me.svg": 1122,
+	"./mf.svg": 1123,
+	"./mg.svg": 1124,
+	"./mh.svg": 1125,
+	"./mk.svg": 1126,
+	"./ml.svg": 1127,
+	"./mm.svg": 1128,
+	"./mn.svg": 1129,
+	"./mo.svg": 1130,
+	"./mp.svg": 1131,
+	"./mq.svg": 1132,
+	"./mr.svg": 1133,
+	"./ms.svg": 1134,
+	"./mt.svg": 1135,
+	"./mu.svg": 1136,
+	"./mv.svg": 1137,
+	"./mw.svg": 1138,
+	"./mx.svg": 1139,
+	"./my.svg": 1140,
+	"./mz.svg": 1141,
+	"./na.svg": 1142,
+	"./nc.svg": 1143,
+	"./ne.svg": 1144,
+	"./nf.svg": 1145,
+	"./ng.svg": 1146,
+	"./ni.svg": 1147,
+	"./nl.svg": 1148,
+	"./no.svg": 1149,
+	"./np.svg": 1150,
+	"./nr.svg": 1151,
+	"./nu.svg": 1152,
+	"./nz.svg": 1153,
+	"./om.svg": 1154,
+	"./pa.svg": 1155,
+	"./pe.svg": 1156,
+	"./pf.svg": 1157,
+	"./pg.svg": 1158,
+	"./ph.svg": 1159,
+	"./pk.svg": 1160,
+	"./pl.svg": 1161,
+	"./pm.svg": 1162,
+	"./pn.svg": 1163,
+	"./pr.svg": 1164,
+	"./ps.svg": 1165,
+	"./pt.svg": 1166,
+	"./pw.svg": 1167,
+	"./py.svg": 1168,
+	"./qa.svg": 1169,
+	"./re.svg": 1170,
+	"./ro.svg": 1171,
+	"./rs.svg": 1172,
+	"./ru.svg": 1173,
+	"./rw.svg": 1174,
+	"./sa.svg": 1175,
+	"./sb.svg": 1176,
+	"./sc.svg": 1177,
+	"./sd.svg": 1178,
+	"./se.svg": 1179,
+	"./sg.svg": 1180,
+	"./sh.svg": 1181,
+	"./si.svg": 1182,
+	"./sj.svg": 1183,
+	"./sk.svg": 1184,
+	"./sl.svg": 1185,
+	"./sm.svg": 1186,
+	"./sn.svg": 1187,
+	"./so.svg": 1188,
+	"./sr.svg": 1189,
+	"./ss.svg": 1190,
+	"./st.svg": 1191,
+	"./sv.svg": 1192,
+	"./sx.svg": 1193,
+	"./sy.svg": 1194,
+	"./sz.svg": 1195,
+	"./tc.svg": 1196,
+	"./td.svg": 1197,
+	"./tf.svg": 1198,
+	"./tg.svg": 1199,
+	"./th.svg": 1200,
+	"./tj.svg": 1201,
+	"./tk.svg": 1202,
+	"./tl.svg": 1203,
+	"./tm.svg": 1204,
+	"./tn.svg": 1205,
+	"./to.svg": 1206,
+	"./tr.svg": 1207,
+	"./tt.svg": 1208,
+	"./tv.svg": 1209,
+	"./tw.svg": 1210,
+	"./tz.svg": 1211,
+	"./ua.svg": 1212,
+	"./ug.svg": 1213,
+	"./um.svg": 1214,
+	"./un.svg": 1215,
+	"./us.svg": 1216,
+	"./uy.svg": 1217,
+	"./uz.svg": 1218,
+	"./va.svg": 1219,
+	"./vc.svg": 1220,
+	"./ve.svg": 1221,
+	"./vg.svg": 1222,
+	"./vi.svg": 1223,
+	"./vn.svg": 1224,
+	"./vu.svg": 1225,
+	"./wf.svg": 1226,
+	"./ws.svg": 1227,
+	"./ye.svg": 1228,
+	"./yt.svg": 1229,
+	"./za.svg": 1230,
+	"./zm.svg": 1231,
+	"./zw.svg": 1232,
+	"./zz.svg": 1233
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -6685,18 +6848,18 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 1263;
+webpackContext.id = 1252;
 
 /***/ }),
-/* 1264 */,
-/* 1265 */,
-/* 1266 */,
-/* 1267 */,
-/* 1268 */,
-/* 1269 */,
-/* 1270 */,
-/* 1271 */,
-/* 1272 */
+/* 1253 */,
+/* 1254 */,
+/* 1255 */,
+/* 1256 */,
+/* 1257 */,
+/* 1258 */,
+/* 1259 */,
+/* 1260 */,
+/* 1261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6704,9 +6867,9 @@ webpackContext.id = 1263;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatItem__ = __webpack_require__(1390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatItem__ = __webpack_require__(1380);
 
 
 
@@ -6735,13 +6898,13 @@ var ShowChatViaList = function ShowChatViaList(props) {
 /* harmony default export */ __webpack_exports__["a"] = (ShowChatViaList);
 
 /***/ }),
-/* 1273 */,
-/* 1274 */,
-/* 1275 */,
-/* 1276 */,
-/* 1277 */,
-/* 1278 */,
-/* 1279 */
+/* 1262 */,
+/* 1263 */,
+/* 1264 */,
+/* 1265 */,
+/* 1266 */,
+/* 1267 */,
+/* 1268 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6751,8 +6914,8 @@ var PromoteToContact = 1;
 var PromoteToUser = 2;
 
 /***/ }),
-/* 1280 */,
-/* 1281 */
+/* 1269 */,
+/* 1270 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6766,23 +6929,631 @@ var Zendesk = 3;
 var Salesforce = 4;
 
 /***/ }),
-/* 1282 */,
-/* 1283 */,
-/* 1284 */
+/* 1271 */,
+/* 1272 */,
+/* 1273 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(Buffer) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_webrtc_adapter__ = __webpack_require__(1789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_webrtc_adapter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_webrtc_adapter__);
+
+
+
+/* eslint-disable */
+
+function SignalingChannel(args) {
+  var url = args.url;
+  var chat = args.chat;
+  var iceServers;
+  var peersCount = 0;
+  var pingTimer;
+  var messageHandler;
+  var remoteStarted = false;
+  var remoteStartHandler;
+  var getIceServersHandler;
+  var schema = url.indexOf('localhost') === -1 ? 'wss://' : 'ws://';
+  var ws;
+  ws = new WebSocket(schema + url + '?chatId=' + chat);
+  var pingTimes = 0;
+  ws.onopen = function () {
+    console.log('open');
+    pingTimer = setInterval(function () {
+      pingTimes++;
+      ws.send('ping');
+      if (pingTimes >= 100) {
+        clearInterval(pingTimer);
+      }
+    }, 20 * 1000);
+  };
+
+  ws.onmessage = function (evt) {
+    var resp = JSON.parse(evt.data);
+    if (resp.count != null) {
+      console.log(resp);
+      if (peersCount === 0 && resp.count > 1) {
+        ensureGetIceServers();
+        console.log('send start');
+        // say start when some one alreay in room
+        send({ start: 1 });
+      }
+      peersCount = resp.count;
+      if (peersCount < 2) {
+        remoteStarted = false;
+      }
+    } else if (resp.start) {
+      ensureGetIceServers();
+      console.log('receive start');
+      remoteStarted = true;
+      checkRemoteStart();
+    } else if (resp.s) {
+      if (resp.s !== 200) {
+        console.error(resp);
+      }
+
+      if (iceServers == null) {
+        iceServers = resp.d ? resp.d.iceServers || [] : [];
+        console.log('get ice servers:', iceServers);
+        iceServers.push(DEFAULT_STUN_SERVER);
+        if (getIceServersHandler) getIceServersHandler(iceServers);
+      }
+    } else {
+      if (messageHandler) messageHandler(resp);
+    }
+  };
+
+  ws.onclose = function () {
+    reset();
+  };
+
+  var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302' };
+
+  function ensureGetIceServers() {
+    if (iceServers == null) {
+      iceServers = [DEFAULT_STUN_SERVER];
+      if (getIceServersHandler) getIceServersHandler(iceServers);
+    }
+  }
+
+  function resetState() {
+    clearInterval(pingTimer);
+    remoteStarted = false;
+    iceServers = null;
+    peersCount = 0;
+  }
+
+  function reset() {
+    resetState();
+    getIceServersHandler = null;
+    messageHandler = null;
+    remoteStartHandler = null;
+  }
+
+  function checkRemoteStart() {
+    if (remoteStarted && remoteStartHandler) {
+      remoteStartHandler();
+    }
+  }
+
+  function send(data) {
+    ws.send(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify___default()(data));
+  }
+
+  function close() {
+    try {
+      reset();
+      ws.onerror = null;
+      ws.close();
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  this.send = send;
+  this.close = close;
+
+  this.onRemoteStart = function (fn) {
+    remoteStartHandler = fn;
+    checkRemoteStart();
+  };
+
+  this.onMessage = function (fn) {
+    messageHandler = fn;
+  };
+
+  this.onGetIceServers = function (fn) {
+    getIceServersHandler = fn;
+    if (iceServers) {
+      if (fn) fn(iceServers);
+    }
+  };
+}
+
+function DeviceMonitor() {
+  var pollTimer;
+  var currentDevices;
+  var deviceChangeHandler;
+
+  function onDeviceChange(fn) {
+    deviceChangeHandler = fn;
+
+    if (deviceChangeHandler) {
+      // firefox只有在getUserMedia允许后才会触发ondevicechange
+      // chrome的ondevicechange可能会同时有多次
+      // 其他浏览器未知
+      getDevices().then(function (devices) {
+        currentDevices = devices;
+        resetPollTimer();
+        pollTimer = setInterval(function () {
+          getDevices().then(checkDevices);
+        }, 1000);
+      });
+    } else {
+      resetPollTimer();
+    }
+  }
+
+  function resetPollTimer() {
+    if (pollTimer) {
+      clearInterval(pollTimer);
+      pollTimer = null;
+    }
+  }
+
+  function hasDevice(devices, kind) {
+    for (var i = 0; i < devices.length; i++) {
+      var d = devices[i];
+      if (d.kind == kind) return true;
+    }
+    return false;
+  }
+
+  function checkDevices(devices) {
+    try {
+      if (!currentDevices) currentDevices = devices;
+
+      if (devices.audio == currentDevices.audio && devices.video == currentDevices.video) return;
+      currentDevices = devices;
+      if (deviceChangeHandler) deviceChangeHandler(devices);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function getDevices() {
+    return navigator.mediaDevices.enumerateDevices().then(function (devices) {
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve({
+        audio: hasDevice(devices, 'audioinput'),
+        video: hasDevice(devices, 'videoinput')
+      });
+    });
+  }
+
+  function reset() {
+    deviceChangeHandler = null;
+    navigator.mediaDevices.ondevicechange = null;
+    resetPollTimer();
+  }
+
+  this.onDeviceChange = onDeviceChange;
+  this.getDevices = function () {
+    return getDevices().then(function (devices) {
+      checkDevices(devices);
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve(devices);
+    });
+  };
+  this.reset = reset;
+}
+
+function DeviceRequester(requestDevices) {
+  // 已允许的设备
+  var allowedDevices = {
+    audio: false,
+    video: false
+  };
+
+  var monitor = new DeviceMonitor();
+
+  function onGetDevice(fn) {
+    if (fn) {
+      monitor.onDeviceChange(function (currentDevices) {
+        // 去掉设备后退成false，这样再插上会重连
+        if (allowedDevices.audio && !currentDevices.audio) {
+          allowedDevices.audio = false;
+        }
+        if (allowedDevices.video && !currentDevices.video) {
+          allowedDevices.video = false;
+        }
+        console.log('allowedDevices: ', allowedDevices);
+        console.log('currentDevices: ', currentDevices);
+        // 已经满足设备要求了
+        if (allowedDevices.audio == requestDevices.audio && allowedDevices.video == requestDevices.video) return;
+
+        // 只有设备比原来变多了才会再请求
+        if (currentDevices.audio && !allowedDevices.audio || currentDevices.video && !allowedDevices.video) {
+          dorequest(currentDevices).then(fn);
+        }
+      });
+    } else {
+      monitor.onDeviceChange(null);
+    }
+  }
+
+  var localStream;
+  function getUserMedia(devices) {
+    stopStream(localStream);
+    // 总是请求前置摄像头
+    return navigator.mediaDevices.getUserMedia({
+      audio: devices.audio,
+      video: devices.video ? { facingMode: 'user' } : false
+    }).then(function (stream) {
+      localStream = stream;
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve(stream);
+    });
+  }
+
+  function dorequest(currentDevices) {
+    // 只请求存在的设备
+    var devices = {
+      audio: requestDevices.audio && currentDevices.audio,
+      video: requestDevices.video && currentDevices.video
+    };
+
+    // 没有请求的设备视为成功
+    if (!devices.audio && !devices.video) {
+      allowedDevices = devices;
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+    }
+
+    // 允许后更新allowedDevices，拒绝了allowedDevices不变
+    return getUserMedia(devices).then(function (stream) {
+      allowedDevices = devices;
+      console.log('get stream:', stream);
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve(stream);
+    });
+  }
+
+  function stopStream(stream) {
+    if (stream) {
+      stream.getTracks().forEach(function (t) {
+        t.stop();
+      });
+    }
+  }
+
+  function reset() {
+    allowedDevices = { audio: false, video: false };
+    stopStream(localStream);
+    localStream = null;
+    monitor.reset();
+  }
+
+  this.request = function () {
+    return monitor.getDevices().then(dorequest);
+  };
+
+  this.onGetDevice = onGetDevice;
+
+  this.getStream = function () {
+    return localStream;
+  };
+
+  this.getDevices = function () {
+    return monitor.getDevices();
+  };
+
+  this.reset = reset;
+}
+
+function P2PChat(args) {
+  var chat = args.chat;
+  var localVideo = args.localVideo;
+  var remoteVideo = args.remoteVideo;
+  var url = args.url;
+  var handlers = [];
+  var connection = null;
+  var remoteStream;
+
+  function handleSignal(conn, signal) {
+    // console.log(signal);
+    var pc = conn.peerConn;
+    var chan = conn.signalingChannel;
+
+    if (signal.offer) {
+      // console.log('receive offer:', signal.offer);
+      // console.log('pc.signalingState:', pc.signalingState)
+      pc.setRemoteDescription(new RTCSessionDescription(signal.offer)).then(function () {
+        return pc.createAnswer();
+      }).then(function (answer) {
+        return pc.setLocalDescription(answer);
+      }).then(function () {
+        chan.send({ answer: pc.localDescription });
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+      }).catch(function (err) {
+        console.error(err);
+        restart(conn, true, true);
+      });
+    }
+
+    if (signal.answer) {
+      // console.log('receive answer:', signal.answer);
+      // console.log('pc.signalingState:', pc.signalingState)
+      pc.setRemoteDescription(new RTCSessionDescription(signal.answer)).then(function () {
+        console.log('set answer success');
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+      }).catch(function (err) {
+        console.log(err);
+        restart(conn, true, true);
+      });
+    }
+
+    if (signal.candidate) {
+      // console.log('receive candidate:', signal.candidate);
+      // console.log('pc.iceGatheringState', pc.iceGatheringState);
+      pc.addIceCandidate(new RTCIceCandidate(signal.candidate)).catch(function () {
+        restart(conn, true, true);
+      });
+    }
+
+    if (signal.restart) {
+      console.log('receive restart');
+      restart(conn, false, false);
+    }
+
+    // 对方发送offer时发现没有device就发送nodevice
+    // 由有device的一方发送offer
+    // 双方都没有device就停住
+    if (signal.nodevice) {
+      console.log('receive nodevice');
+      deviceRequester.getDevices().then(function (devices) {
+        if (devices.audio || devices.video) {
+          sendOffer(conn);
+        } else {
+          console.log('both nodevice');
+        }
+      });
+    }
+  }
+
+  var restartCount = 0;
+  function restart(conn, signalRestart, checkRestartCount) {
+    if (checkRestartCount) restartCount++;
+
+    console.log('restart:', restartCount);
+
+    // catch到exception时checkRestartCount为true
+    // checkRestartCount为true的时候控制restart次数
+    // 避免由于异常导致不停的restart
+    if (!checkRestartCount || restartCount <= 5) {
+      if (signalRestart) {
+        conn.signalingChannel.send({ restart: 1 });
+      }
+      reset(conn);
+      start();
+    } else {
+      resetLocal();
+      reset(conn);
+      fireEvent('error', 'P2PChat Error: restart more than 5 times');
+    }
+  }
+
+  function sendOffer(conn) {
+    var pc = conn.peerConn;
+    var chan = conn.signalingChannel;
+
+    deviceRequester.getDevices().then(function (devices) {
+      // 没有设备发送nodevice
+      if (!devices.audio && !devices.video) {
+        console.log('send nodevice');
+        chan.send({ nodevice: 1 });
+        return;
+      }
+
+      console.log('sendOffer');
+      pc.createOffer().then(function (offer) {
+        console.log('create offer:', offer);
+        return pc.setLocalDescription(offer);
+      }).then(function () {
+        console.log('send offer:', pc.localDescription);
+        chan.send({ offer: pc.localDescription });
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+      }).catch(function (e) {
+        console.error(e);
+        restart(conn, true, true);
+      });
+    });
+  }
+
+  function initLocalVideo(stream) {
+    console.log('add local stream: ', stream);
+    localVideo.autoplay = true;
+    localVideo.muted = true;
+    localVideo.srcObject = stream;
+  }
+
+  var deviceRequester;
+  function requirePermission(isVideo) {
+    resetLocal();
+
+    deviceRequester = new DeviceRequester({
+      audio: true,
+      video: isVideo
+    });
+    return deviceRequester.request().then(function (stream) {
+      initLocalVideo(stream);
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+    });
+  }
+
+  function getStats() {
+    if (conn.peerConn) {
+      conn.peerConn.getStats().then(console.log);
+      return conn.peerConn.getStats();
+    } else {
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a.resolve();
+    }
+  }
+
+  function resetLocal() {
+    if (deviceRequester) deviceRequester.reset();
+    localVideo.srcObject = null;
+  }
+
+  function resetRemote() {
+    if (remoteStream) stopStream(remoteStream);
+    remoteStream = null;
+    remoteVideo.srcObject = null;
+  }
+
+  function reset(conn) {
+    if (deviceRequester) deviceRequester.onGetDevice(null);
+
+    if (!conn) return;
+    if (!conn.peerConn && !conn.signalingChannel) return;
+
+    resetRemote();
+
+    try {
+      var pc = conn.peerConn;
+      if (pc) {
+        pc.onicecandidate = null;
+        pc.oniceconnectionstatechange = null;
+        pc.ontrack = null;
+        pc.close();
+      }
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
+      conn.signalingChannel.close();
+    } catch (e) {
+      console.error(e);
+    }
+
+    conn.peerConn = null;
+    conn.signalingChannel = null;
+    connection = null;
+  }
+
+  function start() {
+    console.log('start');
+    if (connection) reset(connection);
+
+    var conn = {};
+    var chan = new SignalingChannel({
+      chat: chat,
+      url: url
+    });
+    conn.signalingChannel = chan;
+    chan.onGetIceServers(function (iceServers) {
+      var pc = new RTCPeerConnection({
+        iceServers: iceServers
+      });
+      conn.peerConn = pc;
+
+      // send any ice candidates to the other peer
+      pc.onicecandidate = function (evt) {
+        if (evt.candidate == null) return;
+        chan.send({ "candidate": evt.candidate });
+      };
+
+      pc.oniceconnectionstatechange = function (evt) {
+        console.log(pc.iceConnectionState);
+        if (pc.iceConnectionState === 'closed') {
+          reset(conn);
+        } else if (pc.iceConnectionState === 'failed') {
+          restart(conn, true, true);
+        }
+      };
+
+      var localStream = deviceRequester.getStream();
+      deviceRequester.onGetDevice(function (stream) {
+        initLocalVideo(stream);
+        restart(conn, true, false);
+      });
+      if (localStream) pc.addStream(localStream);
+
+      pc.onaddstream = function (evt) {
+        console.log('add remote stream');
+        remoteStream = evt.stream;
+        remoteVideo.autoplay = true;
+        remoteVideo.srcObject = remoteStream;
+      };
+
+      chan.onMessage(handleSignal.bind(null, conn));
+      // only one peer will fire start event (the first one enter room)
+      chan.onRemoteStart(function () {
+        //restart if already started
+        if (remoteStream) {
+          restart(conn, true, false);
+          return;
+        }
+        sendOffer(conn);
+      });
+    });
+    connection = conn;
+  }
+
+  function onevent(f) {
+    if (handlers.indexOf(f) === -1) handlers.push(f);
+  }
+
+  function fireEvent(message, obj) {
+    handlers.forEach(function (fn) {
+      fn(message, obj);
+    });
+  };
+
+  function stopStream(stream) {
+    stream.getTracks().forEach(function (t) {
+      t.stop();
+    });
+  }
+
+  function stop() {
+    restartCount = 0;
+    resetLocal();
+    reset(connection);
+  }
+
+  this.requirePermission = requirePermission;
+  this.getPeerConnectionStats = getStats;
+  this.start = start;
+  this.onevent = onevent;
+  this.stop = stop;
+
+  this.getLocalVideo = function () {
+    return localVideo;
+  };
+
+  this.getRemoteVideo = function () {
+    return remoteVideo;
+  };
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (P2PChat);
+
+/***/ }),
+/* 1274 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(Buffer) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_chunk__ = __webpack_require__(1693);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_chunk__ = __webpack_require__(1683);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_chunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash_chunk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_guid__ = __webpack_require__(543);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_guid__ = __webpack_require__(542);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return requestSecureForm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getSecureFormContent; });
 
@@ -6811,7 +7582,7 @@ var Salesforce = 4;
 var requestSecureForm = function requestSecureForm(serverPath, secureForm, config) {
   return new __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default.a(function (resolve) {
     __webpack_require__.e/* require.ensure */(7).then((function (require) {
-      resolve(__webpack_require__(1330));
+      resolve(__webpack_require__(1320));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
   }).then(function (NodeRSA) {
     return new __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
@@ -6882,9 +7653,19 @@ var getSecureFormContent = function getSecureFormContent(serverPath, config, rsa
     });
   });
 };
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(868).Buffer))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(856).Buffer))
 
 /***/ }),
+/* 1275 */,
+/* 1276 */,
+/* 1277 */,
+/* 1278 */,
+/* 1279 */,
+/* 1280 */,
+/* 1281 */,
+/* 1282 */,
+/* 1283 */,
+/* 1284 */,
 /* 1285 */,
 /* 1286 */,
 /* 1287 */,
@@ -6980,17 +7761,7 @@ var getSecureFormContent = function getSecureFormContent(serverPath, config, rsa
 /* 1377 */,
 /* 1378 */,
 /* 1379 */,
-/* 1380 */,
-/* 1381 */,
-/* 1382 */,
-/* 1383 */,
-/* 1384 */,
-/* 1385 */,
-/* 1386 */,
-/* 1387 */,
-/* 1388 */,
-/* 1389 */,
-/* 1390 */
+/* 1380 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7014,16 +7785,16 @@ var getSecureFormContent = function getSecureFormContent(serverPath, config, rsa
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_Tooltip_Tooltip__ = __webpack_require__(910);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_Tooltip_Tooltip__ = __webpack_require__(899);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatStatus_ChatStatus__ = __webpack_require__(1404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatStatus_ChatStatus__ = __webpack_require__(1394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icon_Icon__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ChatItemDetail__ = __webpack_require__(1393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ChatItemPrompt__ = __webpack_require__(1394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ChatItemSegment__ = __webpack_require__(1395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icon_Icon__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ChatItemDetail__ = __webpack_require__(1383);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ChatItemPrompt__ = __webpack_require__(1384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ChatItemSegment__ = __webpack_require__(1385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
 
 
 
@@ -7129,7 +7900,7 @@ var ChatItem = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItem);
 
 /***/ }),
-/* 1391 */
+/* 1381 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7151,9 +7922,9 @@ var ChatItem = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
 
 
@@ -7226,7 +7997,7 @@ var ChatItemConfig = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItemConfig);
 
 /***/ }),
-/* 1392 */
+/* 1382 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7234,17 +8005,17 @@ var ChatItemConfig = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_tooltip__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CommonResources_common_css__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CommonResources_common_css__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CommonResources_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__CommonResources_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ChatItemConfig__ = __webpack_require__(1391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ShowChatViaGroup__ = __webpack_require__(1397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ShowChatViaList__ = __webpack_require__(1272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ChatItemConfig__ = __webpack_require__(1381);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ShowChatViaGroup__ = __webpack_require__(1387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ShowChatViaList__ = __webpack_require__(1261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_Icon__ = __webpack_require__(59);
 
 
 
@@ -7308,7 +8079,7 @@ var ChatItemContainer = function ChatItemContainer(props) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItemContainer);
 
 /***/ }),
-/* 1393 */
+/* 1383 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7328,7 +8099,7 @@ var ChatItemContainer = function ChatItemContainer(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatItem_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Button_Button__ = __webpack_require__(47);
 
@@ -7407,7 +8178,7 @@ var ChatItemDetail = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItemDetail);
 
 /***/ }),
-/* 1394 */
+/* 1384 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7427,10 +8198,10 @@ var ChatItemDetail = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icons_PromptNumber__ = __webpack_require__(747);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icons_PromptNumber__ = __webpack_require__(744);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_time__ = __webpack_require__(74);
 
@@ -7574,7 +8345,7 @@ var ChatItemPrompt = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItemPrompt);
 
 /***/ }),
-/* 1395 */
+/* 1385 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7594,7 +8365,7 @@ var ChatItemPrompt = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatItem_css__);
 
 
@@ -7649,7 +8420,7 @@ var ChatItemSegment = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatItemSegment);
 
 /***/ }),
-/* 1396 */
+/* 1386 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7657,7 +8428,7 @@ var ChatItemSegment = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ChatItem_css__);
 
 
@@ -7676,7 +8447,7 @@ var NoChat = function NoChat(props) {
 /* harmony default export */ __webpack_exports__["a"] = (NoChat);
 
 /***/ }),
-/* 1397 */
+/* 1387 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7698,10 +8469,10 @@ var NoChat = function NoChat(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css__ = __webpack_require__(875);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatItem_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatItem_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ShowChatViaList__ = __webpack_require__(1272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ShowChatViaList__ = __webpack_require__(1261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
 
 
@@ -7784,7 +8555,7 @@ var ShowChatViaGroup = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ShowChatViaGroup);
 
 /***/ }),
-/* 1398 */
+/* 1388 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7803,9 +8574,9 @@ var ShowChatViaGroup = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__ = __webpack_require__(905);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Modal_ModalBanChat_ModalBanChat__ = __webpack_require__(961);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Modal_ModalBanChat_ModalBanChat__ = __webpack_require__(950);
 
 
 
@@ -7869,7 +8640,7 @@ var BanChat = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (BanChat);
 
 /***/ }),
-/* 1399 */
+/* 1389 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7887,21 +8658,21 @@ var BanChat = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CommonResources_common_css__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CommonResources_common_css__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CommonResources_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__CommonResources_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icons_ChatAction_Font__ = __webpack_require__(1412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icons_ChatAction_Transfer__ = __webpack_require__(1417);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icons_ChatAction_SendFile__ = __webpack_require__(957);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icons_ChatAction_SendEmail__ = __webpack_require__(1416);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icons_ChatAction_AttachTicket__ = __webpack_require__(1410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_ChatAction_Translate__ = __webpack_require__(1418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Icons_ChatAction_GoToMeeting__ = __webpack_require__(1413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Icons_ChatAction_Joinme__ = __webpack_require__(1414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Icons_ChatAction_SecureForm__ = __webpack_require__(1415);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Icons_ChatAction_AudioChat__ = __webpack_require__(1411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Icons_ChatAction_VideoChat__ = __webpack_require__(1419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icons_ChatAction_Font__ = __webpack_require__(1402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icons_ChatAction_Transfer__ = __webpack_require__(1407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icons_ChatAction_SendFile__ = __webpack_require__(946);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icons_ChatAction_SendEmail__ = __webpack_require__(1406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icons_ChatAction_AttachTicket__ = __webpack_require__(1400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_ChatAction_Translate__ = __webpack_require__(1408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Icons_ChatAction_GoToMeeting__ = __webpack_require__(1403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Icons_ChatAction_Joinme__ = __webpack_require__(1404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Icons_ChatAction_SecureForm__ = __webpack_require__(1405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Icons_ChatAction_AudioChat__ = __webpack_require__(1401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Icons_ChatAction_VideoChat__ = __webpack_require__(1409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__utils_helper__ = __webpack_require__(16);
 
 
@@ -8043,7 +8814,7 @@ var ChatAction = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatAction);
 
 /***/ }),
-/* 1400 */
+/* 1390 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8065,20 +8836,20 @@ var ChatAction = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__CommonResources_common_css__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__CommonResources_common_css__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__CommonResources_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__CommonResources_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_css__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_css__ = __webpack_require__(905);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__ChatHeader_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icons_Avatar__ = __webpack_require__(908);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icons_Country__ = __webpack_require__(958);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icons_OS__ = __webpack_require__(959);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Browser__ = __webpack_require__(956);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Icons_Social__ = __webpack_require__(1420);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Promote_Promote__ = __webpack_require__(1403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__BanChat_BanChat__ = __webpack_require__(1398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__LeaveChat_LeaveChat__ = __webpack_require__(1402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__CloseChat_CloseChat__ = __webpack_require__(1401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_socialType__ = __webpack_require__(1281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icons_Avatar__ = __webpack_require__(897);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Icons_Country__ = __webpack_require__(947);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icons_OS__ = __webpack_require__(948);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Browser__ = __webpack_require__(945);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Icons_Social__ = __webpack_require__(1410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Promote_Promote__ = __webpack_require__(1393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__BanChat_BanChat__ = __webpack_require__(1388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__LeaveChat_LeaveChat__ = __webpack_require__(1392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__CloseChat_CloseChat__ = __webpack_require__(1391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_socialType__ = __webpack_require__(1270);
 
 
 
@@ -8188,7 +8959,7 @@ var ChatHeader = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ChatHeader);
 
 /***/ }),
-/* 1401 */
+/* 1391 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8197,7 +8968,7 @@ var ChatHeader = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatHeader_ChatHeader_css__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatHeader_ChatHeader_css__ = __webpack_require__(905);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatHeader_ChatHeader_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__ChatHeader_ChatHeader_css__);
 
 
@@ -8217,7 +8988,7 @@ var CloseChat = function CloseChat(props) {
 /* harmony default export */ __webpack_exports__["a"] = (CloseChat);
 
 /***/ }),
-/* 1402 */
+/* 1392 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8236,9 +9007,9 @@ var CloseChat = function CloseChat(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__ = __webpack_require__(905);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__ChatHeader_ChatHeader_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Modal_ModalLeaveChat_ModalLeaveChat__ = __webpack_require__(1426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Modal_ModalLeaveChat_ModalLeaveChat__ = __webpack_require__(1416);
 
 
 
@@ -8305,7 +9076,7 @@ var LeaveChat = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (LeaveChat);
 
 /***/ }),
-/* 1403 */
+/* 1393 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8325,14 +9096,14 @@ var LeaveChat = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Link_Link__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Link_Link__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_ChatHeader_css__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_ChatHeader_css__ = __webpack_require__(905);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatHeader_ChatHeader_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__ChatHeader_ChatHeader_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__CommonResources_common_css__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__CommonResources_common_css__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__CommonResources_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__CommonResources_common_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_constants_enums_promote__ = __webpack_require__(1279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_StandbyNotice_StandbyNotice__ = __webpack_require__(926);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_constants_enums_promote__ = __webpack_require__(1268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_StandbyNotice_StandbyNotice__ = __webpack_require__(915);
 
 
 
@@ -8454,7 +9225,7 @@ var Promote = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Promote);
 
 /***/ }),
-/* 1404 */
+/* 1394 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8473,9 +9244,9 @@ var Promote = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Icon_Icon__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_languages_visitorStatus__ = __webpack_require__(928);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Icon_Icon__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_languages_visitorStatus__ = __webpack_require__(917);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
 
 
 
@@ -8596,12 +9367,12 @@ ChatStatus.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (ChatStatus);
 
 /***/ }),
-/* 1405 */,
-/* 1406 */,
-/* 1407 */,
-/* 1408 */,
-/* 1409 */,
-/* 1410 */
+/* 1395 */,
+/* 1396 */,
+/* 1397 */,
+/* 1398 */,
+/* 1399 */,
+/* 1400 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8622,12 +9393,12 @@ ChatStatus.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_ModalAttachTicket_ModalAttachTicket__ = __webpack_require__(1425);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_StandbyNotice_StandbyNotice__ = __webpack_require__(926);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_ModalAttachTicket_ModalAttachTicket__ = __webpack_require__(1415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_StandbyNotice_StandbyNotice__ = __webpack_require__(915);
 
 
 
@@ -8724,7 +9495,7 @@ var AttachTicket = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (AttachTicket);
 
 /***/ }),
-/* 1411 */
+/* 1401 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8735,9 +9506,9 @@ var AttachTicket = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums__ = __webpack_require__(3);
 
 
@@ -8762,7 +9533,7 @@ var AudioChat = function AudioChat(props) {
 /* harmony default export */ __webpack_exports__["a"] = (AudioChat);
 
 /***/ }),
-/* 1412 */
+/* 1402 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8782,14 +9553,14 @@ var AudioChat = function AudioChat(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Link_Link__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_constants_enums_fontSize__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Link_Link__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_constants_enums_fontSize__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__Icon_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums__ = __webpack_require__(3);
 
 
@@ -8911,7 +9682,7 @@ var Font = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Font);
 
 /***/ }),
-/* 1413 */
+/* 1403 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8932,11 +9703,11 @@ var Font = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Prompt_PromptGotoMeeting_PromptGotoMeeting__ = __webpack_require__(1446);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Prompt_PromptGotoMeeting_PromptGotoMeeting__ = __webpack_require__(1436);
 
 
 
@@ -9035,7 +9806,7 @@ var GotoMeeting = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (GotoMeeting);
 
 /***/ }),
-/* 1414 */
+/* 1404 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9045,10 +9816,10 @@ var GotoMeeting = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_Link_Link__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_Link_Link__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums__ = __webpack_require__(3);
 
 
@@ -9081,7 +9852,7 @@ var Joinme = function Joinme(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Joinme);
 
 /***/ }),
-/* 1415 */
+/* 1405 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9102,11 +9873,11 @@ var Joinme = function Joinme(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Prompt_PromptSecureForm_PromptSecureForm__ = __webpack_require__(1447);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Prompt_PromptSecureForm_PromptSecureForm__ = __webpack_require__(1437);
 
 
 
@@ -9206,7 +9977,7 @@ var SecureForm = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SecureForm);
 
 /***/ }),
-/* 1416 */
+/* 1406 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9227,11 +9998,11 @@ var SecureForm = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_SendTranscript_SendTranscript__ = __webpack_require__(1433);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_SendTranscript_SendTranscript__ = __webpack_require__(1423);
 
 
 
@@ -9304,7 +10075,7 @@ var SendEmail = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SendEmail);
 
 /***/ }),
-/* 1417 */
+/* 1407 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9325,11 +10096,11 @@ var SendEmail = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_ModalTransfer_ModalTransfer__ = __webpack_require__(1427);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal_ModalTransfer_ModalTransfer__ = __webpack_require__(1417);
 
 
 
@@ -9397,7 +10168,7 @@ var Transfer = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Transfer);
 
 /***/ }),
-/* 1418 */
+/* 1408 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9418,13 +10189,13 @@ var Transfer = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__Icon_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Prompt_AutoTranslate_AutoTranslate__ = __webpack_require__(1445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Prompt_AutoTranslate_AutoTranslate__ = __webpack_require__(1435);
 
 
 
@@ -9517,7 +10288,7 @@ var Translate = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Translate);
 
 /***/ }),
-/* 1419 */
+/* 1409 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9528,9 +10299,9 @@ var Translate = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__ = __webpack_require__(868);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ChatSection_ChatAction_ChatAction_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums__ = __webpack_require__(3);
 
 
@@ -9555,7 +10326,7 @@ var VideoChat = function VideoChat(props) {
 /* harmony default export */ __webpack_exports__["a"] = (VideoChat);
 
 /***/ }),
-/* 1420 */
+/* 1410 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9575,13 +10346,13 @@ var VideoChat = function VideoChat(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_tooltip__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_tooltip__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_tooltip__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_enums_socialType__ = __webpack_require__(1281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_enums_socialType__ = __webpack_require__(1270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__Icon_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Link_Link__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Link_Link__ = __webpack_require__(145);
 
 
 
@@ -9690,11 +10461,11 @@ var Social = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Social);
 
 /***/ }),
-/* 1421 */,
-/* 1422 */,
-/* 1423 */,
-/* 1424 */,
-/* 1425 */
+/* 1411 */,
+/* 1412 */,
+/* 1413 */,
+/* 1414 */,
+/* 1415 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9712,15 +10483,15 @@ var Social = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Modal_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(684);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Input_Input_css__ = __webpack_require__(544);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Input_Input_css__ = __webpack_require__(543);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Input_Input_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__Input_Input_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Input_Input__ = __webpack_require__(684);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_components_Link_Link__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Input_Input__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_components_Link_Link__ = __webpack_require__(145);
 
 
 
@@ -9877,7 +10648,7 @@ var ModalAttachTicket = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ModalAttachTicket);
 
 /***/ }),
-/* 1426 */
+/* 1416 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9885,7 +10656,7 @@ var ModalAttachTicket = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(85);
 
 
 // import ReactModal from 'react-modal';
@@ -9909,7 +10680,7 @@ var ModalLeaveChat = function ModalLeaveChat(props) {
 /* harmony default export */ __webpack_exports__["a"] = (ModalLeaveChat);
 
 /***/ }),
-/* 1427 */
+/* 1417 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9927,14 +10698,14 @@ var ModalLeaveChat = function ModalLeaveChat(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Modal_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RadioButton_RadioButton__ = __webpack_require__(684);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__SelectDepartment__ = __webpack_require__(1429);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__SelectAgentByDepartmentId__ = __webpack_require__(1428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Checkbox_Checkbox__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__SelectDepartment__ = __webpack_require__(1419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__SelectAgentByDepartmentId__ = __webpack_require__(1418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Checkbox_Checkbox__ = __webpack_require__(315);
 
 
 
@@ -10069,7 +10840,7 @@ var ModalTransfer = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ModalTransfer);
 
 /***/ }),
-/* 1428 */
+/* 1418 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10089,10 +10860,10 @@ var ModalTransfer = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Modal_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_Icon__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Select_Select__ = __webpack_require__(683);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Icon_Icon__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Select_Select__ = __webpack_require__(681);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_components_Button_Button__ = __webpack_require__(47);
 
@@ -10219,7 +10990,7 @@ var SelectAgentByDepartmentId = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SelectAgentByDepartmentId);
 
 /***/ }),
-/* 1429 */
+/* 1419 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10237,9 +11008,9 @@ var SelectAgentByDepartmentId = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__Modal_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_Button_Button__ = __webpack_require__(47);
 
@@ -10298,14 +11069,14 @@ var SelectDepartment = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SelectDepartment);
 
 /***/ }),
-/* 1430 */,
-/* 1431 */,
-/* 1432 */,
-/* 1433 */
+/* 1420 */,
+/* 1421 */,
+/* 1422 */,
+/* 1423 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__);
@@ -10319,18 +11090,18 @@ var SelectDepartment = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_replace__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_replace__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_lodash_replace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_lodash_replace__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_isEqual__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_src_components_Icons_LoadingComponent__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_css__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_src_components_Icons_LoadingComponent__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Modal__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_css__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__Modal_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Input_Input__ = __webpack_require__(684);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Input_Input__ = __webpack_require__(682);
 
 
 
@@ -10509,7 +11280,7 @@ var SendTranscript = function (_React$Component) {
         modules: { SendTranscriptBody: function SendTranscriptBody() {
             return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_src_components_LazilyLoad_LazilyLoad__["b" /* importLazy */])(new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
               __webpack_require__.e/* require.ensure */(5).then((function (require) {
-                resolve(__webpack_require__(1275));
+                resolve(__webpack_require__(1264));
               }).bind(null, __webpack_require__)).catch(__webpack_require__.oe).catch(reject);
             }));
           } },
@@ -10547,18 +11318,18 @@ var SendTranscript = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (SendTranscript);
 
 /***/ }),
+/* 1424 */,
+/* 1425 */,
+/* 1426 */,
+/* 1427 */,
+/* 1428 */,
+/* 1429 */,
+/* 1430 */,
+/* 1431 */,
+/* 1432 */,
+/* 1433 */,
 /* 1434 */,
-/* 1435 */,
-/* 1436 */,
-/* 1437 */,
-/* 1438 */,
-/* 1439 */,
-/* 1440 */,
-/* 1441 */,
-/* 1442 */,
-/* 1443 */,
-/* 1444 */,
-/* 1445 */
+/* 1435 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10578,14 +11349,14 @@ var SendTranscript = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css__ = __webpack_require__(981);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css__ = __webpack_require__(970);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Prompt_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__AutoTranslate_css__ = __webpack_require__(1641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__AutoTranslate_css__ = __webpack_require__(1631);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__AutoTranslate_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__AutoTranslate_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Select_Select__ = __webpack_require__(683);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Select_Select__ = __webpack_require__(681);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums_chatAction__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums__ = __webpack_require__(3);
 
 
@@ -10638,13 +11409,13 @@ var AutoTranslate = function (_React$Component) {
     key: 'handleTurnOnAutoTranslate',
     value: function handleTurnOnAutoTranslate() {
       this.props.closePrompt();
-      this.props.onToggleAutoTranslate(__WEBPACK_IMPORTED_MODULE_12__constants_enums_chatAction__["_74" /* turnOnAutoTranslate */], this.props.visitorId, this.state.selectedLanguageValue);
+      this.props.onToggleAutoTranslate(__WEBPACK_IMPORTED_MODULE_12__constants_enums_chatAction__["_65" /* turnOnAutoTranslate */], this.props.visitorId, this.state.selectedLanguageValue);
     }
   }, {
     key: 'handleTurnOffAutoTranslate',
     value: function handleTurnOffAutoTranslate() {
       this.props.closePrompt();
-      this.props.onToggleAutoTranslate(__WEBPACK_IMPORTED_MODULE_12__constants_enums_chatAction__["_75" /* turnOffAutoTranslate */], this.props.visitorId, this.state.selectedLanguageValue);
+      this.props.onToggleAutoTranslate(__WEBPACK_IMPORTED_MODULE_12__constants_enums_chatAction__["_66" /* turnOffAutoTranslate */], this.props.visitorId, this.state.selectedLanguageValue);
     }
   }, {
     key: 'render',
@@ -10686,7 +11457,7 @@ var AutoTranslate = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (AutoTranslate);
 
 /***/ }),
-/* 1446 */
+/* 1436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10694,10 +11465,10 @@ var AutoTranslate = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Prompt_css__ = __webpack_require__(981);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Prompt_css__ = __webpack_require__(970);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Prompt_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Prompt_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants_enums__ = __webpack_require__(3);
 
 
@@ -10737,7 +11508,7 @@ var PromptGotoMeeting = function PromptGotoMeeting(props) {
 /* harmony default export */ __webpack_exports__["a"] = (PromptGotoMeeting);
 
 /***/ }),
-/* 1447 */
+/* 1437 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10757,11 +11528,11 @@ var PromptGotoMeeting = function PromptGotoMeeting(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash_find___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash_find__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css__ = __webpack_require__(981);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css__ = __webpack_require__(970);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Prompt_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Prompt_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Button_Button__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__RadioButton_RadioButton__ = __webpack_require__(686);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__RadioButton_RadioButton__ = __webpack_require__(684);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
 
 
@@ -10860,6 +11631,16 @@ var PromptSecureForm = function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PromptSecureForm);
 
 /***/ }),
+/* 1438 */,
+/* 1439 */,
+/* 1440 */,
+/* 1441 */,
+/* 1442 */,
+/* 1443 */,
+/* 1444 */,
+/* 1445 */,
+/* 1446 */,
+/* 1447 */,
 /* 1448 */,
 /* 1449 */,
 /* 1450 */,
@@ -10902,17 +11683,7 @@ var PromptSecureForm = function (_React$Component) {
 /* 1487 */,
 /* 1488 */,
 /* 1489 */,
-/* 1490 */,
-/* 1491 */,
-/* 1492 */,
-/* 1493 */,
-/* 1494 */,
-/* 1495 */,
-/* 1496 */,
-/* 1497 */,
-/* 1498 */,
-/* 1499 */,
-/* 1500 */
+/* 1490 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10926,14 +11697,14 @@ var Contact = 3;
 var Visitor = 4;
 
 /***/ }),
-/* 1501 */,
-/* 1502 */,
-/* 1503 */,
-/* 1504 */,
-/* 1505 */,
-/* 1506 */,
-/* 1507 */,
-/* 1508 */
+/* 1491 */,
+/* 1492 */,
+/* 1493 */,
+/* 1494 */,
+/* 1495 */,
+/* 1496 */,
+/* 1497 */,
+/* 1498 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10941,12 +11712,12 @@ var Visitor = 4;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_find___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_find__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_isUndefined__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_isUndefined___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_isUndefined__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_utils_common__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lru_memoize__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_utils_common__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lru_memoize__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lru_memoize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lru_memoize__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums_liveChatPermission__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums_liveChatPermission__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_memoryStore__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_memoryStore__ = __webpack_require__(35);
 /* unused harmony export getSegmentations */
@@ -11147,7 +11918,7 @@ var memoizedInitData = __WEBPACK_IMPORTED_MODULE_3_lru_memoize___default()(1)(in
 
 function createChatListState(state) {
   var siteInfo = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_37" /* getSiteInfo */](state);
-  var preferenceOther = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_113" /* getPreferenceOthers */](state);
+  var preferenceOther = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_109" /* getPreferenceOthers */](state);
   var enableRefuseChat = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_6__constants_enums_liveChatPermission__["d" /* refuseChat */]);
   var delay = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_12" /* getTimeDelay */](state) || 0;
   var agentId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["u" /* getCurrentAgentId */](state);
@@ -11162,38 +11933,38 @@ function createChatListState(state) {
 }
 
 /***/ }),
-/* 1509 */,
-/* 1510 */
+/* 1499 */,
+/* 1500 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_get__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_get__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_get__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_each__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_each___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_each__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_redux__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lru_memoize__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lru_memoize__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lru_memoize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_lru_memoize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_ChatSection_ChatAction_ChatAction__ = __webpack_require__(1399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_src_utils_common__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_ChatSection_ChatAction_ChatAction__ = __webpack_require__(1389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_src_utils_common__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_src_utils_time__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_constants_enums_messageType__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_constants_enums_messageType__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_constants_enums_visitorStatus__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_constants_enums_liveChatPermission__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__actions_chat__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_constants_enums_liveChatPermission__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__actions_chat__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__actions_ui__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__actions_agent__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__actions_web__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__actions_agent__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__actions_web__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__constants_enums_chatAction__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_secureForm__ = __webpack_require__(1284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Business_common__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_p2pChat__ = __webpack_require__(698);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__reducers_selectors_urlsManager__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_secureForm__ = __webpack_require__(1274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Business_common__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_p2pChat__ = __webpack_require__(1273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__reducers_selectors_urlsManager__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
 
 
 
@@ -11299,15 +12070,15 @@ var getOnlineDepartmentComponent = function getOnlineDepartmentComponent(state) 
     var id = _ref.id,
         name = _ref.name;
 
-    var availableAgentNumberByDepartmentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_87" /* getAvailableAgentsNumberByDepartmentId */](state, id, visitor);
+    var availableAgentNumberByDepartmentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_82" /* getAvailableAgentsNumberByDepartmentId */](state, id, visitor);
     return {
       /** @todo notice that following two lines are not actually aligned, could be an issue */
       text: name + ' (Online: ' + availableAgentNumberByDepartmentId.onlineAgentNumber + ',\n                          Away: ' + availableAgentNumberByDepartmentId.awayAgentNumber + ')',
       value: id
     };
   });
-  var onlineAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_88" /* getOnlineAvailableAgents */](state, visitor).length;
-  var awayAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_89" /* getAwayAvailableAgents */](state, visitor).length;
+  var onlineAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_83" /* getOnlineAvailableAgents */](state, visitor).length;
+  var awayAgentNumber = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_84" /* getAwayAvailableAgents */](state, visitor).length;
   var defaultSelectOption = [{
     text: 'All Available (Online: ' + onlineAgentNumber + ', Away: ' + awayAgentNumber + ')',
     value: -1
@@ -11421,11 +12192,11 @@ function ifEnableAudioVideoChatButton(state, chat, currentAgentId) {
     return false;
   }
 
-  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_90" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
+  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_85" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
     return false;
   }
 
-  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_91" /* getIfAgentRequestAudioVideoChat */](state, currentAgentId)) {
+  if (__WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_86" /* getIfAgentRequestAudioVideoChat */](state, currentAgentId)) {
     return false;
   }
 
@@ -11444,16 +12215,16 @@ var mapStateToProps = function mapStateToProps(state) {
   var visitorId = visitor.get('id');
   var ifDepartmentEnabled = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["v" /* getifDepartmentEnabled */](state);
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["u" /* getCurrentAgentId */](state);
-  var onlineDepartments = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_92" /* getTransferOnlineDepartments */](state, visitorId);
-  var allAvailableAgents = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_93" /* getAllAvailableAgents */](state, visitor);
-  var currentAgentName = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_83" /* getCurrentAgentName */](state);
+  var onlineDepartments = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_87" /* getTransferOnlineDepartments */](state, visitorId);
+  var allAvailableAgents = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_88" /* getAllAvailableAgents */](state, visitor);
+  var currentAgentName = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_78" /* getCurrentAgentName */](state);
   var currentAgentEmail = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_14" /* getCurrentAgentEmail */](state);
-  var agentSession = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
-  var joinMeIntegrationServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_74" /* getJoinMeIntegrationServer */](state);
+  var agentSession = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_75" /* getCurrentAgentSession */](state);
+  var joinMeIntegrationServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_68" /* getJoinMeIntegrationServer */](state);
   var chat = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["q" /* getSelectedChat */](state);
-  var secureFormServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_94" /* getSecureFormServer */](state);
+  var secureFormServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_89" /* getSecureFormServer */](state);
   var campaign = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'));
-  var ifUseMainServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_95" /* ifUseMainServer */](state);
+  var ifUseMainServer = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_90" /* ifUseMainServer */](state);
   var chatDetails = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_10" /* getChatDetails */](state, visitorId, chatId);
   var dateTimeFormat = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_26" /* getDateTimeFormat */](state);
   var siteInfo = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_37" /* getSiteInfo */](state);
@@ -11464,9 +12235,9 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var onlineDepartmentComponent = getOnlineDepartmentComponent(state);
 
-  var authProvider = ifUseMainServer ? __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_96" /* getChatServerUrl */](state).replace('https://', '').replace('http://', '') : __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_97" /* getStandbyChatServer */](state).replace('https://', '').replace('http://', '');
-  var ifAutoPopTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_98" /* ifPopTranslation */](state, chatId);
-  var enableChatTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getIfChatEnableTransaltion */](state, chatId);
+  var authProvider = ifUseMainServer ? __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_91" /* getChatServerUrl */](state).replace('https://', '').replace('http://', '') : __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_92" /* getStandbyChatServer */](state).replace('https://', '').replace('http://', '');
+  var ifAutoPopTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_93" /* ifPopTranslation */](state, chatId);
+  var enableChatTranslation = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_94" /* getIfChatEnableTransaltion */](state, chatId);
 
   var secureFormConfig = {
     siteId: siteId,
@@ -11475,9 +12246,9 @@ var mapStateToProps = function mapStateToProps(state) {
     authProvider: authProvider,
     themeColor: campaign ? campaign.themeColor : ''
   };
-  var detectedVisitorLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getVisitorLanguage */](state, chatId).toString();
-  var agentTranslationLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* getAgentTranslationLanguage */](state).toString();
-  var fileUploadUrl = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getFileUploadUrl */](state);
+  var detectedVisitorLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_95" /* getVisitorLanguage */](state, chatId).toString();
+  var agentTranslationLanguage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_96" /* getAgentTranslationLanguage */](state).toString();
+  var fileUploadUrl = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_73" /* getFileUploadUrl */](state);
   var sendFileUploadUrl = fileUploadUrl + '?sessionId=' + agentSession + '&visitorId=' + visitorId + '&siteId=' + siteId;
 
   var _common$getAttachTick = __WEBPACK_IMPORTED_MODULE_18__Business_common__["f" /* getAttachTicketURL */](state, visitor.get('ticketId').split('-T')[1]),
@@ -11486,29 +12257,29 @@ var mapStateToProps = function mapStateToProps(state) {
       loginUrl = _common$getAttachTick.loginUrl,
       autoLoginUrl = _common$getAttachTick.autoLoginUrl;
 
-  var responseErrorMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getResponseErrorMessage */](state);
-  var sendEmailSuccessMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_103" /* getSendEmailSuccessMessage */](state);
+  var responseErrorMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_97" /* getResponseErrorMessage */](state);
+  var sendEmailSuccessMessage = __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_98" /* getSendEmailSuccessMessage */](state);
 
   var transcriptInfo = getTranscriptInfo(visitor, chatId, chat.get('messages'), currentAgentName, currentAgentEmail, sessionInfo, chatInfo, dateTimeFormat, ifDepartmentEnabled);
 
   var ret = {
     responseErrorMessage: responseErrorMessage,
     sendEmailSuccessMessage: sendEmailSuccessMessage,
-    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_104" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_105" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'))),
-    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_106" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
+    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'))),
+    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
     siteId: siteId,
     agentSession: agentSession,
     ifUseMainServer: ifUseMainServer,
-    selectedFontSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_86" /* getFontSize */](state),
+    selectedFontSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_81" /* getFontSize */](state),
     siteInfo: {
       visitorId: visitorId,
-      uploadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getFileUploadUrl */](state),
-      downloadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_80" /* getFileDownloadUrl */](state),
-      sessionId: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_56" /* getCurrentAgentSession */](state),
+      uploadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_73" /* getFileUploadUrl */](state),
+      downloadUrl: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_74" /* getFileDownloadUrl */](state),
+      sessionId: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_75" /* getCurrentAgentSession */](state),
       siteId: siteId,
       privateMessage: 1,
-      maxFileSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_84" /* getMaxFileSize */](state),
-      maxFileNum: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_85" /* getMaxFileNum */](state),
+      maxFileSize: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_79" /* getMaxFileSize */](state),
+      maxFileNum: __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_80" /* getMaxFileNum */](state),
       sendFileUploadUrl: sendFileUploadUrl
     },
     visitorId: visitorId,
@@ -11518,7 +12289,7 @@ var mapStateToProps = function mapStateToProps(state) {
     currentAgentId: currentAgentId,
     transfer: getTransfer(ifDepartmentEnabled, onlineDepartments, onlineDepartmentComponent, allAvailableAgents),
     transcriptInfo: transcriptInfo,
-    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_107" /* getPCIForms */](state)),
+    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getPCIForms */](state)),
     autoTranslateInfo: getAutoTranslateInfo(detectedVisitorLanguage, ifAutoPopTranslation, enableChatTranslation, agentTranslationLanguage),
     gotoAttachTicket: function gotoAttachTicket() {
       __WEBPACK_IMPORTED_MODULE_18__Business_common__["g" /* gotoAttachTicket */]({
@@ -11530,7 +12301,7 @@ var mapStateToProps = function mapStateToProps(state) {
     },
 
     chatGuid: visitor.get('chatGuid'),
-    webrtcSignalingServiceUrl: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_20__reducers_selectors_urlsManager__["l" /* getWebrtcSignalingServiceUrl */])(state)
+    webrtcSignalingServiceUrl: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_20__reducers_selectors_urlsManager__["o" /* getWebrtcSignalingServiceUrl */])(state)
   };
   /* perf.markEnd('ChatAction: mapStateToProps'); */
 
@@ -11567,7 +12338,7 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
       }
     },
     onToggleAutoTranslate: function onToggleAutoTranslate(turnOnOrTurnOff, visitorId, language) {
-      if (turnOnOrTurnOff === __WEBPACK_IMPORTED_MODULE_16__constants_enums_chatAction__["_74" /* turnOnAutoTranslate */]) {
+      if (turnOnOrTurnOff === __WEBPACK_IMPORTED_MODULE_16__constants_enums_chatAction__["_65" /* turnOnAutoTranslate */]) {
         dispatch(__WEBPACK_IMPORTED_MODULE_14__actions_agent__["A" /* enableTranslation */](visitorId, language));
       }
     },
@@ -11611,28 +12382,26 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
       dispatch(__WEBPACK_IMPORTED_MODULE_12__actions_chat__["a" /* setErrorMessageForChat */](chatId, errorMsg));
     },
     onRequestAudioChat: function onRequestAudioChat() {
-      var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["a" /* getP2PChat */])() || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["b" /* newP2PChat */])({
+      var p2pChat = new __WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["a" /* default */]({
         url: stateProps.webrtcSignalingServiceUrl,
         chat: stateProps.chatGuid,
         localVideo: document.createElement('VIDEO'),
         remoteVideo: document.createElement('VIDEO')
       });
-      p2pChat.setChat(stateProps.chatGuid);
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["c" /* setP2PChat */])(p2pChat);
       p2pChat.requirePermission(false).then(function () {
+        dispatch(__WEBPACK_IMPORTED_MODULE_12__actions_chat__["e" /* setP2PChat */](stateProps.chatId, p2pChat));
         dispatch(__WEBPACK_IMPORTED_MODULE_15__actions_web__["R" /* onRequestAudioChat */](stateProps.visitorId));
       });
     },
     onRequestVideoChat: function onRequestVideoChat() {
-      var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["a" /* getP2PChat */])() || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["b" /* newP2PChat */])({
+      var p2pChat = new __WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["a" /* default */]({
         url: stateProps.webrtcSignalingServiceUrl,
         chat: stateProps.chatGuid,
         localVideo: document.createElement('VIDEO'),
         remoteVideo: document.createElement('VIDEO')
       });
-      p2pChat.setChat(stateProps.chatGuid);
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_19__services_p2pChat__["c" /* setP2PChat */])(p2pChat);
       p2pChat.requirePermission(true).then(function () {
+        dispatch(__WEBPACK_IMPORTED_MODULE_12__actions_chat__["e" /* setP2PChat */](stateProps.chatId, p2pChat));
         dispatch(__WEBPACK_IMPORTED_MODULE_15__actions_web__["S" /* onRequestVideoChat */](stateProps.visitorId));
       });
     }
@@ -11644,29 +12413,27 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_redux__["connect"])(mapStateToProps, null, mergeProps)(__WEBPACK_IMPORTED_MODULE_5_src_components_ChatSection_ChatAction_ChatAction__["a" /* default */]));
 
 /***/ }),
-/* 1511 */
+/* 1501 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_utils_reporter__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ChatSection_ChatContent_ChatContent__ = __webpack_require__(953);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_chat__ = __webpack_require__(687);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_secureForm__ = __webpack_require__(1284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_common__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_web__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_p2pChat__ = __webpack_require__(698);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__reducers_selectors_urlsManager__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_time__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_utils_reporter__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ChatSection_ChatContent_ChatContent__ = __webpack_require__(942);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_chat__ = __webpack_require__(685);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_secureForm__ = __webpack_require__(1274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_common__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_web__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_p2pChat__ = __webpack_require__(1273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__reducers_selectors_urlsManager__ = __webpack_require__(203);
 
 
 /* import * as perf from 'src/utils/perf'; */
-
 
 
 
@@ -11687,11 +12454,11 @@ var getIsContactOrUserOpen = function getIsContactOrUserOpen(state) {
 };
 
 function getAVStatusForUI(state, visitor, currentAgentId) {
-  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_53" /* isVisitorExists */](state, visitor.get('id'))) {
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_103" /* isVisitorExists */](state, visitor.get('id'))) {
     return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
   }
 
-  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_108" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_104" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
     return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
   }
 
@@ -11709,7 +12476,7 @@ function getAVStatusForUI(state, visitor, currentAgentId) {
     var activeAgents = visitor.get('chatActiveAgents');
     // 当聊天里有多个agent时，当前agent如果正在语音视频，不显示访客请求语音视频界面
     if (activeAgents && activeAgents.length > 1) {
-      if (__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_90" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
+      if (__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_85" /* getIfAgentAudioVideoChatting */](state, currentAgentId)) {
         return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
       }
     }
@@ -11731,16 +12498,16 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
   var visitorId = chat.get('visitorId');
   var visitor = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["r" /* getVisitorByChatId */](state, chatId);
   var chatGuid = visitor.get('chatGuid');
-  var secureFormServer = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_94" /* getSecureFormServer */](state);
+  var secureFormServer = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_89" /* getSecureFormServer */](state);
   var siteId = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["F" /* getSiteId */](state);
-  var agentSession = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_56" /* getCurrentAgentSession */](state);
+  var agentSession = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_75" /* getCurrentAgentSession */](state);
   var timezone = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_24" /* getTimezone */](state);
   var timezoneOffset = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_25" /* getTimezoneOffset */](state);
-  var textDirectionIfRTL = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_77" /* textDirectionIfRTL */](state);
-  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_109" /* getErrorMessageForChat */](state, chat && chat.get('id'));
+  var textDirectionIfRTL = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_71" /* textDirectionIfRTL */](state);
+  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_105" /* getErrorMessageForChat */](state, chat && chat.get('id'));
   var ifShowNotify = chat.get('ifShowNotify');
   var audioVideoChatWidth = chat.get('audioVideoChatWidth');
-  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_110" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
+  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_106" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["u" /* getCurrentAgentId */](state);
   var avStatus = getAVStatusForUI(state, visitor, currentAgentId);
   if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__utils_common__["b" /* isChattingWithAgent */])(visitor, currentAgentId)) {
@@ -11754,8 +12521,8 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
     visitorId: visitorId,
     chatGuid: chatGuid,
     agentSession: agentSession,
-    selectedFontSize: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_86" /* getFontSize */](state),
-    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_111" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
+    selectedFontSize: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_81" /* getFontSize */](state),
+    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_107" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
     typingMessage: chat.get('typingMessage'),
     isContactOrUserOpen: getIsContactOrUserOpen(state),
     chatTo: visitor.get('latestName'),
@@ -11770,8 +12537,9 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
     ifShowNotify: ifShowNotify,
     audioVideoChatWidth: audioVideoChatWidth,
     audioVideoChatStatus: avStatus,
-    webrtcSignalingServiceUrl: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__reducers_selectors_urlsManager__["l" /* getWebrtcSignalingServiceUrl */])(state),
-    audioVideoChatStartTime: audioVideoChatStartTime
+    webrtcSignalingServiceUrl: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__reducers_selectors_urlsManager__["o" /* getWebrtcSignalingServiceUrl */])(state),
+    audioVideoChatStartTime: audioVideoChatStartTime,
+    p2pChat: chat.get('p2pChat')
   };
   /* perf.markEnd('ChatContent: mapStateToProps'); */
 
@@ -11791,39 +12559,38 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
         authToken: stateProps.agentSession
       };
       __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__services_secureForm__["b" /* getSecureFormContent */])(stateProps.secureFormServer, config, rsaKey).then(function (content) {
-        dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["e" /* onGetSecureFormContent */](stateProps.id, token, content));
+        dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["f" /* onGetSecureFormContent */](stateProps.id, token, content));
       }).catch(function (error) {
         __WEBPACK_IMPORTED_MODULE_2_src_utils_reporter__["a" /* error */](error, 'ChatContent', 67, 0);
       });
     },
     onScroll: function onScroll(id, scrollTop) {
-      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["f" /* updateScrollTop */](id, scrollTop));
+      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["g" /* updateScrollTop */](id, scrollTop));
     },
     hideErrorMessage: function hideErrorMessage() {
       dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["a" /* setErrorMessageForChat */](stateProps.id, ''));
     },
     clearG2mStartUrl: function clearG2mStartUrl() {
-      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["g" /* clearG2mStartUrl */](stateProps.id));
+      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["h" /* clearG2mStartUrl */](stateProps.id));
     },
     updateIfShowNotify: function updateIfShowNotify(ifShowNotify) {
-      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["h" /* updateIfShowNotify */](stateProps.id, ifShowNotify));
+      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["i" /* updateIfShowNotify */](stateProps.id, ifShowNotify));
     },
     onAudioAndVideoStopResize: function onAudioAndVideoStopResize(info) {
-      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["i" /* audioAndVideoWidthChanged */](stateProps.id, info));
+      dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["j" /* audioAndVideoWidthChanged */](stateProps.id, info));
     },
     onAudioVideoChatAccept: function onAudioVideoChatAccept() {
       var status = stateProps.audioVideoChatStatus;
       var visitorId = stateProps.visitorId;
       if (status === __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */]) {
-        var p2pChat = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__services_p2pChat__["a" /* getP2PChat */])() || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__services_p2pChat__["b" /* newP2PChat */])({
+        var p2pChat = new __WEBPACK_IMPORTED_MODULE_10__services_p2pChat__["a" /* default */]({
           url: stateProps.webrtcSignalingServiceUrl,
           localVideo: document.createElement('VIDEO'),
           remoteVideo: document.createElement('VIDEO'),
           chat: stateProps.chatGuid
         });
-        p2pChat.setChat(stateProps.chatGuid);
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__services_p2pChat__["c" /* setP2PChat */])(p2pChat);
         p2pChat.requirePermission(status === __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */]).then(function () {
+          dispatch(__WEBPACK_IMPORTED_MODULE_5__actions_chat__["e" /* setP2PChat */](stateProps.id, p2pChat));
           if (status === __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */]) {
             dispatch(__WEBPACK_IMPORTED_MODULE_9__actions_web__["W" /* onAcceptAudioChat */](visitorId));
           } else {
@@ -11857,23 +12624,23 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, null, mergeProps)(__WEBPACK_IMPORTED_MODULE_4__components_ChatSection_ChatContent_ChatContent__["a" /* default */]));
 
 /***/ }),
-/* 1512 */
+/* 1502 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_src_constants_enums_promote__ = __webpack_require__(1279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_constants_enums_userType__ = __webpack_require__(1500);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_constants_enums_liveChatPermission__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_utils_common__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_agent__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_ChatSection_ChatHeader_ChatHeader__ = __webpack_require__(1400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__actions_chat__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_src_constants_enums_promote__ = __webpack_require__(1268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_src_constants_enums_userType__ = __webpack_require__(1490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_constants_enums_liveChatPermission__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_utils_common__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_agent__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_ChatSection_ChatHeader_ChatHeader__ = __webpack_require__(1390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__actions_chat__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__actions_ui__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Tabs_Salesforce_util__ = __webpack_require__(909);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Tabs_Salesforce_util__ = __webpack_require__(898);
 
 
 /* import * as perf from 'src/utils/perf'; */
@@ -11915,7 +12682,7 @@ var ifDisplayLeaveChat = function ifDisplayLeaveChat(state) {
   var visitor = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["r" /* getVisitorByChatId */](state, chat.get('id'));
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["u" /* getCurrentAgentId */](state);
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["c" /* isMonitorWithAgent */](visitor, currentAgentId);
-  var isChattingWithAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_60" /* checkIfVisitorStatusChatting */](visitor.get('status')) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, currentAgentId);
+  var isChattingWithAgent = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_54" /* checkIfVisitorStatusChatting */](visitor.get('status')) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, currentAgentId);
 
   if (isMonitoring || isChattingWithAgent) {
     return true;
@@ -11932,7 +12699,7 @@ var isDisplayCloseChat = function isDisplayCloseChat(state) {
   var status = visitor.get('status');
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["c" /* isMonitorWithAgent */](visitor, agentId);
 
-  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_112" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
+  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_108" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
   var isTransferring = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["b" /* transferring */];
 
   var isMonitorEnded = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["e" /* chatEnded */] && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["g" /* isAgentInMonitorList */](visitor, agentId);
@@ -11976,7 +12743,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var saleforceURL = getSalesforceURL(state, visitor);
   var checkChatExisted = chat.get('id') !== visitor.get('chatId');
-  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_53" /* isVisitorExists */](state, visitor.get('id'));
+  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_103" /* isVisitorExists */](state, visitor.get('id'));
 
   var isContactOrUserOpen = getIsContactOrUserOpen(state);
   var ret = {
@@ -12010,7 +12777,7 @@ var mapStateToProps = function mapStateToProps(state) {
       displayLeave: ifDisplayLeaveChat(state),
       displayCloseChat: isDisplayCloseChat(state)
     },
-    ifUseMainServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_95" /* ifUseMainServer */](state)
+    ifUseMainServer: __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_90" /* ifUseMainServer */](state)
   };
   /* perf.markEnd('ChatHeader: mapStateToProps'); */
 
@@ -12047,7 +12814,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
           visitorId: visitorId
         }));
       } else {
-        dispatch(__WEBPACK_IMPORTED_MODULE_8__actions_chat__["j" /* tryCloseChat */](chatId));
+        dispatch(__WEBPACK_IMPORTED_MODULE_8__actions_chat__["k" /* tryCloseChat */](chatId));
       }
     }
   };
@@ -12056,23 +12823,23 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_6__components_ChatSection_ChatHeader_ChatHeader__["a" /* default */]));
 
 /***/ }),
-/* 1513 */
+/* 1503 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ChatItem_ChatItemContainer__ = __webpack_require__(1392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_chatList__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_agent__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Business_chatList__ = __webpack_require__(1508);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ChatItem_ChatItemContainer__ = __webpack_require__(1382);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_chatList__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_agent__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Business_chatList__ = __webpack_require__(1498);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_visitorDetails__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__actions_salesforce__ = __webpack_require__(556);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_visitorDetails__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__actions_salesforce__ = __webpack_require__(555);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_types_chatList__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_chat__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_chat__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__actions_ui__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_localStorage__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_localStorage__ = __webpack_require__(57);
 
 /* import * as perf from 'src/utils/perf'; */
 
@@ -12129,7 +12896,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       } else {
         dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__actions_agent__["I" /* refuseChat */])(visitor.visitorId));
       }
-      dispatch(__WEBPACK_IMPORTED_MODULE_9__actions_chat__["j" /* tryCloseChat */](visitor.chatId));
+      dispatch(__WEBPACK_IMPORTED_MODULE_9__actions_chat__["k" /* tryCloseChat */](visitor.chatId));
     },
     onWrapUp: function onWrapUp(visitor) {
       dispatch(__WEBPACK_IMPORTED_MODULE_2__actions_chatList__["a" /* setSelected */](visitor.chatId));
@@ -12141,7 +12908,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
           visitorId: visitor.visitorId
         }));
       } else {
-        dispatch(__WEBPACK_IMPORTED_MODULE_9__actions_chat__["j" /* tryCloseChat */](visitor.chatId));
+        dispatch(__WEBPACK_IMPORTED_MODULE_9__actions_chat__["k" /* tryCloseChat */](visitor.chatId));
       }
     },
     onClickArrow: function onClickArrow(id) {
@@ -12157,15 +12924,15 @@ if (true) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_1__components_ChatItem_ChatItemContainer__["a" /* default */]));
 
 /***/ }),
-/* 1514 */,
-/* 1515 */,
-/* 1516 */
+/* 1504 */,
+/* 1505 */,
+/* 1506 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ChatItem_NoChat__ = __webpack_require__(1396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ChatItem_NoChat__ = __webpack_require__(1386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_ui__ = __webpack_require__(34);
 
 
@@ -12181,22 +12948,22 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"])(undefined, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_1__components_ChatItem_NoChat__["a" /* default */]));
 
 /***/ }),
-/* 1517 */,
-/* 1518 */,
-/* 1519 */,
-/* 1520 */
+/* 1507 */,
+/* 1508 */,
+/* 1509 */,
+/* 1510 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_components_Icons_LoadingComponent__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_Widget_Reload__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_src_components_Icons_LoadingComponent__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_src_components_Widget_Reload__ = __webpack_require__(293);
 
 
 
@@ -12209,7 +12976,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     modules: { ChatTextEditor: function ChatTextEditor() {
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_src_components_LazilyLoad_LazilyLoad__["b" /* importLazy */])(new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
           __webpack_require__.e/* require.ensure */(5).then((function (require) {
-            resolve(__webpack_require__(1283));
+            resolve(__webpack_require__(1272));
           }).bind(null, __webpack_require__)).catch(__webpack_require__.oe).catch(reject);
         }));
       } },
@@ -12222,12 +12989,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 });
 
 /***/ }),
-/* 1521 */,
-/* 1522 */,
-/* 1523 */,
-/* 1524 */,
-/* 1525 */,
-/* 1526 */
+/* 1511 */,
+/* 1512 */,
+/* 1513 */,
+/* 1514 */,
+/* 1515 */,
+/* 1516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12343,16 +13110,16 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 1527 */,
-/* 1528 */,
-/* 1529 */,
-/* 1530 */,
-/* 1531 */,
-/* 1532 */,
-/* 1533 */,
-/* 1534 */,
-/* 1535 */,
-/* 1536 */
+/* 1517 */,
+/* 1518 */,
+/* 1519 */,
+/* 1520 */,
+/* 1521 */,
+/* 1522 */,
+/* 1523 */,
+/* 1524 */,
+/* 1525 */,
+/* 1526 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -12363,6 +13130,16 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
+/* 1527 */,
+/* 1528 */,
+/* 1529 */,
+/* 1530 */,
+/* 1531 */,
+/* 1532 */,
+/* 1533 */,
+/* 1534 */,
+/* 1535 */,
+/* 1536 */,
 /* 1537 */,
 /* 1538 */,
 /* 1539 */,
@@ -12457,35 +13234,35 @@ module.exports = Array.isArray || function (arr) {
 /* 1628 */,
 /* 1629 */,
 /* 1630 */,
-/* 1631 */,
-/* 1632 */,
-/* 1633 */,
-/* 1634 */,
-/* 1635 */,
-/* 1636 */,
-/* 1637 */,
-/* 1638 */,
-/* 1639 */,
-/* 1640 */,
-/* 1641 */
+/* 1631 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"autoTranslate":"AutoTranslate__autoTranslate--2MLy-","overlay":"AutoTranslate__overlay--39FoE"};
 
 /***/ }),
-/* 1642 */,
-/* 1643 */,
-/* 1644 */,
-/* 1645 */,
-/* 1646 */,
-/* 1647 */
+/* 1632 */,
+/* 1633 */,
+/* 1634 */,
+/* 1635 */,
+/* 1636 */,
+/* 1637 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"tooltip":"Default__tooltip--1H-e9"};
 
 /***/ }),
+/* 1638 */,
+/* 1639 */,
+/* 1640 */,
+/* 1641 */,
+/* 1642 */,
+/* 1643 */,
+/* 1644 */,
+/* 1645 */,
+/* 1646 */,
+/* 1647 */,
 /* 1648 */,
 /* 1649 */,
 /* 1650 */,
@@ -12499,17 +13276,7 @@ module.exports = {"tooltip":"Default__tooltip--1H-e9"};
 /* 1658 */,
 /* 1659 */,
 /* 1660 */,
-/* 1661 */,
-/* 1662 */,
-/* 1663 */,
-/* 1664 */,
-/* 1665 */,
-/* 1666 */,
-/* 1667 */,
-/* 1668 */,
-/* 1669 */,
-/* 1670 */,
-/* 1671 */
+/* 1661 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -12599,6 +13366,16 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
+/* 1662 */,
+/* 1663 */,
+/* 1664 */,
+/* 1665 */,
+/* 1666 */,
+/* 1667 */,
+/* 1668 */,
+/* 1669 */,
+/* 1670 */,
+/* 1671 */,
 /* 1672 */,
 /* 1673 */,
 /* 1674 */,
@@ -12610,21 +13387,11 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 /* 1680 */,
 /* 1681 */,
 /* 1682 */,
-/* 1683 */,
-/* 1684 */,
-/* 1685 */,
-/* 1686 */,
-/* 1687 */,
-/* 1688 */,
-/* 1689 */,
-/* 1690 */,
-/* 1691 */,
-/* 1692 */,
-/* 1693 */
+/* 1683 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSlice = __webpack_require__(206),
-    isIterateeCall = __webpack_require__(207),
+var baseSlice = __webpack_require__(205),
+    isIterateeCall = __webpack_require__(206),
     toInteger = __webpack_require__(36);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -12675,6 +13442,3015 @@ function chunk(array, size, guard) {
 module.exports = chunk;
 
 
+/***/ }),
+/* 1684 */,
+/* 1685 */,
+/* 1686 */,
+/* 1687 */,
+/* 1688 */,
+/* 1689 */,
+/* 1690 */,
+/* 1691 */,
+/* 1692 */,
+/* 1693 */,
+/* 1694 */,
+/* 1695 */,
+/* 1696 */,
+/* 1697 */,
+/* 1698 */,
+/* 1699 */,
+/* 1700 */,
+/* 1701 */,
+/* 1702 */,
+/* 1703 */,
+/* 1704 */,
+/* 1705 */,
+/* 1706 */,
+/* 1707 */,
+/* 1708 */,
+/* 1709 */,
+/* 1710 */,
+/* 1711 */,
+/* 1712 */,
+/* 1713 */,
+/* 1714 */,
+/* 1715 */,
+/* 1716 */,
+/* 1717 */,
+/* 1718 */,
+/* 1719 */,
+/* 1720 */,
+/* 1721 */,
+/* 1722 */,
+/* 1723 */,
+/* 1724 */,
+/* 1725 */,
+/* 1726 */,
+/* 1727 */,
+/* 1728 */,
+/* 1729 */,
+/* 1730 */,
+/* 1731 */,
+/* 1732 */,
+/* 1733 */,
+/* 1734 */,
+/* 1735 */,
+/* 1736 */,
+/* 1737 */,
+/* 1738 */,
+/* 1739 */,
+/* 1740 */,
+/* 1741 */,
+/* 1742 */,
+/* 1743 */,
+/* 1744 */,
+/* 1745 */,
+/* 1746 */,
+/* 1747 */,
+/* 1748 */,
+/* 1749 */,
+/* 1750 */,
+/* 1751 */,
+/* 1752 */,
+/* 1753 */,
+/* 1754 */,
+/* 1755 */,
+/* 1756 */,
+/* 1757 */,
+/* 1758 */,
+/* 1759 */,
+/* 1760 */,
+/* 1761 */,
+/* 1762 */,
+/* 1763 */,
+/* 1764 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+ /* eslint-env node */
+
+
+// SDP helpers.
+var SDPUtils = {};
+
+// Generate an alphanumeric identifier for cname or mids.
+// TODO: use UUIDs instead? https://gist.github.com/jed/982883
+SDPUtils.generateIdentifier = function() {
+  return Math.random().toString(36).substr(2, 10);
+};
+
+// The RTCP CNAME used by all peerconnections from the same JS.
+SDPUtils.localCName = SDPUtils.generateIdentifier();
+
+// Splits SDP into lines, dealing with both CRLF and LF.
+SDPUtils.splitLines = function(blob) {
+  return blob.trim().split('\n').map(function(line) {
+    return line.trim();
+  });
+};
+// Splits SDP into sessionpart and mediasections. Ensures CRLF.
+SDPUtils.splitSections = function(blob) {
+  var parts = blob.split('\nm=');
+  return parts.map(function(part, index) {
+    return (index > 0 ? 'm=' + part : part).trim() + '\r\n';
+  });
+};
+
+// Returns lines that start with a certain prefix.
+SDPUtils.matchPrefix = function(blob, prefix) {
+  return SDPUtils.splitLines(blob).filter(function(line) {
+    return line.indexOf(prefix) === 0;
+  });
+};
+
+// Parses an ICE candidate line. Sample input:
+// candidate:702786350 2 udp 41819902 8.8.8.8 60769 typ relay raddr 8.8.8.8
+// rport 55996"
+SDPUtils.parseCandidate = function(line) {
+  var parts;
+  // Parse both variants.
+  if (line.indexOf('a=candidate:') === 0) {
+    parts = line.substring(12).split(' ');
+  } else {
+    parts = line.substring(10).split(' ');
+  }
+
+  var candidate = {
+    foundation: parts[0],
+    component: parts[1],
+    protocol: parts[2].toLowerCase(),
+    priority: parseInt(parts[3], 10),
+    ip: parts[4],
+    port: parseInt(parts[5], 10),
+    // skip parts[6] == 'typ'
+    type: parts[7]
+  };
+
+  for (var i = 8; i < parts.length; i += 2) {
+    switch (parts[i]) {
+      case 'raddr':
+        candidate.relatedAddress = parts[i + 1];
+        break;
+      case 'rport':
+        candidate.relatedPort = parseInt(parts[i + 1], 10);
+        break;
+      case 'tcptype':
+        candidate.tcpType = parts[i + 1];
+        break;
+      default: // Unknown extensions are silently ignored.
+        break;
+    }
+  }
+  return candidate;
+};
+
+// Translates a candidate object into SDP candidate attribute.
+SDPUtils.writeCandidate = function(candidate) {
+  var sdp = [];
+  sdp.push(candidate.foundation);
+  sdp.push(candidate.component);
+  sdp.push(candidate.protocol.toUpperCase());
+  sdp.push(candidate.priority);
+  sdp.push(candidate.ip);
+  sdp.push(candidate.port);
+
+  var type = candidate.type;
+  sdp.push('typ');
+  sdp.push(type);
+  if (type !== 'host' && candidate.relatedAddress &&
+      candidate.relatedPort) {
+    sdp.push('raddr');
+    sdp.push(candidate.relatedAddress); // was: relAddr
+    sdp.push('rport');
+    sdp.push(candidate.relatedPort); // was: relPort
+  }
+  if (candidate.tcpType && candidate.protocol.toLowerCase() === 'tcp') {
+    sdp.push('tcptype');
+    sdp.push(candidate.tcpType);
+  }
+  return 'candidate:' + sdp.join(' ');
+};
+
+// Parses an rtpmap line, returns RTCRtpCoddecParameters. Sample input:
+// a=rtpmap:111 opus/48000/2
+SDPUtils.parseRtpMap = function(line) {
+  var parts = line.substr(9).split(' ');
+  var parsed = {
+    payloadType: parseInt(parts.shift(), 10) // was: id
+  };
+
+  parts = parts[0].split('/');
+
+  parsed.name = parts[0];
+  parsed.clockRate = parseInt(parts[1], 10); // was: clockrate
+  // was: channels
+  parsed.numChannels = parts.length === 3 ? parseInt(parts[2], 10) : 1;
+  return parsed;
+};
+
+// Generate an a=rtpmap line from RTCRtpCodecCapability or
+// RTCRtpCodecParameters.
+SDPUtils.writeRtpMap = function(codec) {
+  var pt = codec.payloadType;
+  if (codec.preferredPayloadType !== undefined) {
+    pt = codec.preferredPayloadType;
+  }
+  return 'a=rtpmap:' + pt + ' ' + codec.name + '/' + codec.clockRate +
+      (codec.numChannels !== 1 ? '/' + codec.numChannels : '') + '\r\n';
+};
+
+// Parses an a=extmap line (headerextension from RFC 5285). Sample input:
+// a=extmap:2 urn:ietf:params:rtp-hdrext:toffset
+SDPUtils.parseExtmap = function(line) {
+  var parts = line.substr(9).split(' ');
+  return {
+    id: parseInt(parts[0], 10),
+    uri: parts[1]
+  };
+};
+
+// Generates a=extmap line from RTCRtpHeaderExtensionParameters or
+// RTCRtpHeaderExtension.
+SDPUtils.writeExtmap = function(headerExtension) {
+  return 'a=extmap:' + (headerExtension.id || headerExtension.preferredId) +
+       ' ' + headerExtension.uri + '\r\n';
+};
+
+// Parses an ftmp line, returns dictionary. Sample input:
+// a=fmtp:96 vbr=on;cng=on
+// Also deals with vbr=on; cng=on
+SDPUtils.parseFmtp = function(line) {
+  var parsed = {};
+  var kv;
+  var parts = line.substr(line.indexOf(' ') + 1).split(';');
+  for (var j = 0; j < parts.length; j++) {
+    kv = parts[j].trim().split('=');
+    parsed[kv[0].trim()] = kv[1];
+  }
+  return parsed;
+};
+
+// Generates an a=ftmp line from RTCRtpCodecCapability or RTCRtpCodecParameters.
+SDPUtils.writeFmtp = function(codec) {
+  var line = '';
+  var pt = codec.payloadType;
+  if (codec.preferredPayloadType !== undefined) {
+    pt = codec.preferredPayloadType;
+  }
+  if (codec.parameters && Object.keys(codec.parameters).length) {
+    var params = [];
+    Object.keys(codec.parameters).forEach(function(param) {
+      params.push(param + '=' + codec.parameters[param]);
+    });
+    line += 'a=fmtp:' + pt + ' ' + params.join(';') + '\r\n';
+  }
+  return line;
+};
+
+// Parses an rtcp-fb line, returns RTCPRtcpFeedback object. Sample input:
+// a=rtcp-fb:98 nack rpsi
+SDPUtils.parseRtcpFb = function(line) {
+  var parts = line.substr(line.indexOf(' ') + 1).split(' ');
+  return {
+    type: parts.shift(),
+    parameter: parts.join(' ')
+  };
+};
+// Generate a=rtcp-fb lines from RTCRtpCodecCapability or RTCRtpCodecParameters.
+SDPUtils.writeRtcpFb = function(codec) {
+  var lines = '';
+  var pt = codec.payloadType;
+  if (codec.preferredPayloadType !== undefined) {
+    pt = codec.preferredPayloadType;
+  }
+  if (codec.rtcpFeedback && codec.rtcpFeedback.length) {
+    // FIXME: special handling for trr-int?
+    codec.rtcpFeedback.forEach(function(fb) {
+      lines += 'a=rtcp-fb:' + pt + ' ' + fb.type +
+      (fb.parameter && fb.parameter.length ? ' ' + fb.parameter : '') +
+          '\r\n';
+    });
+  }
+  return lines;
+};
+
+// Parses an RFC 5576 ssrc media attribute. Sample input:
+// a=ssrc:3735928559 cname:something
+SDPUtils.parseSsrcMedia = function(line) {
+  var sp = line.indexOf(' ');
+  var parts = {
+    ssrc: parseInt(line.substr(7, sp - 7), 10)
+  };
+  var colon = line.indexOf(':', sp);
+  if (colon > -1) {
+    parts.attribute = line.substr(sp + 1, colon - sp - 1);
+    parts.value = line.substr(colon + 1);
+  } else {
+    parts.attribute = line.substr(sp + 1);
+  }
+  return parts;
+};
+
+// Extracts DTLS parameters from SDP media section or sessionpart.
+// FIXME: for consistency with other functions this should only
+//   get the fingerprint line as input. See also getIceParameters.
+SDPUtils.getDtlsParameters = function(mediaSection, sessionpart) {
+  var lines = SDPUtils.splitLines(mediaSection);
+  // Search in session part, too.
+  lines = lines.concat(SDPUtils.splitLines(sessionpart));
+  var fpLine = lines.filter(function(line) {
+    return line.indexOf('a=fingerprint:') === 0;
+  })[0].substr(14);
+  // Note: a=setup line is ignored since we use the 'auto' role.
+  // Note2: 'algorithm' is not case sensitive except in Edge.
+  var dtlsParameters = {
+    role: 'auto',
+    fingerprints: [{
+      algorithm: fpLine.split(' ')[0].toLowerCase(),
+      value: fpLine.split(' ')[1]
+    }]
+  };
+  return dtlsParameters;
+};
+
+// Serializes DTLS parameters to SDP.
+SDPUtils.writeDtlsParameters = function(params, setupType) {
+  var sdp = 'a=setup:' + setupType + '\r\n';
+  params.fingerprints.forEach(function(fp) {
+    sdp += 'a=fingerprint:' + fp.algorithm + ' ' + fp.value + '\r\n';
+  });
+  return sdp;
+};
+// Parses ICE information from SDP media section or sessionpart.
+// FIXME: for consistency with other functions this should only
+//   get the ice-ufrag and ice-pwd lines as input.
+SDPUtils.getIceParameters = function(mediaSection, sessionpart) {
+  var lines = SDPUtils.splitLines(mediaSection);
+  // Search in session part, too.
+  lines = lines.concat(SDPUtils.splitLines(sessionpart));
+  var iceParameters = {
+    usernameFragment: lines.filter(function(line) {
+      return line.indexOf('a=ice-ufrag:') === 0;
+    })[0].substr(12),
+    password: lines.filter(function(line) {
+      return line.indexOf('a=ice-pwd:') === 0;
+    })[0].substr(10)
+  };
+  return iceParameters;
+};
+
+// Serializes ICE parameters to SDP.
+SDPUtils.writeIceParameters = function(params) {
+  return 'a=ice-ufrag:' + params.usernameFragment + '\r\n' +
+      'a=ice-pwd:' + params.password + '\r\n';
+};
+
+// Parses the SDP media section and returns RTCRtpParameters.
+SDPUtils.parseRtpParameters = function(mediaSection) {
+  var description = {
+    codecs: [],
+    headerExtensions: [],
+    fecMechanisms: [],
+    rtcp: []
+  };
+  var lines = SDPUtils.splitLines(mediaSection);
+  var mline = lines[0].split(' ');
+  for (var i = 3; i < mline.length; i++) { // find all codecs from mline[3..]
+    var pt = mline[i];
+    var rtpmapline = SDPUtils.matchPrefix(
+        mediaSection, 'a=rtpmap:' + pt + ' ')[0];
+    if (rtpmapline) {
+      var codec = SDPUtils.parseRtpMap(rtpmapline);
+      var fmtps = SDPUtils.matchPrefix(
+          mediaSection, 'a=fmtp:' + pt + ' ');
+      // Only the first a=fmtp:<pt> is considered.
+      codec.parameters = fmtps.length ? SDPUtils.parseFmtp(fmtps[0]) : {};
+      codec.rtcpFeedback = SDPUtils.matchPrefix(
+          mediaSection, 'a=rtcp-fb:' + pt + ' ')
+        .map(SDPUtils.parseRtcpFb);
+      description.codecs.push(codec);
+      // parse FEC mechanisms from rtpmap lines.
+      switch (codec.name.toUpperCase()) {
+        case 'RED':
+        case 'ULPFEC':
+          description.fecMechanisms.push(codec.name.toUpperCase());
+          break;
+        default: // only RED and ULPFEC are recognized as FEC mechanisms.
+          break;
+      }
+    }
+  }
+  SDPUtils.matchPrefix(mediaSection, 'a=extmap:').forEach(function(line) {
+    description.headerExtensions.push(SDPUtils.parseExtmap(line));
+  });
+  // FIXME: parse rtcp.
+  return description;
+};
+
+// Generates parts of the SDP media section describing the capabilities /
+// parameters.
+SDPUtils.writeRtpDescription = function(kind, caps) {
+  var sdp = '';
+
+  // Build the mline.
+  sdp += 'm=' + kind + ' ';
+  sdp += caps.codecs.length > 0 ? '9' : '0'; // reject if no codecs.
+  sdp += ' UDP/TLS/RTP/SAVPF ';
+  sdp += caps.codecs.map(function(codec) {
+    if (codec.preferredPayloadType !== undefined) {
+      return codec.preferredPayloadType;
+    }
+    return codec.payloadType;
+  }).join(' ') + '\r\n';
+
+  sdp += 'c=IN IP4 0.0.0.0\r\n';
+  sdp += 'a=rtcp:9 IN IP4 0.0.0.0\r\n';
+
+  // Add a=rtpmap lines for each codec. Also fmtp and rtcp-fb.
+  caps.codecs.forEach(function(codec) {
+    sdp += SDPUtils.writeRtpMap(codec);
+    sdp += SDPUtils.writeFmtp(codec);
+    sdp += SDPUtils.writeRtcpFb(codec);
+  });
+  var maxptime = 0;
+  caps.codecs.forEach(function(codec) {
+    if (codec.maxptime > maxptime) {
+      maxptime = codec.maxptime;
+    }
+  });
+  if (maxptime > 0) {
+    sdp += 'a=maxptime:' + maxptime + '\r\n';
+  }
+  sdp += 'a=rtcp-mux\r\n';
+
+  caps.headerExtensions.forEach(function(extension) {
+    sdp += SDPUtils.writeExtmap(extension);
+  });
+  // FIXME: write fecMechanisms.
+  return sdp;
+};
+
+// Parses the SDP media section and returns an array of
+// RTCRtpEncodingParameters.
+SDPUtils.parseRtpEncodingParameters = function(mediaSection) {
+  var encodingParameters = [];
+  var description = SDPUtils.parseRtpParameters(mediaSection);
+  var hasRed = description.fecMechanisms.indexOf('RED') !== -1;
+  var hasUlpfec = description.fecMechanisms.indexOf('ULPFEC') !== -1;
+
+  // filter a=ssrc:... cname:, ignore PlanB-msid
+  var ssrcs = SDPUtils.matchPrefix(mediaSection, 'a=ssrc:')
+  .map(function(line) {
+    return SDPUtils.parseSsrcMedia(line);
+  })
+  .filter(function(parts) {
+    return parts.attribute === 'cname';
+  });
+  var primarySsrc = ssrcs.length > 0 && ssrcs[0].ssrc;
+  var secondarySsrc;
+
+  var flows = SDPUtils.matchPrefix(mediaSection, 'a=ssrc-group:FID')
+  .map(function(line) {
+    var parts = line.split(' ');
+    parts.shift();
+    return parts.map(function(part) {
+      return parseInt(part, 10);
+    });
+  });
+  if (flows.length > 0 && flows[0].length > 1 && flows[0][0] === primarySsrc) {
+    secondarySsrc = flows[0][1];
+  }
+
+  description.codecs.forEach(function(codec) {
+    if (codec.name.toUpperCase() === 'RTX' && codec.parameters.apt) {
+      var encParam = {
+        ssrc: primarySsrc,
+        codecPayloadType: parseInt(codec.parameters.apt, 10),
+        rtx: {
+          ssrc: secondarySsrc
+        }
+      };
+      encodingParameters.push(encParam);
+      if (hasRed) {
+        encParam = JSON.parse(JSON.stringify(encParam));
+        encParam.fec = {
+          ssrc: secondarySsrc,
+          mechanism: hasUlpfec ? 'red+ulpfec' : 'red'
+        };
+        encodingParameters.push(encParam);
+      }
+    }
+  });
+  if (encodingParameters.length === 0 && primarySsrc) {
+    encodingParameters.push({
+      ssrc: primarySsrc
+    });
+  }
+
+  // we support both b=AS and b=TIAS but interpret AS as TIAS.
+  var bandwidth = SDPUtils.matchPrefix(mediaSection, 'b=');
+  if (bandwidth.length) {
+    if (bandwidth[0].indexOf('b=TIAS:') === 0) {
+      bandwidth = parseInt(bandwidth[0].substr(7), 10);
+    } else if (bandwidth[0].indexOf('b=AS:') === 0) {
+      bandwidth = parseInt(bandwidth[0].substr(5), 10);
+    }
+    encodingParameters.forEach(function(params) {
+      params.maxBitrate = bandwidth;
+    });
+  }
+  return encodingParameters;
+};
+
+// parses http://draft.ortc.org/#rtcrtcpparameters*
+SDPUtils.parseRtcpParameters = function(mediaSection) {
+  var rtcpParameters = {};
+
+  var cname;
+  // Gets the first SSRC. Note that with RTX there might be multiple
+  // SSRCs.
+  var remoteSsrc = SDPUtils.matchPrefix(mediaSection, 'a=ssrc:')
+      .map(function(line) {
+        return SDPUtils.parseSsrcMedia(line);
+      })
+      .filter(function(obj) {
+        return obj.attribute === 'cname';
+      })[0];
+  if (remoteSsrc) {
+    rtcpParameters.cname = remoteSsrc.value;
+    rtcpParameters.ssrc = remoteSsrc.ssrc;
+  }
+
+  // Edge uses the compound attribute instead of reducedSize
+  // compound is !reducedSize
+  var rsize = SDPUtils.matchPrefix(mediaSection, 'a=rtcp-rsize');
+  rtcpParameters.reducedSize = rsize.length > 0;
+  rtcpParameters.compound = rsize.length === 0;
+
+  // parses the rtcp-mux attrіbute.
+  // Note that Edge does not support unmuxed RTCP.
+  var mux = SDPUtils.matchPrefix(mediaSection, 'a=rtcp-mux');
+  rtcpParameters.mux = mux.length > 0;
+
+  return rtcpParameters;
+};
+
+// parses either a=msid: or a=ssrc:... msid lines an returns
+// the id of the MediaStream and MediaStreamTrack.
+SDPUtils.parseMsid = function(mediaSection) {
+  var parts;
+  var spec = SDPUtils.matchPrefix(mediaSection, 'a=msid:');
+  if (spec.length === 1) {
+    parts = spec[0].substr(7).split(' ');
+    return {stream: parts[0], track: parts[1]};
+  }
+  var planB = SDPUtils.matchPrefix(mediaSection, 'a=ssrc:')
+  .map(function(line) {
+    return SDPUtils.parseSsrcMedia(line);
+  })
+  .filter(function(parts) {
+    return parts.attribute === 'msid';
+  });
+  if (planB.length > 0) {
+    parts = planB[0].value.split(' ');
+    return {stream: parts[0], track: parts[1]};
+  }
+};
+
+SDPUtils.writeSessionBoilerplate = function() {
+  // FIXME: sess-id should be an NTP timestamp.
+  return 'v=0\r\n' +
+      'o=thisisadapterortc 8169639915646943137 2 IN IP4 127.0.0.1\r\n' +
+      's=-\r\n' +
+      't=0 0\r\n';
+};
+
+SDPUtils.writeMediaSection = function(transceiver, caps, type, stream) {
+  var sdp = SDPUtils.writeRtpDescription(transceiver.kind, caps);
+
+  // Map ICE parameters (ufrag, pwd) to SDP.
+  sdp += SDPUtils.writeIceParameters(
+      transceiver.iceGatherer.getLocalParameters());
+
+  // Map DTLS parameters to SDP.
+  sdp += SDPUtils.writeDtlsParameters(
+      transceiver.dtlsTransport.getLocalParameters(),
+      type === 'offer' ? 'actpass' : 'active');
+
+  sdp += 'a=mid:' + transceiver.mid + '\r\n';
+
+  if (transceiver.rtpSender && transceiver.rtpReceiver) {
+    sdp += 'a=sendrecv\r\n';
+  } else if (transceiver.rtpSender) {
+    sdp += 'a=sendonly\r\n';
+  } else if (transceiver.rtpReceiver) {
+    sdp += 'a=recvonly\r\n';
+  } else {
+    sdp += 'a=inactive\r\n';
+  }
+
+  if (transceiver.rtpSender) {
+    // spec.
+    var msid = 'msid:' + stream.id + ' ' +
+        transceiver.rtpSender.track.id + '\r\n';
+    sdp += 'a=' + msid;
+
+    // for Chrome.
+    sdp += 'a=ssrc:' + transceiver.sendEncodingParameters[0].ssrc +
+        ' ' + msid;
+    if (transceiver.sendEncodingParameters[0].rtx) {
+      sdp += 'a=ssrc:' + transceiver.sendEncodingParameters[0].rtx.ssrc +
+          ' ' + msid;
+      sdp += 'a=ssrc-group:FID ' +
+          transceiver.sendEncodingParameters[0].ssrc + ' ' +
+          transceiver.sendEncodingParameters[0].rtx.ssrc +
+          '\r\n';
+    }
+  }
+  // FIXME: this should be written by writeRtpDescription.
+  sdp += 'a=ssrc:' + transceiver.sendEncodingParameters[0].ssrc +
+      ' cname:' + SDPUtils.localCName + '\r\n';
+  if (transceiver.rtpSender && transceiver.sendEncodingParameters[0].rtx) {
+    sdp += 'a=ssrc:' + transceiver.sendEncodingParameters[0].rtx.ssrc +
+        ' cname:' + SDPUtils.localCName + '\r\n';
+  }
+  return sdp;
+};
+
+// Gets the direction from the mediaSection or the sessionpart.
+SDPUtils.getDirection = function(mediaSection, sessionpart) {
+  // Look for sendrecv, sendonly, recvonly, inactive, default to sendrecv.
+  var lines = SDPUtils.splitLines(mediaSection);
+  for (var i = 0; i < lines.length; i++) {
+    switch (lines[i]) {
+      case 'a=sendrecv':
+      case 'a=sendonly':
+      case 'a=recvonly':
+      case 'a=inactive':
+        return lines[i].substr(2);
+      default:
+        // FIXME: What should happen here?
+    }
+  }
+  if (sessionpart) {
+    return SDPUtils.getDirection(sessionpart);
+  }
+  return 'sendrecv';
+};
+
+SDPUtils.getKind = function(mediaSection) {
+  var lines = SDPUtils.splitLines(mediaSection);
+  var mline = lines[0].split(' ');
+  return mline[0].substr(2);
+};
+
+SDPUtils.isRejected = function(mediaSection) {
+  return mediaSection.split(' ', 2)[1] === '0';
+};
+
+// Expose public methods.
+module.exports = SDPUtils;
+
+
+/***/ }),
+/* 1765 */,
+/* 1766 */,
+/* 1767 */,
+/* 1768 */,
+/* 1769 */,
+/* 1770 */,
+/* 1771 */,
+/* 1772 */,
+/* 1773 */,
+/* 1774 */,
+/* 1775 */,
+/* 1776 */,
+/* 1777 */,
+/* 1778 */,
+/* 1779 */,
+/* 1780 */,
+/* 1781 */,
+/* 1782 */,
+/* 1783 */,
+/* 1784 */,
+/* 1785 */,
+/* 1786 */,
+/* 1787 */,
+/* 1788 */,
+/* 1789 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+
+// Shimming starts here.
+(function() {
+  // Utils.
+  var utils = __webpack_require__(877);
+  var logging = utils.log;
+  var browserDetails = utils.browserDetails;
+  // Export to the adapter global object visible in the browser.
+  module.exports.browserDetails = browserDetails;
+  module.exports.extractVersion = utils.extractVersion;
+  module.exports.disableLog = utils.disableLog;
+
+  // Uncomment the line below if you want logging to occur, including logging
+  // for the switch statement below. Can also be turned on in the browser via
+  // adapter.disableLog(false), but then logging from the switch statement below
+  // will not appear.
+  // require('./utils').disableLog(false);
+
+  // Browser shims.
+  var chromeShim = __webpack_require__(1790) || null;
+  var edgeShim = __webpack_require__(1792) || null;
+  var firefoxShim = __webpack_require__(1794) || null;
+  var safariShim = __webpack_require__(1796) || null;
+
+  // Shim browser if found.
+  switch (browserDetails.browser) {
+    case 'chrome':
+      if (!chromeShim || !chromeShim.shimPeerConnection) {
+        logging('Chrome shim is not included in this adapter release.');
+        return;
+      }
+      logging('adapter.js shimming chrome.');
+      // Export to the adapter global object visible in the browser.
+      module.exports.browserShim = chromeShim;
+
+      chromeShim.shimGetUserMedia();
+      chromeShim.shimMediaStream();
+      utils.shimCreateObjectURL();
+      chromeShim.shimSourceObject();
+      chromeShim.shimPeerConnection();
+      chromeShim.shimOnTrack();
+      chromeShim.shimGetSendersWithDtmf();
+      break;
+    case 'firefox':
+      if (!firefoxShim || !firefoxShim.shimPeerConnection) {
+        logging('Firefox shim is not included in this adapter release.');
+        return;
+      }
+      logging('adapter.js shimming firefox.');
+      // Export to the adapter global object visible in the browser.
+      module.exports.browserShim = firefoxShim;
+
+      firefoxShim.shimGetUserMedia();
+      utils.shimCreateObjectURL();
+      firefoxShim.shimSourceObject();
+      firefoxShim.shimPeerConnection();
+      firefoxShim.shimOnTrack();
+      break;
+    case 'edge':
+      if (!edgeShim || !edgeShim.shimPeerConnection) {
+        logging('MS edge shim is not included in this adapter release.');
+        return;
+      }
+      logging('adapter.js shimming edge.');
+      // Export to the adapter global object visible in the browser.
+      module.exports.browserShim = edgeShim;
+
+      edgeShim.shimGetUserMedia();
+      utils.shimCreateObjectURL();
+      edgeShim.shimPeerConnection();
+      break;
+    case 'safari':
+      if (!safariShim) {
+        logging('Safari shim is not included in this adapter release.');
+        return;
+      }
+      logging('adapter.js shimming safari.');
+      // Export to the adapter global object visible in the browser.
+      module.exports.browserShim = safariShim;
+
+      safariShim.shimGetUserMedia();
+      break;
+    default:
+      logging('Unsupported browser!');
+  }
+})();
+
+
+/***/ }),
+/* 1790 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+var logging = __webpack_require__(877).log;
+var browserDetails = __webpack_require__(877).browserDetails;
+
+var chromeShim = {
+  shimMediaStream: function() {
+    window.MediaStream = window.MediaStream || window.webkitMediaStream;
+  },
+
+  shimOnTrack: function() {
+    if (typeof window === 'object' && window.RTCPeerConnection && !('ontrack' in
+        window.RTCPeerConnection.prototype)) {
+      Object.defineProperty(window.RTCPeerConnection.prototype, 'ontrack', {
+        get: function() {
+          return this._ontrack;
+        },
+        set: function(f) {
+          var self = this;
+          if (this._ontrack) {
+            this.removeEventListener('track', this._ontrack);
+            this.removeEventListener('addstream', this._ontrackpoly);
+          }
+          this.addEventListener('track', this._ontrack = f);
+          this.addEventListener('addstream', this._ontrackpoly = function(e) {
+            // onaddstream does not fire when a track is added to an existing
+            // stream. But stream.onaddtrack is implemented so we use that.
+            e.stream.addEventListener('addtrack', function(te) {
+              var event = new Event('track');
+              event.track = te.track;
+              event.receiver = {track: te.track};
+              event.streams = [e.stream];
+              self.dispatchEvent(event);
+            });
+            e.stream.getTracks().forEach(function(track) {
+              var event = new Event('track');
+              event.track = track;
+              event.receiver = {track: track};
+              event.streams = [e.stream];
+              this.dispatchEvent(event);
+            }.bind(this));
+          }.bind(this));
+        }
+      });
+    }
+  },
+
+  shimGetSendersWithDtmf: function() {
+    if (typeof window === 'object' && window.RTCPeerConnection &&
+        !('getSenders' in RTCPeerConnection.prototype) &&
+        'createDTMFSender' in RTCPeerConnection.prototype) {
+      RTCPeerConnection.prototype.getSenders = function() {
+        return this._senders;
+      };
+      var origAddStream = RTCPeerConnection.prototype.addStream;
+      var origRemoveStream = RTCPeerConnection.prototype.removeStream;
+
+      RTCPeerConnection.prototype.addStream = function(stream) {
+        var pc = this;
+        pc._senders = pc._senders || [];
+        origAddStream.apply(pc, [stream]);
+        stream.getTracks().forEach(function(track) {
+          pc._senders.push({
+            track: track,
+            get dtmf() {
+              if (this._dtmf === undefined) {
+                if (track.kind === 'audio') {
+                  this._dtmf = pc.createDTMFSender(track);
+                } else {
+                  this._dtmf = null;
+                }
+              }
+              return this._dtmf;
+            }
+          });
+        });
+      };
+
+      RTCPeerConnection.prototype.removeStream = function(stream) {
+        var pc = this;
+        pc._senders = pc._senders || [];
+        origRemoveStream.apply(pc, [stream]);
+        stream.getTracks().forEach(function(track) {
+          var sender = pc._senders.find(function(s) {
+            return s.track === track;
+          });
+          if (sender) {
+            pc._senders.splice(pc._senders.indexOf(sender), 1); // remove sender
+          }
+        });
+      };
+    }
+  },
+
+  shimSourceObject: function() {
+    if (typeof window === 'object') {
+      if (window.HTMLMediaElement &&
+        !('srcObject' in window.HTMLMediaElement.prototype)) {
+        // Shim the srcObject property, once, when HTMLMediaElement is found.
+        Object.defineProperty(window.HTMLMediaElement.prototype, 'srcObject', {
+          get: function() {
+            return this._srcObject;
+          },
+          set: function(stream) {
+            var self = this;
+            // Use _srcObject as a private property for this shim
+            this._srcObject = stream;
+            if (this.src) {
+              URL.revokeObjectURL(this.src);
+            }
+
+            if (!stream) {
+              this.src = '';
+              return undefined;
+            }
+            this.src = URL.createObjectURL(stream);
+            // We need to recreate the blob url when a track is added or
+            // removed. Doing it manually since we want to avoid a recursion.
+            stream.addEventListener('addtrack', function() {
+              if (self.src) {
+                URL.revokeObjectURL(self.src);
+              }
+              self.src = URL.createObjectURL(stream);
+            });
+            stream.addEventListener('removetrack', function() {
+              if (self.src) {
+                URL.revokeObjectURL(self.src);
+              }
+              self.src = URL.createObjectURL(stream);
+            });
+          }
+        });
+      }
+    }
+  },
+
+  shimPeerConnection: function() {
+    // The RTCPeerConnection object.
+    if (!window.RTCPeerConnection) {
+      window.RTCPeerConnection = function(pcConfig, pcConstraints) {
+        // Translate iceTransportPolicy to iceTransports,
+        // see https://code.google.com/p/webrtc/issues/detail?id=4869
+        // this was fixed in M56 along with unprefixing RTCPeerConnection.
+        logging('PeerConnection');
+        if (pcConfig && pcConfig.iceTransportPolicy) {
+          pcConfig.iceTransports = pcConfig.iceTransportPolicy;
+        }
+
+        return new webkitRTCPeerConnection(pcConfig, pcConstraints);
+      };
+      window.RTCPeerConnection.prototype = webkitRTCPeerConnection.prototype;
+      // wrap static methods. Currently just generateCertificate.
+      if (webkitRTCPeerConnection.generateCertificate) {
+        Object.defineProperty(window.RTCPeerConnection, 'generateCertificate', {
+          get: function() {
+            return webkitRTCPeerConnection.generateCertificate;
+          }
+        });
+      }
+    }
+
+    var origGetStats = RTCPeerConnection.prototype.getStats;
+    RTCPeerConnection.prototype.getStats = function(selector,
+        successCallback, errorCallback) {
+      var self = this;
+      var args = arguments;
+
+      // If selector is a function then we are in the old style stats so just
+      // pass back the original getStats format to avoid breaking old users.
+      if (arguments.length > 0 && typeof selector === 'function') {
+        return origGetStats.apply(this, arguments);
+      }
+
+      // When spec-style getStats is supported, return those when called with
+      // either no arguments or the selector argument is null.
+      if (origGetStats.length === 0 && (arguments.length === 0 ||
+          typeof arguments[0] !== 'function')) {
+        return origGetStats.apply(this, []);
+      }
+
+      var fixChromeStats_ = function(response) {
+        var standardReport = {};
+        var reports = response.result();
+        reports.forEach(function(report) {
+          var standardStats = {
+            id: report.id,
+            timestamp: report.timestamp,
+            type: {
+              localcandidate: 'local-candidate',
+              remotecandidate: 'remote-candidate'
+            }[report.type] || report.type
+          };
+          report.names().forEach(function(name) {
+            standardStats[name] = report.stat(name);
+          });
+          standardReport[standardStats.id] = standardStats;
+        });
+
+        return standardReport;
+      };
+
+      // shim getStats with maplike support
+      var makeMapStats = function(stats) {
+        return new Map(Object.keys(stats).map(function(key) {
+          return[key, stats[key]];
+        }));
+      };
+
+      if (arguments.length >= 2) {
+        var successCallbackWrapper_ = function(response) {
+          args[1](makeMapStats(fixChromeStats_(response)));
+        };
+
+        return origGetStats.apply(this, [successCallbackWrapper_,
+            arguments[0]]);
+      }
+
+      // promise-support
+      return new Promise(function(resolve, reject) {
+        origGetStats.apply(self, [
+          function(response) {
+            resolve(makeMapStats(fixChromeStats_(response)));
+          }, reject]);
+      }).then(successCallback, errorCallback);
+    };
+
+    // add promise support -- natively available in Chrome 51
+    if (browserDetails.version < 51) {
+      ['setLocalDescription', 'setRemoteDescription', 'addIceCandidate']
+          .forEach(function(method) {
+            var nativeMethod = RTCPeerConnection.prototype[method];
+            RTCPeerConnection.prototype[method] = function() {
+              var args = arguments;
+              var self = this;
+              var promise = new Promise(function(resolve, reject) {
+                nativeMethod.apply(self, [args[0], resolve, reject]);
+              });
+              if (args.length < 2) {
+                return promise;
+              }
+              return promise.then(function() {
+                args[1].apply(null, []);
+              },
+              function(err) {
+                if (args.length >= 3) {
+                  args[2].apply(null, [err]);
+                }
+              });
+            };
+          });
+    }
+
+    // promise support for createOffer and createAnswer. Available (without
+    // bugs) since M52: crbug/619289
+    if (browserDetails.version < 52) {
+      ['createOffer', 'createAnswer'].forEach(function(method) {
+        var nativeMethod = RTCPeerConnection.prototype[method];
+        RTCPeerConnection.prototype[method] = function() {
+          var self = this;
+          if (arguments.length < 1 || (arguments.length === 1 &&
+              typeof arguments[0] === 'object')) {
+            var opts = arguments.length === 1 ? arguments[0] : undefined;
+            return new Promise(function(resolve, reject) {
+              nativeMethod.apply(self, [resolve, reject, opts]);
+            });
+          }
+          return nativeMethod.apply(this, arguments);
+        };
+      });
+    }
+
+    // shim implicit creation of RTCSessionDescription/RTCIceCandidate
+    ['setLocalDescription', 'setRemoteDescription', 'addIceCandidate']
+        .forEach(function(method) {
+          var nativeMethod = RTCPeerConnection.prototype[method];
+          RTCPeerConnection.prototype[method] = function() {
+            arguments[0] = new ((method === 'addIceCandidate') ?
+                RTCIceCandidate : RTCSessionDescription)(arguments[0]);
+            return nativeMethod.apply(this, arguments);
+          };
+        });
+
+    // support for addIceCandidate(null or undefined)
+    var nativeAddIceCandidate =
+        RTCPeerConnection.prototype.addIceCandidate;
+    RTCPeerConnection.prototype.addIceCandidate = function() {
+      if (!arguments[0]) {
+        if (arguments[1]) {
+          arguments[1].apply(null);
+        }
+        return Promise.resolve();
+      }
+      return nativeAddIceCandidate.apply(this, arguments);
+    };
+  }
+};
+
+
+// Expose public methods.
+module.exports = {
+  shimMediaStream: chromeShim.shimMediaStream,
+  shimOnTrack: chromeShim.shimOnTrack,
+  shimGetSendersWithDtmf: chromeShim.shimGetSendersWithDtmf,
+  shimSourceObject: chromeShim.shimSourceObject,
+  shimPeerConnection: chromeShim.shimPeerConnection,
+  shimGetUserMedia: __webpack_require__(1791)
+};
+
+
+/***/ }),
+/* 1791 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+var logging = __webpack_require__(877).log;
+var browserDetails = __webpack_require__(877).browserDetails;
+
+// Expose public methods.
+module.exports = function() {
+  var constraintsToChrome_ = function(c) {
+    if (typeof c !== 'object' || c.mandatory || c.optional) {
+      return c;
+    }
+    var cc = {};
+    Object.keys(c).forEach(function(key) {
+      if (key === 'require' || key === 'advanced' || key === 'mediaSource') {
+        return;
+      }
+      var r = (typeof c[key] === 'object') ? c[key] : {ideal: c[key]};
+      if (r.exact !== undefined && typeof r.exact === 'number') {
+        r.min = r.max = r.exact;
+      }
+      var oldname_ = function(prefix, name) {
+        if (prefix) {
+          return prefix + name.charAt(0).toUpperCase() + name.slice(1);
+        }
+        return (name === 'deviceId') ? 'sourceId' : name;
+      };
+      if (r.ideal !== undefined) {
+        cc.optional = cc.optional || [];
+        var oc = {};
+        if (typeof r.ideal === 'number') {
+          oc[oldname_('min', key)] = r.ideal;
+          cc.optional.push(oc);
+          oc = {};
+          oc[oldname_('max', key)] = r.ideal;
+          cc.optional.push(oc);
+        } else {
+          oc[oldname_('', key)] = r.ideal;
+          cc.optional.push(oc);
+        }
+      }
+      if (r.exact !== undefined && typeof r.exact !== 'number') {
+        cc.mandatory = cc.mandatory || {};
+        cc.mandatory[oldname_('', key)] = r.exact;
+      } else {
+        ['min', 'max'].forEach(function(mix) {
+          if (r[mix] !== undefined) {
+            cc.mandatory = cc.mandatory || {};
+            cc.mandatory[oldname_(mix, key)] = r[mix];
+          }
+        });
+      }
+    });
+    if (c.advanced) {
+      cc.optional = (cc.optional || []).concat(c.advanced);
+    }
+    return cc;
+  };
+
+  var shimConstraints_ = function(constraints, func) {
+    constraints = JSON.parse(JSON.stringify(constraints));
+    if (constraints && constraints.audio) {
+      constraints.audio = constraintsToChrome_(constraints.audio);
+    }
+    if (constraints && typeof constraints.video === 'object') {
+      // Shim facingMode for mobile, where it defaults to "user".
+      var face = constraints.video.facingMode;
+      face = face && ((typeof face === 'object') ? face : {ideal: face});
+      var getSupportedFacingModeLies = browserDetails.version < 59;
+
+      if ((face && (face.exact === 'user' || face.exact === 'environment' ||
+                    face.ideal === 'user' || face.ideal === 'environment')) &&
+          !(navigator.mediaDevices.getSupportedConstraints &&
+            navigator.mediaDevices.getSupportedConstraints().facingMode &&
+            !getSupportedFacingModeLies)) {
+        delete constraints.video.facingMode;
+        if (face.exact === 'environment' || face.ideal === 'environment') {
+          // Look for "back" in label, or use last cam (typically back cam).
+          return navigator.mediaDevices.enumerateDevices()
+          .then(function(devices) {
+            devices = devices.filter(function(d) {
+              return d.kind === 'videoinput';
+            });
+            var back = devices.find(function(d) {
+              return d.label.toLowerCase().indexOf('back') !== -1;
+            }) || (devices.length && devices[devices.length - 1]);
+            if (back) {
+              constraints.video.deviceId = face.exact ? {exact: back.deviceId} :
+                                                        {ideal: back.deviceId};
+            }
+            constraints.video = constraintsToChrome_(constraints.video);
+            logging('chrome: ' + JSON.stringify(constraints));
+            return func(constraints);
+          });
+        }
+      }
+      constraints.video = constraintsToChrome_(constraints.video);
+    }
+    logging('chrome: ' + JSON.stringify(constraints));
+    return func(constraints);
+  };
+
+  var shimError_ = function(e) {
+    return {
+      name: {
+        PermissionDeniedError: 'NotAllowedError',
+        ConstraintNotSatisfiedError: 'OverconstrainedError'
+      }[e.name] || e.name,
+      message: e.message,
+      constraint: e.constraintName,
+      toString: function() {
+        return this.name + (this.message && ': ') + this.message;
+      }
+    };
+  };
+
+  var getUserMedia_ = function(constraints, onSuccess, onError) {
+    shimConstraints_(constraints, function(c) {
+      navigator.webkitGetUserMedia(c, onSuccess, function(e) {
+        onError(shimError_(e));
+      });
+    });
+  };
+
+  navigator.getUserMedia = getUserMedia_;
+
+  // Returns the result of getUserMedia as a Promise.
+  var getUserMediaPromise_ = function(constraints) {
+    return new Promise(function(resolve, reject) {
+      navigator.getUserMedia(constraints, resolve, reject);
+    });
+  };
+
+  if (!navigator.mediaDevices) {
+    navigator.mediaDevices = {
+      getUserMedia: getUserMediaPromise_,
+      enumerateDevices: function() {
+        return new Promise(function(resolve) {
+          var kinds = {audio: 'audioinput', video: 'videoinput'};
+          return MediaStreamTrack.getSources(function(devices) {
+            resolve(devices.map(function(device) {
+              return {label: device.label,
+                      kind: kinds[device.kind],
+                      deviceId: device.id,
+                      groupId: ''};
+            }));
+          });
+        });
+      },
+      getSupportedConstraints: function() {
+        return {
+          deviceId: true, echoCancellation: true, facingMode: true,
+          frameRate: true, height: true, width: true
+        };
+      }
+    };
+  }
+
+  // A shim for getUserMedia method on the mediaDevices object.
+  // TODO(KaptenJansson) remove once implemented in Chrome stable.
+  if (!navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia = function(constraints) {
+      return getUserMediaPromise_(constraints);
+    };
+  } else {
+    // Even though Chrome 45 has navigator.mediaDevices and a getUserMedia
+    // function which returns a Promise, it does not accept spec-style
+    // constraints.
+    var origGetUserMedia = navigator.mediaDevices.getUserMedia.
+        bind(navigator.mediaDevices);
+    navigator.mediaDevices.getUserMedia = function(cs) {
+      return shimConstraints_(cs, function(c) {
+        return origGetUserMedia(c).then(function(stream) {
+          if (c.audio && !stream.getAudioTracks().length ||
+              c.video && !stream.getVideoTracks().length) {
+            stream.getTracks().forEach(function(track) {
+              track.stop();
+            });
+            throw new DOMException('', 'NotFoundError');
+          }
+          return stream;
+        }, function(e) {
+          return Promise.reject(shimError_(e));
+        });
+      });
+    };
+  }
+
+  // Dummy devicechange event methods.
+  // TODO(KaptenJansson) remove once implemented in Chrome stable.
+  if (typeof navigator.mediaDevices.addEventListener === 'undefined') {
+    navigator.mediaDevices.addEventListener = function() {
+      logging('Dummy mediaDevices.addEventListener called.');
+    };
+  }
+  if (typeof navigator.mediaDevices.removeEventListener === 'undefined') {
+    navigator.mediaDevices.removeEventListener = function() {
+      logging('Dummy mediaDevices.removeEventListener called.');
+    };
+  }
+};
+
+
+/***/ }),
+/* 1792 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+var SDPUtils = __webpack_require__(1764);
+var browserDetails = __webpack_require__(877).browserDetails;
+
+// sort tracks such that they follow an a-v-a-v...
+// pattern.
+function sortTracks(tracks) {
+  var audioTracks = tracks.filter(function(track) {
+    return track.kind === 'audio';
+  });
+  var videoTracks = tracks.filter(function(track) {
+    return track.kind === 'video';
+  });
+  tracks = [];
+  while (audioTracks.length || videoTracks.length) {
+    if (audioTracks.length) {
+      tracks.push(audioTracks.shift());
+    }
+    if (videoTracks.length) {
+      tracks.push(videoTracks.shift());
+    }
+  }
+  return tracks;
+}
+
+// Edge does not like
+// 1) stun:
+// 2) turn: that does not have all of turn:host:port?transport=udp
+// 3) turn: with ipv6 addresses
+// 4) turn: occurring muliple times
+function filterIceServers(iceServers) {
+  var hasTurn = false;
+  iceServers = JSON.parse(JSON.stringify(iceServers));
+  return iceServers.filter(function(server) {
+    if (server && (server.urls || server.url)) {
+      var urls = server.urls || server.url;
+      var isString = typeof urls === 'string';
+      if (isString) {
+        urls = [urls];
+      }
+      urls = urls.filter(function(url) {
+        var validTurn = url.indexOf('turn:') === 0 &&
+            url.indexOf('transport=udp') !== -1 &&
+            url.indexOf('turn:[') === -1 &&
+            !hasTurn;
+
+        if (validTurn) {
+          hasTurn = true;
+          return true;
+        }
+        return url.indexOf('stun:') === 0 &&
+            browserDetails.version >= 14393;
+      });
+
+      delete server.url;
+      server.urls = isString ? urls[0] : urls;
+      return !!urls.length;
+    }
+    return false;
+  });
+}
+
+var edgeShim = {
+  shimPeerConnection: function() {
+    if (window.RTCIceGatherer) {
+      // ORTC defines an RTCIceCandidate object but no constructor.
+      // Not implemented in Edge.
+      if (!window.RTCIceCandidate) {
+        window.RTCIceCandidate = function(args) {
+          return args;
+        };
+      }
+      // ORTC does not have a session description object but
+      // other browsers (i.e. Chrome) that will support both PC and ORTC
+      // in the future might have this defined already.
+      if (!window.RTCSessionDescription) {
+        window.RTCSessionDescription = function(args) {
+          return args;
+        };
+      }
+      // this adds an additional event listener to MediaStrackTrack that signals
+      // when a tracks enabled property was changed. Workaround for a bug in
+      // addStream, see below. No longer required in 15025+
+      if (browserDetails.version < 15025) {
+        var origMSTEnabled = Object.getOwnPropertyDescriptor(
+            MediaStreamTrack.prototype, 'enabled');
+        Object.defineProperty(MediaStreamTrack.prototype, 'enabled', {
+          set: function(value) {
+            origMSTEnabled.set.call(this, value);
+            var ev = new Event('enabled');
+            ev.enabled = value;
+            this.dispatchEvent(ev);
+          }
+        });
+      }
+    }
+
+    window.RTCPeerConnection = function(config) {
+      var self = this;
+
+      var _eventTarget = document.createDocumentFragment();
+      ['addEventListener', 'removeEventListener', 'dispatchEvent']
+          .forEach(function(method) {
+            self[method] = _eventTarget[method].bind(_eventTarget);
+          });
+
+      this.onicecandidate = null;
+      this.onaddstream = null;
+      this.ontrack = null;
+      this.onremovestream = null;
+      this.onsignalingstatechange = null;
+      this.oniceconnectionstatechange = null;
+      this.onicegatheringstatechange = null;
+      this.onnegotiationneeded = null;
+      this.ondatachannel = null;
+
+      this.localStreams = [];
+      this.remoteStreams = [];
+      this.getLocalStreams = function() {
+        return self.localStreams;
+      };
+      this.getRemoteStreams = function() {
+        return self.remoteStreams;
+      };
+
+      this.localDescription = new RTCSessionDescription({
+        type: '',
+        sdp: ''
+      });
+      this.remoteDescription = new RTCSessionDescription({
+        type: '',
+        sdp: ''
+      });
+      this.signalingState = 'stable';
+      this.iceConnectionState = 'new';
+      this.iceGatheringState = 'new';
+
+      this.iceOptions = {
+        gatherPolicy: 'all',
+        iceServers: []
+      };
+      if (config && config.iceTransportPolicy) {
+        switch (config.iceTransportPolicy) {
+          case 'all':
+          case 'relay':
+            this.iceOptions.gatherPolicy = config.iceTransportPolicy;
+            break;
+          default:
+            // don't set iceTransportPolicy.
+            break;
+        }
+      }
+      this.usingBundle = config && config.bundlePolicy === 'max-bundle';
+
+      if (config && config.iceServers) {
+        this.iceOptions.iceServers = filterIceServers(config.iceServers);
+      }
+      this._config = config;
+
+      // per-track iceGathers, iceTransports, dtlsTransports, rtpSenders, ...
+      // everything that is needed to describe a SDP m-line.
+      this.transceivers = [];
+
+      // since the iceGatherer is currently created in createOffer but we
+      // must not emit candidates until after setLocalDescription we buffer
+      // them in this array.
+      this._localIceCandidatesBuffer = [];
+    };
+
+    window.RTCPeerConnection.prototype._emitGatheringStateChange = function() {
+      var event = new Event('icegatheringstatechange');
+      this.dispatchEvent(event);
+      if (this.onicegatheringstatechange !== null) {
+        this.onicegatheringstatechange(event);
+      }
+    };
+
+    window.RTCPeerConnection.prototype._emitBufferedCandidates = function() {
+      var self = this;
+      var sections = SDPUtils.splitSections(self.localDescription.sdp);
+      // FIXME: need to apply ice candidates in a way which is async but
+      // in-order
+      this._localIceCandidatesBuffer.forEach(function(event) {
+        var end = !event.candidate || Object.keys(event.candidate).length === 0;
+        if (end) {
+          for (var j = 1; j < sections.length; j++) {
+            if (sections[j].indexOf('\r\na=end-of-candidates\r\n') === -1) {
+              sections[j] += 'a=end-of-candidates\r\n';
+            }
+          }
+        } else {
+          sections[event.candidate.sdpMLineIndex + 1] +=
+              'a=' + event.candidate.candidate + '\r\n';
+        }
+        self.localDescription.sdp = sections.join('');
+        self.dispatchEvent(event);
+        if (self.onicecandidate !== null) {
+          self.onicecandidate(event);
+        }
+        if (!event.candidate && self.iceGatheringState !== 'complete') {
+          var complete = self.transceivers.every(function(transceiver) {
+            return transceiver.iceGatherer &&
+                transceiver.iceGatherer.state === 'completed';
+          });
+          if (complete && self.iceGatheringStateChange !== 'complete') {
+            self.iceGatheringState = 'complete';
+            self._emitGatheringStateChange();
+          }
+        }
+      });
+      this._localIceCandidatesBuffer = [];
+    };
+
+    window.RTCPeerConnection.prototype.getConfiguration = function() {
+      return this._config;
+    };
+
+    window.RTCPeerConnection.prototype.addStream = function(stream) {
+      if (browserDetails.version >= 15025) {
+        this.localStreams.push(stream);
+      } else {
+        // Clone is necessary for local demos mostly, attaching directly
+        // to two different senders does not work (build 10547).
+        // Fixed in 15025 (or earlier)
+        var clonedStream = stream.clone();
+        stream.getTracks().forEach(function(track, idx) {
+          var clonedTrack = clonedStream.getTracks()[idx];
+          track.addEventListener('enabled', function(event) {
+            clonedTrack.enabled = event.enabled;
+          });
+        });
+        this.localStreams.push(clonedStream);
+      }
+      this._maybeFireNegotiationNeeded();
+    };
+
+    window.RTCPeerConnection.prototype.removeStream = function(stream) {
+      var idx = this.localStreams.indexOf(stream);
+      if (idx > -1) {
+        this.localStreams.splice(idx, 1);
+        this._maybeFireNegotiationNeeded();
+      }
+    };
+
+    window.RTCPeerConnection.prototype.getSenders = function() {
+      return this.transceivers.filter(function(transceiver) {
+        return !!transceiver.rtpSender;
+      })
+      .map(function(transceiver) {
+        return transceiver.rtpSender;
+      });
+    };
+
+    window.RTCPeerConnection.prototype.getReceivers = function() {
+      return this.transceivers.filter(function(transceiver) {
+        return !!transceiver.rtpReceiver;
+      })
+      .map(function(transceiver) {
+        return transceiver.rtpReceiver;
+      });
+    };
+
+    // Determines the intersection of local and remote capabilities.
+    window.RTCPeerConnection.prototype._getCommonCapabilities =
+        function(localCapabilities, remoteCapabilities) {
+          var commonCapabilities = {
+            codecs: [],
+            headerExtensions: [],
+            fecMechanisms: []
+          };
+
+          var findCodecByPayloadType = function(pt, codecs) {
+            pt = parseInt(pt, 10);
+            for (var i = 0; i < codecs.length; i++) {
+              if (codecs[i].payloadType === pt ||
+                  codecs[i].preferredPayloadType === pt) {
+                return codecs[i];
+              }
+            }
+          };
+
+          var rtxCapabilityMatches = function(lRtx, rRtx, lCodecs, rCodecs) {
+            var lCodec = findCodecByPayloadType(lRtx.parameters.apt, lCodecs);
+            var rCodec = findCodecByPayloadType(rRtx.parameters.apt, rCodecs);
+            return lCodec && rCodec &&
+                lCodec.name.toLowerCase() === rCodec.name.toLowerCase();
+          };
+
+          localCapabilities.codecs.forEach(function(lCodec) {
+            for (var i = 0; i < remoteCapabilities.codecs.length; i++) {
+              var rCodec = remoteCapabilities.codecs[i];
+              if (lCodec.name.toLowerCase() === rCodec.name.toLowerCase() &&
+                  lCodec.clockRate === rCodec.clockRate) {
+                if (lCodec.name.toLowerCase() === 'rtx' &&
+                    lCodec.parameters && rCodec.parameters.apt) {
+                  // for RTX we need to find the local rtx that has a apt
+                  // which points to the same local codec as the remote one.
+                  if (!rtxCapabilityMatches(lCodec, rCodec,
+                      localCapabilities.codecs, remoteCapabilities.codecs)) {
+                    continue;
+                  }
+                }
+                rCodec = JSON.parse(JSON.stringify(rCodec)); // deepcopy
+                // number of channels is the highest common number of channels
+                rCodec.numChannels = Math.min(lCodec.numChannels,
+                    rCodec.numChannels);
+                // push rCodec so we reply with offerer payload type
+                commonCapabilities.codecs.push(rCodec);
+
+                // determine common feedback mechanisms
+                rCodec.rtcpFeedback = rCodec.rtcpFeedback.filter(function(fb) {
+                  for (var j = 0; j < lCodec.rtcpFeedback.length; j++) {
+                    if (lCodec.rtcpFeedback[j].type === fb.type &&
+                        lCodec.rtcpFeedback[j].parameter === fb.parameter) {
+                      return true;
+                    }
+                  }
+                  return false;
+                });
+                // FIXME: also need to determine .parameters
+                //  see https://github.com/openpeer/ortc/issues/569
+                break;
+              }
+            }
+          });
+
+          localCapabilities.headerExtensions
+              .forEach(function(lHeaderExtension) {
+                for (var i = 0; i < remoteCapabilities.headerExtensions.length;
+                     i++) {
+                  var rHeaderExtension = remoteCapabilities.headerExtensions[i];
+                  if (lHeaderExtension.uri === rHeaderExtension.uri) {
+                    commonCapabilities.headerExtensions.push(rHeaderExtension);
+                    break;
+                  }
+                }
+              });
+
+          // FIXME: fecMechanisms
+          return commonCapabilities;
+        };
+
+    // Create ICE gatherer, ICE transport and DTLS transport.
+    window.RTCPeerConnection.prototype._createIceAndDtlsTransports =
+        function(mid, sdpMLineIndex) {
+          var self = this;
+          var iceGatherer = new RTCIceGatherer(self.iceOptions);
+          var iceTransport = new RTCIceTransport(iceGatherer);
+          iceGatherer.onlocalcandidate = function(evt) {
+            var event = new Event('icecandidate');
+            event.candidate = {sdpMid: mid, sdpMLineIndex: sdpMLineIndex};
+
+            var cand = evt.candidate;
+            var end = !cand || Object.keys(cand).length === 0;
+            // Edge emits an empty object for RTCIceCandidateComplete‥
+            if (end) {
+              // polyfill since RTCIceGatherer.state is not implemented in
+              // Edge 10547 yet.
+              if (iceGatherer.state === undefined) {
+                iceGatherer.state = 'completed';
+              }
+            } else {
+              // RTCIceCandidate doesn't have a component, needs to be added
+              cand.component = iceTransport.component === 'RTCP' ? 2 : 1;
+              event.candidate.candidate = SDPUtils.writeCandidate(cand);
+            }
+
+            // update local description.
+            var sections = SDPUtils.splitSections(self.localDescription.sdp);
+            if (!end) {
+              sections[event.candidate.sdpMLineIndex + 1] +=
+                  'a=' + event.candidate.candidate + '\r\n';
+            } else {
+              sections[event.candidate.sdpMLineIndex + 1] +=
+                  'a=end-of-candidates\r\n';
+            }
+            self.localDescription.sdp = sections.join('');
+            var transceivers = self._pendingOffer ? self._pendingOffer :
+                self.transceivers;
+            var complete = transceivers.every(function(transceiver) {
+              return transceiver.iceGatherer &&
+                  transceiver.iceGatherer.state === 'completed';
+            });
+
+            // Emit candidate if localDescription is set.
+            // Also emits null candidate when all gatherers are complete.
+            switch (self.iceGatheringState) {
+              case 'new':
+                if (!end) {
+                  self._localIceCandidatesBuffer.push(event);
+                }
+                if (end && complete) {
+                  self._localIceCandidatesBuffer.push(
+                      new Event('icecandidate'));
+                }
+                break;
+              case 'gathering':
+                self._emitBufferedCandidates();
+                if (!end) {
+                  self.dispatchEvent(event);
+                  if (self.onicecandidate !== null) {
+                    self.onicecandidate(event);
+                  }
+                }
+                if (complete) {
+                  self.dispatchEvent(new Event('icecandidate'));
+                  if (self.onicecandidate !== null) {
+                    self.onicecandidate(new Event('icecandidate'));
+                  }
+                  self.iceGatheringState = 'complete';
+                  self._emitGatheringStateChange();
+                }
+                break;
+              case 'complete':
+                // should not happen... currently!
+                break;
+              default: // no-op.
+                break;
+            }
+          };
+          iceTransport.onicestatechange = function() {
+            self._updateConnectionState();
+          };
+
+          var dtlsTransport = new RTCDtlsTransport(iceTransport);
+          dtlsTransport.ondtlsstatechange = function() {
+            self._updateConnectionState();
+          };
+          dtlsTransport.onerror = function() {
+            // onerror does not set state to failed by itself.
+            dtlsTransport.state = 'failed';
+            self._updateConnectionState();
+          };
+
+          return {
+            iceGatherer: iceGatherer,
+            iceTransport: iceTransport,
+            dtlsTransport: dtlsTransport
+          };
+        };
+
+    // Start the RTP Sender and Receiver for a transceiver.
+    window.RTCPeerConnection.prototype._transceive = function(transceiver,
+        send, recv) {
+      var params = this._getCommonCapabilities(transceiver.localCapabilities,
+          transceiver.remoteCapabilities);
+      if (send && transceiver.rtpSender) {
+        params.encodings = transceiver.sendEncodingParameters;
+        params.rtcp = {
+          cname: SDPUtils.localCName
+        };
+        if (transceiver.recvEncodingParameters.length) {
+          params.rtcp.ssrc = transceiver.recvEncodingParameters[0].ssrc;
+        }
+        transceiver.rtpSender.send(params);
+      }
+      if (recv && transceiver.rtpReceiver) {
+        // remove RTX field in Edge 14942
+        if (transceiver.kind === 'video'
+            && transceiver.recvEncodingParameters
+            && browserDetails.version < 15019) {
+          transceiver.recvEncodingParameters.forEach(function(p) {
+            delete p.rtx;
+          });
+        }
+        params.encodings = transceiver.recvEncodingParameters;
+        params.rtcp = {
+          cname: transceiver.cname
+        };
+        if (transceiver.sendEncodingParameters.length) {
+          params.rtcp.ssrc = transceiver.sendEncodingParameters[0].ssrc;
+        }
+        transceiver.rtpReceiver.receive(params);
+      }
+    };
+
+    window.RTCPeerConnection.prototype.setLocalDescription =
+        function(description) {
+          var self = this;
+          var sections;
+          var sessionpart;
+          if (description.type === 'offer') {
+            // FIXME: What was the purpose of this empty if statement?
+            // if (!this._pendingOffer) {
+            // } else {
+            if (this._pendingOffer) {
+              // VERY limited support for SDP munging. Limited to:
+              // * changing the order of codecs
+              sections = SDPUtils.splitSections(description.sdp);
+              sessionpart = sections.shift();
+              sections.forEach(function(mediaSection, sdpMLineIndex) {
+                var caps = SDPUtils.parseRtpParameters(mediaSection);
+                self._pendingOffer[sdpMLineIndex].localCapabilities = caps;
+              });
+              this.transceivers = this._pendingOffer;
+              delete this._pendingOffer;
+            }
+          } else if (description.type === 'answer') {
+            sections = SDPUtils.splitSections(self.remoteDescription.sdp);
+            sessionpart = sections.shift();
+            var isIceLite = SDPUtils.matchPrefix(sessionpart,
+                'a=ice-lite').length > 0;
+            sections.forEach(function(mediaSection, sdpMLineIndex) {
+              var transceiver = self.transceivers[sdpMLineIndex];
+              var iceGatherer = transceiver.iceGatherer;
+              var iceTransport = transceiver.iceTransport;
+              var dtlsTransport = transceiver.dtlsTransport;
+              var localCapabilities = transceiver.localCapabilities;
+              var remoteCapabilities = transceiver.remoteCapabilities;
+
+              var rejected = mediaSection.split('\n', 1)[0]
+                  .split(' ', 2)[1] === '0';
+
+              if (!rejected && !transceiver.isDatachannel) {
+                var remoteIceParameters = SDPUtils.getIceParameters(
+                    mediaSection, sessionpart);
+                var remoteDtlsParameters = SDPUtils.getDtlsParameters(
+                    mediaSection, sessionpart);
+                if (isIceLite) {
+                  remoteDtlsParameters.role = 'server';
+                }
+
+                if (!self.usingBundle || sdpMLineIndex === 0) {
+                  iceTransport.start(iceGatherer, remoteIceParameters,
+                      isIceLite ? 'controlling' : 'controlled');
+                  dtlsTransport.start(remoteDtlsParameters);
+                }
+
+                // Calculate intersection of capabilities.
+                var params = self._getCommonCapabilities(localCapabilities,
+                    remoteCapabilities);
+
+                // Start the RTCRtpSender. The RTCRtpReceiver for this
+                // transceiver has already been started in setRemoteDescription.
+                self._transceive(transceiver,
+                    params.codecs.length > 0,
+                    false);
+              }
+            });
+          }
+
+          this.localDescription = {
+            type: description.type,
+            sdp: description.sdp
+          };
+          switch (description.type) {
+            case 'offer':
+              this._updateSignalingState('have-local-offer');
+              break;
+            case 'answer':
+              this._updateSignalingState('stable');
+              break;
+            default:
+              throw new TypeError('unsupported type "' + description.type +
+                  '"');
+          }
+
+          // If a success callback was provided, emit ICE candidates after it
+          // has been executed. Otherwise, emit callback after the Promise is
+          // resolved.
+          var hasCallback = arguments.length > 1 &&
+            typeof arguments[1] === 'function';
+          if (hasCallback) {
+            var cb = arguments[1];
+            window.setTimeout(function() {
+              cb();
+              if (self.iceGatheringState === 'new') {
+                self.iceGatheringState = 'gathering';
+                self._emitGatheringStateChange();
+              }
+              self._emitBufferedCandidates();
+            }, 0);
+          }
+          var p = Promise.resolve();
+          p.then(function() {
+            if (!hasCallback) {
+              if (self.iceGatheringState === 'new') {
+                self.iceGatheringState = 'gathering';
+                self._emitGatheringStateChange();
+              }
+              // Usually candidates will be emitted earlier.
+              window.setTimeout(self._emitBufferedCandidates.bind(self), 500);
+            }
+          });
+          return p;
+        };
+
+    window.RTCPeerConnection.prototype.setRemoteDescription =
+        function(description) {
+          var self = this;
+          var stream = new MediaStream();
+          var receiverList = [];
+          var sections = SDPUtils.splitSections(description.sdp);
+          var sessionpart = sections.shift();
+          var isIceLite = SDPUtils.matchPrefix(sessionpart,
+              'a=ice-lite').length > 0;
+          this.usingBundle = SDPUtils.matchPrefix(sessionpart,
+              'a=group:BUNDLE ').length > 0;
+          sections.forEach(function(mediaSection, sdpMLineIndex) {
+            var lines = SDPUtils.splitLines(mediaSection);
+            var mline = lines[0].substr(2).split(' ');
+            var kind = mline[0];
+            var rejected = mline[1] === '0';
+            var direction = SDPUtils.getDirection(mediaSection, sessionpart);
+
+            var mid = SDPUtils.matchPrefix(mediaSection, 'a=mid:');
+            if (mid.length) {
+              mid = mid[0].substr(6);
+            } else {
+              mid = SDPUtils.generateIdentifier();
+            }
+
+            // Reject datachannels which are not implemented yet.
+            if (kind === 'application' && mline[2] === 'DTLS/SCTP') {
+              self.transceivers[sdpMLineIndex] = {
+                mid: mid,
+                isDatachannel: true
+              };
+              return;
+            }
+
+            var transceiver;
+            var iceGatherer;
+            var iceTransport;
+            var dtlsTransport;
+            var rtpSender;
+            var rtpReceiver;
+            var sendEncodingParameters;
+            var recvEncodingParameters;
+            var localCapabilities;
+
+            var track;
+            // FIXME: ensure the mediaSection has rtcp-mux set.
+            var remoteCapabilities = SDPUtils.parseRtpParameters(mediaSection);
+            var remoteIceParameters;
+            var remoteDtlsParameters;
+            if (!rejected) {
+              remoteIceParameters = SDPUtils.getIceParameters(mediaSection,
+                  sessionpart);
+              remoteDtlsParameters = SDPUtils.getDtlsParameters(mediaSection,
+                  sessionpart);
+              remoteDtlsParameters.role = 'client';
+            }
+            recvEncodingParameters =
+                SDPUtils.parseRtpEncodingParameters(mediaSection);
+
+            var cname;
+            // Gets the first SSRC. Note that with RTX there might be multiple
+            // SSRCs.
+            var remoteSsrc = SDPUtils.matchPrefix(mediaSection, 'a=ssrc:')
+                .map(function(line) {
+                  return SDPUtils.parseSsrcMedia(line);
+                })
+                .filter(function(obj) {
+                  return obj.attribute === 'cname';
+                })[0];
+            if (remoteSsrc) {
+              cname = remoteSsrc.value;
+            }
+
+            var isComplete = SDPUtils.matchPrefix(mediaSection,
+                'a=end-of-candidates', sessionpart).length > 0;
+            var cands = SDPUtils.matchPrefix(mediaSection, 'a=candidate:')
+                .map(function(cand) {
+                  return SDPUtils.parseCandidate(cand);
+                })
+                .filter(function(cand) {
+                  return cand.component === '1';
+                });
+            if (description.type === 'offer' && !rejected) {
+              var transports = self.usingBundle && sdpMLineIndex > 0 ? {
+                iceGatherer: self.transceivers[0].iceGatherer,
+                iceTransport: self.transceivers[0].iceTransport,
+                dtlsTransport: self.transceivers[0].dtlsTransport
+              } : self._createIceAndDtlsTransports(mid, sdpMLineIndex);
+
+              if (isComplete && (!self.usingBundle || sdpMLineIndex === 0)) {
+                transports.iceTransport.setRemoteCandidates(cands);
+              }
+
+              localCapabilities = RTCRtpReceiver.getCapabilities(kind);
+
+              // filter RTX until additional stuff needed for RTX is implemented
+              // in adapter.js
+              if (browserDetails.version < 15019) {
+                localCapabilities.codecs = localCapabilities.codecs.filter(
+                    function(codec) {
+                      return codec.name !== 'rtx';
+                    });
+              }
+
+              sendEncodingParameters = [{
+                ssrc: (2 * sdpMLineIndex + 2) * 1001
+              }];
+
+              if (direction === 'sendrecv' || direction === 'sendonly') {
+                rtpReceiver = new RTCRtpReceiver(transports.dtlsTransport,
+                    kind);
+
+                track = rtpReceiver.track;
+                receiverList.push([track, rtpReceiver]);
+                // FIXME: not correct when there are multiple streams but that
+                // is not currently supported in this shim.
+                stream.addTrack(track);
+              }
+
+              // FIXME: look at direction.
+              if (self.localStreams.length > 0 &&
+                  self.localStreams[0].getTracks().length >= sdpMLineIndex) {
+                var localTrack;
+                if (kind === 'audio') {
+                  localTrack = self.localStreams[0].getAudioTracks()[0];
+                } else if (kind === 'video') {
+                  localTrack = self.localStreams[0].getVideoTracks()[0];
+                }
+                if (localTrack) {
+                  // add RTX
+                  if (browserDetails.version >= 15019 && kind === 'video') {
+                    sendEncodingParameters[0].rtx = {
+                      ssrc: (2 * sdpMLineIndex + 2) * 1001 + 1
+                    };
+                  }
+                  rtpSender = new RTCRtpSender(localTrack,
+                      transports.dtlsTransport);
+                }
+              }
+
+              self.transceivers[sdpMLineIndex] = {
+                iceGatherer: transports.iceGatherer,
+                iceTransport: transports.iceTransport,
+                dtlsTransport: transports.dtlsTransport,
+                localCapabilities: localCapabilities,
+                remoteCapabilities: remoteCapabilities,
+                rtpSender: rtpSender,
+                rtpReceiver: rtpReceiver,
+                kind: kind,
+                mid: mid,
+                cname: cname,
+                sendEncodingParameters: sendEncodingParameters,
+                recvEncodingParameters: recvEncodingParameters
+              };
+              // Start the RTCRtpReceiver now. The RTPSender is started in
+              // setLocalDescription.
+              self._transceive(self.transceivers[sdpMLineIndex],
+                  false,
+                  direction === 'sendrecv' || direction === 'sendonly');
+            } else if (description.type === 'answer' && !rejected) {
+              transceiver = self.transceivers[sdpMLineIndex];
+              iceGatherer = transceiver.iceGatherer;
+              iceTransport = transceiver.iceTransport;
+              dtlsTransport = transceiver.dtlsTransport;
+              rtpSender = transceiver.rtpSender;
+              rtpReceiver = transceiver.rtpReceiver;
+              sendEncodingParameters = transceiver.sendEncodingParameters;
+              localCapabilities = transceiver.localCapabilities;
+
+              self.transceivers[sdpMLineIndex].recvEncodingParameters =
+                  recvEncodingParameters;
+              self.transceivers[sdpMLineIndex].remoteCapabilities =
+                  remoteCapabilities;
+              self.transceivers[sdpMLineIndex].cname = cname;
+
+              if ((isIceLite || isComplete) && cands.length) {
+                iceTransport.setRemoteCandidates(cands);
+              }
+              if (!self.usingBundle || sdpMLineIndex === 0) {
+                iceTransport.start(iceGatherer, remoteIceParameters,
+                    'controlling');
+                dtlsTransport.start(remoteDtlsParameters);
+              }
+
+              self._transceive(transceiver,
+                  direction === 'sendrecv' || direction === 'recvonly',
+                  direction === 'sendrecv' || direction === 'sendonly');
+
+              if (rtpReceiver &&
+                  (direction === 'sendrecv' || direction === 'sendonly')) {
+                track = rtpReceiver.track;
+                receiverList.push([track, rtpReceiver]);
+                stream.addTrack(track);
+              } else {
+                // FIXME: actually the receiver should be created later.
+                delete transceiver.rtpReceiver;
+              }
+            }
+          });
+
+          this.remoteDescription = {
+            type: description.type,
+            sdp: description.sdp
+          };
+          switch (description.type) {
+            case 'offer':
+              this._updateSignalingState('have-remote-offer');
+              break;
+            case 'answer':
+              this._updateSignalingState('stable');
+              break;
+            default:
+              throw new TypeError('unsupported type "' + description.type +
+                  '"');
+          }
+          if (stream.getTracks().length) {
+            self.remoteStreams.push(stream);
+            window.setTimeout(function() {
+              var event = new Event('addstream');
+              event.stream = stream;
+              self.dispatchEvent(event);
+              if (self.onaddstream !== null) {
+                window.setTimeout(function() {
+                  self.onaddstream(event);
+                }, 0);
+              }
+
+              receiverList.forEach(function(item) {
+                var track = item[0];
+                var receiver = item[1];
+                var trackEvent = new Event('track');
+                trackEvent.track = track;
+                trackEvent.receiver = receiver;
+                trackEvent.streams = [stream];
+                self.dispatchEvent(trackEvent);
+                if (self.ontrack !== null) {
+                  window.setTimeout(function() {
+                    self.ontrack(trackEvent);
+                  }, 0);
+                }
+              });
+            }, 0);
+          }
+          if (arguments.length > 1 && typeof arguments[1] === 'function') {
+            window.setTimeout(arguments[1], 0);
+          }
+          return Promise.resolve();
+        };
+
+    window.RTCPeerConnection.prototype.close = function() {
+      this.transceivers.forEach(function(transceiver) {
+        /* not yet
+        if (transceiver.iceGatherer) {
+          transceiver.iceGatherer.close();
+        }
+        */
+        if (transceiver.iceTransport) {
+          transceiver.iceTransport.stop();
+        }
+        if (transceiver.dtlsTransport) {
+          transceiver.dtlsTransport.stop();
+        }
+        if (transceiver.rtpSender) {
+          transceiver.rtpSender.stop();
+        }
+        if (transceiver.rtpReceiver) {
+          transceiver.rtpReceiver.stop();
+        }
+      });
+      // FIXME: clean up tracks, local streams, remote streams, etc
+      this._updateSignalingState('closed');
+    };
+
+    // Update the signaling state.
+    window.RTCPeerConnection.prototype._updateSignalingState =
+        function(newState) {
+          this.signalingState = newState;
+          var event = new Event('signalingstatechange');
+          this.dispatchEvent(event);
+          if (this.onsignalingstatechange !== null) {
+            this.onsignalingstatechange(event);
+          }
+        };
+
+    // Determine whether to fire the negotiationneeded event.
+    window.RTCPeerConnection.prototype._maybeFireNegotiationNeeded =
+        function() {
+          // Fire away (for now).
+          var event = new Event('negotiationneeded');
+          this.dispatchEvent(event);
+          if (this.onnegotiationneeded !== null) {
+            this.onnegotiationneeded(event);
+          }
+        };
+
+    // Update the connection state.
+    window.RTCPeerConnection.prototype._updateConnectionState = function() {
+      var self = this;
+      var newState;
+      var states = {
+        'new': 0,
+        closed: 0,
+        connecting: 0,
+        checking: 0,
+        connected: 0,
+        completed: 0,
+        failed: 0
+      };
+      this.transceivers.forEach(function(transceiver) {
+        states[transceiver.iceTransport.state]++;
+        states[transceiver.dtlsTransport.state]++;
+      });
+      // ICETransport.completed and connected are the same for this purpose.
+      states.connected += states.completed;
+
+      newState = 'new';
+      if (states.failed > 0) {
+        newState = 'failed';
+      } else if (states.connecting > 0 || states.checking > 0) {
+        newState = 'connecting';
+      } else if (states.disconnected > 0) {
+        newState = 'disconnected';
+      } else if (states.new > 0) {
+        newState = 'new';
+      } else if (states.connected > 0 || states.completed > 0) {
+        newState = 'connected';
+      }
+
+      if (newState !== self.iceConnectionState) {
+        self.iceConnectionState = newState;
+        var event = new Event('iceconnectionstatechange');
+        this.dispatchEvent(event);
+        if (this.oniceconnectionstatechange !== null) {
+          this.oniceconnectionstatechange(event);
+        }
+      }
+    };
+
+    window.RTCPeerConnection.prototype.createOffer = function() {
+      var self = this;
+      if (this._pendingOffer) {
+        throw new Error('createOffer called while there is a pending offer.');
+      }
+      var offerOptions;
+      if (arguments.length === 1 && typeof arguments[0] !== 'function') {
+        offerOptions = arguments[0];
+      } else if (arguments.length === 3) {
+        offerOptions = arguments[2];
+      }
+
+      var tracks = [];
+      var numAudioTracks = 0;
+      var numVideoTracks = 0;
+      // Default to sendrecv.
+      if (this.localStreams.length) {
+        numAudioTracks = this.localStreams[0].getAudioTracks().length;
+        numVideoTracks = this.localStreams[0].getVideoTracks().length;
+      }
+      // Determine number of audio and video tracks we need to send/recv.
+      if (offerOptions) {
+        // Reject Chrome legacy constraints.
+        if (offerOptions.mandatory || offerOptions.optional) {
+          throw new TypeError(
+              'Legacy mandatory/optional constraints not supported.');
+        }
+        if (offerOptions.offerToReceiveAudio !== undefined) {
+          numAudioTracks = offerOptions.offerToReceiveAudio;
+        }
+        if (offerOptions.offerToReceiveVideo !== undefined) {
+          numVideoTracks = offerOptions.offerToReceiveVideo;
+        }
+      }
+      if (this.localStreams.length) {
+        // Push local streams.
+        this.localStreams[0].getTracks().forEach(function(track) {
+          tracks.push({
+            kind: track.kind,
+            track: track,
+            wantReceive: track.kind === 'audio' ?
+                numAudioTracks > 0 : numVideoTracks > 0
+          });
+          if (track.kind === 'audio') {
+            numAudioTracks--;
+          } else if (track.kind === 'video') {
+            numVideoTracks--;
+          }
+        });
+      }
+      // Create M-lines for recvonly streams.
+      while (numAudioTracks > 0 || numVideoTracks > 0) {
+        if (numAudioTracks > 0) {
+          tracks.push({
+            kind: 'audio',
+            wantReceive: true
+          });
+          numAudioTracks--;
+        }
+        if (numVideoTracks > 0) {
+          tracks.push({
+            kind: 'video',
+            wantReceive: true
+          });
+          numVideoTracks--;
+        }
+      }
+      // reorder tracks
+      tracks = sortTracks(tracks);
+
+      var sdp = SDPUtils.writeSessionBoilerplate();
+      var transceivers = [];
+      tracks.forEach(function(mline, sdpMLineIndex) {
+        // For each track, create an ice gatherer, ice transport,
+        // dtls transport, potentially rtpsender and rtpreceiver.
+        var track = mline.track;
+        var kind = mline.kind;
+        var mid = SDPUtils.generateIdentifier();
+
+        var transports = self.usingBundle && sdpMLineIndex > 0 ? {
+          iceGatherer: transceivers[0].iceGatherer,
+          iceTransport: transceivers[0].iceTransport,
+          dtlsTransport: transceivers[0].dtlsTransport
+        } : self._createIceAndDtlsTransports(mid, sdpMLineIndex);
+
+        var localCapabilities = RTCRtpSender.getCapabilities(kind);
+        // filter RTX until additional stuff needed for RTX is implemented
+        // in adapter.js
+        if (browserDetails.version < 15019) {
+          localCapabilities.codecs = localCapabilities.codecs.filter(
+              function(codec) {
+                return codec.name !== 'rtx';
+              });
+        }
+        localCapabilities.codecs.forEach(function(codec) {
+          // work around https://bugs.chromium.org/p/webrtc/issues/detail?id=6552
+          // by adding level-asymmetry-allowed=1
+          if (codec.name === 'H264' &&
+              codec.parameters['level-asymmetry-allowed'] === undefined) {
+            codec.parameters['level-asymmetry-allowed'] = '1';
+          }
+        });
+
+        var rtpSender;
+        var rtpReceiver;
+
+        // generate an ssrc now, to be used later in rtpSender.send
+        var sendEncodingParameters = [{
+          ssrc: (2 * sdpMLineIndex + 1) * 1001
+        }];
+        if (track) {
+          // add RTX
+          if (browserDetails.version >= 15019 && kind === 'video') {
+            sendEncodingParameters[0].rtx = {
+              ssrc: (2 * sdpMLineIndex + 1) * 1001 + 1
+            };
+          }
+          rtpSender = new RTCRtpSender(track, transports.dtlsTransport);
+        }
+
+        if (mline.wantReceive) {
+          rtpReceiver = new RTCRtpReceiver(transports.dtlsTransport, kind);
+        }
+
+        transceivers[sdpMLineIndex] = {
+          iceGatherer: transports.iceGatherer,
+          iceTransport: transports.iceTransport,
+          dtlsTransport: transports.dtlsTransport,
+          localCapabilities: localCapabilities,
+          remoteCapabilities: null,
+          rtpSender: rtpSender,
+          rtpReceiver: rtpReceiver,
+          kind: kind,
+          mid: mid,
+          sendEncodingParameters: sendEncodingParameters,
+          recvEncodingParameters: null
+        };
+      });
+      if (this.usingBundle) {
+        sdp += 'a=group:BUNDLE ' + transceivers.map(function(t) {
+          return t.mid;
+        }).join(' ') + '\r\n';
+      }
+      tracks.forEach(function(mline, sdpMLineIndex) {
+        var transceiver = transceivers[sdpMLineIndex];
+        sdp += SDPUtils.writeMediaSection(transceiver,
+            transceiver.localCapabilities, 'offer', self.localStreams[0]);
+      });
+
+      this._pendingOffer = transceivers;
+      var desc = new RTCSessionDescription({
+        type: 'offer',
+        sdp: sdp
+      });
+      if (arguments.length && typeof arguments[0] === 'function') {
+        window.setTimeout(arguments[0], 0, desc);
+      }
+      return Promise.resolve(desc);
+    };
+
+    window.RTCPeerConnection.prototype.createAnswer = function() {
+      var self = this;
+
+      var sdp = SDPUtils.writeSessionBoilerplate();
+      if (this.usingBundle) {
+        sdp += 'a=group:BUNDLE ' + this.transceivers.map(function(t) {
+          return t.mid;
+        }).join(' ') + '\r\n';
+      }
+      this.transceivers.forEach(function(transceiver) {
+        if (transceiver.isDatachannel) {
+          sdp += 'm=application 0 DTLS/SCTP 5000\r\n' +
+              'c=IN IP4 0.0.0.0\r\n' +
+              'a=mid:' + transceiver.mid + '\r\n';
+          return;
+        }
+        // Calculate intersection of capabilities.
+        var commonCapabilities = self._getCommonCapabilities(
+            transceiver.localCapabilities,
+            transceiver.remoteCapabilities);
+
+        sdp += SDPUtils.writeMediaSection(transceiver, commonCapabilities,
+            'answer', self.localStreams[0]);
+      });
+
+      var desc = new RTCSessionDescription({
+        type: 'answer',
+        sdp: sdp
+      });
+      if (arguments.length && typeof arguments[0] === 'function') {
+        window.setTimeout(arguments[0], 0, desc);
+      }
+      return Promise.resolve(desc);
+    };
+
+    window.RTCPeerConnection.prototype.addIceCandidate = function(candidate) {
+      if (!candidate) {
+        for (var j = 0; j < this.transceivers.length; j++) {
+          this.transceivers[j].iceTransport.addRemoteCandidate({});
+          if (this.usingBundle) {
+            return Promise.resolve();
+          }
+        }
+      } else {
+        var mLineIndex = candidate.sdpMLineIndex;
+        if (candidate.sdpMid) {
+          for (var i = 0; i < this.transceivers.length; i++) {
+            if (this.transceivers[i].mid === candidate.sdpMid) {
+              mLineIndex = i;
+              break;
+            }
+          }
+        }
+        var transceiver = this.transceivers[mLineIndex];
+        if (transceiver) {
+          var cand = Object.keys(candidate.candidate).length > 0 ?
+              SDPUtils.parseCandidate(candidate.candidate) : {};
+          // Ignore Chrome's invalid candidates since Edge does not like them.
+          if (cand.protocol === 'tcp' && (cand.port === 0 || cand.port === 9)) {
+            return Promise.resolve();
+          }
+          // Ignore RTCP candidates, we assume RTCP-MUX.
+          if (cand.component !== '1') {
+            return Promise.resolve();
+          }
+          transceiver.iceTransport.addRemoteCandidate(cand);
+
+          // update the remoteDescription.
+          var sections = SDPUtils.splitSections(this.remoteDescription.sdp);
+          sections[mLineIndex + 1] += (cand.type ? candidate.candidate.trim()
+              : 'a=end-of-candidates') + '\r\n';
+          this.remoteDescription.sdp = sections.join('');
+        }
+      }
+      if (arguments.length > 1 && typeof arguments[1] === 'function') {
+        window.setTimeout(arguments[1], 0);
+      }
+      return Promise.resolve();
+    };
+
+    window.RTCPeerConnection.prototype.getStats = function() {
+      var promises = [];
+      this.transceivers.forEach(function(transceiver) {
+        ['rtpSender', 'rtpReceiver', 'iceGatherer', 'iceTransport',
+            'dtlsTransport'].forEach(function(method) {
+              if (transceiver[method]) {
+                promises.push(transceiver[method].getStats());
+              }
+            });
+      });
+      var cb = arguments.length > 1 && typeof arguments[1] === 'function' &&
+          arguments[1];
+      var fixStatsType = function(stat) {
+        return {
+          inboundrtp: 'inbound-rtp',
+          outboundrtp: 'outbound-rtp',
+          candidatepair: 'candidate-pair',
+          localcandidate: 'local-candidate',
+          remotecandidate: 'remote-candidate'
+        }[stat.type] || stat.type;
+      };
+      return new Promise(function(resolve) {
+        // shim getStats with maplike support
+        var results = new Map();
+        Promise.all(promises).then(function(res) {
+          res.forEach(function(result) {
+            Object.keys(result).forEach(function(id) {
+              result[id].type = fixStatsType(result[id]);
+              results.set(id, result[id]);
+            });
+          });
+          if (cb) {
+            window.setTimeout(cb, 0, results);
+          }
+          resolve(results);
+        });
+      });
+    };
+  }
+};
+
+// Expose public methods.
+module.exports = {
+  shimPeerConnection: edgeShim.shimPeerConnection,
+  shimGetUserMedia: __webpack_require__(1793)
+};
+
+
+/***/ }),
+/* 1793 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+// Expose public methods.
+module.exports = function() {
+  var shimError_ = function(e) {
+    return {
+      name: {PermissionDeniedError: 'NotAllowedError'}[e.name] || e.name,
+      message: e.message,
+      constraint: e.constraint,
+      toString: function() {
+        return this.name;
+      }
+    };
+  };
+
+  // getUserMedia error shim.
+  var origGetUserMedia = navigator.mediaDevices.getUserMedia.
+      bind(navigator.mediaDevices);
+  navigator.mediaDevices.getUserMedia = function(c) {
+    return origGetUserMedia(c).catch(function(e) {
+      return Promise.reject(shimError_(e));
+    });
+  };
+};
+
+
+/***/ }),
+/* 1794 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+var browserDetails = __webpack_require__(877).browserDetails;
+
+var firefoxShim = {
+  shimOnTrack: function() {
+    if (typeof window === 'object' && window.RTCPeerConnection && !('ontrack' in
+        window.RTCPeerConnection.prototype)) {
+      Object.defineProperty(window.RTCPeerConnection.prototype, 'ontrack', {
+        get: function() {
+          return this._ontrack;
+        },
+        set: function(f) {
+          if (this._ontrack) {
+            this.removeEventListener('track', this._ontrack);
+            this.removeEventListener('addstream', this._ontrackpoly);
+          }
+          this.addEventListener('track', this._ontrack = f);
+          this.addEventListener('addstream', this._ontrackpoly = function(e) {
+            e.stream.getTracks().forEach(function(track) {
+              var event = new Event('track');
+              event.track = track;
+              event.receiver = {track: track};
+              event.streams = [e.stream];
+              this.dispatchEvent(event);
+            }.bind(this));
+          }.bind(this));
+        }
+      });
+    }
+  },
+
+  shimSourceObject: function() {
+    // Firefox has supported mozSrcObject since FF22, unprefixed in 42.
+    if (typeof window === 'object') {
+      if (window.HTMLMediaElement &&
+        !('srcObject' in window.HTMLMediaElement.prototype)) {
+        // Shim the srcObject property, once, when HTMLMediaElement is found.
+        Object.defineProperty(window.HTMLMediaElement.prototype, 'srcObject', {
+          get: function() {
+            return this.mozSrcObject;
+          },
+          set: function(stream) {
+            this.mozSrcObject = stream;
+          }
+        });
+      }
+    }
+  },
+
+  shimPeerConnection: function() {
+    if (typeof window !== 'object' || !(window.RTCPeerConnection ||
+        window.mozRTCPeerConnection)) {
+      return; // probably media.peerconnection.enabled=false in about:config
+    }
+    // The RTCPeerConnection object.
+    if (!window.RTCPeerConnection) {
+      window.RTCPeerConnection = function(pcConfig, pcConstraints) {
+        if (browserDetails.version < 38) {
+          // .urls is not supported in FF < 38.
+          // create RTCIceServers with a single url.
+          if (pcConfig && pcConfig.iceServers) {
+            var newIceServers = [];
+            for (var i = 0; i < pcConfig.iceServers.length; i++) {
+              var server = pcConfig.iceServers[i];
+              if (server.hasOwnProperty('urls')) {
+                for (var j = 0; j < server.urls.length; j++) {
+                  var newServer = {
+                    url: server.urls[j]
+                  };
+                  if (server.urls[j].indexOf('turn') === 0) {
+                    newServer.username = server.username;
+                    newServer.credential = server.credential;
+                  }
+                  newIceServers.push(newServer);
+                }
+              } else {
+                newIceServers.push(pcConfig.iceServers[i]);
+              }
+            }
+            pcConfig.iceServers = newIceServers;
+          }
+        }
+        return new mozRTCPeerConnection(pcConfig, pcConstraints);
+      };
+      window.RTCPeerConnection.prototype = mozRTCPeerConnection.prototype;
+
+      // wrap static methods. Currently just generateCertificate.
+      if (mozRTCPeerConnection.generateCertificate) {
+        Object.defineProperty(window.RTCPeerConnection, 'generateCertificate', {
+          get: function() {
+            return mozRTCPeerConnection.generateCertificate;
+          }
+        });
+      }
+
+      window.RTCSessionDescription = mozRTCSessionDescription;
+      window.RTCIceCandidate = mozRTCIceCandidate;
+    }
+
+    // shim away need for obsolete RTCIceCandidate/RTCSessionDescription.
+    ['setLocalDescription', 'setRemoteDescription', 'addIceCandidate']
+        .forEach(function(method) {
+          var nativeMethod = RTCPeerConnection.prototype[method];
+          RTCPeerConnection.prototype[method] = function() {
+            arguments[0] = new ((method === 'addIceCandidate') ?
+                RTCIceCandidate : RTCSessionDescription)(arguments[0]);
+            return nativeMethod.apply(this, arguments);
+          };
+        });
+
+    // support for addIceCandidate(null or undefined)
+    var nativeAddIceCandidate =
+        RTCPeerConnection.prototype.addIceCandidate;
+    RTCPeerConnection.prototype.addIceCandidate = function() {
+      if (!arguments[0]) {
+        if (arguments[1]) {
+          arguments[1].apply(null);
+        }
+        return Promise.resolve();
+      }
+      return nativeAddIceCandidate.apply(this, arguments);
+    };
+
+    // shim getStats with maplike support
+    var makeMapStats = function(stats) {
+      var map = new Map();
+      Object.keys(stats).forEach(function(key) {
+        map.set(key, stats[key]);
+        map[key] = stats[key];
+      });
+      return map;
+    };
+
+    var modernStatsTypes = {
+      inboundrtp: 'inbound-rtp',
+      outboundrtp: 'outbound-rtp',
+      candidatepair: 'candidate-pair',
+      localcandidate: 'local-candidate',
+      remotecandidate: 'remote-candidate'
+    };
+
+    var nativeGetStats = RTCPeerConnection.prototype.getStats;
+    RTCPeerConnection.prototype.getStats = function(selector, onSucc, onErr) {
+      return nativeGetStats.apply(this, [selector || null])
+        .then(function(stats) {
+          if (browserDetails.version < 48) {
+            stats = makeMapStats(stats);
+          }
+          if (browserDetails.version < 53 && !onSucc) {
+            // Shim only promise getStats with spec-hyphens in type names
+            // Leave callback version alone; misc old uses of forEach before Map
+            try {
+              stats.forEach(function(stat) {
+                stat.type = modernStatsTypes[stat.type] || stat.type;
+              });
+            } catch (e) {
+              if (e.name !== 'TypeError') {
+                throw e;
+              }
+              // Avoid TypeError: "type" is read-only, in old versions. 34-43ish
+              stats.forEach(function(stat, i) {
+                stats.set(i, Object.assign({}, stat, {
+                  type: modernStatsTypes[stat.type] || stat.type
+                }));
+              });
+            }
+          }
+          return stats;
+        })
+        .then(onSucc, onErr);
+    };
+  }
+};
+
+// Expose public methods.
+module.exports = {
+  shimOnTrack: firefoxShim.shimOnTrack,
+  shimSourceObject: firefoxShim.shimSourceObject,
+  shimPeerConnection: firefoxShim.shimPeerConnection,
+  shimGetUserMedia: __webpack_require__(1795)
+};
+
+
+/***/ }),
+/* 1795 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+ /* eslint-env node */
+
+
+var logging = __webpack_require__(877).log;
+var browserDetails = __webpack_require__(877).browserDetails;
+
+// Expose public methods.
+module.exports = function() {
+  var shimError_ = function(e) {
+    return {
+      name: {
+        SecurityError: 'NotAllowedError',
+        PermissionDeniedError: 'NotAllowedError'
+      }[e.name] || e.name,
+      message: {
+        'The operation is insecure.': 'The request is not allowed by the ' +
+        'user agent or the platform in the current context.'
+      }[e.message] || e.message,
+      constraint: e.constraint,
+      toString: function() {
+        return this.name + (this.message && ': ') + this.message;
+      }
+    };
+  };
+
+  // getUserMedia constraints shim.
+  var getUserMedia_ = function(constraints, onSuccess, onError) {
+    var constraintsToFF37_ = function(c) {
+      if (typeof c !== 'object' || c.require) {
+        return c;
+      }
+      var require = [];
+      Object.keys(c).forEach(function(key) {
+        if (key === 'require' || key === 'advanced' || key === 'mediaSource') {
+          return;
+        }
+        var r = c[key] = (typeof c[key] === 'object') ?
+            c[key] : {ideal: c[key]};
+        if (r.min !== undefined ||
+            r.max !== undefined || r.exact !== undefined) {
+          require.push(key);
+        }
+        if (r.exact !== undefined) {
+          if (typeof r.exact === 'number') {
+            r. min = r.max = r.exact;
+          } else {
+            c[key] = r.exact;
+          }
+          delete r.exact;
+        }
+        if (r.ideal !== undefined) {
+          c.advanced = c.advanced || [];
+          var oc = {};
+          if (typeof r.ideal === 'number') {
+            oc[key] = {min: r.ideal, max: r.ideal};
+          } else {
+            oc[key] = r.ideal;
+          }
+          c.advanced.push(oc);
+          delete r.ideal;
+          if (!Object.keys(r).length) {
+            delete c[key];
+          }
+        }
+      });
+      if (require.length) {
+        c.require = require;
+      }
+      return c;
+    };
+    constraints = JSON.parse(JSON.stringify(constraints));
+    if (browserDetails.version < 38) {
+      logging('spec: ' + JSON.stringify(constraints));
+      if (constraints.audio) {
+        constraints.audio = constraintsToFF37_(constraints.audio);
+      }
+      if (constraints.video) {
+        constraints.video = constraintsToFF37_(constraints.video);
+      }
+      logging('ff37: ' + JSON.stringify(constraints));
+    }
+    return navigator.mozGetUserMedia(constraints, onSuccess, function(e) {
+      onError(shimError_(e));
+    });
+  };
+
+  // Returns the result of getUserMedia as a Promise.
+  var getUserMediaPromise_ = function(constraints) {
+    return new Promise(function(resolve, reject) {
+      getUserMedia_(constraints, resolve, reject);
+    });
+  };
+
+  // Shim for mediaDevices on older versions.
+  if (!navigator.mediaDevices) {
+    navigator.mediaDevices = {getUserMedia: getUserMediaPromise_,
+      addEventListener: function() { },
+      removeEventListener: function() { }
+    };
+  }
+  navigator.mediaDevices.enumerateDevices =
+      navigator.mediaDevices.enumerateDevices || function() {
+        return new Promise(function(resolve) {
+          var infos = [
+            {kind: 'audioinput', deviceId: 'default', label: '', groupId: ''},
+            {kind: 'videoinput', deviceId: 'default', label: '', groupId: ''}
+          ];
+          resolve(infos);
+        });
+      };
+
+  if (browserDetails.version < 41) {
+    // Work around http://bugzil.la/1169665
+    var orgEnumerateDevices =
+        navigator.mediaDevices.enumerateDevices.bind(navigator.mediaDevices);
+    navigator.mediaDevices.enumerateDevices = function() {
+      return orgEnumerateDevices().then(undefined, function(e) {
+        if (e.name === 'NotFoundError') {
+          return [];
+        }
+        throw e;
+      });
+    };
+  }
+  if (browserDetails.version < 49) {
+    var origGetUserMedia = navigator.mediaDevices.getUserMedia.
+        bind(navigator.mediaDevices);
+    navigator.mediaDevices.getUserMedia = function(c) {
+      return origGetUserMedia(c).then(function(stream) {
+        // Work around https://bugzil.la/802326
+        if (c.audio && !stream.getAudioTracks().length ||
+            c.video && !stream.getVideoTracks().length) {
+          stream.getTracks().forEach(function(track) {
+            track.stop();
+          });
+          throw new DOMException('The object can not be found here.',
+                                 'NotFoundError');
+        }
+        return stream;
+      }, function(e) {
+        return Promise.reject(shimError_(e));
+      });
+    };
+  }
+  navigator.getUserMedia = function(constraints, onSuccess, onError) {
+    if (browserDetails.version < 44) {
+      return getUserMedia_(constraints, onSuccess, onError);
+    }
+    // Replace Firefox 44+'s deprecation warning with unprefixed version.
+    console.warn('navigator.getUserMedia has been replaced by ' +
+                 'navigator.mediaDevices.getUserMedia');
+    navigator.mediaDevices.getUserMedia(constraints).then(onSuccess, onError);
+  };
+};
+
+
+/***/ }),
+/* 1796 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+
+var safariShim = {
+  // TODO: DrAlex, should be here, double check against LayoutTests
+  // shimOnTrack: function() { },
+
+  // TODO: once the back-end for the mac port is done, add.
+  // TODO: check for webkitGTK+
+  // shimPeerConnection: function() { },
+
+  shimGetUserMedia: function() {
+    if (!navigator.getUserMedia) {
+      if (navigator.webkitGetUserMedia) {
+        navigator.getUserMedia = navigator.webkitGetUserMedia.bind(navigator);
+      } else if (navigator.mediaDevices &&
+          navigator.mediaDevices.getUserMedia) {
+        navigator.getUserMedia = function(constraints, cb, errcb) {
+          navigator.mediaDevices.getUserMedia(constraints)
+          .then(cb, errcb);
+        }.bind(navigator);
+      }
+    }
+  }
+};
+
+// Expose public methods.
+module.exports = {
+  shimGetUserMedia: safariShim.shimGetUserMedia
+  // TODO
+  // shimOnTrack: safariShim.shimOnTrack,
+  // shimPeerConnection: safariShim.shimPeerConnection
+};
+
+
 /***/ })
 ]));
-//# sourceMappingURL=chat.f06de.js.map
+//# sourceMappingURL=chat.fd107.js.map
