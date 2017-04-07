@@ -1289,6 +1289,9 @@ function initServer() {
             if (check_if_ban_error(data)) {
                 goto_window(visitor_window.ban);
                 show_error(data.e);
+                if(typeof MediaChat !== 'undefined') {
+                    MediaChat.forceStopP2PChat();
+                }
                 return;
             }
 
@@ -3981,7 +3984,6 @@ function request_chat_handler(fncomplete, fnerror) {
             var seconds = parseInt(res.server_current_time.match(/Date\((\d+)\)/)[1]);
             seconds -= (new Date).getTimezoneOffset() * 60;
             time_delay = seconds - Date.now();
-            console.log('time_delay: ', time_delay);
         }
 
         function complete_request_chat(res) {
@@ -4153,10 +4155,6 @@ var chat_window = (function () {
         notification.request_permission();
 
         focus_chat_input();
-
-        // if(ifSupportWebrtc && MediaChat){
-        //     MediaChat.setChatGuid(chatGuid);
-        // }
     }
 
     function init_dropupload() {
@@ -4549,7 +4547,7 @@ var chat_window = (function () {
                     break;
             }
             if( ifSupportWebrtc && MediaChat && (code >= message_code.agent_video_chat_request && code <= message_code.system_if_supportWebrtc)) {
-                MediaChat.handleMessages(code, sender, time, message, message_id, info);
+                MediaChat.handleMessages(code, sender, time, message, info);
             }
         } catch (e) {
             handle_exception(e, 'handle_message');

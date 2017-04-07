@@ -3742,7 +3742,6 @@ var MediaChat = {
 
     prepareP2PChat: function(){
         if(MediaChat.p2pChat === null) {
-            console.log('chatId: ', MediaChat.chatGuid);
             MediaChat.p2pChat = new P2PChat ({
                 chat: MediaChat.chat_window_handler.get_chatguid(),
                 localVideo: MediaChat.localVideo,
@@ -3763,7 +3762,6 @@ var MediaChat = {
     },
 
     startP2PChat: function (time){
-        console.log(time);
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
         this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
@@ -3775,8 +3773,6 @@ var MediaChat = {
     stopP2PChat: function() {
         if(this.p2pChat !== null) {
             this.p2pChat.stop();
-        }
-        else {            
         }
     },
 
@@ -3852,6 +3848,18 @@ var MediaChat = {
     changeStatus: function (status, ifVideo) {
         if(typeof ifVideo !== 'undefined') this.ifVideoChat = ifVideo;
         this.currentStatus = status;
+    },
+
+    forceStopP2PChat: function(){
+        if (this.currentStatus === this.enumStatus.audioChatting
+            || this.currentStatus === this.enumStatus.videoChatting
+            || this.currentStatus === this.enumStatus.audioRequesting
+            || this.currentStatus === this.enumStatus.videoRequesting)
+            {
+                this.stopP2PChat();
+                this.changeStatus(this.enumStatus.notStart, false);
+                this.updateUI();
+            }
     },
 
     requestChat: function () {
@@ -3954,7 +3962,7 @@ var MediaChat = {
         return mediaChat;
     },
 
-    handleMessages: function (code, sender, time, message, message_id, info) {
+    handleMessages: function (code, sender, time, message, info) {
         var agentName, agentAvatar, acceptTime;
         this.chatGuid = this.chat_window_handler.get_chatguid();
         if (code !== this.enumActionCode.system_if_supportWebrtc) {
