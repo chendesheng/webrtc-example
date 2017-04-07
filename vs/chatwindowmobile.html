@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng"> 
 <head> 
 	<title>Comm100 Chat Window</title> 
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no">
 	<link rel="stylesheet" href="mobile/themes/custom.min.css" />
 	<link rel="stylesheet" href="mobile/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="mobile/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="mobile/jquery-1.11.1.min.js"></script>
-	<link rel="stylesheet" href="mobile/themes/icons.css?v=20161101"></head>
+	<link rel="stylesheet" href="mobile/themes/icons.css?v=20170328"></head>
 	<script type="text/javascript">
 		$( document ).bind( "mobileinit", function() {
 			$.mobile.hashListeningEnabled = false;
@@ -18,7 +18,7 @@
 		});
 	</script>
 	<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170217">
+	<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170328">
 	<script type="text/javascript">	    
         (function () {
 	        var siteId = /siteId=([0-9]+)/i.exec(window.location.search)[1];
@@ -214,13 +214,85 @@
 						</span>
 					</a>
 				</td>
-                </tr>
+				</tr>
+				<tr>
+				<td class="icon-audio-chat">
+					<a id="btn-audio-chat">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
+							<span class="ui-icon icon-audio"></span>
+                        </li>
+                        <li>
+							<span class="ui-btn-text icon-audio-chat LanguageButtonAudioChat"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
+				<td class="icon-video-chat">
+					<a id="btn-video-chat">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
+							<span class="ui-icon icon-video"></span>
+                        </li>
+                        <li>
+							<span class="ui-btn-text icon-video-chat LanguageButtonVideoChat"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
+				</tr>
 			</table>
-			<%--<div id="popup-bubble"></div>--%>
-			<%--<div id="popup-bubble-border"></div>--%>
+		</div>
+		<div id="media-chat-window" class="media-chat-window hidden overlay">
+			<div class="requesting">
+				<div class="agentAvatar"><img class="avatarImg" src="" /></div><div class="agentName"></div>
+				<div class="waiting">
+					<div class="textAudio">
+						<span class="iconfont icon-audio-light"></span><div class="chatTypeText LanguageAudioChatCalling"></div>
+					</div>
+					<div class="textVideo">
+						<span class="iconfont icon-video-light"></span><div class="chatTypeText LanguageVideoChatCalling"></div>
+					</div>
+					<div class="waitingAni"><span>.</span><span>.</span><span>.</span></div>
+				</div>
+				<div class="buttons">
+					<div class="button accept" onclick="MediaChat.accept();"><span class="iconfont icon-accept"></span></div>
+					<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
+				</div>
+			</div>
+			<div class="chatting">
+				<div class="chattingAgent">
+					<div class="agentImg"><img class="avatarImg" src="" /></div>
+					<div class="agentName"></div>
+					<div class="chattingTime">
+						<span class="iconfont icon-audio-light"></span>
+						<div class="chatTypeText LanguageAudioChatCalling"></div>
+						<div class="chattingDuration">00:00</div>
+					</div>
+				</div>
+				<video id="remoteVideo"></video>
+				<video id="localVideo"></video>
+				<div class="buttons">
+					<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
+				</div>
+			</div>
+			<div class="bottomTab">
+				<div class="tab audio-tab">
+					<span class="ui-icon icon-audio"></span>
+				</div>
+				<div class="tab video-tab">
+					<span class="ui-icon icon-video"></span>
+				</div>
+				<div class="tab">
+					<span class="ui-icon icon-chatting"></span>
+				</div>
+			</div>
 		</div>
 	</div><!-- /page -->
-
 	<div data-role="page" id="rating" data-title="Comm100 Live Chat - Chat Window">
 		<div data-role="header" data-theme="a">
 			<h1 class="icon-rating LanguageButtonRating"></h1>
@@ -271,8 +343,8 @@
 		</div>
 	</div>
     <iframe id="ifr-upload" allowtransparency="true" frameborder="0" scrolling="no" src="javascript:false" width="250" height="30"></iframe>
-	<script type="text/javascript" src="mobile/mutils.js?v=20161129"></script>
-	<script type="text/javascript" src="mobile/mchat.js?v=20161129"></script>
+	<script type="text/javascript" src="mobile/mutils.js?v=20170328"></script>
+	<script type="text/javascript" src="mobile/mchat.js?v=20170328"></script>
 	<script type="text/javascript">
 	    var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
 	    chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';

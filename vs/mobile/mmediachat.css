@@ -1,0 +1,238 @@
+.requesting {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.avatarImg {
+    width: 95px;
+    height: 95px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: none;
+}
+.requesting .agentName {
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 0 10px;
+}
+.waiting {
+    font-size: 14px;
+    color: #fff;
+    opacity: .5;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+}
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+.waitingAni span {
+    animation: blink both 1.4s infinite;
+    -webkit-animation: blink both 1.4s infinite;
+}
+.waitingAni span:nth-child(2) {
+    animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+}
+.waitingAni span:nth-child(3) {
+    animation-delay: .4s;
+    -webkit-animation-delay: .4s;
+}
+.waiting .ui-icon,
+.chattingTime .ui-icon {
+    font-size: 16px;
+    padding-right: 10px;
+    position: relative;
+    top: 2px;
+}
+.textVideo, .textAudio {
+    display: flex;
+}
+.buttons {
+    margin-top: 40px;
+}
+.button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #fff;
+    display: inline-block;
+    margin: 0 42px;
+    line-height: 45px;
+    cursor: pointer;
+}
+.button .iconfont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.button.accept {
+    background-color: #5cc148;
+}
+.button.hangup {
+    background-color: #d34946;
+}
+.audioChatting .button.accept,
+.videoChatting .button.accept,
+.audioRequesting .button.accept,
+.videoRequesting .button.accept,
+.audioIncoming .textVideo,
+.audioRequesting .textVideo,
+.videoIncoming .textAudio,
+.videoRequesting .textAudio,
+.audioChatting .video-tab,
+.videoChatting .audio-tab,
+.audioRequesting .video-tab,
+.videoRequesting .audio-tab,
+.audioIncoming .video-tab,
+.videoIncoming .audio-tab {
+    display: none;
+}
+
+.audioRequesting .requesting,
+.videoRequesting .requesting,
+.audioIncoming .requesting,
+.videoIncoming .requesting,
+.audioChatting .chatting,
+.videoChatting .chatting {
+    display: block;
+}
+
+.audioRequesting .chatting,
+.videoRequesting .chatting,
+.audioIncoming .chatting,
+.videoIncoming .chatting,
+.videoChatting .requesting,
+.audioChatting .requesting {
+    display: none;
+}
+
+.audioIncoming .waitingAni,
+.videoIncoming .waitingAni {
+    display: none;
+}
+
+.requesting .agentAvatar {
+    display: flex;
+    justify-content: center;
+}
+
+.audioChatting .agentAvatar {
+    display: block;
+}
+
+.chatting {
+    width: 100%;
+    height: 100%;
+    margin: 30px 0;
+    position: relative;
+}
+.chattingAgent {
+    color: #fff;
+    float: left;
+}
+.chatting .agentName {
+    font-size: 18px;
+    color: #fff;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.videoChatting .chatting {
+    display: flex;
+}
+.videoChatting .chattingAgent {
+    position: absolute;
+    left: 20px;
+    top: 8%;
+}
+.videoChatting .buttons {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+}
+.videoChatting .agentImg,
+.videoChatting .chatTypeText,
+.videoChatting .icon-audio {
+    display: none;
+}
+.chattingDuration{
+    font-size: 14px;
+    float: left;
+}
+.audioChatting .chatting {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-direction: column;
+}
+.audioChatting .chattingAgent {
+    position: static;
+}
+.audioChatting .agentName {
+    padding: 20px 0 15px;
+}
+.chattingTime {
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+    height: 18px;
+}
+.audioChatting .chattingDuration {
+    float: none;
+}
+.audioChatting .chatTypeText {
+    font-size: 14px;
+    padding-right: 10px;
+}
+.audioChatting video {
+    display: none;
+}
+.videoChatting .chatting .buttons {
+    /*display: none;*/
+}
+#remoteVideo:hover .buttons {
+    display: block;
+}
+#remoteVideo {
+    width: 100%;
+}
+#localVideo {
+    position: absolute;
+    right: 20px;
+    top: 8%;
+    width: 80px;
+    /* height: 55px; */
+    border: 1px solid #ddd;
+}
+.loading {
+    background: url(../images/loading-large.gif) no-repeat center;
+}
+.bottomTab {
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.tab {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.tab .ui-icon {
+    font-size: 18px !important;
+    color: #fff;
+}

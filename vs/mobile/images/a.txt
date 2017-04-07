@@ -1,0 +1,31 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 7AC1-E248
+
+ Directory of D:\Personal Folder\Roy\LiveChat.VisitorSide\Coding\LiveChatServerShell_ENT\ChatServerShell\mobile\images
+
+07/07/2015  06:53 PM    <DIR>          .
+07/07/2015  06:53 PM    <DIR>          ..
+07/07/2015  06:53 PM                 0 a.txt
+02/02/2015  04:34 PM             7,825 ajax-loader.gif
+07/07/2015  06:53 PM                12 allfiles.bat
+02/02/2015  04:34 PM             2,762 back-pressed.png
+02/02/2015  04:34 PM             1,583 back.png
+02/02/2015  04:34 PM             4,892 close-pressed.png
+02/02/2015  04:34 PM             4,683 close.png
+02/02/2015  04:34 PM             1,708 down.png
+02/02/2015  04:34 PM             1,967 email.png
+02/02/2015  04:34 PM             3,127 fb-login.png
+02/02/2015  04:34 PM             3,820 file.png
+02/02/2015  04:34 PM             3,279 gp-login.png
+02/02/2015  04:34 PM             1,968 icons-18-black.png
+02/02/2015  04:34 PM             1,988 icons-18-white.png
+02/02/2015  04:34 PM             3,859 icons-36-black.png
+02/02/2015  04:34 PM             3,861 icons-36-white.png
+02/02/2015  04:34 PM             4,616 rating.png
+02/02/2015  04:34 PM             1,429 rename.png
+02/02/2015  04:34 PM             4,161 send.png
+02/02/2015  04:34 PM             4,163 sound-off.png
+02/02/2015  04:34 PM             4,325 sound-on.png
+02/02/2015  04:34 PM               948 up.png
+              22 File(s)         66,976 bytes
+               2 Dir(s)  18,780,106,752 bytes free
