@@ -3719,14 +3719,18 @@ var MediaChat = {
         counter.innerHTML = '00:00';
     },
 
+    hidePopupMenu: function(){
+        var p = $('#popupMenu');
+        if (p.is(':visible')) {
+            p.hide();
+        }
+    },
+
     onRequestChatClick: function (e) {
         if (!MediaChat.chat_window_handler.is_chatting())
             return;
         else {
-            var p = $('#popupMenu');
-            if (p.is(':visible')) {
-                p.hide();
-            } 
+            this.hidePopupMenu();
             if (MediaChat.currentStatus === MediaChat.enumStatus.notStart) {
                 MediaChat.ifVideoChat = e.id.indexOf('video') > 0;
                 MediaChat.changeStatus(MediaChat.ifVideoChat ? 
@@ -3765,7 +3769,6 @@ var MediaChat = {
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
         this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
-        console.log('startTime: ', this.startTime); 
         this.p2pChat.start();
         this.startTimer($('.chattingDuration')[0]);
     },
@@ -3775,7 +3778,6 @@ var MediaChat = {
             this.p2pChat.stop();
         }
     },
-
     
     setAgentInfo: function (name, src) {
         if (typeof src !== 'undefined') {
@@ -3835,12 +3837,12 @@ var MediaChat = {
     },
 
     hideIconButtons: function(){
-        //this.add_class(document.getElementById('btn-audio-chat'), 'disabled');
-        //this.add_class(document.getElementById('btn-video-chat'), 'disabled');
+        $('#btn-audio-chat').addClass('hidden');
+        $('#btn-video-chat').addClass('hidden');
     },
     showIconButtons: function(){
-        //this.remove_class(document.getElementById('btn-audio-chat'), 'disabled');
-        //this.remove_class(document.getElementById('btn-video-chat'), 'disabled');
+        $('#btn-audio-chat').removeClass('hidden');
+        $('#btn-video-chat').removeClass('hidden');
     },
 
     changeStatus: function (status, ifVideo) {
@@ -3901,8 +3903,8 @@ var MediaChat = {
             $('#btn-video-chat').click(function() {
                 MediaChat.onRequestChatClick(this);
             });
-        this.localVideo = $('#localVideo');
-        this.remoteVideo = $('#remoteVideo');
+        this.localVideo = $('#localVideo').get(0);
+        this.remoteVideo = $('#remoteVideo').get(0);
 
         return mediaChat;
     },
