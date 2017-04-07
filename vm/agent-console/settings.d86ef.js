@@ -1097,20 +1097,22 @@ var initSoundArray = function initSoundArray(_ref, siteInfo) {
     ifPopup: ifExceptionPopup
   });
 
-  array.push({
-    type: __WEBPACK_IMPORTED_MODULE_22__constants_enums_preference__["d" /* soundType */].enumIncomingAudioVideoChat,
-    id: audioVideoChatRequestSoundId,
-    volume: audioVideoChatRequestSoundVolume,
-    ifSoundOn: ifAudioVideoChatRequestSoundOn,
-    ifPopup: ifAudioVideoChatRequestPopup
-  });
-  array.push({
-    type: __WEBPACK_IMPORTED_MODULE_22__constants_enums_preference__["d" /* soundType */].enumEndAudioVideoChat,
-    id: audioVideoChatEndSoundId,
-    volume: audioVideoChatEndSoundVolume,
-    ifSoundOn: ifAudioVideoChatEndSoundOn,
-    ifPopup: ifAudioVideoChatEndPopup
-  });
+  if (siteInfo.ifEnableAudioVideoChat) {
+    array.push({
+      type: __WEBPACK_IMPORTED_MODULE_22__constants_enums_preference__["d" /* soundType */].enumIncomingAudioVideoChat,
+      id: audioVideoChatRequestSoundId,
+      volume: audioVideoChatRequestSoundVolume,
+      ifSoundOn: ifAudioVideoChatRequestSoundOn,
+      ifPopup: ifAudioVideoChatRequestPopup
+    });
+    array.push({
+      type: __WEBPACK_IMPORTED_MODULE_22__constants_enums_preference__["d" /* soundType */].enumEndAudioVideoChat,
+      id: audioVideoChatEndSoundId,
+      volume: audioVideoChatEndSoundVolume,
+      ifSoundOn: ifAudioVideoChatEndSoundOn,
+      ifPopup: ifAudioVideoChatEndPopup
+    });
+  }
   return array;
 };
 
@@ -2999,7 +3001,8 @@ var mapStateToProps = function mapStateToProps(state) {
       ifRecordNavigation: state.config.settings.siteInfo && state.config.settings.siteInfo.ifRecordNavigation,
       systemSounds: state.config.settings.sound,
       customVariables: state.config.settings.customVariables,
-      ifUseMainServer: state.config.ifUseMainServer
+      ifUseMainServer: state.config.ifUseMainServer,
+      ifEnableAudioVideoChat: state.config.settings.siteInfo && state.config.settings.siteInfo.ifEnableAudioVideoChat
     },
     chatInfo: {
       shortcutSend: state.config.preference.shortcutSend,
@@ -3251,4 +3254,4 @@ module.exports = {"tab":"style__tab--1Xwp7","selected":"style__selected--2SB81"}
 /***/ })
 
 });
-//# sourceMappingURL=settings.d9829.js.map
+//# sourceMappingURL=settings.d86ef.js.map

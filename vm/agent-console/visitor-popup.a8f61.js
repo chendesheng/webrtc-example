@@ -1,6 +1,6 @@
 /*
  * version: 1.0.0
- * compiled: 2017-04-07 11:43:37.124
+ * compiled: 2017-04-07 18:21:13.708
  */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","5":"editor","6":"details-tab","8":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"46f82","5":"aa73f","6":"8e71a","8":"ab779"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","5":"editor","6":"details-tab","8":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"a0f89","5":"9866f","6":"4cb51","8":"ab779"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -722,16 +722,16 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_50", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["r"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_53", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["s"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_54", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["e"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_103", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["f"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_104", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["t"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_108", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["u"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_126", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["v"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_127", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["w"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_128", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["x"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_129", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["y"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_135", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["z"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_136", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["A"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_139", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_104", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_105", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["t"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_109", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["u"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_127", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["v"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_128", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["w"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_129", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["x"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_130", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["y"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_136", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["z"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_137", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["A"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_140", function() { return __WEBPACK_IMPORTED_MODULE_0__visitors__["c"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__chats__ = __webpack_require__(221);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "L", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["f"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "M", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["g"]; });
@@ -742,10 +742,10 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_93", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["h"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_94", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["i"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_95", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["j"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_105", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["k"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_107", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["l"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_130", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["m"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_140", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["n"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_106", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["k"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_108", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["l"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_131", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["m"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_141", function() { return __WEBPACK_IMPORTED_MODULE_1__chats__["n"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agentChats__ = __webpack_require__(356);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "X", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return __WEBPACK_IMPORTED_MODULE_2__agentChats__["b"]; });
@@ -763,7 +763,7 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_83", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["i"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_84", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["j"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_88", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["k"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_110", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["l"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_111", function() { return __WEBPACK_IMPORTED_MODULE_3__agents__["l"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ui__ = __webpack_require__(222);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["e"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["f"]; });
@@ -791,10 +791,10 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_81", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["z"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_97", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["A"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_98", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["B"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_114", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["C"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_115", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["D"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_116", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["E"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_117", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["F"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_115", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["C"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_116", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["D"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_117", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["E"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_118", function() { return __WEBPACK_IMPORTED_MODULE_4__ui__["F"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(158);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["b"]; });
@@ -855,24 +855,25 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_100", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_9"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_101", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_10"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_102", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_11"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_106", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_12"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_109", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_13"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_112", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_14"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_103", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_12"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_107", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_13"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_110", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_14"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_113", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_15"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_118", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_16"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_114", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_16"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_119", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_17"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_120", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_18"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_121", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_19"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_122", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_20"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_123", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_21"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_131", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_22"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_124", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_22"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_132", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_23"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_133", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_24"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_138", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_25"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_141", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_26"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_134", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_25"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_139", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_26"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_142", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_27"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_143", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_28"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_146", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_29"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_144", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_29"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_147", function() { return __WEBPACK_IMPORTED_MODULE_5__config__["_30"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hybrid__ = __webpack_require__(357);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["b"]; });
@@ -891,12 +892,12 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_85", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["o"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_86", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["p"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_87", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["q"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_111", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["r"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_124", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["s"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_134", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["t"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_137", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["u"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_144", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["v"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_145", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["w"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_112", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["r"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_125", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["s"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_135", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["t"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_138", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["u"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_145", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["v"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_146", function() { return __WEBPACK_IMPORTED_MODULE_6__hybrid__["w"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlsManager__ = __webpack_require__(204);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "G", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "H", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["c"]; });
@@ -911,7 +912,7 @@ module.exports = (__webpack_require__(0))("./node_modules/babel-runtime/core-js/
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_74", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["m"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_77", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["n"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_90", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["p"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_125", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["o"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_126", function() { return __WEBPACK_IMPORTED_MODULE_7__urlsManager__["o"]; });
 
 
 
@@ -9082,7 +9083,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__utils_common__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getDepartments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return getAutoInvitations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return getOnlineDepartments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return getOnlineDepartments; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return getDepartmentById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return getSegmentations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return getSegmentationById; });
@@ -9090,25 +9091,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return getCustomAwayById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return getChatServerUrl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return getStandbyChatServer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return getLiveChatHandler3; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return getIfUseMainServer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return getModeratorServer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return getLiveChatHandler3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return getIfUseMainServer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return getModeratorServer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return getLiveChatFuncUrl; });
 /* unused harmony export getControlPanelUrl */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return getCannedMessages; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getSiteId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return getAgentId; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return getLigInInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return getLigInInfo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return getDepartmentNameById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return getAgents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return getSegmentsByIds; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return getSiteInfo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return getJoinMeIntegrationServer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ifEnableAdvancedCategoryMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return ifSiteEnableAudioVideoChat; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return getCustomFilter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return getVisitorTabs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return getPreference; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return getPreferenceOthers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return getPreferenceOthers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return getPermission; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return getAgentById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return getCampaigns; });
@@ -9121,43 +9123,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return getIfEnableTeamWork; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return getIfEnableInvitation; });
 /* unused harmony export getManualInviationMessage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return getIfEnableAutoAcceptChat; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return getIfEnableAutoAllocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return getIfEnableAutoAcceptChat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return getIfEnableAutoAllocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return getIfEnableCannedMessageShortcuts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return getCampaignName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return getPCIForms; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return getPCIForms; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return getSecureFormServer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return getVisitorListColumns; });
 /* unused harmony export getColumn */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return getCustomVariables; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return getCustomVariableById; });
 /* unused harmony export getSpecificValueInPreference */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return getVolumeBySoundType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return checkSoundExisted; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return getNotificationIfPopupOnBySoundType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return getNotificationIfSoundOnVolumeBySoundType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return getVolumeBySoundType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return checkSoundExisted; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return getNotificationIfPopupOnBySoundType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return getNotificationIfSoundOnVolumeBySoundType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return getIfPasteCode; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return getIfEnableCustomVariable; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return getIfEnableVisitorSegmentation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return getAgentIfEnableTranslation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return getAgentIfEnableTranslation; });
 /* unused harmony export ifEnableMaxOn */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return getAgentTranslationLanguage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return getTimeDelay; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return serverDateToLocal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return serverDateToLocal; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return getifDepartmentEnabled; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return getIfEnableWrapupChat; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return getSendType; });
 /* unused harmony export getIfEnableSpellCheck */
 /* unused harmony export getSpellCheckLanguage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return getDashboardMessages; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return ifEnableAutoMonitor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return ifEnableAutoCloseChat; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return autoCloseChatWindowDelay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return getDashboardMessages; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return ifEnableAutoMonitor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return ifEnableAutoCloseChat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return autoCloseChatWindowDelay; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return getCannedMessageShortcut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return getNextChatShortcut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return getNextResponseShortcut; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return ifHavePermissionMonitorChat; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return ifHavePermissionMonitorDepartment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return ifHavePermissionMonitorDepartment; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return getTimezone; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return getTimezoneOffset; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return getDateTimeFormat; });
@@ -9332,6 +9334,10 @@ var getJoinMeIntegrationServer = function getJoinMeIntegrationServer(state) {
 
 var ifEnableAdvancedCategoryMode = function ifEnableAdvancedCategoryMode(state) {
   return state.config.settings.siteInfo.ifEnableAdvancedCategoryMode;
+};
+
+var ifSiteEnableAudioVideoChat = function ifSiteEnableAudioVideoChat(state) {
+  return state.config.settings.siteInfo.ifEnableAudioVideoChat;
 };
 
 var getCustomFilter = function getCustomFilter(state) {
@@ -26477,4 +26483,4 @@ if (false) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=visitor-popup.5f9ef.js.map
+//# sourceMappingURL=visitor-popup.a8f61.js.map

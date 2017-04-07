@@ -11148,7 +11148,7 @@ var memoizedInitData = __WEBPACK_IMPORTED_MODULE_3_lru_memoize___default()(1)(in
 
 function createChatListState(state) {
   var siteInfo = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_37" /* getSiteInfo */](state);
-  var preferenceOther = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_109" /* getPreferenceOthers */](state);
+  var preferenceOther = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_110" /* getPreferenceOthers */](state);
   var enableRefuseChat = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_28" /* getPermission */](state, __WEBPACK_IMPORTED_MODULE_6__constants_enums_liveChatPermission__["d" /* refuseChat */]);
   var delay = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["_12" /* getTimeDelay */](state) || 0;
   var agentId = __WEBPACK_IMPORTED_MODULE_5__reducers_selectors__["u" /* getCurrentAgentId */](state);
@@ -11327,7 +11327,7 @@ var getOnlineDepartmentComponent = function getOnlineDepartmentComponent(state) 
   return cachedDepartment;
 };
 
-var getChatActionDisplay = __WEBPACK_IMPORTED_MODULE_4_lru_memoize___default()(1)(function (siteInfo, ifHaveTransferPermission, ifEnableTranslate, ifG2MConnected, campaign) {
+var getChatActionDisplay = __WEBPACK_IMPORTED_MODULE_4_lru_memoize___default()(1)(function (siteInfo, ifHaveTransferPermission, ifEnableTranslate, ifG2MConnected, campaign, ifSiteEnableAudioVideoChat) {
   return {
     transfer: siteInfo.ifEnableTeamWork && ifHaveTransferPermission,
     /** @todo following is not used in <SendFile />, could be an issue */
@@ -11338,8 +11338,8 @@ var getChatActionDisplay = __WEBPACK_IMPORTED_MODULE_4_lru_memoize___default()(1
     gotoMeeting: siteInfo.ifEnableScreenSharing && siteInfo.ifEnableGotoMeeting && ifG2MConnected,
     joinMe: siteInfo.ifEnableJoinMeScreenSharing,
     pciForm: siteInfo.ifEnablePCIForm,
-    audioChat: __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["p" /* ifSupportWebrtc */] && campaign && campaign.ifEnableAudioChat,
-    videoChat: __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["p" /* ifSupportWebrtc */] && campaign && campaign.ifEnableVideoChat
+    audioChat: ifSiteEnableAudioVideoChat && __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["p" /* ifSupportWebrtc */] && campaign && campaign.ifEnableAudioChat,
+    videoChat: ifSiteEnableAudioVideoChat && __WEBPACK_IMPORTED_MODULE_6_src_utils_common__["p" /* ifSupportWebrtc */] && campaign && campaign.ifEnableVideoChat
   };
 });
 
@@ -11495,8 +11495,8 @@ var mapStateToProps = function mapStateToProps(state) {
   var ret = {
     responseErrorMessage: responseErrorMessage,
     sendEmailSuccessMessage: sendEmailSuccessMessage,
-    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId'))),
-    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
+    chatActionDisplay: getChatActionDisplay(siteInfo, ifHaveTransferPermission, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_99" /* getIfEnableTranslate */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_100" /* getConfigIfG2MConnected */](state), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["A" /* getCodePlan */](state, visitor.get('codePlanId')), __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_101" /* ifSiteEnableAudioVideoChat */](state)),
+    chatActionEnable: getChatActionEnable(visitor, currentAgentId, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getIfUseMainServer */](state), ifEnableAudioVideoChatButton(state, chat, currentAgentId)),
     siteId: siteId,
     agentSession: agentSession,
     ifUseMainServer: ifUseMainServer,
@@ -11519,7 +11519,7 @@ var mapStateToProps = function mapStateToProps(state) {
     currentAgentId: currentAgentId,
     transfer: getTransfer(ifDepartmentEnabled, onlineDepartments, onlineDepartmentComponent, allAvailableAgents),
     transcriptInfo: transcriptInfo,
-    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_102" /* getPCIForms */](state)),
+    pciForm: getPCIForm(secureFormServer, secureFormConfig, __WEBPACK_IMPORTED_MODULE_11__reducers_selectors__["_103" /* getPCIForms */](state)),
     autoTranslateInfo: getAutoTranslateInfo(detectedVisitorLanguage, ifAutoPopTranslation, enableChatTranslation, agentTranslationLanguage),
     gotoAttachTicket: function gotoAttachTicket() {
       __WEBPACK_IMPORTED_MODULE_18__Business_common__["g" /* gotoAttachTicket */]({
@@ -11684,11 +11684,11 @@ var getIsContactOrUserOpen = function getIsContactOrUserOpen(state) {
 };
 
 function getAVStatusForUI(state, visitor, currentAgentId) {
-  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_103" /* isVisitorExists */](state, visitor.get('id'))) {
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_104" /* isVisitorExists */](state, visitor.get('id'))) {
     return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
   }
 
-  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_104" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
+  if (!__WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_105" /* checkIfAgentInVisitorActiveIds */]({ chatActiveAgents: visitor.get('chatActiveAgents') }, currentAgentId)) {
     return __WEBPACK_IMPORTED_MODULE_8__constants_enums_visitorAudioVideoChatStatus__["g" /* notStart */];
   }
 
@@ -11734,10 +11734,10 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
   var timezone = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_24" /* getTimezone */](state);
   var timezoneOffset = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_25" /* getTimezoneOffset */](state);
   var textDirectionIfRTL = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_71" /* textDirectionIfRTL */](state);
-  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_105" /* getErrorMessageForChat */](state, chat && chat.get('id'));
+  var errorMessageForChat = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_106" /* getErrorMessageForChat */](state, chat && chat.get('id'));
   var ifShowNotify = chat.get('ifShowNotify');
   var audioVideoChatWidth = chat.get('audioVideoChatWidth');
-  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_106" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
+  var audioVideoChatStartTime = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_107" /* serverDateToLocal */](state, visitor.get('audioVideoChatStartTime'));
   var currentAgentId = __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["u" /* getCurrentAgentId */](state);
   var avStatus = getAVStatusForUI(state, visitor, currentAgentId);
   if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__utils_common__["b" /* isChattingWithAgent */])(visitor, currentAgentId)) {
@@ -11752,7 +11752,7 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
     chatGuid: chatGuid,
     agentSession: agentSession,
     selectedFontSize: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_81" /* getFontSize */](state),
-    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_107" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
+    messages: __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_108" /* getChatMessages */](state, __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__["_40" /* getSelectedChatId */](state)),
     typingMessage: chat.get('typingMessage'),
     isContactOrUserOpen: getIsContactOrUserOpen(state),
     chatTo: visitor.get('latestName'),
@@ -11929,7 +11929,7 @@ var isDisplayCloseChat = function isDisplayCloseChat(state) {
   var status = visitor.get('status');
   var isMonitoring = __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["c" /* isMonitorWithAgent */](visitor, agentId);
 
-  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_108" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
+  var isChatEnded = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_109" /* isChatEnded */](status) || __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["v" /* isVisitorChattedWithAgent */](visitor, agentId) && !(__WEBPACK_IMPORTED_MODULE_4_src_utils_common__["u" /* isChatting */](visitor) && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["e" /* isAgentInChatActiveList */](visitor, agentId));
   var isTransferring = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["b" /* transferring */];
 
   var isMonitorEnded = status === __WEBPACK_IMPORTED_MODULE_9__constants_enums_visitorStatus__["e" /* chatEnded */] && __WEBPACK_IMPORTED_MODULE_4_src_utils_common__["g" /* isAgentInMonitorList */](visitor, agentId);
@@ -11973,7 +11973,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var saleforceURL = getSalesforceURL(state, visitor);
   var checkChatExisted = chat.get('id') !== visitor.get('chatId');
-  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_103" /* isVisitorExists */](state, visitor.get('id'));
+  var isVisitorExists = __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__["_104" /* isVisitorExists */](state, visitor.get('id'));
 
   var isContactOrUserOpen = getIsContactOrUserOpen(state);
   var ret = {
@@ -12674,4 +12674,4 @@ module.exports = chunk;
 
 /***/ })
 ]));
-//# sourceMappingURL=chat.f26af.js.map
+//# sourceMappingURL=chat.8d999.js.map

@@ -21282,4 +21282,4 @@ module.exports = {"history":"visitorHistory__history--3H_9j","infoline":"visitor
 /***/ })
 
 });
-//# sourceMappingURL=details-tab.8e71a.js.map
+//# sourceMappingURL=details-tab.4cb51.js.map
