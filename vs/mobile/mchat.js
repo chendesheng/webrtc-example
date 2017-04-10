@@ -1544,6 +1544,7 @@ var chat_window = (function () {
                 default:
                     break;
             }
+            bottom_tabs.addPrompt();
             if( ifSupportWebrtc && MediaChat && (code >= message_code.agent_video_chat_request && code <= message_code.system_if_supportWebrtc)) {
                 MediaChat.handleMessages(code, sender, time, message, info);
             }
@@ -2122,6 +2123,82 @@ var chat_window = (function () {
     function message_queue_add(code, content) {
         message_queue.add(code, content);
     }
+
+    var bottom_tabs = (function () {
+        var tabs = [];
+        var promptNum = 0;
+
+        function show() {
+            if(!$('#bottom-tab').is(':visible')) {
+                $('#bottom-tab').show();
+                $('#text-input').animate({
+                    bottom: '34px'
+                }, 100);
+            }
+            resetPromptNum();
+        }
+
+        function hide() {
+            if($('#bottom-tab').is(':visible')) {
+                $('#bottom-tab').hide();
+                $('#text-input').animate({
+                    bottom: '0'
+                }, 100);
+            }
+        }
+
+        function addTab(contentDivId, iconName) {
+            tabs.push(contentDivId);
+            var tab = $("<div></div>");
+            tab.addClass('tab');
+            var icon = $("<span></span>");
+            icon.addClass("ui-icon " + iconName);
+            tab.append(icon);
+            tab.click(function(){
+                $('.tab').removeClass('selected');
+                $(this).addClass('selected');
+                tabs.forEach(function(id){
+                    if(id === contentDivId){
+                        $('#' + id).show();
+                    } else {
+                        $('#' + id).hide();
+                    }
+                });
+            });
+            tab.insertBefore(".chattingTab");
+            $('.chattingTab').click(function(){
+                $('.tab').removeClass('selected');
+                $(this).addClass('selected');
+                tabs.forEach(function(divId){
+                    $('#' + divId).hide();
+                });
+                resetPromptNum();
+            });
+        }
+
+        function resetPromptNum(){
+            $('.promptNum').hide();
+            promptNum = 0;
+        }
+
+        function addPrompt(){
+            if($('#bottom-tab').is(':visible') &&
+                !$('.chattingTab').hasClass('selected')) {
+                promptNum += 1;
+                if(promptNum > 0) {
+                    $('.promptNum').html(promptNum).show();
+                }
+            }
+        }
+
+        return  {
+            show: show,
+            hide: hide,
+            addTab: addTab,
+            addPrompt: addPrompt
+        };
+        //promptNumber
+    })();
     
     return {
         'start': start_chat,
@@ -2160,7 +2237,7 @@ var chat_window = (function () {
         'get_time_delay': function() {
             return window.time_delay;
         },
-
+        'bottom_tabs': bottom_tabs,
     };
 })();
 

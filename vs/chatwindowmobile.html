@@ -155,6 +155,12 @@
 	    	</table>
 	    	<div id="footer-bottom"></div>
 		</div>
+		<div id="bottom-tab" class="bottomTab" style="display: none">			
+			<div class="tab chattingTab">
+				<span class="ui-icon icon-chatting"></span>
+				<span class="promptNum" style="display: none"></span>
+			</div>
+		</div>
 		<div style="display:none;" id="popupMenu">
 			<table>
             <tr>
@@ -252,10 +258,10 @@
 				<div class="agentAvatar"><img class="avatarImg" src="" /></div><div class="agentName"></div>
 				<div class="waiting">
 					<div class="textAudio">
-						<span class="iconfont icon-audio-light"></span><div class="chatTypeText LanguageAudioChatCalling"></div>
+						<span class="ui-icon icon-audio-light"></span><div class="chatTypeText LanguageAudioChatCalling"></div>
 					</div>
 					<div class="textVideo">
-						<span class="iconfont icon-video-light"></span><div class="chatTypeText LanguageVideoChatCalling"></div>
+						<span class="ui-icon icon-video-light"></span><div class="chatTypeText LanguageVideoChatCalling"></div>
 					</div>
 					<div class="waitingAni"><span>.</span><span>.</span><span>.</span></div>
 				</div>
@@ -269,7 +275,7 @@
 					<div class="agentImg"><img class="avatarImg" src="" /></div>
 					<div class="agentName"></div>
 					<div class="chattingTime">
-						<span class="iconfont icon-audio-light"></span>
+						<span class="ui-icon icon-audio-light"></span>
 						<div class="chatTypeText LanguageAudioChatCalling"></div>
 						<div class="chattingDuration">00:00</div>
 					</div>
@@ -279,18 +285,7 @@
 				<div class="buttons">
 					<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
 				</div>
-			</div>
-			<div class="bottomTab">
-				<div class="tab audio-tab">
-					<span class="ui-icon icon-audio"></span>
-				</div>
-				<div class="tab video-tab">
-					<span class="ui-icon icon-video"></span>
-				</div>
-				<div class="tab">
-					<span class="ui-icon icon-chatting"></span>
-				</div>
-			</div>
+			</div>			
 		</div>
 	</div><!-- /page -->
 	<div data-role="page" id="rating" data-title="Comm100 Live Chat - Chat Window">

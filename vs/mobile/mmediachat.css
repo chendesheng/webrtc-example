@@ -89,13 +89,7 @@
 .audioIncoming .textVideo,
 .audioRequesting .textVideo,
 .videoIncoming .textAudio,
-.videoRequesting .textAudio,
-.audioChatting .video-tab,
-.videoChatting .audio-tab,
-.audioRequesting .video-tab,
-.videoRequesting .audio-tab,
-.audioIncoming .video-tab,
-.videoIncoming .audio-tab {
+.videoRequesting .textAudio {
     display: none;
 }
 
@@ -163,7 +157,7 @@
 }
 .videoChatting .agentImg,
 .videoChatting .chatTypeText,
-.videoChatting .icon-audio {
+.videoChatting .icon-audio-light {
     display: none;
 }
 .chattingDuration{
@@ -193,7 +187,7 @@
 }
 .audioChatting .chatTypeText {
     font-size: 14px;
-    padding-right: 10px;
+    padding-left: 10px;
 }
 .audioChatting video {
     display: none;
@@ -217,22 +211,4 @@
 }
 .loading {
     background: url(../images/loading-large.gif) no-repeat center;
-}
-.bottomTab {
-    height: 35px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-.tab {
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-.tab .ui-icon {
-    font-size: 18px !important;
-    color: #fff;
 }

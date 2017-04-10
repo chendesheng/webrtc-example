@@ -688,7 +688,7 @@ input {
 	margin-right:50px;
 }
 .media-chat-window {
-    height: 100%;
+    height: calc(100% - 35px);
 	width: 100%;
     display: flex;
     align-items: center;
@@ -702,4 +702,38 @@ input {
     left: 0;
     background: rgba(0, 0, 0, 0.7);
 	z-index: 10;
+}
+.bottomTab {
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.tab {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+}
+.tab .ui-icon {
+    font-size: 18px !important;
+    color: #fff;
+}
+.selected {
+    background-color: #4f4f4f;
+}
+.promptNum {
+	position: relative;
+    left: 5px;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background: #ff0000;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
 }

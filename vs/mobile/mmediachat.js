@@ -3689,7 +3689,6 @@ var MediaChat = {
     window: null,
     localVido: null,
     remoteVideo: null,
-    isPopupWindow: false,
     textAudioCalling: 'Audio Chat',
     textVideoCalling: 'Video Chat',
     actionTimer: 0,
@@ -3860,30 +3859,32 @@ var MediaChat = {
             case this.enumStatus.notStart:
             default:
                 //this.enableIconButtons();
-                //this.setWindowSize(false);
                 this.stopTimer($('.chattingDuration')[0]);
+                this.chat_window_handler.bottom_tabs.hide();
                 break;
             case this.enumStatus.audioIncoming:
             case this.enumStatus.videoIncoming:
                 //this.disableIconButtons();
+                this.chat_window_handler.bottom_tabs.show();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
                 this.stopTimer($('.chattingDuration')[0]);
-                //this.setWindowSize(true);
+                this.chat_window_handler.bottom_tabs.show();
                 break;
             case this.enumStatus.audioRequesting:
             case this.enumStatus.videoRequesting:
                 //this.disableIconButtons();
+                this.chat_window_handler.bottom_tabs.show();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                //this.setWindowSize(true);
+                this.chat_window_handler.bottom_tabs.show();
                 break;
             case this.enumStatus.audioChatting:
             case this.enumStatus.videoChatting:
                 //this.disableIconButtons();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                //this.setWindowSize(true);
+                this.chat_window_handler.bottom_tabs.show();
                 break;
         }
         this.oldStatus = this.currentStatus;
@@ -3895,14 +3896,18 @@ var MediaChat = {
         this.window = $('#media-chat-window');
         this.serverOrigin = serverorigin;
         //install events
-        if (ifEnableAudioChat && $('#btn-audio-chat'))
+        if (ifEnableAudioChat && $('#btn-audio-chat')) {
             $('#btn-audio-chat').click(function() {
                 MediaChat.onRequestChatClick(this);
             });
-        if (ifEnableVideoChat && $('#btn-video-chat'))
+            //MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-audio');
+        }
+        if (ifEnableVideoChat && $('#btn-video-chat')) {
             $('#btn-video-chat').click(function() {
                 MediaChat.onRequestChatClick(this);
             });
+            MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
+        }
         this.localVideo = $('#localVideo').get(0);
         this.remoteVideo = $('#remoteVideo').get(0);
 
