@@ -51,7 +51,6 @@
     font-size: 16px;
     padding-right: 10px;
     position: relative;
-    top: 2px;
 }
 .textVideo, .textAudio {
     display: flex;
@@ -152,7 +151,7 @@
 }
 .videoChatting .buttons {
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     width: 100%;
 }
 .videoChatting .agentImg,
