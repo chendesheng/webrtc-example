@@ -1,102 +1,89 @@
 <!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
-
-<head>
-	<title>Comm100 Chat Window</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng"> 
+<head> 
+	<title>Comm100 Chat Window</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no">
 	<link rel="stylesheet" href="mobile/themes/custom.min.css" />
 	<link rel="stylesheet" href="mobile/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="mobile/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="mobile/jquery-1.11.1.min.js"></script>
-	<link rel="stylesheet" href="mobile/themes/icons.css?v=20170328">
-</head>
-<script type="text/javascript">
-	$(document).bind("mobileinit", function () {
-		$.mobile.hashListeningEnabled = false;
-		$.mobile.pushStateEnabled = false;
-		$.mobile.changePage.defaults.changeHash = false;
-		$.mobile.ajaxEnabled = false;
-		$.mobile.defaultHomeScroll = 0;
-	});
+	<link rel="stylesheet" href="mobile/themes/icons.css?v=20170328"></head>
+	<script type="text/javascript">
+		$( document ).bind( "mobileinit", function() {
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+			$.mobile.changePage.defaults.changeHash = false;
+			$.mobile.ajaxEnabled = false;
+			$.mobile.defaultHomeScroll = 0;
+		});
+	</script>
+	<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170328">
+	<script type="text/javascript">	    
+        (function () {
+	        var siteId = /siteId=([0-9]+)/i.exec(window.location.search)[1];
+	        var planId = /planId=([0-9]+)/i.exec(window.location.search)[1];
+	        var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
+	        chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
 
-</script>
-<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
-<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170328">
-<script type="text/javascript">
-	(function () {
-		var siteId = /siteId=([0-9]+)/i.exec(window.location.search)[1];
-		var planId = /planId=([0-9]+)/i.exec(window.location.search)[1];
-		var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
-		chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
-
-		document.write('<link href="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
-	})();
-
-</script>
-<script type="text/javascript" src="mobile/mutils.js?v=20170328"></script>
-<script type="text/javascript" src="mobile/mchat.js?v=20170328"></script>
-<script type="text/javascript">
-	var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
-	chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
-	document.write('<scr' + 'ipt type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
-
-</script>
-</head>
-
+	        document.write('<link href="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
+	    })();
+	</script>
+</head> 
 <body class="mobile-window">
 	<div data-role="page" id="start-window" data-title="Comm100 Live Chat">
-		<div class="icon-rating LanguageButtonRating" id="tester-icon-rating"></div>
+    	<div class="icon-rating LanguageButtonRating" id="tester-icon-rating"></div>
 		<div class="icon-email LanguageButtonTranscript" id="tester-icon-email"></div>
 		<div class="icon-rename LanguageButtonSetName" id="tester-icon-rename"></div>
-		<div class="icon-upload" id="tester-icon-upload"></div>
+        <div class="icon-upload" id="tester-icon-upload"></div>
 	</div>
-	<div data-role="page" id="loading-window" data-title="Loading">
-		<div style="left: 50%; top: 50%; margin-left: -32px; margin-top: -32px;position: absolute;">
-			<span class="icon-page-loading"></span>
-		</div>
-	</div>
+    <div data-role="page" id="loading-window" data-title="Loading">
+        <div style="left: 50%; top: 50%; margin-left: -32px; margin-top: -32px;position: absolute;">
+            <span class="icon-page-loading"></span>
+        </div>
+    </div>
 	<div data-role="page" id="ban-window" data-title="">
 		<div data-role="content">
 			<div id="ban-error"></div>
 		</div>
 	</div>
-	<div data-role="page" id="prelogin-window" data-title="Comm100 Live Chat - Pre-Chat Window">
-		<div data-role="header" data-theme="a">
+    <div  data-role="page" id="prelogin-window"  data-title="Comm100 Live Chat - Pre-Chat Window">
+        <div data-role="header" data-theme="a">
 			<h1 class="LanguageMobilePreChat"></h1>
 		</div>
-		<div class="branding header"></div>
+        <div class="branding header"></div>	
 		<div data-role="content" class="main-content ssologin">
-			<div id="prelogin-login-greeing" class="LanguagePromptIfLogin"></div>
-			<div class="form-bottom">
-				<div class="sso-btn"><input id="sso-login" type="button" class="LanguageButtonLoginAsUser" onclick="sso_login_click();" /></div>
-				<div class="sso-btn"><input id="chat-as-visitor" type="button" class="LanguageButtonChatAsVisitor" onclick="chat_as_visitor_click();" /></div>
-			</div>
+            <div id="prelogin-login-greeing" class="LanguagePromptIfLogin"></div>
+            <div class="form-bottom">
+                <div class="sso-btn"><input id="sso-login" type="button" class="LanguageButtonLoginAsUser" onclick="sso_login_click();"/></div>
+			    <div class="sso-btn"><input id="chat-as-visitor" type="button" class="LanguageButtonChatAsVisitor" onclick="chat_as_visitor_click();"/></div>
+            </div>   
+        </div>     
 		</div>
-	</div>
-	</div>
+    </div>
 
 	<div data-role="page" id="prechat-window" data-title="Comm100 Live Chat - Pre-Chat Window">
 		<div data-role="header" data-theme="a">
 			<h1 class="LanguageMobilePreChat"></h1>
 		</div>
-		<div class="branding header"></div>
-		<div data-role="content" class="main-content">
+		<div class="branding header"></div>	
+		<div data-role="content" class="main-content">	
 			<div id="prechat-greeting" class="greeting"></div>
 			<div id="social-logins">
-				<span class="float-left lang-sign-in-with system LanguagePreChatSocialMediaSignInWith"></span>
-				<span id="social-login-icons" class="float-left loading">
+			    <span class="float-left lang-sign-in-with system LanguagePreChatSocialMediaSignInWith"></span>
+			    <span id="social-login-icons" class="float-left loading">
                     <span class="icon-loading"></span>
-				<span id="fb-login" class="icon icon-facebook" style="display:none;" onclick="facebook.login(submit_social_info);"></span>
-				<span id="gp-login" class="icon icon-googleplus" style="display:none;" onclick="googleplus.login(submit_social_info);"></span>
-				</span>
-				<div class="clear"></div>
-				<div class="box-hor-or">
-					<span class="hor-bar"></span>
-					<span class="LanguagePreChatSocialMediaOr hor-or"></span>
-				</div>
+				    <span id="fb-login" class="icon icon-facebook" style="display:none;" onclick="facebook.login(submit_social_info);"></span>
+				    <span id="gp-login" class="icon icon-googleplus" style="display:none;" onclick="googleplus.login(submit_social_info);"></span>
+			    </span>
+			    <div class="clear"></div>
+			    <div class="box-hor-or">
+			        <span class="hor-bar"></span>
+			        <span class="LanguagePreChatSocialMediaOr hor-or"></span>
+			    </div>
 			</div>
 			<div class="form"></div>
-			<input id="btn-start-chat" type="button" onclick="start_chat_click();" class="LanguageButtonStartChat ui-btn-a" />
+            <input id="btn-start-chat" type="button" onclick="start_chat_click();" class="LanguageButtonStartChat ui-btn-a" />
 		</div>
 	</div>
 
@@ -108,9 +95,9 @@
 		<div data-role="content" class="main-content">
 			<div id="offline-greeting" class="greeting"></div>
 			<div class="form"></div>
-			<input id="btn-submit-offline" type="button" onclick="offline_submit_click();" class="LanguageButtonSubmit ui-btn-a" />
-		</div>
-	</div>
+            <input id="btn-submit-offline" type="button" onclick="offline_submit_click();" class="LanguageButtonSubmit ui-btn-a"/>
+	    </div>
+    </div>
 
 	<div data-role="page" id="postchat-window" data-title="Comm100 Live Chat - Post Chat Window">
 		<div data-role="header" data-theme="a" id="postchat-window-header">
@@ -120,59 +107,55 @@
 		<div data-role="content" class="main-content">
 			<div id="postchat-greeting" class="greeting"></div>
 			<div class="form"></div>
-			<input id="btn-submit-postchat" type="button" onclick="chat_window.submit_postchat();" class="LanguageButtonSubmit ui-btn-a"
-			/>
-		</div>
-	</div>
+            <input id="btn-submit-postchat" type="button" onclick="chat_window.submit_postchat();" class="LanguageButtonSubmit ui-btn-a"/>
+	    </div>
+    </div>
 
-	<div data-role="page" id="chat-window" data-title="Comm100 Live Chat - Chat Window">
+	<div data-role="page" id="chat-window"  data-title="Comm100 Live Chat - Chat Window">
 		<div id="chat-window-header" data-role="header" data-theme="a" data-tap-toggle="false">
 			<h1></h1>
 			<a id="btn-end-chat" class="ui-btn-right" data-role="button" data-mini="true">
 				<span class="icon-endchat"></span>
-			</a>
-		</div>
-		<!-- /header -->
-		<div data-role="content" id="chat-content" class="chat main-content">
-			<div class="branding header"></div>
-			<div class="chat-system-message chat-greeting-message greeting" id="chat-greeting"></div>
-			<!--only for insert before-->
-			<div id="chat-content-bottom"></div>
-			<div id="operator-typing" style="display:none" class="LanguageEventOperatorIsTyping chat-operator-typing chat-system-message chat-same-sender"></div>
-			<div id="input-limited" style="display:none" class="LanguageEventOperatorIsTyping chat-operator-typing chat-system-message chat-same-sender"></div>
-			<div class="chat-visitor chat-visitor-uploading" style="display:none" id="uploading-message">
-				<div class="chat-visitor-message">
-					<div id="uploading">
-						<span id="uploading-file-name" class="block"></span>
-						<span class="icon-loading block" style="vertical-align: sub;"></span>
-						<span class="icon-endchat" style="padding-left: 5px; font-size: 16px; color: #333;" onclick="chat_window.cancel_upload();"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /content -->
+            </a>
+		</div><!-- /header -->
+		<div data-role="content" id="chat-content" class="chat main-content">        
+            <div class="branding header"></div>
+            <div class="chat-system-message chat-greeting-message greeting" id="chat-greeting"></div>
+            <!--only for insert before-->
+            <div id="chat-content-bottom"></div>
+	        <div id="operator-typing" style="display:none" class="LanguageEventOperatorIsTyping chat-operator-typing chat-system-message chat-same-sender"></div>
+            <div id="input-limited" style="display:none" class="LanguageEventOperatorIsTyping chat-operator-typing chat-system-message chat-same-sender"></div>
+            <div class="chat-visitor chat-visitor-uploading" style="display:none" id="uploading-message">
+	            <div class="chat-visitor-message">
+		            <div id="uploading">
+			            <span id="uploading-file-name" class="block"></span>
+			            <span class="icon-loading block" style="vertical-align: sub;"></span>
+                        <span class="icon-endchat" style="padding-left: 5px; font-size: 16px; color: #333;" onclick="chat_window.cancel_upload();"></span>
+		            </div>
+	            </div>
+            </div>
+		</div><!-- /content -->
 		<div id="text-input" data-theme="a" data-role="footer">
-			<table style="width:100%" cellspacing="0">
-				<td id="chat-tools-wrap">
+	    	<table style="width:100%" cellspacing="0">
+	    		<td id="chat-tools-wrap">
 					<a id="chat-tools" class="custom-button">
-						<span class="icon-function"></span>
+                        <span class="icon-function"></span>
 					</a>
 				</td>
-				<td style="width:100%;padding:0 5px;">
-					<form>
-						<label style="display:none;" for="chat-input-control">Send Message</label>
-						<input id="chat-input-control" data-theme="a" type="text" onkeypress="return chat_window.send_text_message_if_enter(event);"
-						 onkeydown="return chat_window.set_visitor_typing(event);" />
-					</form>
+	    		<td style="width:100%;padding:0 5px;">
+	    			<form>
+                        <label style="display:none;" for="chat-input-control">Send Message</label>
+		    			<input id="chat-input-control" data-theme="a" type="text" onkeypress="return chat_window.send_text_message_if_enter(event);"  onkeydown="return chat_window.set_visitor_typing(event);"/>
+	    			</form>
 				</td>
-				<td style="padding:0 5px 0 0px;" id="btn-send-td">
-					<a id="btn-send" class="custom-button">
-						<span class="icon-send"></span></a>
-				</td>
-			</table>
-			<div id="footer-bottom"></div>
+	    		<td style="padding:0 5px 0 0px;" id="btn-send-td">
+		    		<a id="btn-send" class="custom-button">
+                    <span class="icon-send"></span></a>
+		    	</td>
+	    	</table>
+	    	<div id="footer-bottom"></div>
 		</div>
-		<div id="bottom-tab" class="bottomTab" style="display: none">
+		<div id="bottom-tab" class="bottomTab" style="display: none">			
 			<div class="tab chattingTab">
 				<span class="ui-icon icon-chatting"></span>
 				<span class="promptNum" style="display: none"></span>
@@ -180,108 +163,105 @@
 		</div>
 		<div style="display:none;" id="popupMenu">
 			<table>
-				<tr>
-					<td class="icon-email LanguageButtonTranscript">
-						<a id="tool-email" onclick="chat_window.show_send_email();">
-							<span class="ui-btn-inner">
-                        <ul>
-                        <li>
+            <tr>
+				<td class="icon-email LanguageButtonTranscript">
+					<a id="tool-email" onclick="chat_window.show_send_email();">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li>                          
 							<span class="ui-icon icon-transcript"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-email LanguageButtonTranscript"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
-					<td class="icon-rating LanguageButtonRating">
-						<a id="tool-rating" onclick="chat_window.show_rating();">
-							<span class="ui-btn-inner">
-                        <ul>
+                        </li>
                         <li>
+							<span class="ui-btn-text icon-email LanguageButtonTranscript"></span>
+                        </li>
+                        </ul> 
+						</span>
+					</a>
+				</td>
+				<td class="icon-rating LanguageButtonRating">
+					<a id="tool-rating" onclick="chat_window.show_rating();">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
 							<span class="ui-icon icon-rate"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-rating LanguageButtonRating"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
-					<td class="icon-rename LanguageButtonSetName">
-						<a id="tool-rename" onclick="chat_window.show_rename();">
-							<span class="ui-btn-inner">
-                        <ul>
+                        </li>
                         <li>
+							<span class="ui-btn-text icon-rating LanguageButtonRating"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
+				<td class="icon-rename LanguageButtonSetName">
+					<a id="tool-rename" onclick="chat_window.show_rename();">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
 							<span class="ui-icon icon-setname"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-rename LanguageButtonSetName"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
-					<td class="icon-upload">
-						<a id="tool-file-upload" onclick="chat_window.show_upload();">
-							<span class="ui-btn-inner">
-                        <ul>
+                        </li>
                         <li>
+							<span class="ui-btn-text icon-rename LanguageButtonSetName"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
+                <td class="icon-upload">
+					<a id="tool-file-upload" onclick="chat_window.show_upload();">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
 							<span class="ui-icon icon-file"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-upload LanguageButtonSendFile"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
+                        </li>
+                        <li>
+							<span class="ui-btn-text icon-upload LanguageButtonSendFile"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
 				</tr>
 				<tr>
-					<td class="icon-audio-chat">
-						<a id="btn-audio-chat">
-							<span class="ui-btn-inner">
-                        <ul>
-                        <li>
+				<td class="icon-audio-chat">
+					<a id="btn-audio-chat">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
 							<span class="ui-icon icon-audio"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-audio-chat LanguageButtonAudioChat"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
-					<td class="icon-video-chat">
-						<a id="btn-video-chat">
-							<span class="ui-btn-inner">
-                        <ul>
+                        </li>
                         <li>
+							<span class="ui-btn-text icon-audio-chat LanguageButtonAudioChat"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
+				<td class="icon-video-chat">
+					<a id="btn-video-chat">
+						<span class="ui-btn-inner">
+                        <ul> 
+                        <li> 
 							<span class="ui-icon icon-video"></span>
-							</li>
-							<li>
-								<span class="ui-btn-text icon-video-chat LanguageButtonVideoChat"></span>
-							</li>
-							</ul>
-							</span>
-						</a>
-					</td>
+                        </li>
+                        <li>
+							<span class="ui-btn-text icon-video-chat LanguageButtonVideoChat"></span>
+                        </li>
+                        </ul>
+						</span>
+					</a>
+				</td>
 				</tr>
 			</table>
 		</div>
 		<div id="media-chat-window" class="media-chat-window hidden overlay">
 			<div class="requesting">
-				<div class="agentAvatar"><img class="avatarImg" src="" /></div>
-				<div class="agentName"></div>
+				<div class="agentAvatar"><img class="avatarImg" src="" /></div><div class="agentName"></div>
 				<div class="waiting">
 					<div class="textAudio">
-						<span class="ui-icon icon-audio-light"></span>
-						<div class="chatTypeText LanguageAudioChatCalling"></div>
+						<span class="ui-icon icon-audio-light"></span><div class="chatTypeText LanguageAudioChatCalling"></div>
 					</div>
 					<div class="textVideo">
-						<span class="ui-icon icon-video-light"></span>
-						<div class="chatTypeText LanguageVideoChatCalling"></div>
+						<span class="ui-icon icon-video-light"></span><div class="chatTypeText LanguageVideoChatCalling"></div>
 					</div>
 					<div class="waitingAni"><span>.</span><span>.</span><span>.</span></div>
 				</div>
@@ -305,15 +285,14 @@
 				<div class="buttons">
 					<div class="button hangup" onclick="MediaChat.hangup();"><span class="iconfont icon-hangup"></span></div>
 				</div>
-			</div>
+			</div>			
 		</div>
-	</div>
-	<!-- /page -->
+	</div><!-- /page -->
 	<div data-role="page" id="rating" data-title="Comm100 Live Chat - Chat Window">
 		<div data-role="header" data-theme="a">
 			<h1 class="icon-rating LanguageButtonRating"></h1>
 			<a title="Back" href="#chat-window" class="custom-button btn-back" data-role="button">
-				<span class="icon-return"></span>
+            <span class="icon-return"></span>
 			</a>
 		</div>
 		<div data-role="content">
@@ -323,32 +302,31 @@
 				<label for="rating-comment-control" class="LanguageFieldRatingComment">Comment</label>
 				<textarea id="rating-comment-control"></textarea>
 			</div>
-			<input id="btn-submit-rating" type="button" class="LanguageButtonSubmit ui-btn-a" onclick="chat_window.submit_rating();"
-			/>
+            <input id="btn-submit-rating" type="button" class="LanguageButtonSubmit ui-btn-a" onclick="chat_window.submit_rating();"/>
 		</div>
 	</div>
 
-	<div data-role="page" id="rename" data-title="Comm100 Live Chat - Chat Window">
+	<div data-role="page" id="rename"  data-title="Comm100 Live Chat - Chat Window">
 		<div data-role="header" data-theme="a">
 			<h1 class="icon-rename LanguageButtonSetName"></h1>
 			<a class="custom-button btn-back" data-role="button">
-				<span class="icon-return"></span>
+            <span class="icon-return"></span>
 			</a>
 		</div>
 		<div data-role="content">
 			<div data-role="fieldcontain" class="ui-hide-label" id="rename-control-wrap">
 				<label for="rename-control" class="LanguagePromptName greeting">Name</label>
-				<input id="rename-control" type="text" />
+				<input id="rename-control" type="text"/>
 			</div>
-			<input type="button" class="LanguageButtonSubmit ui-btn-a" onclick="chat_window.rename();" />
+            <input type="button" class="LanguageButtonSubmit ui-btn-a" onclick="chat_window.rename();"/>
 		</div>
 	</div>
 
-	<div data-role="page" id="transcript" data-title="Comm100 Live Chat - Chat Window">
+	<div data-role="page" id="transcript"  data-title="Comm100 Live Chat - Chat Window">
 		<div data-role="header" data-theme="a">
 			<h1 class="icon-email LanguageButtonTranscript"></h1>
 			<a class="custom-button btn-back" data-role="button">
-				<span class="icon-return"></span>
+            <span class="icon-return"></span>
 			</a>
 		</div>
 		<div data-role="content">
@@ -356,10 +334,16 @@
 				<label for="send-email-control" class="LanguagePromptEmail greeting">Send Transcript</label>
 				<input id="send-email-control" type="email" />
 			</div>
-			<input type="button" class="btn-ok LanguageButtonSend ui-btn-a" onclick="chat_window.send_email();" />
+            <input type="button" class="btn-ok LanguageButtonSend ui-btn-a" onclick="chat_window.send_email();"/>
 		</div>
 	</div>
-	<iframe id="ifr-upload" allowtransparency="true" frameborder="0" scrolling="no" src="javascript:false" width="250" height="30"></iframe>
+    <iframe id="ifr-upload" allowtransparency="true" frameborder="0" scrolling="no" src="javascript:false" width="250" height="30"></iframe>
+	<script type="text/javascript" src="mobile/mutils.js?v=20170328"></script>
+	<script type="text/javascript" src="mobile/mchat.js?v=20170328"></script>
+	<script type="text/javascript">
+	    var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
+	    chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
+	    document.write('<scr' + 'ipt type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
+	</script>
 </body>
-
 </html>
