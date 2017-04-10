@@ -923,7 +923,7 @@ var Comm100API = (Comm100API || { loaded: false });
     //    $u.safari = (ua.match(/safari/)&&!ua.match(/chrome/)) ? 1 : 0;
     //    $u.firefox_mac = ua.match(/macintosh.*firefox/);
     $u.mobile = /mobile|android|ipad/i.test(ua);
-
+    if (isTesting && $u.mobile) window_url = 'chatwindowmobile.html';
     var $e = (function () {
         var ifrbox, ifr, dh;
         var ck = 'comm100_embedded_' + $c.site_id + (chatGroup === null ? "" : ("_" + chatGroup));
@@ -2440,7 +2440,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-04-10T17:10:20.436Z
+ * compiled: 2017-04-10T18:01:33.648Z
  */
  
  
