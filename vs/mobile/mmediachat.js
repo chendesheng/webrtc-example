@@ -3640,3 +3640,382 @@ function P2PChat(args) {
 }
 
 // export default P2PChat
+var MediaChat = {
+    enumStatus: {
+        notStart: 'notStart',
+        audioIncoming: 'audioIncoming',
+        audioRequesting: 'audioRequesting',
+        audioChatting: 'audioChatting',
+        videoIncoming: 'videoIncoming',
+        videoRequesting: 'videoRequesting',
+        videoChatting: 'videoChatting'
+    },
+    enumActionCode: {
+        agent_video_chat_request: 320,
+        agent_video_chat_cancel_request: 321,
+        agent_video_chat_accept: 322,
+        agent_video_chat_refuse: 323,
+        agent_video_chat_stop: 324,
+        visitor_video_chat_request: 325,
+        visitor_video_chat_cancel_request: 326,
+        visitor_video_chat_accept: 327,
+        visitor_video_chat_refuse: 328,
+        visitor_video_chat_stop: 329,
+        server_video_chat_no_answer: 330,
+        server_video_chat_end: 331,
+        agent_audio_chat_request: 332,
+        agent_audio_chat_cancel_request: 333,
+        agent_audio_chat_accept: 334,
+        agent_audio_chat_refuse: 335,
+        agent_audio_chat_stop: 336,
+        visitor_audio_chat_request: 337,
+        visitor_audio_chat_cancel_request: 338,
+        visitor_audio_chat_accept: 339,
+        visitor_audio_chat_refuse: 340,
+        visitor_audio_chat_stop: 341,
+        server_audio_chat_no_answer: 342,
+        server_audio_chat_end: 343,
+        system_if_supportWebrtc: 344
+    },
+    serverOrigin: '',
+    chatGuid: '',
+    agentName: '',
+    agentAvatarSrc: '',
+    p2pChat: null,
+    ifVideoChat: false,
+    chat_window_handler: {},
+    currentStatus: 'notStart',
+    oldStatus: 'notStart',
+    window: null,
+    localVido: null,
+    remoteVideo: null,
+    textAudioCalling: 'Audio Chat',
+    textVideoCalling: 'Video Chat',
+    actionTimer: 0,
+
+    startTime: 0,
+    timer: 0,
+    startTimer: function (counter) {
+        this.timer = setInterval(function () {
+            var elapsed = parseInt(Math.abs(MediaChat.startTime.getTime() - Date.now())/1000, 10);
+            var days, hours, minutes, seconds, displayText;
+            days = parseInt(elapsed / 86400, 10);
+            hours = parseInt((elapsed % 86400) / 3600, 10);
+            minutes = parseInt(((elapsed % 86400) % 3600) / 60, 10);
+            seconds = parseInt(((elapsed % 86400) % 3600) % 60, 10);
+            displayText = (days > 0 ? days + '.' : '')
+                            + (hours > 10 ? hours + ':' :
+                            (hours < 10 && hours > 0 ? '0' + hours + ':' : (hours === 0 && days > 0 ? '00' : '')))
+                            + (minutes < 10 ? '0' + minutes + ':' : minutes + ':')
+                            + (seconds < 10 ? '0' + seconds : seconds);
+            counter.innerHTML = displayText;
+        }, 1000);
+    },
+
+    stopTimer: function (counter) {
+        clearInterval(this.timer);
+        this.startTime = 0;
+        counter.innerHTML = '00:00';
+    },
+
+    hidePopupMenu: function(){
+        var p = $('#popupMenu');
+        if (p.is(':visible')) {
+            p.hide();
+        }
+    },
+
+    onRequestChatClick: function (e) {
+        if (!MediaChat.chat_window_handler.is_chatting())
+            return;
+        else {
+            this.hidePopupMenu();
+            if (MediaChat.currentStatus === MediaChat.enumStatus.notStart) {
+                MediaChat.ifVideoChat = e.id.indexOf('video') > 0;
+                MediaChat.changeStatus(MediaChat.ifVideoChat ? 
+                    MediaChat.enumStatus.videoRequesting : MediaChat.enumStatus.audioRequesting);
+                MediaChat.prepareP2PChat().then(function(){
+                    if(MediaChat.currentStatus === MediaChat.enumStatus.videoRequesting ||
+                        MediaChat.currentStatus === MediaChat.enumStatus.audioRequesting)
+                        MediaChat.requestChat();
+                });
+            }
+        }
+    },
+
+    prepareP2PChat: function(){
+        if(MediaChat.p2pChat === null) {
+            MediaChat.p2pChat = new P2PChat ({
+                chat: MediaChat.chat_window_handler.get_chatguid(),
+                localVideo: MediaChat.localVideo,
+                remoteVideo: MediaChat.remoteVideo,
+                url: MediaChat.serverOrigin + '/webrtcSignalingService/signaling.ashx',
+            });            
+            MediaChat.p2pChat.onevent(function onVideoChatEvent(type, data) {
+                console.log('type: ', type);
+                if (type === 'error') {
+                    console.error(data);
+                    //NEED TO DO STH
+                } else if (type === 'close') {
+                    //NEED TO DO STH
+                }
+            });
+        }
+        return MediaChat.p2pChat.requirePermission(MediaChat.ifVideoChat);
+    },
+
+    startP2PChat: function (time){
+        var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
+	    seconds -= (new Date).getTimezoneOffset() * 60;
+        this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
+        this.p2pChat.start();
+        this.startTimer($('.chattingDuration')[0]);
+    },
+
+    stopP2PChat: function() {
+        if(this.p2pChat !== null) {
+            this.p2pChat.stop();
+        }
+    },
+    
+    setAgentInfo: function (name, src) {
+        if (typeof src !== 'undefined') {
+            this.agentAvatarSrc = src;
+            var imgs = document.getElementsByClassName('avatarImg');
+            Array.prototype.forEach.call(imgs, function (item) {
+                item.src = MediaChat.agentAvatarSrc;
+            });
+        }
+        if (typeof name !== 'undefined') {
+            this.agentName = name;
+            var nameEles = document.getElementsByClassName('agentName');
+            Array.prototype.forEach.call(nameEles, function (item) {
+                item.innerHTML = MediaChat.agentName;
+            });
+        }
+    },
+
+    requestChat: function () {
+        var actionCode = MediaChat.ifVideoChat ?
+            MediaChat.enumActionCode.visitor_video_chat_request : MediaChat.enumActionCode.visitor_audio_chat_request;
+        MediaChat.chat_window_handler.message_queue_add(actionCode, '');
+    },
+
+    accept: function (){
+        var actionCode = MediaChat.ifVideoChat ? MediaChat.enumActionCode.visitor_video_chat_accept : MediaChat.enumActionCode.visitor_audio_chat_accept;
+        this.prepareP2PChat().then(function(){
+            MediaChat.chat_window_handler.message_queue_add(actionCode, '');
+        });
+    },
+
+    hangup: function () {
+        var actionCode;
+        switch (MediaChat.currentStatus) {
+            case MediaChat.enumStatus.audioIncoming:
+                actionCode = MediaChat.enumActionCode.visitor_audio_chat_refuse;
+                break;
+            case MediaChat.enumStatus.audioChatting:
+                actionCode = MediaChat.enumActionCode.visitor_audio_chat_stop;
+                break;
+            case MediaChat.enumStatus.audioRequesting:
+                actionCode = MediaChat.enumActionCode.visitor_audio_chat_cancel_request;
+                break;
+            case MediaChat.enumStatus.videoIncoming:
+                actionCode = MediaChat.enumActionCode.visitor_video_chat_refuse;
+                break;
+            case MediaChat.enumStatus.videoChatting:
+                actionCode = MediaChat.enumActionCode.visitor_video_chat_stop;
+                break;
+            case MediaChat.enumStatus.videoRequesting:
+                actionCode = MediaChat.enumActionCode.visitor_video_chat_cancel_request;
+                break;
+            default:
+                break;
+        }
+        MediaChat.chat_window_handler.message_queue_add(actionCode, '');
+    },
+
+    hideIconButtons: function(){
+        $('#btn-audio-chat').addClass('hidden');
+        $('#btn-video-chat').addClass('hidden');
+    },
+    showIconButtons: function(){
+        $('#btn-audio-chat').removeClass('hidden');
+        $('#btn-video-chat').removeClass('hidden');
+    },
+
+    changeStatus: function (status, ifVideo) {
+        if(typeof ifVideo !== 'undefined') this.ifVideoChat = ifVideo;
+        this.currentStatus = status;
+    },
+
+    restoreWindow: function() {
+        this.window.removeClass().addClass('media-chat-window hidden overlay');
+    },
+
+    updateUI: function (agentName, agentAvatar) {
+        this.restoreWindow();
+        switch (this.currentStatus) {
+            case this.enumStatus.notStart:
+            default:
+                //this.enableIconButtons();
+                this.stopTimer($('.chattingDuration')[0]);
+                this.chat_window_handler.bottom_tabs.hide();
+                break;
+            case this.enumStatus.audioIncoming:
+            case this.enumStatus.videoIncoming:
+                //this.disableIconButtons();
+                this.hidePopupMenu();
+                this.setAgentInfo(agentName, agentAvatar);
+                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
+                this.stopTimer($('.chattingDuration')[0]);
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioIncoming ? 'icon-audio' : 'icon-video');
+                break;
+            case this.enumStatus.audioRequesting:
+            case this.enumStatus.videoRequesting:
+                //this.disableIconButtons();
+                this.setAgentInfo(agentName, agentAvatar);
+                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioRequesting ? 'icon-audio' : 'icon-video');
+                break;
+            case this.enumStatus.audioChatting:
+            case this.enumStatus.videoChatting:
+                //this.disableIconButtons();
+                this.hidePopupMenu();
+                this.setAgentInfo(agentName, agentAvatar);
+                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioChatting ? 'icon-audio' : 'icon-video');
+                break;
+        }
+        this.oldStatus = this.currentStatus;
+    },
+
+    initialize: function (chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
+        var mediaChat = {};
+        this.chat_window_handler = chatWindowHandler;
+        this.window = $('#media-chat-window');
+        this.serverOrigin = serverorigin;
+        //install events
+        if (ifEnableAudioChat && $('#btn-audio-chat')) {
+            $('#btn-audio-chat').click(function() {
+                MediaChat.onRequestChatClick(this);
+            });
+            //MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-audio');
+        }
+        if (ifEnableVideoChat && $('#btn-video-chat')) {
+            $('#btn-video-chat').click(function() {
+                MediaChat.onRequestChatClick(this);
+            });
+        }
+        
+        MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
+        
+        this.localVideo = $('#localVideo').get(0);
+        this.remoteVideo = $('#remoteVideo').get(0);
+
+        return mediaChat;
+    },
+
+    handleMessages: function (code, sender, time, message, info) {
+        var agentName, agentAvatar, acceptTime;
+        this.chatGuid = this.chat_window_handler.get_chatguid();
+        if (code !== this.enumActionCode.system_if_supportWebrtc) {
+            switch (code) {
+                case this.enumActionCode.agent_video_chat_request:
+                    this.changeStatus(this.enumStatus.videoIncoming, true);
+                    agentName = info[1];
+                    agentAvatar = info[0];
+                    break;
+                case this.enumActionCode.agent_video_chat_cancel_request:
+                case this.enumActionCode.agent_video_chat_refuse:
+                case this.enumActionCode.agent_video_chat_stop:
+                case this.enumActionCode.visitor_video_chat_cancel_request:
+                case this.enumActionCode.visitor_video_chat_refuse:
+                case this.enumActionCode.visitor_video_chat_stop:
+                case this.enumActionCode.server_video_chat_no_answer:
+                case this.enumActionCode.server_video_chat_end:
+                case this.enumActionCode.agent_audio_chat_cancel_request:
+                case this.enumActionCode.agent_audio_chat_refuse:
+                case this.enumActionCode.agent_audio_chat_stop:
+                case this.enumActionCode.visitor_audio_chat_cancel_request:
+                case this.enumActionCode.visitor_audio_chat_refuse:
+                case this.enumActionCode.visitor_audio_chat_stop:
+                case this.enumActionCode.server_audio_chat_no_answer:
+                case this.enumActionCode.server_audio_chat_end:
+                    this.stopP2PChat();
+                    this.changeStatus(this.enumStatus.notStart, false);
+                    break;
+                case this.enumActionCode.agent_video_chat_accept:
+                    agentName = info[1];
+                    agentAvatar = info[0];
+                    this.changeStatus(this.enumStatus.videoChatting, true);
+                    break;
+                case this.enumActionCode.visitor_video_chat_request:
+                    agentName = info[1];
+                    agentAvatar = info[0] === '' ? 'images/avatar.png' : info[0];
+                    this.changeStatus(this.enumStatus.videoRequesting, true);
+                    break;
+                case this.enumActionCode.visitor_video_chat_accept:
+                    this.changeStatus(this.enumStatus.videoChatting, true);
+                    break;
+                case this.enumActionCode.agent_audio_chat_request:
+                    this.changeStatus(this.enumStatus.audioIncoming, false);
+                    agentName = info[1];
+                    agentAvatar = info[0];
+                    break;
+                case this.enumActionCode.agent_audio_chat_accept:
+                    this.changeStatus(this.enumStatus.audioChatting, false);
+                    agentName = info[1];
+                    agentAvatar = info[0];
+                    break;
+                case this.enumActionCode.visitor_audio_chat_request:
+                    this.changeStatus(this.enumStatus.audioRequesting, false);
+                    agentName = info[1];
+                    agentAvatar = info[0] === '' ? 'images/avatar.png' : info[0];
+                    break;
+                case this.enumActionCode.visitor_audio_chat_accept:
+                    this.changeStatus(this.enumStatus.audioChatting, false);
+                    break;
+                default:
+                    break;
+            }
+            clearTimeout(MediaChat.actionTimer);
+            MediaChat.actionTimer = setTimeout(function() {
+                MediaChat.update(time, agentName, agentAvatar);
+            }, 100);
+        }
+        else {
+            if (message === 'True')
+                this.showIconButtons();
+            else
+                this.hideIconButtons();
+        }
+    },
+
+    update: function(actionTime, agentName, agentAvatar) {     
+        if (MediaChat.p2pChat === null) {
+            if (MediaChat.currentStatus === MediaChat.enumStatus.audioChatting ||
+                MediaChat.currentStatus === MediaChat.enumStatus.videoChatting) {
+                    this.prepareP2PChat().then(function(){
+                        MediaChat.startP2PChat(actionTime);
+                    });
+                }
+        }
+        else {
+            if(this.currentStatus === this.enumStatus.audioChatting || this.currentStatus === this.enumStatus.videoChatting)
+                MediaChat.startP2PChat(actionTime);
+            else if(this.currentStatus === this.enumStatus.notStart)
+                MediaChat.stopP2PChat();
+        }
+        if(this.oldStatus !== this.currentStatus) {
+            MediaChat.updateUI(agentName, agentAvatar);
+        }
+    },
+};
+
+var media_chat = MediaChat.initialize(window.chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.server_origin);
+
+window.main();
