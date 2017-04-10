@@ -1445,6 +1445,25 @@ var chat_window = (function () {
                     chat_content.add_system_message(message, true);
                 }
             }
+
+            if (code == message_code.operator_add_text_message
+                    || code == message_code.operator_add_text_message_via_manual_invitation
+                    || code == message_code.operator_join_chat
+                    || code == message_code.operator_send_file
+                    || code == message_code.operator_send_url
+                    || code == message_code.operator_accept_chat
+                    || code == message_code.operator_refuse_chat
+                    || code == message_code.system_visitor_not_respond
+                    || code == message_code.operator_end_chat
+                    || code == message_code.operator_promote_visitor_to_user
+                    || code == message_code.operator_promote_visitor_to_contact
+                    || code == message_code.operator_end_chat
+                    || code == message_code.operator_transfer_chat_to_department
+                    || code == message_code.operator_accept_transfer
+                    || code == message_code.operator_refuse_transfer
+                    || code == message_code.system_visitor_not_respond_and_end_chat) {
+                        bottom_tabs.addPrompt();
+                    }
             switch (code) {
                 case message_code.visitor_request_chat:
                     handle_request_chat(message);
@@ -1544,7 +1563,6 @@ var chat_window = (function () {
                 default:
                     break;
             }
-            bottom_tabs.addPrompt();
             if( ifSupportWebrtc && MediaChat && (code >= message_code.agent_video_chat_request && code <= message_code.system_if_supportWebrtc)) {
                 MediaChat.handleMessages(code, sender, time, message, info);
             }
@@ -2134,7 +2152,15 @@ var chat_window = (function () {
                 $('#text-input').animate({
                     bottom: '34px'
                 }, 100);
-            }
+                var dis = $('#chat-content').css('padding-bottom');
+                var bottom = 0;
+                if(dis.indexOf('px')>0) {
+                    bottom = parseInt(dis.substring(0, dis.indexOf('px')), 10) + 35;
+                } else {
+                    bottom = parseInt(dis, 10) + 35;
+                }
+                $('#chat-content').css('padding-bottom', bottom);
+            }            
             resetPromptNum();
         }
 
@@ -2144,21 +2170,30 @@ var chat_window = (function () {
                 $('#text-input').animate({
                     bottom: '0'
                 }, 100);
+                var dis = $('#chat-content').css('padding-bottom');
+                var bottom = 0;
+                if(dis.indexOf('px')>0) {
+                    bottom = parseInt(dis.substring(0, dis.indexOf('px')), 10) - 35;
+                } else {
+                    bottom = parseInt(dis, 10) - 35;
+                }
+                $('#chat-content').css('padding-bottom', bottom);
             }
         }
 
-        function addTab(contentDivId, iconName) {
-            tabs.push(contentDivId);
+        function addTab(contentId, iconName) {
+            tabs.push(contentId);
             var tab = $("<div></div>");
             tab.addClass('tab');
             var icon = $("<span></span>");
             icon.addClass("ui-icon " + iconName);
             tab.append(icon);
             tab.click(function(){
+                $('#popupMenu').hide();
                 $('.tab').removeClass('selected');
                 $(this).addClass('selected');
                 tabs.forEach(function(id){
-                    if(id === contentDivId){
+                    if(id === contentId){
                         $('#' + id).show();
                     } else {
                         $('#' + id).hide();
@@ -2167,6 +2202,7 @@ var chat_window = (function () {
             });
             tab.insertBefore(".chattingTab");
             $('.chattingTab').click(function(){
+                $('#popupMenu').hide();
                 $('.tab').removeClass('selected');
                 $(this).addClass('selected');
                 tabs.forEach(function(divId){
@@ -2642,10 +2678,11 @@ $('#chat-window').on('pageinit', function () {
         if (p.is(':visible')) {
             p.hide();
         } else {
+            var bottom = $('#bottom-tab').is(':visible') ? '97px' : '62px';
             if (supportFix) {
-                p.css({ position: 'fixed', bottom: '62px', left: '15px', display: 'block' });
+                p.css({ position: 'fixed', bottom: bottom, left: '15px', display: 'block' });
             } else {
-                p.css({ position: 'absolute', bottom: '62px', left: '15px', display: 'block' });
+                p.css({ position: 'absolute', bottom: bottom, left: '15px', display: 'block' });
             }
         }
         return false;

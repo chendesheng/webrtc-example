@@ -3865,6 +3865,7 @@ var MediaChat = {
             case this.enumStatus.audioIncoming:
             case this.enumStatus.videoIncoming:
                 //this.disableIconButtons();
+                this.hidePopupMenu();
                 this.chat_window_handler.bottom_tabs.show();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
@@ -3882,6 +3883,7 @@ var MediaChat = {
             case this.enumStatus.audioChatting:
             case this.enumStatus.videoChatting:
                 //this.disableIconButtons();
+                this.hidePopupMenu();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
                 this.chat_window_handler.bottom_tabs.show();

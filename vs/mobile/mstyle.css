@@ -695,6 +695,7 @@ input {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+	touch-action: none;
 }
 .overlay {
     position: fixed;
@@ -729,11 +730,11 @@ input {
 	position: relative;
     left: 5px;
     color: #fff;
-    width: 16px;
-    height: 16px;
-    border-radius: 16px;
-    background: #ff0000;
-    line-height: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #d34946;
+    line-height: 10px;
     text-align: center;
-    font-size: 12px;
+    font-size: 7px;
 }
