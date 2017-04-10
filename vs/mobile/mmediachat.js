@@ -3866,19 +3866,19 @@ var MediaChat = {
             case this.enumStatus.videoIncoming:
                 //this.disableIconButtons();
                 this.hidePopupMenu();
-                this.chat_window_handler.bottom_tabs.show();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
                 this.stopTimer($('.chattingDuration')[0]);
-                this.chat_window_handler.bottom_tabs.show();
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioIncoming ? 'icon-audio' : 'icon-video');
                 break;
             case this.enumStatus.audioRequesting:
             case this.enumStatus.videoRequesting:
                 //this.disableIconButtons();
-                this.chat_window_handler.bottom_tabs.show();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                this.chat_window_handler.bottom_tabs.show();
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioRequesting ? 'icon-audio' : 'icon-video');
                 break;
             case this.enumStatus.audioChatting:
             case this.enumStatus.videoChatting:
@@ -3886,7 +3886,8 @@ var MediaChat = {
                 this.hidePopupMenu();
                 this.setAgentInfo(agentName, agentAvatar);
                 this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                this.chat_window_handler.bottom_tabs.show();
+                this.chat_window_handler.bottom_tabs.show('media-chat-window',
+                    this.currentStatus === this.enumStatus.audioChatting ? 'icon-audio' : 'icon-video');
                 break;
         }
         this.oldStatus = this.currentStatus;
@@ -3908,8 +3909,10 @@ var MediaChat = {
             $('#btn-video-chat').click(function() {
                 MediaChat.onRequestChatClick(this);
             });
-            MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
         }
+        
+        MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
+        
         this.localVideo = $('#localVideo').get(0);
         this.remoteVideo = $('#remoteVideo').get(0);
 

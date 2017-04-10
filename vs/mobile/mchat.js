@@ -2145,8 +2145,18 @@ var chat_window = (function () {
     var bottom_tabs = (function () {
         var tabs = [];
         var promptNum = 0;
+        
+        $('.chattingTab').click(function(){
+            $('#popupMenu').hide();
+            $('.tab').removeClass('selected');
+            $(this).addClass('selected');
+            tabs.forEach(function(divId){
+                $('#' + divId).hide();
+            });
+            resetPromptNum();
+        });
 
-        function show() {
+        function show(contentId, iconName) {
             if(!$('#bottom-tab').is(':visible')) {
                 $('#bottom-tab').show();
                 $('#text-input').animate({
@@ -2160,6 +2170,8 @@ var chat_window = (function () {
                     bottom = parseInt(dis, 10) + 35;
                 }
                 $('#chat-content').css('padding-bottom', bottom);
+
+                setSelectedTab(contentId, iconName);
             }            
             resetPromptNum();
         }
@@ -2181,9 +2193,20 @@ var chat_window = (function () {
             }
         }
 
+        function setSelectedTab(contentId, iconName) {
+            if(typeof iconName !== 'undefined') {
+                $('.' + contentId + 'Tab .ui-icon').remove();
+                var icon = $("<span></span>");
+                icon.addClass("ui-icon " + iconName);
+                $('.' + contentId + 'Tab').append(icon);
+            }
+            $('.tab').removeClass('selected');
+            $('.' + contentId + 'Tab').addClass('selected');            
+        }
+
         function addTab(contentId, iconName) {
             tabs.push(contentId);
-            var tab = $("<div></div>");
+            var tab = $("<div class='" + contentId + "Tab'></div>");
             tab.addClass('tab');
             var icon = $("<span></span>");
             icon.addClass("ui-icon " + iconName);
@@ -2201,15 +2224,6 @@ var chat_window = (function () {
                 });
             });
             tab.insertBefore(".chattingTab");
-            $('.chattingTab').click(function(){
-                $('#popupMenu').hide();
-                $('.tab').removeClass('selected');
-                $(this).addClass('selected');
-                tabs.forEach(function(divId){
-                    $('#' + divId).hide();
-                });
-                resetPromptNum();
-            });
         }
 
         function resetPromptNum(){
@@ -2231,6 +2245,7 @@ var chat_window = (function () {
             show: show,
             hide: hide,
             addTab: addTab,
+            setSelectedTab: setSelectedTab,
             addPrompt: addPrompt
         };
         //promptNumber
