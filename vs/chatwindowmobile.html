@@ -9,38 +9,37 @@
 	<link rel="stylesheet" href="mobile/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="mobile/jquery-1.11.1.min.js"></script>
 	<link rel="stylesheet" href="mobile/themes/icons.css?v=20170328">
-</head>
-<script type="text/javascript">
-	$(document).bind("mobileinit", function () {
-		$.mobile.hashListeningEnabled = false;
-		$.mobile.pushStateEnabled = false;
-		$.mobile.changePage.defaults.changeHash = false;
-		$.mobile.ajaxEnabled = false;
-		$.mobile.defaultHomeScroll = 0;
-	});
+	<script type="text/javascript">
+		$(document).bind("mobileinit", function () {
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+			$.mobile.changePage.defaults.changeHash = false;
+			$.mobile.ajaxEnabled = false;
+			$.mobile.defaultHomeScroll = 0;
+		});
 
-</script>
-<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
-<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170328">
-<script type="text/javascript">
-	(function () {
-		var siteId = /siteId=([0-9]+)/i.exec(window.location.search)[1];
-		var planId = /planId=([0-9]+)/i.exec(window.location.search)[1];
+	</script>
+	<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="mobile/mstyle.css?v=20170328">
+	<script type="text/javascript">
+		(function () {
+			var siteId = /siteId=([0-9]+)/i.exec(window.location.search)[1];
+			var planId = /planId=([0-9]+)/i.exec(window.location.search)[1];
+			var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
+			chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
+
+			document.write('<link href="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
+		})();
+
+	</script>
+	<script type="text/javascript" src="mobile/mutils.js?v=20170328"></script>
+	<script type="text/javascript" src="mobile/mchat.js?v=20170328"></script>
+	<script type="text/javascript">
 		var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
 		chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
+		document.write('<scr' + 'ipt type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
 
-		document.write('<link href="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=12' + chatGroup + '" rel="stylesheet" type="text/css" />');
-	})();
-
-</script>
-<script type="text/javascript" src="mobile/mutils.js?v=20170328"></script>
-<script type="text/javascript" src="mobile/mchat.js?v=20170328"></script>
-<script type="text/javascript">
-	var chatGroup = /chatGroup=(\d+)/i.test(window.location.search) ? /chatGroup=(\d+)/i.exec(window.location.search)[1] : null;
-	chatGroup = !!chatGroup ? ('&chatGroup=' + chatGroup) : '';
-	document.write('<scr' + 'ipt type="text/javascript" src="https://ent.comm100.com/chatserver/livechatvisitorhandler.ashx?siteId=' + siteId + '&planId=' + planId + '&a=30' + chatGroup + '"></scr' + 'ipt>');
-
-</script>
+	</script>
 </head>
 
 <body class="mobile-window">
