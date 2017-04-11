@@ -291,23 +291,6 @@ function DeviceRequester(requestDevices) {
     monitor.reset();
   }
 
-  function allDevicesReady() {
-    return requestDevices.audio === allowedDevices.audio
-      && requestDevices.video === allowedDevices.video;
-  }
-
-  function noDevicesReady() {
-    return !allowedDevices.audio && !allowedDevices.video;
-  }
-
-  function videoDeviceReady() {
-    return requestDevices.video && allowedDevices.video;
-  }
-
-  this.videoDeviceReady = videoDeviceReady;
-  this.allDevicesReady = allDevicesReady;
-  this.noDevicesReady = noDevicesReady;
-
   this.ifRequestVideoDevice = function () {
     return requestDevices.video;
   };
@@ -390,20 +373,6 @@ function P2PChat(args) {
     if (signal.restart) {
       console.log('receive restart');
       restart(conn, false, false);
-    }
-
-    // 对方发送offer时发现没有device就发送nodevice
-    // 由有device的一方发送offer
-    // 双方都没有device就停住
-    if (signal.nodevice) {
-      console.log('receive nodevice');
-      deviceRequester.getDevices().then(function (devices) {
-        if (deviceRequester.noDevicesReady()) {
-          console.log('both nodevice');
-        } else {
-          sendOffer(conn);
-        }
-      });
     }
   }
 
@@ -582,16 +551,7 @@ function P2PChat(args) {
           return;
         }
 
-        // deviceRequester.getDevices().then(function (devices) {
-        // 没有设备发送nodevice
-        // if (deviceRequester.noDevicesReady() || !deviceRequester.videoDeviceReady()) {
-        //   console.log('send nodevice');
-        //   chan.send({ nodevice: 1 });
-        //   return;
-        // }
-
         sendOffer(conn);
-        //});
       });
     });
     connection = conn;
