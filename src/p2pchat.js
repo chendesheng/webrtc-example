@@ -66,6 +66,10 @@ function SignalingChannel(args) {
     reset();
   };
 
+  ws.onerror = function (err) {
+    console.log(err);
+  };
+
   var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302' };
 
   function ensureGetIceServers() {
