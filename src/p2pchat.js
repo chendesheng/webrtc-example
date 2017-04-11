@@ -296,7 +296,12 @@ function DeviceRequester(requestDevices) {
       && requestDevices.video === allowedDevices.video;
   }
 
+  function noDevicesReady() {
+    return requestDevices.audio && !allowedDevices.audio || requestDevices.video && !allowedDevices.video;
+  }
+
   this.allDevicesReady = allDevicesReady;
+  this.noDevicesReady = noDevicesReady;
 
   this.request = function () {
     return monitor.getDevices().then(dorequest);
@@ -384,10 +389,10 @@ function P2PChat(args) {
     if (signal.nodevice) {
       console.log('receive nodevice');
       deviceRequester.getDevices().then(function (devices) {
-        if (devices.audio || devices.video) {
-          sendOffer(conn);
-        } else {
+        if (deviceRequester.noDevicesReady()) {
           console.log('both nodevice');
+        } else {
+          sendOffer(conn);
         }
       });
     }
@@ -419,29 +424,20 @@ function P2PChat(args) {
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
 
-    deviceRequester.getDevices().then(function (devices) {
-      // 没有设备发送nodevice
-      if (!deviceRequester.allDevicesReady()) {
-        console.log('send nodevice');
-        chan.send({ nodevice: 1 });
-        return;
-      }
-
-      console.log('sendOffer');
-      pc.createOffer()
-        .then(function (offer) {
-          console.log('create offer:', offer);
-          return pc.setLocalDescription(offer);
-        })
-        .then(function () {
-          console.log('send offer:', pc.localDescription);
-          chan.send({ offer: pc.localDescription });
-          return Promise.resolve();
-        }).catch(function (e) {
-          console.error(e);
-          restart(conn, true, true);
-        });
-    });
+    console.log('sendOffer');
+    pc.createOffer()
+      .then(function (offer) {
+        console.log('create offer:', offer);
+        return pc.setLocalDescription(offer);
+      })
+      .then(function () {
+        console.log('send offer:', pc.localDescription);
+        chan.send({ offer: pc.localDescription });
+        return Promise.resolve();
+      }).catch(function (e) {
+        console.error(e);
+        restart(conn, true, true);
+      });
   }
 
   function initLocalVideo(stream) {
@@ -573,7 +569,17 @@ function P2PChat(args) {
           restart(conn, true, false);
           return;
         }
-        sendOffer(conn);
+
+        deviceRequester.getDevices().then(function (devices) {
+          // 没有设备发送nodevice
+          if (!deviceRequester.allDevicesReady()) {
+            console.log('send nodevice');
+            chan.send({ nodevice: 1 });
+            return;
+          }
+
+          sendOffer(conn);
+        });
       });
     });
     connection = conn;
