@@ -398,6 +398,20 @@ function P2PChat(args) {
     }
   }
 
+  function exceptionRetry(fn, cnt) {
+    cnt = cnt || 0;
+    if (cnt > 10) return;
+
+    try {
+      if (fn) fn();
+    } catch (e) {
+      console.log(e);
+      setTimeout(function () {
+        exceptionRetry(fn, cnt + 1);
+      }, 1000);
+    }
+  }
+
   function sendOffer(conn) {
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
@@ -524,7 +538,9 @@ function P2PChat(args) {
         if (pc.iceConnectionState === 'closed') {
           reset(conn);
         } else if (pc.iceConnectionState === 'failed') {
-          restart(conn, true, true);
+          exceptionRetry(function () {
+            restart(conn, true, true);
+          });
         }
       }
 
