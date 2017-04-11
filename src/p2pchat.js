@@ -297,7 +297,7 @@ function DeviceRequester(requestDevices) {
   }
 
   function noDevicesReady() {
-    return requestDevices.audio && !allowedDevices.audio || requestDevices.video && !allowedDevices.video;
+    return !allowedDevices.audio && !allowedDevices.video;
   }
 
   this.allDevicesReady = allDevicesReady;
