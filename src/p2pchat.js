@@ -400,7 +400,7 @@ function P2PChat(args) {
 
   function exceptionRetry(fn, cnt) {
     cnt = cnt || 0;
-    if (cnt > 10) return;
+    if (cnt > 5) return;
 
     try {
       if (fn) fn();
