@@ -8,6 +8,7 @@ function SignalingChannel(args) {
   var peersCount = 0;
   var pingTimer;
   var messageHandler;
+  var errorHandler;
   var remoteStarted = false;
   var remoteStartHandler;
   var getIceServersHandler;
@@ -67,7 +68,8 @@ function SignalingChannel(args) {
   };
 
   ws.onerror = function (err) {
-    console.log(err);
+    reset();
+    if (errorHandler) errorHandler();
   };
 
   var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302' };
@@ -130,6 +132,10 @@ function SignalingChannel(args) {
     if (iceServers) {
       if (fn) fn(iceServers);
     }
+  };
+
+  this.onError = function (fn) {
+    errorHandler = fn;
   };
 }
 
@@ -524,6 +530,15 @@ function P2PChat(args) {
       url: url,
     });
     conn.signalingChannel = chan;
+    chan.onError(function () {
+      if (conn.peerConn == null
+        || conn.peerConn.iceConnectionState === 'closed'
+        || conn.peerConn.iceConnectionState === 'failed') {
+        setTimeout(function () {
+          restart(conn, false, true);
+        }, 2000);
+      }
+    });
     chan.onGetIceServers(function (iceServers) {
       var pc = new RTCPeerConnection({
         iceServers: iceServers,
