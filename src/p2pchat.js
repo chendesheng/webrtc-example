@@ -308,6 +308,7 @@ function DeviceRequester(requestDevices) {
   this.allDevicesReady = allDevicesReady;
   this.noDevicesReady = noDevicesReady;
 
+
   this.request = function () {
     return monitor.getDevices().then(dorequest);
   };
