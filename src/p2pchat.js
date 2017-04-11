@@ -395,7 +395,7 @@ function P2PChat(args) {
     // catch到exception时checkRestartCount为true
     // checkRestartCount为true的时候控制restart次数
     // 避免由于异常导致不停的restart
-    if (!checkRestartCount || restartCount <= 5) {
+    if (!checkRestartCount || restartCount <= 8) {
       if (signalRestart) {
         conn.signalingChannel.send({ restart: 1 });
       }
@@ -405,20 +405,6 @@ function P2PChat(args) {
       resetLocal();
       reset(conn);
       fireEvent('error', 'P2PChat Error: restart more than 5 times');
-    }
-  }
-
-  function exceptionRetry(fn, cnt) {
-    cnt = cnt || 0;
-    if (cnt > 5) return;
-
-    try {
-      if (fn) fn();
-    } catch (e) {
-      console.log(e);
-      setTimeout(function () {
-        exceptionRetry(fn, cnt + 1);
-      }, 1000);
     }
   }
 
@@ -536,7 +522,7 @@ function P2PChat(args) {
         || conn.peerConn.iceConnectionState === 'failed') {
         setTimeout(function () {
           restart(conn, false, true);
-        }, 2000);
+        }, 3000);
       }
     });
     chan.onGetIceServers(function (iceServers) {
@@ -557,9 +543,7 @@ function P2PChat(args) {
         if (pc.iceConnectionState === 'closed') {
           reset(conn);
         } else if (pc.iceConnectionState === 'failed') {
-          exceptionRetry(function () {
-            restart(conn, true, true);
-          });
+          restart(conn, true, true);
         }
       }
 
