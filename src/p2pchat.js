@@ -291,6 +291,13 @@ function DeviceRequester(requestDevices) {
     monitor.reset();
   }
 
+  function allDevicesReady() {
+    return requestDevices.audio === allowedDevices.audio
+      && requestDevices.video === allowedDevices.video;
+  }
+
+  this.allDevicesReady = allDevicesReady;
+
   this.request = function () {
     return monitor.getDevices().then(dorequest);
   };
@@ -414,7 +421,7 @@ function P2PChat(args) {
 
     deviceRequester.getDevices().then(function (devices) {
       // 没有设备发送nodevice
-      if (!devices.audio && !devices.video) {
+      if (!deviceRequester.allDevicesReady()) {
         console.log('send nodevice');
         chan.send({ nodevice: 1 });
         return;
@@ -434,7 +441,7 @@ function P2PChat(args) {
           console.error(e);
           restart(conn, true, true);
         });
-    })
+    });
   }
 
   function initLocalVideo(stream) {
