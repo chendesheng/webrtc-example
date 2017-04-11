@@ -304,6 +304,7 @@ function DeviceRequester(requestDevices) {
     return requestDevices.video && allowedDevices.video;
   }
 
+  this.videoDeviceReady = videoDeviceReady;
   this.allDevicesReady = allDevicesReady;
   this.noDevicesReady = noDevicesReady;
 
