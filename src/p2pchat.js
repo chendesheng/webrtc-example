@@ -308,6 +308,9 @@ function DeviceRequester(requestDevices) {
   this.allDevicesReady = allDevicesReady;
   this.noDevicesReady = noDevicesReady;
 
+  this.ifRequestVideoDevice = function () {
+    return requestDevices.video;
+  };
 
   this.request = function () {
     return monitor.getDevices().then(dorequest);
@@ -431,7 +434,10 @@ function P2PChat(args) {
     var chan = conn.signalingChannel;
 
     console.log('sendOffer');
-    pc.createOffer()
+    pc.createOffer({
+      offerToReceiveAudio: true,
+      offerToReceiveVideo: deviceRequester.ifRequestVideoDevice(),
+    })
       .then(function (offer) {
         console.log('create offer:', offer);
         return pc.setLocalDescription(offer);
@@ -576,16 +582,16 @@ function P2PChat(args) {
           return;
         }
 
-        deviceRequester.getDevices().then(function (devices) {
-          // 没有设备发送nodevice
-          if (deviceRequester.noDevicesReady() || !deviceRequester.videoDeviceReady()) {
-            console.log('send nodevice');
-            chan.send({ nodevice: 1 });
-            return;
-          }
+        // deviceRequester.getDevices().then(function (devices) {
+        // 没有设备发送nodevice
+        // if (deviceRequester.noDevicesReady() || !deviceRequester.videoDeviceReady()) {
+        //   console.log('send nodevice');
+        //   chan.send({ nodevice: 1 });
+        //   return;
+        // }
 
-          sendOffer(conn);
-        });
+        sendOffer(conn);
+        //});
       });
     });
     connection = conn;
