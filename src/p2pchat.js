@@ -300,6 +300,10 @@ function DeviceRequester(requestDevices) {
     return !allowedDevices.audio && !allowedDevices.video;
   }
 
+  function videoDeviceReady() {
+    return requestDevices.video && allowedDevices.video;
+  }
+
   this.allDevicesReady = allDevicesReady;
   this.noDevicesReady = noDevicesReady;
 
@@ -572,7 +576,7 @@ function P2PChat(args) {
 
         deviceRequester.getDevices().then(function (devices) {
           // 没有设备发送nodevice
-          if (!deviceRequester.allDevicesReady()) {
+          if (deviceRequester.noDevicesReady() || !deviceRequester.videoDeviceReady()) {
             console.log('send nodevice');
             chan.send({ nodevice: 1 });
             return;
