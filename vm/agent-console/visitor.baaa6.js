@@ -1,6 +1,6 @@
 /*
  * version: 9.0.0
- * compiled: 2017-04-13 14:01:12.827
+ * compiled: 2017-04-13 14:37:45.968
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -5861,7 +5861,7 @@ module.exports = (__webpack_require__(0))("./node_modules/invariant/browser.js")
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_constants_enums_preference__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_utils_time__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__constants_enums_columnType__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__constants_enums_columnType__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__constants_enums_visitorStatus__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__constants_languages_visitorStatus__ = __webpack_require__(965);
@@ -6433,7 +6433,7 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
@@ -13316,8 +13316,8 @@ var VisitorInfoCell = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__VisitorListContent__ = __webpack_require__(1588);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Header__ = __webpack_require__(1582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__constants_enums_visitorStatus__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__constants_enums_columnType__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_visitorTab__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__constants_enums_columnType__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__constants_enums_visitorTab__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__style_css__ = __webpack_require__(917);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__style_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__utils_helper__ = __webpack_require__(16);
@@ -14313,7 +14313,7 @@ module.exports = arrayMap;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(182),
-    baseIteratee = __webpack_require__(149),
+    baseIteratee = __webpack_require__(150),
     baseMap = __webpack_require__(1684),
     baseSortBy = __webpack_require__(1690),
     baseUnary = __webpack_require__(331),
@@ -17576,4 +17576,4 @@ module.exports = (__webpack_require__(0))("./node_modules/fbjs/lib/shallowEqual.
 
 /***/ })
 ]));
-//# sourceMappingURL=http://localhost:8000/visitor.1fb03.js.map
+//# sourceMappingURL=http://localhost:8000/visitor.baaa6.js.map
