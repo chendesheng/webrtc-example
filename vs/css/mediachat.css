@@ -134,7 +134,7 @@
 .chatting {
     width: 100%;
     height: 100%;
-    margin: 30px 0;
+    margin: 20px 0;
     position: relative;
 }
 .chattingAgent {
@@ -154,12 +154,18 @@
 .videoChatting .chattingAgent {
     position: absolute;
     left: 20px;
-    top: 8%;
+    top: 25px;
 }
 .videoChatting .buttons {
     position: absolute;
-    bottom: 8%;
+    bottom: 25px;
     width: 100%;
+}
+.popup-window .videoChatting .chattingAgent {
+    top: 10px;
+}
+.popup-window .videoChatting .buttons {
+    bottom: 8px;
 }
 .videoChatting .agentImg,
 .videoChatting .chatTypeText,
@@ -210,10 +216,13 @@
 #localVideo {
     position: absolute;
     right: 20px;
-    top: 8%;
+    top: 25px;
     width: 80px;
     /* height: 55px; */
     border: 1px solid #ddd;
+}
+.popup-window #localVideo {
+    top: 10px;
 }
 .loading {
     background: url(../images/loading-large.gif) no-repeat center;

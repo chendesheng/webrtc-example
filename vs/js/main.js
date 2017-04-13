@@ -4811,6 +4811,9 @@ var chat_window = (function () {
 
     function end_chat() {
         dialog.confirm(languages_data.LanguagePromptStopChat, function () {
+            if(typeof MediaChat !== 'undefined') {
+                MediaChat.forceStopP2PChat();
+            }
             message_queue.add(message_code.visitor_end_chat, "");
             // send_action_chat_heartbeat();
             error_timer = setTimeout(function () {

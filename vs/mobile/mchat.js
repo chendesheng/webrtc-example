@@ -2607,6 +2607,7 @@ function initconfigs(configs) {
         window.if_can_audio_chat = init_data.if_can_audio_chat;
         window.if_can_video_chat = init_data.if_can_video_chat;
         window.server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
+        $('#popupMenu').addClass('high');
     }
     else {
         main();
@@ -2776,6 +2777,9 @@ function goto_offline() {
 }
 function goto_ban() {
     changePage('#ban-window');
+    if(typeof MediaChat !== 'undefined') {
+        MediaChat.forceStopP2PChat();
+    }
     current_window = visitor_window.ban;
     stop_heartbeat();
 }

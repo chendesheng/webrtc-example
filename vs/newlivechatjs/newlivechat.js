@@ -259,6 +259,24 @@ var Comm100API = (Comm100API || { loaded: false });
             get_custom_variable_config: 12
         },
         id: 0,
+        ifrLastPosition: null,
+        setifrLastPosition: function(ele){
+            $u.ifrLastPosition = {
+                top: ele.style.top,
+                bottom: ele.style.bottom,
+                left: ele.style.left,
+                right: ele.style.right
+            };            
+        },
+        restoreifrPosition: function(ele){
+            if ($u.ifrLastPosition !== null) {
+                ele.style.top = $u.ifrLastPosition.top;
+                ele.style.bottom = $u.ifrLastPosition.bottom;
+                ele.style.left = $u.ifrLastPosition.left;
+                ele.style.right = $u.ifrLastPosition.right;
+                $u.ifrLastPosition = null;
+            }
+        },
         getId: function () {
             return ++$u.id;
         },
@@ -1198,6 +1216,16 @@ var Comm100API = (Comm100API || { loaded: false });
                         onEmbeddedWindowLoaded = function () { };
                     } else if (d.indexOf('resize_') == 0) {
                         var size = JSON.parse(d.replace('resize_', ''));
+                        var posLeft = ifrbox.style.left.indexOf('px') > 0 ?
+                            parseInt(ifrbox.style.left.substring(0, ifrbox.style.left.indexOf('px')), 10) : 0;
+                        if(size.width > 0 && posLeft + ifrbox.clientWidth + size.width > screen.width) {
+                            $u.setifrLastPosition(ifrbox);
+                            ifrbox.style.right = screen.width - ifrbox.clientWidth - posLeft + 'px';
+                            ifrbox.style.left = 'auto';
+                        }
+                        else if(size.width < 0) {
+                            $u.restoreifrPosition(ifrbox);
+                        }
                         window_size.w += size.width;
                         window_size.h += size.height;
                         $u.set_ele_size(ifrbox, window_size);
@@ -2440,7 +2468,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-04-10T18:17:03.749Z
+ * compiled: 2017-04-13T11:33:33.612Z
  */
  
  

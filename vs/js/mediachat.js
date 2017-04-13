@@ -3037,6 +3037,7 @@ function SignalingChannel(args) {
   var peersCount = 0;
   var pingTimer;
   var messageHandler;
+  var errorHandler;
   var remoteStarted = false;
   var remoteStartHandler;
   var getIceServersHandler;
@@ -3093,6 +3094,11 @@ function SignalingChannel(args) {
 
   ws.onclose = function () {
     reset();
+  };
+
+  ws.onerror = function (err) {
+    reset();
+    if (errorHandler) errorHandler();
   };
 
   var DEFAULT_STUN_SERVER = { urls: 'stun:stun.l.google.com:19302' };
@@ -3155,6 +3161,10 @@ function SignalingChannel(args) {
     if (iceServers) {
       if (fn) fn(iceServers);
     }
+  };
+
+  this.onError = function (fn) {
+    errorHandler = fn;
   };
 }
 
@@ -3320,6 +3330,10 @@ function DeviceRequester(requestDevices) {
     monitor.reset();
   }
 
+  this.ifRequestVideoDevice = function () {
+    return requestDevices.video;
+  };
+
   this.request = function () {
     return monitor.getDevices().then(dorequest);
   };
@@ -3399,20 +3413,6 @@ function P2PChat(args) {
       console.log('receive restart');
       restart(conn, false, false);
     }
-
-    // 对方发送offer时发现没有device就发送nodevice
-    // 由有device的一方发送offer
-    // 双方都没有device就停住
-    if (signal.nodevice) {
-      console.log('receive nodevice');
-      deviceRequester.getDevices().then(function (devices) {
-        if (devices.audio || devices.video) {
-          sendOffer(conn);
-        } else {
-          console.log('both nodevice');
-        }
-      });
-    }
   }
 
   var restartCount = 0;
@@ -3424,7 +3424,7 @@ function P2PChat(args) {
     // catch到exception时checkRestartCount为true
     // checkRestartCount为true的时候控制restart次数
     // 避免由于异常导致不停的restart
-    if (!checkRestartCount || restartCount <= 5) {
+    if (!checkRestartCount || restartCount <= 8) {
       if (signalRestart) {
         conn.signalingChannel.send({ restart: 1 });
       }
@@ -3441,29 +3441,23 @@ function P2PChat(args) {
     var pc = conn.peerConn;
     var chan = conn.signalingChannel;
 
-    deviceRequester.getDevices().then(function (devices) {
-      // 没有设备发送nodevice
-      if (!devices.audio && !devices.video) {
-        console.log('send nodevice');
-        chan.send({ nodevice: 1 });
-        return;
-      }
-
-      console.log('sendOffer');
-      pc.createOffer()
-        .then(function (offer) {
-          console.log('create offer:', offer);
-          return pc.setLocalDescription(offer);
-        })
-        .then(function () {
-          console.log('send offer:', pc.localDescription);
-          chan.send({ offer: pc.localDescription });
-          return Promise.resolve();
-        }).catch(function (e) {
-          console.error(e);
-          restart(conn, true, true);
-        });
+    console.log('sendOffer');
+    pc.createOffer({
+      offerToReceiveAudio: true,
+      offerToReceiveVideo: deviceRequester.ifRequestVideoDevice(),
     })
+      .then(function (offer) {
+        console.log('create offer:', offer);
+        return pc.setLocalDescription(offer);
+      })
+      .then(function () {
+        console.log('send offer:', pc.localDescription);
+        chan.send({ offer: pc.localDescription });
+        return Promise.resolve();
+      }).catch(function (e) {
+        console.error(e);
+        restart(conn, true, true);
+      });
   }
 
   function initLocalVideo(stream) {
@@ -3551,6 +3545,15 @@ function P2PChat(args) {
       url: url,
     });
     conn.signalingChannel = chan;
+    chan.onError(function () {
+      if (conn.peerConn == null
+        || conn.peerConn.iceConnectionState === 'closed'
+        || conn.peerConn.iceConnectionState === 'failed') {
+        setTimeout(function () {
+          restart(conn, false, true);
+        }, 3000);
+      }
+    });
     chan.onGetIceServers(function (iceServers) {
       var pc = new RTCPeerConnection({
         iceServers: iceServers,
@@ -3595,6 +3598,7 @@ function P2PChat(args) {
           restart(conn, true, false);
           return;
         }
+
         sendOffer(conn);
       });
     });
@@ -3709,7 +3713,7 @@ var MediaChat = {
             seconds = parseInt(((elapsed % 86400) % 3600) % 60, 10);
             displayText = (days > 0 ? days + '.' : '')
                             + (hours > 10 ? hours + ':' :
-                            (hours < 10 && hours > 0 ? '0' + hours + ':' : (hours === 0 && days > 0 ? '00' : '')))
+                            (hours < 10 && hours > 0 ? '0' + hours + ':' : (hours === 0 && days > 0 ? '00:' : '')))
                             + (minutes < 10 ? '0' + minutes + ':' : minutes + ':')
                             + (seconds < 10 ? '0' + seconds : seconds);
             counter.innerHTML = displayText;
@@ -3764,8 +3768,7 @@ var MediaChat = {
     startP2PChat: function (time){
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
-        this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
-        console.log('startTime: ', this.startTime); 
+        this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());
         this.p2pChat.start();
         this.startTimer(document.getElementsByClassName('chattingDuration')[0]);
     },
@@ -3779,16 +3782,14 @@ var MediaChat = {
     setChatGuid: function(guid) {
         this.chatGuid = guid;
     },
-    setAgentInfo: function (name, src) {
-        if (typeof src !== 'undefined') {
-            this.agentAvatarSrc = src;
+    setAgentInfo: function () {
+        if (typeof MediaChat.agentAvatarSrc !== 'undefined') {
             var imgs = document.getElementsByClassName('avatarImg');
             Array.prototype.forEach.call(imgs, function (item) {
                 item.src = MediaChat.agentAvatarSrc;
             });
         }
-        if (typeof name !== 'undefined') {
-            this.agentName = name;
+        if (typeof MediaChat.agentName !== 'undefined') {
             var nameEles = document.getElementsByClassName('agentName');
             Array.prototype.forEach.call(nameEles, function (item) {
                 item.innerHTML = MediaChat.agentName;
@@ -3806,10 +3807,10 @@ var MediaChat = {
             return this.ifLargeWindow;
     },
     updateIfLargeWindow: function(ifLarge) {
-        if(this.isPopupWindow) {
+        // if(this.isPopupWindow) {
             localStorage.setItem('Comm100_IfLargeWindow', JSON.stringify(ifLarge));
-        }
-        else
+        // }
+        // else
             this.ifLargeWindow = ifLarge;
     },
 
@@ -3906,7 +3907,7 @@ var MediaChat = {
         document.getElementById('media-chat-window').className = 'media-chat-window hidden';
     },
 
-    updateUI: function (agentName, agentAvatar) {
+    updateUI: function () {
         this.restoreWindow();
         switch (this.currentStatus) {
             case this.enumStatus.notStart:
@@ -3918,7 +3919,7 @@ var MediaChat = {
             case this.enumStatus.audioIncoming:
             case this.enumStatus.videoIncoming:
                 this.disableIconButtons();
-                this.setAgentInfo(agentName, agentAvatar);
+                this.setAgentInfo();
                 this.remove_class(this.window, 'hidden');
                 this.add_class(this.window, this.enumStatus[this.currentStatus]);
                 this.stopTimer(document.getElementsByClassName('chattingDuration')[0]);
@@ -3927,7 +3928,7 @@ var MediaChat = {
             case this.enumStatus.audioRequesting:
             case this.enumStatus.videoRequesting:
                 this.disableIconButtons();
-                this.setAgentInfo(agentName, agentAvatar);
+                this.setAgentInfo();
                 this.remove_class(this.window, 'hidden');
                 this.add_class(this.window, this.enumStatus[this.currentStatus]);
                 this.setWindowSize(true);
@@ -3935,7 +3936,7 @@ var MediaChat = {
             case this.enumStatus.audioChatting:
             case this.enumStatus.videoChatting:
                 this.disableIconButtons();
-                this.setAgentInfo(agentName, agentAvatar);
+                this.setAgentInfo();
                 this.remove_class(this.window, 'hidden');
                 this.add_class(this.window, this.enumStatus[this.currentStatus]);
                 this.setWindowSize(true);
@@ -3969,8 +3970,8 @@ var MediaChat = {
             switch (code) {
                 case this.enumActionCode.agent_video_chat_request:
                     this.changeStatus(this.enumStatus.videoIncoming, true);
-                    agentName = info[1];
-                    agentAvatar = info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0];
                     break;
                 case this.enumActionCode.agent_video_chat_cancel_request:
                 case this.enumActionCode.agent_video_chat_refuse:
@@ -3992,13 +3993,13 @@ var MediaChat = {
                     this.changeStatus(this.enumStatus.notStart, false);
                     break;
                 case this.enumActionCode.agent_video_chat_accept:
-                    agentName = info[1];
-                    agentAvatar = info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0];
                     this.changeStatus(this.enumStatus.videoChatting, true);
                     break;
                 case this.enumActionCode.visitor_video_chat_request:
-                    agentName = info[1];
-                    agentAvatar = info[0] === '' ? 'images/avatar.png' : info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
                     this.changeStatus(this.enumStatus.videoRequesting, true);
                     break;
                 case this.enumActionCode.visitor_video_chat_accept:
@@ -4006,18 +4007,18 @@ var MediaChat = {
                     break;
                 case this.enumActionCode.agent_audio_chat_request:
                     this.changeStatus(this.enumStatus.audioIncoming, false);
-                    agentName = info[1];
-                    agentAvatar = info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0];
                     break;
                 case this.enumActionCode.agent_audio_chat_accept:
                     this.changeStatus(this.enumStatus.audioChatting, false);
-                    agentName = info[1];
-                    agentAvatar = info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0];
                     break;
                 case this.enumActionCode.visitor_audio_chat_request:
                     this.changeStatus(this.enumStatus.audioRequesting, false);
-                    agentName = info[1];
-                    agentAvatar = info[0] === '' ? 'images/avatar.png' : info[0];
+                    this.agentName = info[1];
+                    this.agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
                     break;
                 case this.enumActionCode.visitor_audio_chat_accept:
                     this.changeStatus(this.enumStatus.audioChatting, false);
@@ -4027,7 +4028,7 @@ var MediaChat = {
             }
             clearTimeout(MediaChat.actionTimer);
             MediaChat.actionTimer = setTimeout(function() {
-                MediaChat.update(time, agentName, agentAvatar);
+                MediaChat.update(time);
             }, 100);
         }
         else {
@@ -4038,18 +4039,13 @@ var MediaChat = {
         }
     },
 
-    update: function(actionTime, agentName, agentAvatar) {     
+    update: function(actionTime) {     
         if (MediaChat.p2pChat === null) {
             if (MediaChat.currentStatus === MediaChat.enumStatus.audioChatting ||
                 MediaChat.currentStatus === MediaChat.enumStatus.videoChatting) {
                     this.prepareP2PChat().then(function(){
                         MediaChat.startP2PChat(actionTime);
                     });
-                    // clearTimeout(this.actionTimer);
-                    // console.log('oldStatus: ', this.oldStatus, 'currentStatus: ', this.currentStatus);
-                    // var action = MediaChat.ifVideoChat ? MediaChat.enumActionCode.visitor_video_chat_stop : MediaChat.enumActionCode.visitor_audio_chat_stop;
-                    // MediaChat.chat_window_handler.add_message(action, '');
-                    // this.changeStatus(this.enumStatus.notStart);
                 }
         }
         else {
@@ -4059,7 +4055,7 @@ var MediaChat = {
                 MediaChat.stopP2PChat();
         }
         if(this.oldStatus !== this.currentStatus) {
-            MediaChat.updateUI(agentName, agentAvatar);
+            MediaChat.updateUI();
         }
     },
 

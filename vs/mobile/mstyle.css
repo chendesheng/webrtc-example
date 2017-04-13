@@ -70,7 +70,7 @@
 	border:none;
 	/*background: white;*/
 	/*height:60px;*/
-	padding:5px 10px 15px;
+	padding:5px 10px 5px;
 /*	margin-bottom: 11px;
 	margin-left: -8px;*/
 	-webkit-border-radius: 4px !important;
@@ -114,7 +114,10 @@
   display: block;
   position: absolute;
   content: '';
-  top: 80px;
+  top: 77px;
+}
+#popupMenu.high:before, #popupMenu.high:after{
+	top: 128px;
 }
 #popupMenu:before {
   border-color: rgba(0,0,0,0.7) transparent transparent transparent;
@@ -159,6 +162,9 @@
 	height: 36px;
 	margin-top:4px;
 	visibility: hidden;
+}
+#popupMenu .icon-disable .ui-icon {
+	opacity: .5;
 }
 .ui-btn-active:visited,.ui-btn-active:hover,.ui-btn-active a.ui-link-inherit {
 	color:#fff;
