@@ -1,9 +1,11 @@
 <!DOCTYPE html><html><head><title>Comm100 Live Chat Agent Console</title><meta charset=utf-8><meta name=format-detection content="telephone=no,email=no,address=no"><meta name=description content="Comm100 Agent Console"><style></style></head><body><div id=app></div><script type=text/javascript>const minimumVersion = '9.0.0';
-      const version = require('electron').remote.process.env.version.split('.');
-      if (minimumVersion.split('.').some((ver, i) => +ver > +version[i])) {
-        location.href = './upgrade.html';
-      }</script><script type=text/javascript>window.mainRouteServerUrl = 'https://route.comm100.com/routeserver';
-      window.backupRouteServerUrl = 'https://route1.comm100.com/routeserver';
+      if (typeof require !== 'undefined') {
+        const version = require('electron').remote.process.env.version.split('.');
+        if (minimumVersion.split('.').some((ver, i) => +ver > +version[i])) {
+          location.href = './upgrade.html';
+        }
+      }</script><script type=text/javascript>window.mainRouteServerUrl = 'https://route.comm100.com/routeserver/urlhandler.ashx';
+      window.backupRouteServerUrl = 'https://route1.comm100.com/routeserver/urlhandler.ashx';
       window.portalLivechatUrl = 'https://hosted.comm100.com/livechat';
       window.forgotPassword = 'https://www.comm100.com/secure/ForgotPassword.aspx';
 
@@ -21,7 +23,7 @@
       }
       window.beta = true;
 
-      var cssArray = ["./agent-console/style.b58ae.css"];
+      var cssArray = ["./agent-console/style.51a5f.css"];
       for(var i=0; i< cssArray.length; i++) {
           var css = cssArray[i];
           var link = document.createElement('link');
@@ -29,4 +31,4 @@
           link.href = css;
           link.type = 'text/css';
           document.head.appendChild(link);
-      }</script><script src=agent-console/dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/visitor-popup.9efb9.js type=text/javascript></script><script src=./agent-console/manifest.e21d5.js type=text/javascript></script></body></html>
+      }</script><script src=agent-console/dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/visitor-popup.f4713.js type=text/javascript></script><script src=./agent-console/manifest.bd46a.js type=text/javascript></script></body></html>

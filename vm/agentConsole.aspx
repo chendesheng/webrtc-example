@@ -34,7 +34,7 @@
         }
         window.beta = true;
 
-        var cssArray = ["./agent-console/style.6d4de.css"];
+        var cssArray = ["./agent-console/style.57c9b.css"];
         for(var i=0; i< cssArray.length; i++) {
             var css = cssArray[i];
             var link = document.createElement('link');
@@ -43,4 +43,4 @@
             link.type = 'text/css';
             var element = document.getElementsByTagName('link')[0];
             element.parentNode.insertBefore(link, element);
-        }</script><script src=agent-console/dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/manifest.e21d5.js type=text/javascript></script><script src=./agent-console/bundle.73b55.js type=text/javascript></script></body></html>
+        }</script><script src=agent-console/dll.dev.5011b.js type=text/javascript></script><script src=./agent-console/manifest.bd46a.js type=text/javascript></script><script src=./agent-console/bundle.96746.js type=text/javascript></script></body></html>
