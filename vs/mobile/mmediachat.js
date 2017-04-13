@@ -3730,7 +3730,8 @@ var MediaChat = {
     },
 
     onRequestChatClick: function (e) {
-        if (!MediaChat.chat_window_handler.is_chatting())
+        if (!MediaChat.chat_window_handler.is_chatting() ||
+            $(e).hasClass('icon-disable'))
             return;
         else {
             this.hidePopupMenu();
@@ -3759,6 +3760,8 @@ var MediaChat = {
                 console.log('type: ', type);
                 if (type === 'error') {
                     console.error(data);
+                    this.hangup();                 
+                    this.forceStopP2PChat();
                     //NEED TO DO STH
                 } else if (type === 'close') {
                     //NEED TO DO STH

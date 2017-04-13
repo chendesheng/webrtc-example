@@ -161,11 +161,11 @@
     bottom: 25px;
     width: 100%;
 }
-.popup-window .videoChatting .chattingAgent {
-    top: 10px;
-}
+/*.popup-window .videoChatting .chattingAgent {
+    top: 10%;
+}*/
 .popup-window .videoChatting .buttons {
-    bottom: 8px;
+    bottom: 10px;
 }
 .videoChatting .agentImg,
 .videoChatting .chatTypeText,
@@ -221,9 +221,9 @@
     /* height: 55px; */
     border: 1px solid #ddd;
 }
-.popup-window #localVideo {
-    top: 10px;
-}
+/*.popup-window #localVideo {
+    top: 10%;
+}*/
 .loading {
     background: url(../images/loading-large.gif) no-repeat center;
 }

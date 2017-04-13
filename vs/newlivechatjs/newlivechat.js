@@ -2468,7 +2468,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-04-13T11:33:33.612Z
+ * compiled: 2017-04-13T17:46:35.269Z
  */
  
  
