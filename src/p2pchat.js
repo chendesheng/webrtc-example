@@ -327,7 +327,7 @@ function P2PChat(args) {
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
   var url = args.url;
-  var handlers = [];
+  var eventHandler;
   var connection = null;
   var remoteStream;
   var useRelayOnly = false;
@@ -462,15 +462,23 @@ function P2PChat(args) {
     }
   }
 
+  function resetVideoElement(videoElement) {
+    try {
+      videoElement.srcObject = null;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   function resetLocal() {
     if (deviceRequester) deviceRequester.reset();
-    localVideo.srcObject = null;
+    resetVideoElement(localVideo);
   }
 
   function resetRemote() {
     if (remoteStream) stopStream(remoteStream);
     remoteStream = null;
-    remoteVideo.srcObject = null;
+    resetVideoElement(remoteVideo);
   }
 
   function reset(conn) {
@@ -505,6 +513,8 @@ function P2PChat(args) {
   }
 
   function start(relayOnly) {
+    fireEvent('start');
+
     console.log('start');
     useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
@@ -559,6 +569,8 @@ function P2PChat(args) {
         remoteStream = evt.stream;
         remoteVideo.autoplay = true;
         remoteVideo.srcObject = remoteStream;
+
+        fireEvent('remoteStreamReceived', remoteStream);
       };
 
       chan.onMessage(handleSignal.bind(null, conn));
@@ -577,14 +589,11 @@ function P2PChat(args) {
   }
 
   function onevent(f) {
-    if (handlers.indexOf(f) === -1)
-      handlers.push(f);
+    eventHandler = f;
   }
 
   function fireEvent(message, obj) {
-    handlers.forEach(function (fn) {
-      fn(message, obj)
-    });
+    if (eventHandler) eventHandler(message, obj);
   };
 
   function stopStream(stream) {
