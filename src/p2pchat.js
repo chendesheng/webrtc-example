@@ -352,9 +352,22 @@ function WakeLock() {
       return video;
     }
 
+    function onfocus() {
+      try {
+        console.log('onfocus');
+        lockVideo.play();
+        if (localVideo) localVideo.play();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
     this.enable = function () {
       try {
         lockVideo.play();
+
+        window.removeEventListener('focus', onfocus);
+        window.addEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
@@ -363,6 +376,7 @@ function WakeLock() {
     this.disable = function () {
       try {
         lockVideo.pause();
+        window.removeEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
