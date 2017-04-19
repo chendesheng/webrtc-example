@@ -64,6 +64,7 @@ function SignalingChannel(args) {
   };
 
   ws.onclose = function () {
+    console.log('signaling connection close');
     reset();
   };
 
@@ -322,6 +323,56 @@ function DeviceRequester(requestDevices) {
   this.reset = reset;
 }
 
+function WakeLock() {
+  /**
+   * code came from NoSleep.js  v0.5.0 - git.io/vfn01
+   * Rich Tibbett
+   * MIT license
+   **/
+  const android = /Android/ig.test(navigator.userAgent),
+  if (android) {
+    var media = {
+      WebM: "data:video/webm;base64,GkXfo0AgQoaBAUL3gQFC8oEEQvOBCEKCQAR3ZWJtQoeBAkKFgQIYU4BnQI0VSalmQCgq17FAAw9CQE2AQAZ3aGFtbXlXQUAGd2hhbW15RIlACECPQAAAAAAAFlSua0AxrkAu14EBY8WBAZyBACK1nEADdW5khkAFVl9WUDglhohAA1ZQOIOBAeBABrCBCLqBCB9DtnVAIueBAKNAHIEAAIAwAQCdASoIAAgAAUAmJaQAA3AA/vz0AAA=",
+      MP4: "data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw=="
+    };
+    const lockVideo = initLockVideo();
+
+    function addSourceToVideo(video, type, dataURI) {
+      var source = document.createElement('source');
+      source.src = dataURI;
+      source.type = "video/" + type;
+      video.appendChild(source);
+    }
+
+    function initLockVideo() {
+      const video = document.createElement('Video');
+      video.setAttribute('loop', '');
+      addSourceToVideo(video, 'webm', media.WebM);
+      addSourceToVideo(video, 'mp4', media.MP4);
+      return video;
+    }
+
+    this.enable = function () {
+      try {
+        lockVideo.play();
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    this.disable = function () {
+      try {
+        lockVideo.pause();
+      } catch (err) {
+        console.error(err);
+      }
+    };
+  } else {
+    this.enable = function () { };
+    this.disable = function () { };
+  }
+}
+
 function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
@@ -331,6 +382,7 @@ function P2PChat(args) {
   var connection = null;
   var remoteStream;
   var useRelayOnly = false;
+  var wakeLock = new WakeLock();
 
   function handleSignal(conn, signal) {
     // console.log(signal);
@@ -441,6 +493,10 @@ function P2PChat(args) {
   var deviceRequester;
   function requirePermission(isVideo) {
     resetLocal();
+    if (!isVideo) {
+      wakeLock = new WakeLock();
+      wakeLock.enable();
+    }
 
     deviceRequester = new DeviceRequester({
       audio: true,
@@ -514,7 +570,6 @@ function P2PChat(args) {
 
   function start(relayOnly) {
     fireEvent('start');
-
     console.log('start');
     useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
@@ -540,6 +595,7 @@ function P2PChat(args) {
         iceServers: iceServers,
         iceTransportPolicy: useRelayOnly ? 'relay' : 'all',
       });
+
       conn.peerConn = pc;
 
       // send any ice candidates to the other peer
@@ -603,6 +659,8 @@ function P2PChat(args) {
   }
 
   function stop() {
+    if (wakeLock) wakeLock.disable();
+
     restartCount = 0;
     resetLocal();
     reset(connection);
