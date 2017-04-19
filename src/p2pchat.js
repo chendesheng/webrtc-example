@@ -353,16 +353,6 @@ function WakeLock() {
       return video;
     }
 
-    function onfocus() {
-      try {
-        alert('onfocus');
-        lockVideo.play();
-        if (localVideo) localVideo.play();
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
     this.enable = function () {
       try {
         lockVideo.play();
@@ -370,9 +360,6 @@ function WakeLock() {
         lockVideoPlayTimer = setInterval(function () {
           lockVideo.play();
         }, 3000);
-
-        // window.removeEventListener('focus', onfocus);
-        // window.addEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
@@ -382,7 +369,6 @@ function WakeLock() {
       try {
         lockVideo.pause();
         if (lockVideoPlayTimer) clearInterval(lockVideoPlayTimer);
-        // window.removeEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
