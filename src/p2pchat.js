@@ -354,7 +354,7 @@ function WakeLock() {
 
     function onfocus() {
       try {
-        console.log('onfocus');
+        alert('onfocus');
         lockVideo.play();
         if (localVideo) localVideo.play();
       } catch (err) {
