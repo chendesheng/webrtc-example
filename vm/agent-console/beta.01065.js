@@ -1,6 +1,6 @@
 /*
- * version: 9.0.0
- * compiled: 2017-04-13 14:37:45.968
+ * version: 8.5.0
+ * compiled: 2017-04-17 10:19:49.338
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -38,7 +38,7 @@ webpackJsonp([4],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__RadioButton_RadioButton__ = __webpack_require__(686);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Button_Button__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__constants_login__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__constants_login__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_browser__ = __webpack_require__(698);
 
 
@@ -401,7 +401,7 @@ var FeedBack = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__versionPromptBox_css__ = __webpack_require__(1656);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__versionPromptBox_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__versionPromptBox_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Link_Link__ = __webpack_require__(177);
@@ -590,4 +590,4 @@ var SplitterBetaFeature = function SplitterBetaFeature(props) {
 /***/ })
 
 });
-//# sourceMappingURL=http://localhost:8000/beta.e6ff7.js.map
+//# sourceMappingURL=http://localhost:8000/beta.01065.js.map

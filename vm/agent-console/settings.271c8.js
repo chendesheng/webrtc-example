@@ -1,6 +1,6 @@
 /*
- * version: 9.0.0
- * compiled: 2017-04-13 14:37:45.968
+ * version: 8.5.0
+ * compiled: 2017-04-17 10:19:49.338
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -47,7 +47,7 @@ module.exports = {"tab":"style__tab--1Xwp7","selected":"style__selected--2SB81"}
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Shortcut__ = __webpack_require__(1531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums_preference__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__utils_schema__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__Modal_css__);
 
 
@@ -405,7 +405,7 @@ var ColumnsTab = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__style_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Checkbox_Checkbox__ = __webpack_require__(315);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums_preference__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__Modal_css__);
 
 
@@ -583,7 +583,7 @@ var LanguageTab = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_joinme__ = __webpack_require__(1616);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Select_Select__ = __webpack_require__(684);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19__Modal_css__);
 
 
@@ -956,7 +956,7 @@ var OthersTab = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_isEqual___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_lodash_isEqual__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Modal__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Modal__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__MenuTab_Tab__ = __webpack_require__(994);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatTab__ = __webpack_require__(1526);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__LanguageTab__ = __webpack_require__(1528);
@@ -2116,7 +2116,7 @@ var Sound = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums_preference__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Select_Select__ = __webpack_require__(684);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_schema__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__Modal_css__);
 
 
@@ -2863,7 +2863,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_agent__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Business_common__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_localStorage__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_localStorage__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_localStorage__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_electronAPI__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_enums_channels__ = __webpack_require__(59);
 
@@ -3174,8 +3174,8 @@ module.exports = {"multipleText":"TextArea__multipleText--1J3OF","error":"TextAr
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Modal__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Modal_css__);
 
 
@@ -3255,4 +3255,4 @@ var MenuTab = function MenuTab(_ref) {
 /***/ })
 
 });
-//# sourceMappingURL=http://localhost:8000/settings.32dbb.js.map
+//# sourceMappingURL=http://localhost:8000/settings.271c8.js.map

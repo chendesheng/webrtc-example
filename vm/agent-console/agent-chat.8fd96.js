@@ -1,6 +1,6 @@
 /*
- * version: 9.0.0
- * compiled: 2017-04-13 14:37:45.968
+ * version: 8.5.0
+ * compiled: 2017-04-17 10:19:49.338
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -310,7 +310,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1425,8 +1425,8 @@ var NoAgents = function NoAgents(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Modal__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__Modal_css__);
 
 
@@ -1611,7 +1611,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_isNull___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_isNull__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_immutable__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_immutable__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_immutable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_immutable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ChatSection_ChatContent_ChatContent__ = __webpack_require__(987);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_agentChat__ = __webpack_require__(960);
@@ -2058,7 +2058,7 @@ Avatar.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash_isPlainObject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash_isPlainObject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_lodash_isUndefined__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_immutable__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_immutable__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_immutable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_immutable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__constants_enums_fontSize__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__reducers_selectors__ = __webpack_require__(5);
@@ -2377,28 +2377,34 @@ var cancelUpload = function cancelUpload(chatId, filename, guid) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Icon_Icon__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatContent_css__ = __webpack_require__(903);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Avatar__ = __webpack_require__(923);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_assign__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_assign__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_moment__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_Button_Button__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_classnames__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Icon_Icon__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatContent_css__ = __webpack_require__(903);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__ChatContent_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__constants_enums__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Icon_css__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Icons_Icon_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__Icons_Icon_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Icons_Avatar__ = __webpack_require__(923);
+
+
 
 
 
@@ -2417,15 +2423,15 @@ var cancelUpload = function cancelUpload(chatId, filename, guid) {
 
 var statusText = function statusText(status) {
   switch (status) {
-    case __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */]:
+    case __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */]:
       return 'Audio Chat';
-    case __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */]:
+    case __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */]:
       return 'Audio Chat...';
-    case __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */]:
+    case __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */]:
       return 'Video Chat';
-    case __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */]:
+    case __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */]:
       return 'Video Chat...';
-    case __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */]:
+    case __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */]:
       return 'Audio Chat';
     default:
       return '';
@@ -2433,27 +2439,27 @@ var statusText = function statusText(status) {
 };
 
 var showAcceptButton = function showAcceptButton(status) {
-  return status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */];
+  return status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */];
 };
 
 var showRefuseButton = function showRefuseButton(status) {
-  return status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
+  return status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["c" /* visitorRequestVideoChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["f" /* agentRequestVideoChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
 };
 
 var isVideoChatting = function isVideoChatting(status) {
-  return status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
+  return status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
 };
 var isAudioChatting = function isAudioChatting(status) {
-  return status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */];
+  return status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */];
 };
 var isChatting = function isChatting(status) {
-  return status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
+  return status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["d" /* videoChatting */];
 };
 var audioVideoIcon = function audioVideoIcon(status) {
-  if (status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_13__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */]) {
-    return __WEBPACK_IMPORTED_MODULE_12__constants_enums__["b" /* icons */].requestAudioChat;
+  if (status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["b" /* audioChatting */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["e" /* agentRequestAudioChat */] || status === __WEBPACK_IMPORTED_MODULE_15__constants_enums_visitorAudioVideoChatStatus__["a" /* visitorRequestAudioChat */]) {
+    return __WEBPACK_IMPORTED_MODULE_13__constants_enums__["b" /* icons */].requestAudioChat;
   }
-  return __WEBPACK_IMPORTED_MODULE_12__constants_enums__["b" /* icons */].requestVideoChat;
+  return __WEBPACK_IMPORTED_MODULE_13__constants_enums__["b" /* icons */].requestVideoChat;
 };
 
 var diffTime = function diffTime(a, b) {
@@ -2467,26 +2473,33 @@ var diffTime = function diffTime(a, b) {
   var dd = Math.floor(d / (24 * 3600 * 1000));
   var hms = d - dd * 24 * 3600 * 1000;
 
-  return '' + (dd > 0 ? dd + '.' : '') + __WEBPACK_IMPORTED_MODULE_7_moment__["default"].utc(hms).format(hms < 3600 * 1000 && dd <= 0 ? 'mm:ss' : 'HH:mm:ss');
+  return '' + (dd > 0 ? dd + '.' : '') + __WEBPACK_IMPORTED_MODULE_8_moment__["default"].utc(hms).format(hms < 3600 * 1000 && dd <= 0 ? 'mm:ss' : 'HH:mm:ss');
 };
 
+var _ref = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('span', {
+  className: __WEBPACK_IMPORTED_MODULE_14__Icons_Icon_css__["loadingLarge"]
+});
+
 var AudioVideoChatContent = function (_React$Component) {
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(AudioVideoChatContent, _React$Component);
+  __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(AudioVideoChatContent, _React$Component);
 
   function AudioVideoChatContent(props) {
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, AudioVideoChatContent);
+    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, AudioVideoChatContent);
 
-    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AudioVideoChatContent.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(AudioVideoChatContent)).call(this, props));
+    var _this = __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AudioVideoChatContent.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(AudioVideoChatContent)).call(this, props));
 
     if (isChatting(props.audioVideoChatStatus)) {
-      _this.state = { timespan: diffTime(new Date(), props.audioVideoChatStartTime) };
+      _this.state = {
+        timespan: diffTime(new Date(), props.audioVideoChatStartTime),
+        showLoading: false
+      };
     } else {
-      _this.state = { timespan: '' };
+      _this.state = { timespan: '', showLoading: false };
     }
     return _this;
   }
 
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(AudioVideoChatContent, [{
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(AudioVideoChatContent, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.startClock();
@@ -2499,9 +2512,27 @@ var AudioVideoChatContent = function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
+      var _this2 = this;
+
       this.setState({
         timespan: diffTime(new Date(), nextProps.audioVideoChatStartTime)
       });
+
+      if (nextProps.p2pChat) {
+        nextProps.p2pChat.onevent(function (type) {
+          if (type === 'error') {
+            _this2.props.onRefuseClick();
+          } else if (type === 'start') {
+            _this2.setState(function (prevState) {
+              return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_assign___default()(prevState, { showLoading: true });
+            });
+          } else if (type === 'remoteStreamReceived') {
+            _this2.setState(function (prevState) {
+              return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_assign___default()(prevState, { showLoading: false });
+            });
+          }
+        });
+      }
     }
   }, {
     key: 'componentDidUpdate',
@@ -2520,7 +2551,7 @@ var AudioVideoChatContent = function (_React$Component) {
       if (p2pChat != null && isVideoChatting(props.audioVideoChatStatus) && this.videoContainer) {
         var localVideo = p2pChat.getLocalVideo();
         if (localVideo) {
-          localVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.localVideo;
+          localVideo.className = __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.localVideo;
           if (document.getElementById('localVideo') == null) {
             localVideo.id = 'localVideo';
             this.videoContainer.appendChild(localVideo);
@@ -2530,7 +2561,7 @@ var AudioVideoChatContent = function (_React$Component) {
 
         var remoteVideo = p2pChat.getRemoteVideo();
         if (remoteVideo) {
-          remoteVideo.className = __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.remoteVideo;
+          remoteVideo.className = __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.remoteVideo;
           if (document.getElementById('remoteVideo') == null) {
             remoteVideo.id = 'remoteVideo';
             this.videoContainer.appendChild(remoteVideo);
@@ -2542,18 +2573,18 @@ var AudioVideoChatContent = function (_React$Component) {
   }, {
     key: 'startClock',
     value: function startClock() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.clock = setInterval(function () {
-        return _this2.setState({
-          timespan: diffTime(new Date(), _this2.props.audioVideoChatStartTime)
+        return _this3.setState({
+          timespan: diffTime(new Date(), _this3.props.audioVideoChatStartTime)
         });
       }, 1000);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var props = this.props;
       var videoChatting = isVideoChatting(props.audioVideoChatStatus);
@@ -2565,54 +2596,58 @@ var AudioVideoChatContent = function (_React$Component) {
       // console.log('showAcceptButton:', showAcceptButton(props.audioVideoChatStatus));
       // console.log('showRefuseButton:', showRefuseButton(props.audioVideoChatStatus));
       var timespan = this.state.timespan;
+      var showLoading = this.state.showLoading;
       var incoming = showAcceptButton(props.audioVideoChatStatus);
-      // console.log('p2pChat:', p2pChat);
       return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_9_classnames___default()(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chatVideoContainer, videoChatting && __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.videoChatting)
-      }, void 0, videoChatting && __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.videoContainer,
-        ref: function ref(element) {
-          _this3.videoContainer = element;
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chatVideoItem
+        className: __WEBPACK_IMPORTED_MODULE_10_classnames___default()(__WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.chatVideoContainer, videoChatting && __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.videoChatting)
+      }, void 0, videoChatting && __WEBPACK_IMPORTED_MODULE_7_react___default.a.createElement(
+        'div',
+        {
+          className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.videoContainer,
+          ref: function ref(element) {
+            _this4.videoContainer = element;
+          }
+        },
+        showLoading && _ref
+      ), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.chatVideoItem
       }, void 0, videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.chattingInfo
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.chattingInfo
       }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.time
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.time
       }, void 0, timespan.toString())), !videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.avatarContainer
-      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_14__Icons_Avatar__["a" /* default */], {
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.avatarContainer
+      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_16__Icons_Avatar__["a" /* default */], {
         isContactOrUserOpen: props.isContactOrUserOpen,
         avatarLink: props.avatarLink,
         identityType: props.identityType,
         ifShowTooltip: false
       })), !videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.visitorName
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.visitorName
       }, void 0, props.chatTo), !videoChatting && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.notice
-      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_10__Icon_Icon__["a" /* default */], {
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.notice
+      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_11__Icon_Icon__["a" /* default */], {
         type: audioVideoIcon(props.audioVideoChatStatus)
       }), '' + statusText(props.audioVideoChatStatus), audioChatting ? ' ' + timespan : ''), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()('div', {
-        className: __WEBPACK_IMPORTED_MODULE_9_classnames___default()(__WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.action, incoming ? __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.incoming : null)
-      }, void 0, incoming && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__["a" /* default */], {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.accept,
+        className: __WEBPACK_IMPORTED_MODULE_10_classnames___default()(__WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.action, incoming ? __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.incoming : null)
+      }, void 0, incoming && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_9_src_components_Button_Button__["a" /* default */], {
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.accept,
         onClick: props.onAcceptClick,
         type: 'noborder'
-      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_10__Icon_Icon__["a" /* default */], {
-        type: __WEBPACK_IMPORTED_MODULE_12__constants_enums__["b" /* icons */].acceptChat
-      })), showRefuseButton(props.audioVideoChatStatus) && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_8_src_components_Button_Button__["a" /* default */], {
-        className: __WEBPACK_IMPORTED_MODULE_11__ChatContent_css___default.a.refuse,
+      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_11__Icon_Icon__["a" /* default */], {
+        type: __WEBPACK_IMPORTED_MODULE_13__constants_enums__["b" /* icons */].acceptChat
+      })), showRefuseButton(props.audioVideoChatStatus) && __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_9_src_components_Button_Button__["a" /* default */], {
+        className: __WEBPACK_IMPORTED_MODULE_12__ChatContent_css___default.a.refuse,
         type: 'noborder',
         onClick: props.onRefuseClick
-      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_10__Icon_Icon__["a" /* default */], {
-        type: __WEBPACK_IMPORTED_MODULE_12__constants_enums__["b" /* icons */].refuseChat
+      }, void 0, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_11__Icon_Icon__["a" /* default */], {
+        type: __WEBPACK_IMPORTED_MODULE_13__constants_enums__["b" /* icons */].refuseChat
       })))));
     }
   }]);
 
   return AudioVideoChatContent;
-}(__WEBPACK_IMPORTED_MODULE_6_react___default.a.Component);
+}(__WEBPACK_IMPORTED_MODULE_7_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (AudioVideoChatContent);
 
@@ -2646,7 +2681,7 @@ var AudioVideoChatContent = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_classnames__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_immutable__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_immutable__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_immutable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_immutable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_constants_enums_fontSize__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_src_components_Button_Button__ = __webpack_require__(86);
@@ -2961,7 +2996,7 @@ var ChatContent = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_utils_time__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_Link_Link__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_messageType__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_str__ = __webpack_require__(133);
@@ -3390,4 +3425,4 @@ var visitorIdentityTypeVisitor = 6;
 /***/ })
 
 });
-//# sourceMappingURL=http://localhost:8000/agent-chat.2b93b.js.map
+//# sourceMappingURL=http://localhost:8000/agent-chat.8fd96.js.map

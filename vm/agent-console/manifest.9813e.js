@@ -1,6 +1,6 @@
 /*
- * version: 9.0.0
- * compiled: 2017-04-13 14:37:45.968
+ * version: 8.5.0
+ * compiled: 2017-04-17 10:19:49.338
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -96,7 +96,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","1":"chat","2":"agent-chat","3":"settings","4":"beta","5":"bundle","6":"editor","7":"details-tab","8":"secure-form","9":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"baaa6","1":"72fe1","2":"2b93b","3":"32dbb","4":"e6ff7","5":"297ce","6":"95981","7":"5dfbe","8":"8d7cb","9":"74935"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"visitor","1":"chat","2":"agent-chat","3":"settings","4":"beta","5":"bundle","6":"editor","7":"details-tab","8":"secure-form","9":"custom-filter"}[chunkId]||chunkId) + "." + {"0":"6a80a","1":"e2ebf","2":"8fd96","3":"271c8","4":"01065","5":"fc7a4","6":"f5651","7":"9248a","8":"8d7cb","9":"0545b"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -154,4 +154,4 @@
 /******/ })
 /************************************************************************/
 /******/ ([]);
-//# sourceMappingURL=http://localhost:8000/manifest.0cded.js.map
+//# sourceMappingURL=http://localhost:8000/manifest.9813e.js.map

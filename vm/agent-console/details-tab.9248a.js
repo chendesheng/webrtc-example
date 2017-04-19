@@ -1,6 +1,6 @@
 /*
- * version: 9.0.0
- * compiled: 2017-04-13 14:37:45.968
+ * version: 8.5.0
+ * compiled: 2017-04-17 10:19:49.338
  *
  * Notice:
  * This file contains works from many authors under various (but compatible)
@@ -2825,7 +2825,7 @@ var WrapupForm = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__salesforceLookup_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__salesforceLookup_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Button_Button__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_str__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Modal_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__Modal_css__);
 
 
@@ -3017,7 +3017,7 @@ var SalesforceLookup = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__SalesforceLookup__ = __webpack_require__(1523);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Modal__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Modal__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__salesforceLookup_css__ = __webpack_require__(1418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__salesforceLookup_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__salesforceLookup_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__constants_enums__ = __webpack_require__(3);
@@ -5694,7 +5694,7 @@ var WhereFrom = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_tooltip__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_tooltip__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_str__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_time__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Link_Link__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__navigation_css__ = __webpack_require__(1082);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__navigation_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__navigation_css__);
@@ -5820,7 +5820,7 @@ var Navigation = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Link_Link__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_css__ = __webpack_require__(1082);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__navigation_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_time__ = __webpack_require__(75);
 
 
 
@@ -7921,7 +7921,7 @@ var WrapupFormWrapper = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Wrapup_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__Wrapup_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Link_Link__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__WrapupDetail__ = __webpack_require__(1571);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_time__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Icon_Icon__ = __webpack_require__(55);
 
@@ -9294,7 +9294,7 @@ var mergeProps = function mergeProps(stateProps, dispatchProps, ownProps) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reducers_selectors__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_navigation__ = __webpack_require__(1473);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants_enums_page__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_time__ = __webpack_require__(75);
 
 
 
@@ -9368,7 +9368,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants_enums_SFPurposeInManualMode__ = __webpack_require__(1589);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__actions_salesforce__ = __webpack_require__(557);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_enums_salesforceInfoType__ = __webpack_require__(964);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_time__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_str__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Tabs_Salesforce_util__ = __webpack_require__(924);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__constants_salesforce__ = __webpack_require__(321);
@@ -9725,8 +9725,8 @@ var mergeProps = function mergeProps(stateProps, dispatchProps) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reducers_selectors_urlsManager__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__constants_enums__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_helper__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_time__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_config__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_time__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__constants_config__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants_enums_page__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_str__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__containers_Business_common__ = __webpack_require__(319);
@@ -10606,7 +10606,7 @@ module.exports = pullAll;
 /***/ 1704:
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(78),
+var copyObject = __webpack_require__(77),
     keysIn = __webpack_require__(328);
 
 /**
@@ -10710,7 +10710,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -11052,7 +11052,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -11298,7 +11298,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -11759,7 +11759,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -13840,7 +13840,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -15509,7 +15509,7 @@ var arrayMap = __webpack_require__(182),
     baseClone = __webpack_require__(137),
     baseUnset = __webpack_require__(750),
     castPath = __webpack_require__(114),
-    copyObject = __webpack_require__(78),
+    copyObject = __webpack_require__(77),
     customOmitClone = __webpack_require__(751),
     flatRest = __webpack_require__(138),
     getAllKeysIn = __webpack_require__(296);
@@ -15602,7 +15602,7 @@ module.exports = (__webpack_require__(0))("./node_modules/object-assign/index.js
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rc_trigger_assets_index_css__ = __webpack_require__(710);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rc_trigger_assets_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rc_trigger_assets_index_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_src_components_Icon_Icon__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_react_dom__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_react_dom__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__DropdownMenu__ = __webpack_require__(694);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Select_css__ = __webpack_require__(287);
@@ -16426,15 +16426,12 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash_forEach___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_lodash_forEach__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_dom__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__scrollIntoView__ = __webpack_require__(696);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Option__ = __webpack_require__(547);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__OptGroup__ = __webpack_require__(695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Select_css__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Select_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__Select_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__utils_guid__ = __webpack_require__(544);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__scrollIntoView__ = __webpack_require__(696);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Option__ = __webpack_require__(547);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__OptGroup__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Select_css__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Select_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__Select_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utils_guid__ = __webpack_require__(544);
 
 
 
@@ -16461,7 +16458,7 @@ function staticSelectGenerator(_ref, gid) {
     var obj = _obj;
     var group = option.group || '';
     var text = option.text || option.value;
-    var component = __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_12__Option__["a" /* default */], {
+    var component = __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_11__Option__["a" /* default */], {
       value: option.value,
       id: gid,
       selectedValue: selectedValue,
@@ -16476,7 +16473,7 @@ function staticSelectGenerator(_ref, gid) {
     if (key === '') {
       optionComponents = optionComponents.concat(optionGroups[key]);
     } else {
-      optionComponents.push(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_13__OptGroup__["a" /* default */], {
+      optionComponents.push(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()(__WEBPACK_IMPORTED_MODULE_12__OptGroup__["a" /* default */], {
         label: key
       }, void 0, optionGroups[key]));
     }
@@ -16492,7 +16489,7 @@ var DropdownMenu = function (_React$Component) {
 
     var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (DropdownMenu.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(DropdownMenu)).call(this, props));
 
-    _this.gid = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_15__utils_guid__["a" /* createGUID */])();
+    _this.gid = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__utils_guid__["a" /* createGUID */])();
     _this.menuWrapper = null;
     return _this;
   }
@@ -16527,7 +16524,7 @@ var DropdownMenu = function (_React$Component) {
       // scroll into view
       var activeItem = document.getElementById(this.gid);
       if (activeItem) {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__scrollIntoView__["a" /* default */])(activeItem, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_react_dom__["findDOMNode"])(this.menuWrapper), {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__scrollIntoView__["a" /* default */])(activeItem, this.menuWrapper, {
           onlyScrollIfNeeded: true,
           alignWithTop: true
         });
@@ -16539,19 +16536,23 @@ var DropdownMenu = function (_React$Component) {
       var _this2 = this;
 
       if (this.props.options && this.props.options.length) {
-        return __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()('div', {
-          refs: function refs(element) {
-            _this2.menuWrapper = element;
+        return __WEBPACK_IMPORTED_MODULE_9_react___default.a.createElement(
+          'div',
+          {
+            ref: function ref(element) {
+              _this2.menuWrapper = element;
+            },
+            className: this.props.className,
+            style: { overflow: 'auto' },
+            onFocus: this.props.onPopupFocus,
+            onMouseDown: function onMouseDown(event) {
+              event.preventDefault();
+            }
           },
-          className: this.props.className,
-          style: { overflow: 'auto' },
-          onFocus: this.props.onPopupFocus,
-          onMouseDown: function onMouseDown(event) {
-            event.preventDefault();
-          }
-        }, void 0, __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()('ul', {
-          className: __WEBPACK_IMPORTED_MODULE_14__Select_css___default.a['dropdown-menu']
-        }, this.gid, staticSelectGenerator(this.props, this.gid)));
+          __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_jsx___default()('ul', {
+            className: __WEBPACK_IMPORTED_MODULE_13__Select_css___default.a['dropdown-menu']
+          }, this.gid, staticSelectGenerator(this.props, this.gid))
+        );
       }
       return null;
     }
@@ -18303,7 +18304,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -18506,7 +18507,7 @@ var _addDomEventListener = __webpack_require__(546);
 
 var _addDomEventListener2 = _interopRequireDefault(_addDomEventListener);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -18877,7 +18878,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -19116,7 +19117,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -19408,7 +19409,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -19948,7 +19949,7 @@ var _addDomEventListener = __webpack_require__(546);
 
 var _addDomEventListener2 = _interopRequireDefault(_addDomEventListener);
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -20004,7 +20005,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports["default"] = getContainerRenderMixin;
 
-var _reactDom = __webpack_require__(73);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -20320,7 +20321,7 @@ module.exports = {"salesforce":"salesforce__salesforce--3Yn0Z","Loading":"salesf
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_find___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_find__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_salesforce__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_time__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_time__ = __webpack_require__(75);
 /* unused harmony export isSystem */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getDisplayText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return isNeedSelector; });
@@ -21319,4 +21320,4 @@ var getTabs = function getTabs(state) {
 /***/ })
 
 });
-//# sourceMappingURL=http://localhost:8000/details-tab.5dfbe.js.map
+//# sourceMappingURL=http://localhost:8000/details-tab.9248a.js.map
