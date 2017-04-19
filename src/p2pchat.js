@@ -336,6 +336,7 @@ function WakeLock() {
       MP4: "data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw=="
     };
     var lockVideo = initLockVideo();
+    var lockVideoPlayTimer;
 
     function addSourceToVideo(video, type, dataURI) {
       var source = document.createElement('source');
@@ -365,9 +366,13 @@ function WakeLock() {
     this.enable = function () {
       try {
         lockVideo.play();
+        if (lockVideoPlayTimer) clearInterval(lockVideoPlayTimer);
+        lockVideoPlayTimer = setInterval(function () {
+          lockVideo.play();
+        }, 3000);
 
-        window.removeEventListener('focus', onfocus);
-        window.addEventListener('focus', onfocus);
+        // window.removeEventListener('focus', onfocus);
+        // window.addEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
@@ -376,7 +381,8 @@ function WakeLock() {
     this.disable = function () {
       try {
         lockVideo.pause();
-        window.removeEventListener('focus', onfocus);
+        if (lockVideoPlayTimer) clearInterval(lockVideoPlayTimer);
+        // window.removeEventListener('focus', onfocus);
       } catch (err) {
         console.error(err);
       }
