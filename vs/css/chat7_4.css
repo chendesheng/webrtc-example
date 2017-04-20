@@ -1617,7 +1617,7 @@ object {
     height: 100%;
 }
 .media-chat-window {
-    flex: 0 0 500px;
+    flex-grow: 1;
     height: 100%;
     background-color: #333333;
     display: flex;
@@ -1625,12 +1625,17 @@ object {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
 }
 .media-chat-window.hidden {
     display: none;
 }
 #main {
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 100%;
+    right: 0;
+    top: 0;
 }

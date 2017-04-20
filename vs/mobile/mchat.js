@@ -1797,6 +1797,13 @@ var chat_window = (function () {
         }
     }
 
+    function blur_chat_input() {
+        try {
+            $('#chat-input-control').blur();
+        }
+        catch(e) {}
+    }
+
     function init_window_events(argument) {
         refresh_upload();
         window.onbeforeunload = function () {
@@ -2194,6 +2201,7 @@ var chat_window = (function () {
         }
 
         function setSelectedTab(contentId, iconName) {
+            blur_chat_input();
             if(typeof iconName !== 'undefined') {
                 $('.' + contentId + 'Tab .ui-icon').remove();
                 var icon = $("<span></span>");

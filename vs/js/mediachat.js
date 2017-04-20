@@ -3932,21 +3932,13 @@ var MediaChat = (function(){
     }
 
     function resizeAnimationEmbed(width, duration, span) {
-        var wstep = width / span, mediaWindowWidth;
-        if (width < 0) {
-            var originalWidth = media_chat_window.style.flexBasis;
-            mediaWindowWidth = parseInt(originalWidth.substring(0, originalWidth.indexOf('px')), 10);
-        }
-        else
-            mediaWindowWidth = 0;
-        media_chat_window.style.flexBasis = mediaWindowWidth + 'px';
+        var wstep = width / span;
+        var mainWindowWidth = document.getElementById('main').clientWidth;
+        document.getElementById('main').style.width = mainWindowWidth + 'px';
+        media_chat_window.style.width = 'calc(100% - ' + mainWindowWidth + 'px)';
         var interval = setInterval(function() {
             embedded_window_handler.resize(wstep, 0);
-            mediaWindowWidth += wstep;
             width -= wstep;
-            setTimeout(function() {
-                media_chat_window.style.flexBasis = mediaWindowWidth + 'px';
-            }, 0);
             if (width === 0) clearInterval(interval);
         }, duration / span);
     }
@@ -4028,16 +4020,19 @@ var MediaChat = (function(){
     }
     
     function restoreWindow() {
-        document.getElementById('media-chat-window').className = 'media-chat-window hidden';
+        document.getElementById('media-chat-window').className = 'media-chat-window';
+        document.getElementById('main').style.width = '100%';
     }
 
     function updateUI() {
-        restoreWindow();
         switch (currentStatus) {
             case enumStatus.notStart:
             default:
                 enableIconButtons();
                 setWindowSize(false);
+                setTimeout(function(){
+                    restoreWindow();    
+                }, 200);
                 stopTimer();
                 break;
             case enumStatus.audioIncoming:
