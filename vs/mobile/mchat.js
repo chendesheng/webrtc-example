@@ -2201,7 +2201,14 @@ var chat_window = (function () {
                 $('.' + contentId + 'Tab').append(icon);
             }
             $('.tab').removeClass('selected');
-            $('.' + contentId + 'Tab').addClass('selected');            
+            $('.' + contentId + 'Tab').addClass('selected');
+            tabs.forEach(function(id){
+                if(id === contentId){
+                    $('#' + id).show();
+                } else {
+                    $('#' + id).hide();
+                }
+            });       
         }
 
         function addTab(contentId, iconName) {
@@ -2534,6 +2541,8 @@ function initconfigs(configs) {
     init_data.if_show_typing_content = configs.if_show_typing_content;
     init_data.chat_window_theme_type = configs.chat_window_theme_type;
     init_data.if_credit_card_masking = configs.if_credit_card_masking;
+    init_data.if_can_audio_chat = configs.if_can_audio_chat;
+    init_data.if_can_video_chat = configs.if_can_video_chat;
 
     var prechat_fields = configs.prechat_fields;
     var offline_fields = configs.offline_fields;
@@ -2587,9 +2596,6 @@ function initconfigs(configs) {
         }
     });
 
-    //TESTCODE
-    init_data.if_can_audio_chat = true;
-    init_data.if_can_video_chat = true;
     if(ifSupportWebrtc && (init_data.if_can_audio_chat || init_data.if_can_video_chat)) {
         var script = document.createElement('script');
         script.src = 'mobile/mmediachat.js';
