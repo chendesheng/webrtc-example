@@ -3824,8 +3824,8 @@ var MediaChat = {
         if(MediaChat.p2pChat === null) {
             MediaChat.p2pChat = new P2PChat ({
                 chat: MediaChat.chat_window_handler.get_chatguid(),
-                localVideo: MediaChat.localVideo,
-                remoteVideo: MediaChat.remoteVideo,
+                localVideo: MediaChat.localVideo.get(0),
+                remoteVideo: MediaChat.remoteVideo.get(0),
                 url: MediaChat.serverOrigin + '/webrtcSignalingService/signaling.ashx',
             });            
             MediaChat.p2pChat.onevent(function onVideoChatEvent(type, data) {
@@ -3834,7 +3834,7 @@ var MediaChat = {
                     console.error(data);
                     MediaChat.hangup();                 
                     MediaChat.forceStopP2PChat();
-                } else if (type === 'close') {                    
+                } else if (type === 'start') {                    
                     MediaChat.showLoading();
                 } else if (type === 'remoteStreamReceived') {
                     MediaChat.hideLoading();
@@ -4013,8 +4013,8 @@ var MediaChat = {
         
         MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
         
-        this.localVideo = $('#localVideo').get(0);
-        this.remoteVideo = $('#remoteVideo').get(0);
+        this.localVideo = $('#localVideo');
+        this.remoteVideo = $('#remoteVideo');
 
         return mediaChat;
     },
