@@ -114,7 +114,7 @@
   display: block;
   position: absolute;
   content: '';
-  top: 77px;
+  top: 72px;
 }
 #popupMenu.high:before, #popupMenu.high:after{
 	top: 128px;

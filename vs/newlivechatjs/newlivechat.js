@@ -1088,7 +1088,16 @@ var Comm100API = (Comm100API || { loaded: false });
                 return;
             }
 
-            planId = pId;
+            planId = pId;            
+
+            // if (window.performance.navigation.type === 1) {
+            //     var mediaChatWindowInfo = JSON.parse(localStorage.getItem('Comm100_MediaWindow'));
+            //     if (mediaChatWindowInfo) {
+            //         mediaChatWindowInfo.ifRefreshed = true;
+            //         localStorage.setItem('Comm100_MediaWindow', JSON.stringify(mediaChatWindowInfo));
+            //         url += mediaChatWindowInfo.id;
+            //     }
+            // }
 
             function show_chat_button() {
                 var b = get_button(planId);
@@ -1978,6 +1987,8 @@ var Comm100API = (Comm100API || { loaded: false });
         return b.o ? $u.get_image_url($c.site_id, b.a) : $u.get_image_url($c.site_id, b.b);
     }
     function open_chat_window(e, plan, source, source_id, msg, if_directly_chat, guid, dynamic) {
+        
+        
         $u.preventDefault(e);
 
         plan = plan || $c.main_code_plan;
@@ -2017,6 +2028,7 @@ var Comm100API = (Comm100API || { loaded: false });
                     $e.open(p, plan, msg);
                 } else {
                     if ($e.ispopupped()) {
+                        
                         p += '&popupfromembedded=1';
                     }
 
@@ -2468,7 +2480,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-04-13T17:46:35.269Z
+ * compiled: 2017-04-20T16:18:47.355Z
  */
  
  

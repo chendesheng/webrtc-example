@@ -3042,8 +3042,7 @@ function SignalingChannel(args) {
   var remoteStartHandler;
   var getIceServersHandler;
   var schema = url.indexOf('localhost') === -1 ? 'wss://' : 'ws://';
-  var ws;
-  ws = new WebSocket(schema + url + '?chatId=' + chat);
+  var ws = new WebSocket(schema + url + '?chatId=' + chat);
   var pingTimes = 0;
   ws.onopen = function () {
     console.log('open');
@@ -3093,6 +3092,7 @@ function SignalingChannel(args) {
   };
 
   ws.onclose = function () {
+    console.log('signaling connection close');
     reset();
   };
 
@@ -3351,15 +3351,72 @@ function DeviceRequester(requestDevices) {
   this.reset = reset;
 }
 
+function WakeLock() {
+  /**
+   * code came from NoSleep.js  v0.5.0 - git.io/vfn01
+   * Rich Tibbett
+   * MIT license
+   **/
+  var android = /Android/ig.test(navigator.userAgent);
+  if (android) {
+    var media = {
+      WebM: "data:video/webm;base64,GkXfo0AgQoaBAUL3gQFC8oEEQvOBCEKCQAR3ZWJtQoeBAkKFgQIYU4BnQI0VSalmQCgq17FAAw9CQE2AQAZ3aGFtbXlXQUAGd2hhbW15RIlACECPQAAAAAAAFlSua0AxrkAu14EBY8WBAZyBACK1nEADdW5khkAFVl9WUDglhohAA1ZQOIOBAeBABrCBCLqBCB9DtnVAIueBAKNAHIEAAIAwAQCdASoIAAgAAUAmJaQAA3AA/vz0AAA=",
+      MP4: "data:video/mp4;base64,AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw=="
+    };
+    var lockVideo = initLockVideo();
+    var lockVideoPlayTimer;
+
+    function addSourceToVideo(video, type, dataURI) {
+      var source = document.createElement('source');
+      source.src = dataURI;
+      source.type = "video/" + type;
+      video.appendChild(source);
+    }
+
+    function initLockVideo() {
+      var video = document.createElement('Video');
+      video.setAttribute('loop', '');
+      addSourceToVideo(video, 'webm', media.WebM);
+      addSourceToVideo(video, 'mp4', media.MP4);
+      return video;
+    }
+
+    this.enable = function () {
+      try {
+        lockVideo.play();
+        if (lockVideoPlayTimer) clearInterval(lockVideoPlayTimer);
+        lockVideoPlayTimer = setInterval(function () {
+          lockVideo.play();
+        }, 3000);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    this.disable = function () {
+      try {
+        lockVideo.pause();
+        if (lockVideoPlayTimer) clearInterval(lockVideoPlayTimer);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+  } else {
+    this.enable = function () { };
+    this.disable = function () { };
+  }
+}
+
 function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
   var url = args.url;
-  var handlers = [];
+  var eventHandler;
   var connection = null;
   var remoteStream;
   var useRelayOnly = false;
+  var wakeLock = new WakeLock();
 
   function handleSignal(conn, signal) {
     // console.log(signal);
@@ -3470,6 +3527,10 @@ function P2PChat(args) {
   var deviceRequester;
   function requirePermission(isVideo) {
     resetLocal();
+    if (!isVideo) {
+      wakeLock = new WakeLock();
+      wakeLock.enable();
+    }
 
     deviceRequester = new DeviceRequester({
       audio: true,
@@ -3491,15 +3552,23 @@ function P2PChat(args) {
     }
   }
 
+  function resetVideoElement(videoElement) {
+    try {
+      videoElement.srcObject = null;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   function resetLocal() {
     if (deviceRequester) deviceRequester.reset();
-    localVideo.srcObject = null;
+    resetVideoElement(localVideo);
   }
 
   function resetRemote() {
     if (remoteStream) stopStream(remoteStream);
     remoteStream = null;
-    remoteVideo.srcObject = null;
+    resetVideoElement(remoteVideo);
   }
 
   function reset(conn) {
@@ -3534,6 +3603,7 @@ function P2PChat(args) {
   }
 
   function start(relayOnly) {
+    fireEvent('start');
     console.log('start');
     useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
@@ -3559,6 +3629,7 @@ function P2PChat(args) {
         iceServers: iceServers,
         iceTransportPolicy: useRelayOnly ? 'relay' : 'all',
       });
+
       conn.peerConn = pc;
 
       // send any ice candidates to the other peer
@@ -3588,6 +3659,8 @@ function P2PChat(args) {
         remoteStream = evt.stream;
         remoteVideo.autoplay = true;
         remoteVideo.srcObject = remoteStream;
+
+        fireEvent('remoteStreamReceived', remoteStream);
       };
 
       chan.onMessage(handleSignal.bind(null, conn));
@@ -3606,14 +3679,11 @@ function P2PChat(args) {
   }
 
   function onevent(f) {
-    if (handlers.indexOf(f) === -1)
-      handlers.push(f);
+    eventHandler = f;
   }
 
   function fireEvent(message, obj) {
-    handlers.forEach(function (fn) {
-      fn(message, obj)
-    });
+    if (eventHandler) eventHandler(message, obj);
   };
 
   function stopStream(stream) {
@@ -3623,6 +3693,8 @@ function P2PChat(args) {
   }
 
   function stop() {
+    if (wakeLock) wakeLock.disable();
+
     restartCount = 0;
     resetLocal();
     reset(connection);
@@ -3760,11 +3832,12 @@ var MediaChat = {
                 console.log('type: ', type);
                 if (type === 'error') {
                     console.error(data);
-                    this.hangup();                 
-                    this.forceStopP2PChat();
-                    //NEED TO DO STH
-                } else if (type === 'close') {
-                    //NEED TO DO STH
+                    MediaChat.hangup();                 
+                    MediaChat.forceStopP2PChat();
+                } else if (type === 'close') {                    
+                    MediaChat.showLoading();
+                } else if (type === 'remoteStreamReceived') {
+                    MediaChat.hideLoading();
                 }
             });
         }
@@ -3850,6 +3923,14 @@ var MediaChat = {
                 break;
         }
         MediaChat.chat_window_handler.message_queue_add(actionCode, '');
+    },
+
+    showLoading: function () {
+        remoteVideo.addClass('loading');
+    },
+
+    hideLoading: function () {
+        remoteVideo.removeClass('loading');
     },
 
     disableIconButtons: function(){

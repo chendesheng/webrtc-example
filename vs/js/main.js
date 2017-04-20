@@ -984,6 +984,17 @@ var is_popup_window = !url_query('embeddedwindow', 0);
 var cookie_last_message_id = url_query('lastMessageId', '');
 var current_window = visitor_window.chat;
 
+window.onbeforeunload = function() {
+    if (typeof MediaChat !== 'undefined') 
+        MediaChat.deleteBeforeUnload();
+        // else {
+        //     localStorage.setItem('Common100_MediaChat', JSON.stringify({
+        //         isChatting: true,
+        //         id: window.location.hash
+        //     }));
+        // }
+}
+
 function get_ticket_id_from_query() {
     var ticketIdStr = url_query('ticketId', '');
     if (!ticketIdStr) {
@@ -1790,7 +1801,9 @@ var embedded_window = (function () {
 
         var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        return window.open(window.location.href.replace('embeddedwindow=1&', '').replace('&embInv=1', '')+'&popupfromembedded=1', 'comm100_popup_' + siteId, 'height=' + h + ',width=' + w + ',left=200,top=' + top + ',status=yes,toolbar=no,menubar=no,resizable=yes,location=no,titlebar=no');
+        var href = window.location.href;
+        if(window.location.hash !== '') { href = href.replace(window.location.hash, ''); }
+        return window.open(href.replace('embeddedwindow=1&', '').replace('&embInv=1', '')+'&popupfromembedded=1' + window.location.hash, 'comm100_popup_' + siteId, 'height=' + h + ',width=' + w + ',left=200,top=' + top + ',status=yes,toolbar=no,menubar=no,resizable=yes,location=no,titlebar=no');
     }
 
     function minimize() {
@@ -3982,8 +3995,9 @@ function request_chat_handler(fncomplete, fnerror) {
         
         if(typeof res.server_current_time !== 'undefined') {
             var seconds = parseInt(res.server_current_time.match(/Date\((\d+)\)/)[1]);
-            seconds -= (new Date).getTimezoneOffset() * 60;
-            time_delay = seconds - Date.now();
+            var now = new Date();
+            seconds -= now.getTimezoneOffset() * 60;
+            time_delay = seconds - now.getTime();
         }
 
         function complete_request_chat(res) {
