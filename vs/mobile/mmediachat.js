@@ -3926,11 +3926,13 @@ var MediaChat = {
     },
 
     showLoading: function () {
-        remoteVideo.addClass('loading');
+        console.log('showLoading');
+        MediaChat.remoteVideo.addClass('loading');
     },
 
     hideLoading: function () {
-        remoteVideo.removeClass('loading');
+        console.log('hideLoading');
+        MediaChat.remoteVideo.removeClass('loading');
     },
 
     disableIconButtons: function(){
