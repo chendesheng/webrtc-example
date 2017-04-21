@@ -157,7 +157,7 @@
 }
 .videoChatting .buttons {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     width: 100%;
 }
 .videoChatting .agentImg,
@@ -197,8 +197,8 @@
 .audioChatting video {
     display: none;
 }
-.videoChatting .chatting .buttons {
-    /*display: none;*/
+.hidden {
+    display: none;
 }
 #remoteVideo:hover .buttons {
     display: block;

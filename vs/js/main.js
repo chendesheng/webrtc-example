@@ -987,12 +987,6 @@ var current_window = visitor_window.chat;
 window.onbeforeunload = function() {
     if (typeof MediaChat !== 'undefined') 
         MediaChat.deleteBeforeUnload();
-        // else {
-        //     localStorage.setItem('Common100_MediaChat', JSON.stringify({
-        //         isChatting: true,
-        //         id: window.location.hash
-        //     }));
-        // }
 }
 
 function get_ticket_id_from_query() {
@@ -1188,13 +1182,13 @@ function initconfigs(configs) {
         style.type = 'text/css';
         document.head.appendChild(style);
 
-        window.main = main;
-        window.chat_window = chat_window;
-        window.embedded_window = embedded_window;
+        window.comm100_media_chat_loaded = main;
+        window.comm100_chat_window = chat_window;
+        window.comm100_embedded_window = embedded_window;
         window.if_can_audio_chat = init_data.if_can_audio_chat;
         window.if_can_video_chat = init_data.if_can_video_chat;
         window.if_popup_window = is_popup_window;
-        window.server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
+        window.comm100_server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
     }
     else {
         main();

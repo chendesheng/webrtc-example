@@ -2616,11 +2616,11 @@ function initconfigs(configs) {
         style.type = 'text/css';
         document.head.appendChild(style);
 
-        window.main = main;
-        window.chat_window = chat_window;
+        window.comm100_media_chat_loaded = main;
+        window.comm100_chat_window = chat_window;
         window.if_can_audio_chat = init_data.if_can_audio_chat;
         window.if_can_video_chat = init_data.if_can_video_chat;
-        window.server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
+        window.comm100_server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
         $('#popupMenu').addClass('high');
     }
     else {

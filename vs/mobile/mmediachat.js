@@ -3796,13 +3796,6 @@ var MediaChat = (function(){
         counter.text('00:00');
     }
 
-    function hidePopupMenu(){
-        var p = $('#popupMenu');
-        if (p.is(':visible')) {
-            p.hide();
-        }
-    }
-
     function onRequestChatClick(e) {
         if (!chat_window_handler.is_chatting() || $(e).hasClass('icon-disable'))
             return;
@@ -3816,72 +3809,6 @@ var MediaChat = (function(){
                         requestChat();
                 });
             }
-        }
-    }
-
-    function prepareP2PChat() {
-        if(p2pChat === null) {
-            p2pChat = new P2PChat ({
-                chat: chat_window_handler.get_chatguid(),
-                localVideo: localVideo.get(0),
-                remoteVideo: remoteVideo.get(0),
-                url: serverOrigin + '/webrtcSignalingService/signaling.ashx',
-            });            
-            p2pChat.onevent(function onVideoChatEvent(type, data) {
-                console.log('type: ', type);
-                if (type === 'error') {
-                    console.error(data);
-                    hangup();                 
-                    forceStopP2PChat();
-                } else if (type === 'start') {                    
-                    showLoading();
-                } else if (type === 'remoteStreamReceived') {
-                    hideLoading();
-                }
-            });
-        }
-        return p2pChat.requirePermission(MediaChat.ifVideoChat);
-    }
-
-    function startP2PChat(time) {
-        var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
-	    seconds -= (new Date).getTimezoneOffset() * 60;
-        startTime = new Date(seconds - chat_window_handler.get_time_delay());  
-        p2pChat.start();
-        startTimer();
-    }
-
-    function stopP2PChat() {
-        if(p2pChat !== null) {
-            p2pChat.stop();
-        }
-        stopTimer();
-    }
-
-    function forceStopP2PChat() {
-        if (currentStatus === enumStatus.audioChatting
-            || currentStatus === enumStatus.videoChatting
-            || currentStatus === enumStatus.audioRequesting
-            || currentStatus === enumStatus.videoRequesting)
-            {
-                stopP2PChat();
-                changeStatus(enumStatus.notStart, false);
-                updateUI();
-            }
-    }
-    
-    function setAgentInfo() {
-        if (typeof agentAvatarSrc !== 'undefined') {
-            var imgs = $('.avatarImg');
-            Array.prototype.forEach.call(imgs, function (item) {
-                item.src = agentAvatarSrc;
-            });
-        }
-        if (typeof agentName !== 'undefined') {
-            var nameEles = $('.agentName');
-            Array.prototype.forEach.call(nameEles, function (item) {
-                $(item).text(agentName)
-            });
         }
     }
 
@@ -3925,26 +3852,72 @@ var MediaChat = (function(){
         chat_window_handler.message_queue_add(actionCode, '');
     }
 
-    function showLoading() {
-        remoteVideo.addClass('loading');
+    /* handle p2pChat */
+    function prepareP2PChat() {
+        if(p2pChat === null) {
+            p2pChat = new P2PChat ({
+                chat: chat_window_handler.get_chatguid(),
+                localVideo: localVideo.get(0),
+                remoteVideo: remoteVideo.get(0),
+                url: serverOrigin + '/webrtcSignalingService/signaling.ashx',
+            });            
+            p2pChat.onevent(function onVideoChatEvent(type, data) {
+                console.log('type: ', type);
+                if (type === 'error') {
+                    console.error(data);
+                    hangup();                 
+                    forceStopP2PChat();
+                } else if (type === 'start') {                    
+                    showLoading();
+                } else if (type === 'remoteStreamReceived') {
+                    hideLoading();
+                }
+            });
+        }
+        return p2pChat.requirePermission(ifVideoChat);
     }
 
-    function hideLoading() {
-        remoteVideo.removeClass('loading');
+    function startP2PChat(time) {
+        var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
+	    seconds -= (new Date).getTimezoneOffset() * 60;
+        startTime = new Date(seconds - chat_window_handler.get_time_delay());  
+        p2pChat.start();
+        startTimer();
     }
 
-    function disableIconButtons() {
-        $('#btn-audio-chat').addClass('icon-disable');
-        $('#btn-video-chat').addClass('icon-disable');
-    }
-    function enableIconButtons() {
-        $('#btn-audio-chat').removeClass('icon-disable');
-        $('#btn-video-chat').removeClass('icon-disable');
+    function stopP2PChat() {
+        if(p2pChat !== null) {
+            p2pChat.stop();
+        }
+        stopTimer();
     }
 
-    function changeStatus(status, ifVideo) {
-        if(typeof ifVideo !== 'undefined') ifVideoChat = ifVideo;
-        currentStatus = status;
+    function forceStopP2PChat() {
+        if (currentStatus === enumStatus.audioChatting
+            || currentStatus === enumStatus.videoChatting
+            || currentStatus === enumStatus.audioRequesting
+            || currentStatus === enumStatus.videoRequesting)
+            {
+                stopP2PChat();
+                changeStatus(enumStatus.notStart, false);
+                updateUI();
+            }
+    }
+    
+    /* UI */
+    function setAgentInfo() {
+        if (typeof agentAvatarSrc !== 'undefined') {
+            var imgs = $('.avatarImg');
+            Array.prototype.forEach.call(imgs, function (item) {
+                item.src = agentAvatarSrc;
+            });
+        }
+        if (typeof agentName !== 'undefined') {
+            var nameEles = $('.agentName');
+            Array.prototype.forEach.call(nameEles, function (item) {
+                $(item).text(agentName)
+            });
+        }
     }
 
     function restoreWindow() {
@@ -3989,6 +3962,35 @@ var MediaChat = (function(){
                 break;
         }
         oldStatus = currentStatus;
+    }
+    
+    function hidePopupMenu(){
+        var p = $('#popupMenu');
+        if (p.is(':visible')) {
+            p.hide();
+        }
+    }
+
+    function showLoading() {
+        remoteVideo.addClass('loading');
+    }
+
+    function hideLoading() {
+        remoteVideo.removeClass('loading');
+    }
+
+    function disableIconButtons() {
+        $('#btn-audio-chat').addClass('icon-disable');
+        $('#btn-video-chat').addClass('icon-disable');
+    }
+    function enableIconButtons() {
+        $('#btn-audio-chat').removeClass('icon-disable');
+        $('#btn-video-chat').removeClass('icon-disable');
+    }
+
+    function changeStatus(status, ifVideo) {
+        if(typeof ifVideo !== 'undefined') ifVideoChat = ifVideo;
+        currentStatus = status;
     }
 
     function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
@@ -4121,6 +4123,6 @@ var MediaChat = (function(){
     }
 })();
 
-var media_chat = MediaChat.initialize(window.chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.server_origin);
+var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.comm100_server_origin);
 
-window.main();
+window.comm100_media_chat_loaded();

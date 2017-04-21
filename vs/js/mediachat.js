@@ -3816,8 +3816,51 @@ var MediaChat = (function(){
                 }
             }
         }
+    }    
+
+    function requestChat() {
+        var actionCode = ifVideoChat ?
+            enumActionCode.visitor_video_chat_request : enumActionCode.visitor_audio_chat_request;
+        chat_window_handler.add_message(actionCode, '');
+    }
+    
+    function accept() {
+        var actionCode = ifVideoChat ? enumActionCode.visitor_video_chat_accept : enumActionCode.visitor_audio_chat_accept;
+        if (ifActiveMediaChatWindow()) {   
+            prepareP2PChat().then(function(){
+                chat_window_handler.add_message(actionCode, '');
+            });
+        }
     }
 
+    function hangup() {
+        var actionCode;
+        switch (currentStatus) {
+            case enumStatus.audioIncoming:
+                actionCode = enumActionCode.visitor_audio_chat_refuse;
+                break;
+            case enumStatus.audioChatting:
+                actionCode = enumActionCode.visitor_audio_chat_stop;
+                break;
+            case enumStatus.audioRequesting:
+                actionCode = enumActionCode.visitor_audio_chat_cancel_request;
+                break;
+            case enumStatus.videoIncoming:
+                actionCode = enumActionCode.visitor_video_chat_refuse;
+                break;
+            case enumStatus.videoChatting:
+                actionCode = enumActionCode.visitor_video_chat_stop;
+                break;
+            case enumStatus.videoRequesting:
+                actionCode = enumActionCode.visitor_video_chat_cancel_request;
+                break;
+            default:
+                break;
+        }
+        chat_window_handler.add_message(actionCode, '');
+    }
+    
+    /* handle p2pChat */
     function prepareP2PChat() {
         localStorage.setItem('Comm100_MediaChat_' + chatGuid, window.location.hash);
         if (p2pChat === null) {
@@ -3861,6 +3904,19 @@ var MediaChat = (function(){
         stopTimer();
     }
 
+    function forceStopP2PChat() {
+        if (currentStatus === enumStatus.audioChatting
+            || currentStatus === enumStatus.videoChatting
+            || currentStatus === enumStatus.audioRequesting
+            || currentStatus === enumStatus.videoRequesting)
+            {
+                stopP2PChat();
+                changeStatus(enumStatus.notStart, false);
+                updateUI();
+            }
+    }
+
+    /* UI */
     function setAgentInfo() {
         if (typeof agentAvatarSrc !== 'undefined') {
             var imgs = document.getElementsByClassName('avatarImg');
@@ -3875,7 +3931,56 @@ var MediaChat = (function(){
             });
         }
     }
-
+    
+    function restoreWindow() {
+        media_chat_window.className = 'media-chat-window';
+        document.getElementById('main').style.width = '100%';
+    }
+    
+    function updateUI() {
+        switch (currentStatus) {
+            case enumStatus.notStart:
+            default:
+                enableIconButtons();
+                setWindowSize(false);
+                setTimeout(function(){
+                    restoreWindow();    
+                }, 200);
+                stopTimer();
+                break;
+            case enumStatus.audioIncoming:
+            case enumStatus.videoIncoming:
+                disableIconButtons();
+                setAgentInfo();
+                remove_class(media_chat_window, 'hidden');
+                add_class(media_chat_window, enumStatus[currentStatus]);
+                setWindowSize(true);
+                stopTimer();
+                break;
+            case enumStatus.audioRequesting:
+            case enumStatus.videoRequesting:
+                disableIconButtons();
+                setAgentInfo();
+                remove_class(media_chat_window, 'hidden');
+                add_class(media_chat_window, enumStatus[currentStatus]);
+                setWindowSize(true);
+                break;
+            case enumStatus.audioChatting:
+            case enumStatus.videoChatting:
+                disableIconButtons();
+                if(ifActiveMediaChatWindow()) {
+                    setAgentInfo();
+                    remove_class(media_chat_window, 'hidden');
+                    add_class(media_chat_window, enumStatus[currentStatus]); 
+                    setWindowSize(true);
+                }
+                else
+                    setWindowSize(false);
+                break;
+        }
+        oldStatus = currentStatus;
+    }
+    
     function ifActiveMediaChatWindow() {
         var localWindowId = localStorage.getItem('Comm100_MediaChat_' + chatGuid);       
         if (localWindowId) {
@@ -3896,6 +4001,7 @@ var MediaChat = (function(){
         else
             return ifLargeWindow;
     }
+
     function updateIfLargeWindow(ifLarge) {
         if(this.isPopupWindow) {
             localStorage.setItem('Comm100_IfLargeWindow', JSON.stringify(ifLarge));
@@ -3903,6 +4009,7 @@ var MediaChat = (function(){
         else
             ifLargeWindow = ifLarge;
     }
+
     function resetIfLargeWindow() {
         localStorage.setItem('Comm100_IfLargeWindow', JSON.stringify(false));
     }
@@ -3963,109 +4070,6 @@ var MediaChat = (function(){
     function changeStatus(status, ifVideo) {
         if(typeof ifVideo !== 'undefined') ifVideoChat = ifVideo;
         currentStatus = status;
-    }
-
-    function forceStopP2PChat() {
-        if (currentStatus === enumStatus.audioChatting
-            || currentStatus === enumStatus.videoChatting
-            || currentStatus === enumStatus.audioRequesting
-            || currentStatus === enumStatus.videoRequesting)
-            {
-                stopP2PChat();
-                changeStatus(enumStatus.notStart, false);
-                updateUI();
-            }
-    }
-
-    function requestChat() {
-        var actionCode = ifVideoChat ?
-            enumActionCode.visitor_video_chat_request : enumActionCode.visitor_audio_chat_request;
-        chat_window_handler.add_message(actionCode, '');
-    }
-
-    function accept() {
-        var actionCode = ifVideoChat ? enumActionCode.visitor_video_chat_accept : enumActionCode.visitor_audio_chat_accept;
-        if (ifActiveMediaChatWindow()) {   
-            prepareP2PChat().then(function(){
-                chat_window_handler.add_message(actionCode, '');
-            });
-        }
-    }
-
-    function hangup() {
-        var actionCode;
-        switch (currentStatus) {
-            case enumStatus.audioIncoming:
-                actionCode = enumActionCode.visitor_audio_chat_refuse;
-                break;
-            case enumStatus.audioChatting:
-                actionCode = enumActionCode.visitor_audio_chat_stop;
-                break;
-            case enumStatus.audioRequesting:
-                actionCode = enumActionCode.visitor_audio_chat_cancel_request;
-                break;
-            case enumStatus.videoIncoming:
-                actionCode = enumActionCode.visitor_video_chat_refuse;
-                break;
-            case enumStatus.videoChatting:
-                actionCode = enumActionCode.visitor_video_chat_stop;
-                break;
-            case enumStatus.videoRequesting:
-                actionCode = enumActionCode.visitor_video_chat_cancel_request;
-                break;
-            default:
-                break;
-        }
-        chat_window_handler.add_message(actionCode, '');
-    }
-    
-    function restoreWindow() {
-        media_chat_window.className = 'media-chat-window';
-        document.getElementById('main').style.width = '100%';
-    }
-
-    function updateUI() {
-        switch (currentStatus) {
-            case enumStatus.notStart:
-            default:
-                enableIconButtons();
-                setWindowSize(false);
-                setTimeout(function(){
-                    restoreWindow();    
-                }, 200);
-                stopTimer();
-                break;
-            case enumStatus.audioIncoming:
-            case enumStatus.videoIncoming:
-                disableIconButtons();
-                setAgentInfo();
-                remove_class(media_chat_window, 'hidden');
-                add_class(media_chat_window, enumStatus[currentStatus]);
-                setWindowSize(true);
-                stopTimer();
-                break;
-            case enumStatus.audioRequesting:
-            case enumStatus.videoRequesting:
-                disableIconButtons();
-                setAgentInfo();
-                remove_class(media_chat_window, 'hidden');
-                add_class(media_chat_window, enumStatus[currentStatus]);
-                setWindowSize(true);
-                break;
-            case enumStatus.audioChatting:
-            case enumStatus.videoChatting:
-                disableIconButtons();
-                if(ifActiveMediaChatWindow()) {
-                    setAgentInfo();
-                    remove_class(media_chat_window, 'hidden');
-                    add_class(media_chat_window, enumStatus[currentStatus]); 
-                    setWindowSize(true);
-                }
-                else
-                    setWindowSize(false);
-                break;
-        }
-        oldStatus = currentStatus;
     }
 
     function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, ifPopupWindow, embeddedWindowHandler, serverorigin) {
@@ -4168,12 +4172,6 @@ var MediaChat = (function(){
         }
     }
 
-    function deleteBeforeUnload() {
-        var localWindowId = localStorage.getItem('Comm100_MediaChat_' + chatGuid);
-        if (localWindowId !== null && localWindowId === window.location.hash)
-            localStorage.removeItem('Comm100_MediaChat_' + chatGuid);
-    }
-
     function update(actionTime) {
         if (ifActiveMediaChatWindow()) {
             if (p2pChat === null) {
@@ -4194,6 +4192,12 @@ var MediaChat = (function(){
         if(oldStatus !== currentStatus) {
             updateUI();
         }
+    }    
+
+    function deleteBeforeUnload() {
+        var localWindowId = localStorage.getItem('Comm100_MediaChat_' + chatGuid);
+        if (localWindowId !== null && localWindowId === window.location.hash)
+            localStorage.removeItem('Comm100_MediaChat_' + chatGuid);
     }
 
     //utils
@@ -4218,7 +4222,7 @@ var MediaChat = (function(){
     }
 })();
 
-var media_chat = MediaChat.initialize(window.chat_window, window.if_can_audio_chat, window.if_can_video_chat,
-                    window.if_popup_window, window.embedded_window, window.server_origin);
+var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat,
+                    window.if_popup_window, window.comm100_embedded_window, window.comm100_server_origin);
 
-window.main();
+window.comm100_media_chat_loaded();
