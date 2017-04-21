@@ -81,9 +81,11 @@
 }
 .button.accept {
     background-color: #5cc148;
+    background: url(../images/phone-accept.svg) no-repeat center;
 }
 .button.hangup {
     background-color: #d34946;
+    background: url(../images/phone-refuse.svg) no-repeat center;
 }
 .audioChatting .button.accept,
 .videoChatting .button.accept,

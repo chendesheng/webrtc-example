@@ -79,10 +79,11 @@
     box-shadow: inset 0 2px 5px rgba(0,0,0,.25);
 }
 .button.accept {
+    background: url(../images/phone-accept.svg) no-repeat center;
     background-color: #5cc148;
 }
 .button.hangup {
-    background-color: #d34946;
+    background: url(../images/phone-refuse.svg) no-repeat center;
 }
 .icon-accept:before {
   content: "\e016";

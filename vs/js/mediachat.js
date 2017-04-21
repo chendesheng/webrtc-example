@@ -4020,7 +4020,7 @@ var MediaChat = (function(){
     }
     
     function restoreWindow() {
-        document.getElementById('media-chat-window').className = 'media-chat-window';
+        media_chat_window.className = 'media-chat-window';
         document.getElementById('main').style.width = '100%';
     }
 

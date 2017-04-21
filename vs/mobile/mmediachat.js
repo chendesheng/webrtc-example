@@ -3716,8 +3716,8 @@ function P2PChat(args) {
 }
 
 // export default P2PChat
-var MediaChat = {
-    enumStatus: {
+var MediaChat = (function(){
+    var enumStatus = {
         notStart: 'notStart',
         audioIncoming: 'audioIncoming',
         audioRequesting: 'audioRequesting',
@@ -3725,8 +3725,8 @@ var MediaChat = {
         videoIncoming: 'videoIncoming',
         videoRequesting: 'videoRequesting',
         videoChatting: 'videoChatting'
-    },
-    enumActionCode: {
+    };
+    var enumActionCode = {
         agent_video_chat_request: 320,
         agent_video_chat_cancel_request: 321,
         agent_video_chat_accept: 322,
@@ -3752,28 +3752,30 @@ var MediaChat = {
         server_audio_chat_no_answer: 342,
         server_audio_chat_end: 343,
         system_if_supportWebrtc: 344
-    },
-    serverOrigin: '',
-    chatGuid: '',
-    agentName: '',
-    agentAvatarSrc: '',
-    p2pChat: null,
-    ifVideoChat: false,
-    chat_window_handler: {},
-    currentStatus: 'notStart',
-    oldStatus: 'notStart',
-    window: null,
-    localVido: null,
-    remoteVideo: null,
-    textAudioCalling: 'Audio Chat',
-    textVideoCalling: 'Video Chat',
-    actionTimer: 0,
+    };
 
-    startTime: 0,
-    timer: 0,
-    startTimer: function (counter) {
-        this.timer = setInterval(function () {
-            var elapsed = parseInt(Math.abs(MediaChat.startTime.getTime() - Date.now())/1000, 10);
+    var serverOrigin = '';
+    var chatGuid = '';
+    var agentName = '';
+    var agentAvatarSrc = '';
+    var p2pChat = null;
+    var ifVideoChat = false;
+    var chat_window_handler = {};
+    var currentStatus = enumStatus.notStart;
+    var oldStatus = enumStatus.notStart;
+    var media_chat_window = null;
+    var localVido = null;
+    var remoteVideo = null;
+    var textAudioCalling = 'Audio Chat';
+    var textVideoCalling = 'Video Chat';
+    var actionTimer = 0;
+
+    var startTime = 0;
+    var timer = 0;
+    var counter = null;
+    function startTimer() {
+        timer = setInterval(function () {
+            var elapsed = parseInt(Math.abs(startTime.getTime() - Date.now())/1000, 10);
             var days, hours, minutes, seconds, displayText;
             days = parseInt(elapsed / 86400, 10);
             hours = parseInt((elapsed % 86400) / 3600, 10);
@@ -3786,333 +3788,337 @@ var MediaChat = {
                             + (seconds < 10 ? '0' + seconds : seconds);
             counter.innerHTML = displayText;
         }, 1000);
-    },
+    }
 
-    stopTimer: function (counter) {
-        clearInterval(this.timer);
-        this.startTime = 0;
+    function stopTimer() {
+        clearInterval(timer);
+        startTime = 0;
         counter.innerHTML = '00:00';
-    },
+    }
 
-    hidePopupMenu: function(){
+    function hidePopupMenu(){
         var p = $('#popupMenu');
         if (p.is(':visible')) {
             p.hide();
         }
-    },
+    }
 
-    onRequestChatClick: function (e) {
-        if (!MediaChat.chat_window_handler.is_chatting() ||
-            $(e).hasClass('icon-disable'))
+    function onRequestChatClick(e) {
+        if (!chat_window_handler.is_chatting() || $(e).hasClass('icon-disable'))
             return;
         else {
-            this.hidePopupMenu();
-            if (MediaChat.currentStatus === MediaChat.enumStatus.notStart) {
-                MediaChat.ifVideoChat = e.id.indexOf('video') > 0;
-                MediaChat.changeStatus(MediaChat.ifVideoChat ? 
-                    MediaChat.enumStatus.videoRequesting : MediaChat.enumStatus.audioRequesting);
-                MediaChat.prepareP2PChat().then(function(){
-                    if(MediaChat.currentStatus === MediaChat.enumStatus.videoRequesting ||
-                        MediaChat.currentStatus === MediaChat.enumStatus.audioRequesting)
-                        MediaChat.requestChat();
+            hidePopupMenu();
+            if (currentStatus === enumStatus.notStart) {
+                ifVideoChat = e.id.indexOf('video') > 0;
+                changeStatus(ifVideoChat ? enumStatus.videoRequesting : enumStatus.audioRequesting);
+                prepareP2PChat().then(function(){
+                    if(currentStatus === enumStatus.videoRequesting || currentStatus === enumStatus.audioRequesting)
+                        requestChat();
                 });
             }
         }
-    },
+    }
 
-    prepareP2PChat: function(){
-        if(MediaChat.p2pChat === null) {
-            MediaChat.p2pChat = new P2PChat ({
-                chat: MediaChat.chat_window_handler.get_chatguid(),
-                localVideo: MediaChat.localVideo.get(0),
-                remoteVideo: MediaChat.remoteVideo.get(0),
-                url: MediaChat.serverOrigin + '/webrtcSignalingService/signaling.ashx',
+    function prepareP2PChat() {
+        if(p2pChat === null) {
+            p2pChat = new P2PChat ({
+                chat: chat_window_handler.get_chatguid(),
+                localVideo: localVideo.get(0),
+                remoteVideo: remoteVideo.get(0),
+                url: serverOrigin + '/webrtcSignalingService/signaling.ashx',
             });            
-            MediaChat.p2pChat.onevent(function onVideoChatEvent(type, data) {
+            p2pChat.onevent(function onVideoChatEvent(type, data) {
                 console.log('type: ', type);
                 if (type === 'error') {
                     console.error(data);
-                    MediaChat.hangup();                 
-                    MediaChat.forceStopP2PChat();
+                    hangup();                 
+                    forceStopP2PChat();
                 } else if (type === 'start') {                    
-                    MediaChat.showLoading();
+                    showLoading();
                 } else if (type === 'remoteStreamReceived') {
-                    MediaChat.hideLoading();
+                    hideLoading();
                 }
             });
         }
-        return MediaChat.p2pChat.requirePermission(MediaChat.ifVideoChat);
-    },
+        return p2pChat.requirePermission(MediaChat.ifVideoChat);
+    }
 
-    startP2PChat: function (time){
+    function startP2PChat(time) {
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
-        this.startTime = new Date(seconds - this.chat_window_handler.get_time_delay());  
-        this.p2pChat.start();
-        this.startTimer($('.chattingDuration')[0]);
-    },
+        startTime = new Date(seconds - chat_window_handler.get_time_delay());  
+        p2pChat.start();
+        startTimer();
+    }
 
-    stopP2PChat: function() {
-        if(this.p2pChat !== null) {
-            this.p2pChat.stop();
+    function stopP2PChat() {
+        if(p2pChat !== null) {
+            p2pChat.stop();
         }
-    },
+        stopTimer();
+    }
 
-    forceStopP2PChat: function(){
-        if (this.currentStatus === this.enumStatus.audioChatting
-            || this.currentStatus === this.enumStatus.videoChatting
-            || this.currentStatus === this.enumStatus.audioRequesting
-            || this.currentStatus === this.enumStatus.videoRequesting)
+    function forceStopP2PChat() {
+        if (currentStatus === enumStatus.audioChatting
+            || currentStatus === enumStatus.videoChatting
+            || currentStatus === enumStatus.audioRequesting
+            || currentStatus === enumStatus.videoRequesting)
             {
-                this.stopP2PChat();
-                this.changeStatus(this.enumStatus.notStart, false);
-                this.updateUI();
+                stopP2PChat();
+                changeStatus(enumStatus.notStart, false);
+                updateUI();
             }
-    },
+    }
     
-    setAgentInfo: function () {
-        if (typeof MediaChat.agentAvatarSrc !== 'undefined') {
-            var imgs = document.getElementsByClassName('avatarImg');
+    function setAgentInfo() {
+        if (typeof agentAvatarSrc !== 'undefined') {
+            var imgs = $('.avatarImg');
             Array.prototype.forEach.call(imgs, function (item) {
-                item.src = MediaChat.agentAvatarSrc;
+                item.src = agentAvatarSrc;
             });
         }
-        if (typeof MediaChat.agentName !== 'undefined') {
-            var nameEles = document.getElementsByClassName('agentName');
+        if (typeof agentName !== 'undefined') {
+            var nameEles = $('.agentName');
             Array.prototype.forEach.call(nameEles, function (item) {
-                item.innerHTML = MediaChat.agentName;
+                item.innerHTML = agentName;
             });
         }
-    },
+    }
 
-    requestChat: function () {
-        var actionCode = MediaChat.ifVideoChat ?
-            MediaChat.enumActionCode.visitor_video_chat_request : MediaChat.enumActionCode.visitor_audio_chat_request;
-        MediaChat.chat_window_handler.message_queue_add(actionCode, '');
-    },
+    function requestChat() {
+        var actionCode = ifVideoChat ?
+            enumActionCode.visitor_video_chat_request : enumActionCode.visitor_audio_chat_request;
+        chat_window_handler.message_queue_add(actionCode, '');
+    }
 
-    accept: function (){
-        var actionCode = MediaChat.ifVideoChat ? MediaChat.enumActionCode.visitor_video_chat_accept : MediaChat.enumActionCode.visitor_audio_chat_accept;
-        this.prepareP2PChat().then(function(){
-            MediaChat.chat_window_handler.message_queue_add(actionCode, '');
+    function accept() {
+        var actionCode = ifVideoChat ? enumActionCode.visitor_video_chat_accept : enumActionCode.visitor_audio_chat_accept;
+        prepareP2PChat().then(function(){
+            chat_window_handler.message_queue_add(actionCode, '');
         });
-    },
+    }
 
-    hangup: function () {
+    function hangup() {
         var actionCode;
-        switch (MediaChat.currentStatus) {
-            case MediaChat.enumStatus.audioIncoming:
-                actionCode = MediaChat.enumActionCode.visitor_audio_chat_refuse;
+        switch (currentStatus) {
+            case enumStatus.audioIncoming:
+                actionCode = enumActionCode.visitor_audio_chat_refuse;
                 break;
-            case MediaChat.enumStatus.audioChatting:
-                actionCode = MediaChat.enumActionCode.visitor_audio_chat_stop;
+            case enumStatus.audioChatting:
+                actionCode = enumActionCode.visitor_audio_chat_stop;
                 break;
-            case MediaChat.enumStatus.audioRequesting:
-                actionCode = MediaChat.enumActionCode.visitor_audio_chat_cancel_request;
+            case enumStatus.audioRequesting:
+                actionCode = enumActionCode.visitor_audio_chat_cancel_request;
                 break;
-            case MediaChat.enumStatus.videoIncoming:
-                actionCode = MediaChat.enumActionCode.visitor_video_chat_refuse;
+            case enumStatus.videoIncoming:
+                actionCode = enumActionCode.visitor_video_chat_refuse;
                 break;
-            case MediaChat.enumStatus.videoChatting:
-                actionCode = MediaChat.enumActionCode.visitor_video_chat_stop;
+            case enumStatus.videoChatting:
+                actionCode = enumActionCode.visitor_video_chat_stop;
                 break;
-            case MediaChat.enumStatus.videoRequesting:
-                actionCode = MediaChat.enumActionCode.visitor_video_chat_cancel_request;
+            case enumStatus.videoRequesting:
+                actionCode = enumActionCode.visitor_video_chat_cancel_request;
                 break;
             default:
                 break;
         }
-        MediaChat.chat_window_handler.message_queue_add(actionCode, '');
-    },
+        chat_window_handler.message_queue_add(actionCode, '');
+    }
 
-    showLoading: function () {
-        MediaChat.remoteVideo.addClass('loading');
-    },
+    function showLoading() {
+        remoteVideo.addClass('loading');
+    }
 
-    hideLoading: function () {
-        MediaChat.remoteVideo.removeClass('loading');
-    },
+    function hideLoading() {
+        remoteVideo.removeClass('loading');
+    }
 
-    disableIconButtons: function(){
+    function disableIconButtons() {
         $('#btn-audio-chat').addClass('icon-disable');
         $('#btn-video-chat').addClass('icon-disable');
-    },
-    enableIconButtons: function(){
+    }
+    function enableIconButtons() {
         $('#btn-audio-chat').removeClass('icon-disable');
         $('#btn-video-chat').removeClass('icon-disable');
-    },
+    }
 
-    changeStatus: function (status, ifVideo) {
-        if(typeof ifVideo !== 'undefined') this.ifVideoChat = ifVideo;
-        this.currentStatus = status;
-    },
+    function changeStatus(status, ifVideo) {
+        if(typeof ifVideo !== 'undefined') ifVideoChat = ifVideo;
+        currentStatus = status;
+    }
 
-    restoreWindow: function() {
-        this.window.removeClass().addClass('media-chat-window hidden overlay');
-    },
+    function restoreWindow() {
+        media_chat_window.removeClass().addClass('media-chat-window hidden overlay');
+    }
 
-    updateUI: function () {
-        this.restoreWindow();
-        switch (this.currentStatus) {
-            case this.enumStatus.notStart:
+    function updateUI() {
+        restoreWindow();
+        switch (currentStatus) {
+            case enumStatus.notStart:
             default:
-                this.enableIconButtons();
-                this.stopTimer($('.chattingDuration')[0]);
-                this.chat_window_handler.bottom_tabs.hide();
+                enableIconButtons();
+                stopTimer();
+                chat_window_handler.bottom_tabs.hide();
                 break;
-            case this.enumStatus.audioIncoming:
-            case this.enumStatus.videoIncoming:
-                this.disableIconButtons();
-                this.hidePopupMenu();
-                this.setAgentInfo();
-                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                this.stopTimer($('.chattingDuration')[0]);
-                this.chat_window_handler.bottom_tabs.show('media-chat-window',
-                    this.currentStatus === this.enumStatus.audioIncoming ? 'icon-audio' : 'icon-video');
+            case enumStatus.audioIncoming:
+            case enumStatus.videoIncoming:
+                disableIconButtons();
+                hidePopupMenu();
+                setAgentInfo();
+                media_chat_window.removeClass('hidden').addClass(enumStatus[currentStatus]);
+                stopTimer();
+                chat_window_handler.bottom_tabs.show('media-chat-window',
+                    currentStatus === enumStatus.audioIncoming ? 'icon-audio' : 'icon-video');
                 break;
-            case this.enumStatus.audioRequesting:
-            case this.enumStatus.videoRequesting:
-                this.disableIconButtons();
-                this.setAgentInfo();
-                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                this.chat_window_handler.bottom_tabs.show('media-chat-window',
-                    this.currentStatus === this.enumStatus.audioRequesting ? 'icon-audio' : 'icon-video');
+            case enumStatus.audioRequesting:
+            case enumStatus.videoRequesting:
+                disableIconButtons();
+                setAgentInfo();
+                media_chat_window.removeClass('hidden').addClass(enumStatus[currentStatus]);
+                chat_window_handler.bottom_tabs.show('media-chat-window',
+                    currentStatus === enumStatus.audioRequesting ? 'icon-audio' : 'icon-video');
                 break;
-            case this.enumStatus.audioChatting:
-            case this.enumStatus.videoChatting:
-                this.disableIconButtons();
-                this.hidePopupMenu();
-                this.setAgentInfo();
-                this.window.removeClass('hidden').addClass(this.enumStatus[this.currentStatus]);
-                this.chat_window_handler.bottom_tabs.show('media-chat-window',
-                    this.currentStatus === this.enumStatus.audioChatting ? 'icon-audio' : 'icon-video');
+            case enumStatus.audioChatting:
+            case enumStatus.videoChatting:
+                disableIconButtons();
+                hidePopupMenu();
+                setAgentInfo();
+                media_chat_window.removeClass('hidden').addClass(enumStatus[currentStatus]);
+                chat_window_handler.bottom_tabs.show('media-chat-window',
+                    currentStatus === enumStatus.audioChatting ? 'icon-audio' : 'icon-video');
                 break;
         }
-        this.oldStatus = this.currentStatus;
-    },
+        oldStatus = currentStatus;
+    }
 
-    initialize: function (chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
+    function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
         var mediaChat = {};
-        this.chat_window_handler = chatWindowHandler;
-        this.window = $('#media-chat-window');
-        this.serverOrigin = serverorigin;
+        chat_window_handler = chatWindowHandler;
+        media_chat_window = $('#media-chat-window').get(0);
+        serverOrigin = serverorigin;
         //install events
         if (ifEnableAudioChat && $('#btn-audio-chat')) {
             $('#btn-audio-chat').click(function() {
-                MediaChat.onRequestChatClick(this);
+                onRequestChatClick(this);
             });
-            //MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-audio');
         }
         if (ifEnableVideoChat && $('#btn-video-chat')) {
             $('#btn-video-chat').click(function() {
-                MediaChat.onRequestChatClick(this);
+                onRequestChatClick(this);
             });
         }
         
-        MediaChat.chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
+        chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
         
-        this.localVideo = $('#localVideo');
-        this.remoteVideo = $('#remoteVideo');
+        localVideo = $('#localVideo');
+        remoteVideo = $('#remoteVideo');
 
         return mediaChat;
-    },
+    }
 
-    handleMessages: function (code, sender, time, message, info) {
+    function handleMessages(code, sender, time, message, info) {
         var acceptTime;
-        this.chatGuid = this.chat_window_handler.get_chatguid();
-        if (code !== this.enumActionCode.system_if_supportWebrtc) {
+        chatGuid = chat_window_handler.get_chatguid();
+        if (code !== enumActionCode.system_if_supportWebrtc) {
             switch (code) {
-                case this.enumActionCode.agent_video_chat_request:
-                    this.changeStatus(this.enumStatus.videoIncoming, true);
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0];
+                case enumActionCode.agent_video_chat_request:
+                    changeStatus(enumStatus.videoIncoming, true);
+                    agentName = info[1];
+                    agentAvatarSrc = info[0];
                     break;
-                case this.enumActionCode.agent_video_chat_cancel_request:
-                case this.enumActionCode.agent_video_chat_refuse:
-                case this.enumActionCode.agent_video_chat_stop:
-                case this.enumActionCode.visitor_video_chat_cancel_request:
-                case this.enumActionCode.visitor_video_chat_refuse:
-                case this.enumActionCode.visitor_video_chat_stop:
-                case this.enumActionCode.server_video_chat_no_answer:
-                case this.enumActionCode.server_video_chat_end:
-                case this.enumActionCode.agent_audio_chat_cancel_request:
-                case this.enumActionCode.agent_audio_chat_refuse:
-                case this.enumActionCode.agent_audio_chat_stop:
-                case this.enumActionCode.visitor_audio_chat_cancel_request:
-                case this.enumActionCode.visitor_audio_chat_refuse:
-                case this.enumActionCode.visitor_audio_chat_stop:
-                case this.enumActionCode.server_audio_chat_no_answer:
-                case this.enumActionCode.server_audio_chat_end:
-                    this.stopP2PChat();
-                    this.changeStatus(this.enumStatus.notStart, false);
+                case enumActionCode.agent_video_chat_cancel_request:
+                case enumActionCode.agent_video_chat_refuse:
+                case enumActionCode.agent_video_chat_stop:
+                case enumActionCode.visitor_video_chat_cancel_request:
+                case enumActionCode.visitor_video_chat_refuse:
+                case enumActionCode.visitor_video_chat_stop:
+                case enumActionCode.server_video_chat_no_answer:
+                case enumActionCode.server_video_chat_end:
+                case enumActionCode.agent_audio_chat_cancel_request:
+                case enumActionCode.agent_audio_chat_refuse:
+                case enumActionCode.agent_audio_chat_stop:
+                case enumActionCode.visitor_audio_chat_cancel_request:
+                case enumActionCode.visitor_audio_chat_refuse:
+                case enumActionCode.visitor_audio_chat_stop:
+                case enumActionCode.server_audio_chat_no_answer:
+                case enumActionCode.server_audio_chat_end:
+                    stopP2PChat();
+                    changeStatus(enumStatus.notStart, false);
                     break;
-                case this.enumActionCode.agent_video_chat_accept:
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0];
-                    this.changeStatus(this.enumStatus.videoChatting, true);
+                case enumActionCode.agent_video_chat_accept:
+                    agentName = info[1];
+                    agentAvatarSrc = info[0];
+                    changeStatus(enumStatus.videoChatting, true);
                     break;
-                case this.enumActionCode.visitor_video_chat_request:
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
-                    this.changeStatus(this.enumStatus.videoRequesting, true);
+                case enumActionCode.visitor_video_chat_request:
+                    agentName = info[1];
+                    agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
+                    changeStatus(enumStatus.videoRequesting, true);
                     break;
-                case this.enumActionCode.visitor_video_chat_accept:
-                    this.changeStatus(this.enumStatus.videoChatting, true);
+                case enumActionCode.visitor_video_chat_accept:
+                    changeStatus(enumStatus.videoChatting, true);
                     break;
-                case this.enumActionCode.agent_audio_chat_request:
-                    this.changeStatus(this.enumStatus.audioIncoming, false);
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0];
+                case enumActionCode.agent_audio_chat_request:
+                    changeStatus(enumStatus.audioIncoming, false);
+                    agentName = info[1];
+                    agentAvatarSrc = info[0];
                     break;
-                case this.enumActionCode.agent_audio_chat_accept:
-                    this.changeStatus(this.enumStatus.audioChatting, false);
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0];
+                case enumActionCode.agent_audio_chat_accept:
+                    changeStatus(enumStatus.audioChatting, false);
+                    agentName = info[1];
+                    agentAvatarSrc = info[0];
                     break;
-                case this.enumActionCode.visitor_audio_chat_request:
-                    this.changeStatus(this.enumStatus.audioRequesting, false);
-                    this.agentName = info[1];
-                    this.agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
+                case enumActionCode.visitor_audio_chat_request:
+                    changeStatus(enumStatus.audioRequesting, false);
+                    agentName = info[1];
+                    agentAvatarSrc = info[0] === '' ? 'images/avatar.png' : info[0];
                     break;
-                case this.enumActionCode.visitor_audio_chat_accept:
-                    this.changeStatus(this.enumStatus.audioChatting, false);
+                case enumActionCode.visitor_audio_chat_accept:
+                    changeStatus(enumStatus.audioChatting, false);
                     break;
                 default:
                     break;
             }
-            clearTimeout(MediaChat.actionTimer);
-            MediaChat.actionTimer = setTimeout(function() {
-                MediaChat.update(time);
+            clearTimeout(actionTimer);
+            actionTimer = setTimeout(function() {
+                update(time);
             }, 100);
         }
         else {
             if (message === 'True')
-                this.enableIconButtons();
+                enableIconButtons();
             else
-                this.disableIconButtons();
+                disableIconButtons();
         }
-    },
+    }
 
-    update: function(actionTime) {     
-        if (MediaChat.p2pChat === null) {
-            if (MediaChat.currentStatus === MediaChat.enumStatus.audioChatting ||
-                MediaChat.currentStatus === MediaChat.enumStatus.videoChatting) {
-                    this.prepareP2PChat().then(function(){
-                        MediaChat.startP2PChat(actionTime);
+    function update(actionTime) {     
+        if (p2pChat === null) {
+            if (currentStatus === enumStatus.audioChatting || currentStatus === enumStatus.videoChatting) {
+                    prepareP2PChat().then(function(){
+                        startP2PChat(actionTime);
                     });
                 }
         }
         else {
-            if(this.currentStatus === this.enumStatus.audioChatting || this.currentStatus === this.enumStatus.videoChatting)
-                MediaChat.startP2PChat(actionTime);
-            else if(this.currentStatus === this.enumStatus.notStart)
-                MediaChat.stopP2PChat();
+            if(currentStatus === enumStatus.audioChatting || currentStatus === enumStatus.videoChatting)
+                startP2PChat(actionTime);
+            else if(currentStatus === enumStatus.notStart)
+                stopP2PChat();
         }
-        if(this.oldStatus !== this.currentStatus) {
-            MediaChat.updateUI();
+        if(oldStatus !== currentStatus) {
+            updateUI();
         }
-    },
-};
+    }
+
+    return {
+        'hangup': hangup,
+        'accept': accept,
+        'initialize': initialize,
+        'forceStopP2PChat': forceStopP2PChat,
+        'handleMessages': handleMessages
+    }
+})();
 
 var media_chat = MediaChat.initialize(window.chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.server_origin);
 

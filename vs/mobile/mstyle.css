@@ -736,11 +736,11 @@ input {
 	position: relative;
     left: 5px;
     color: #fff;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
+    height: 14px;
+    border-radius: 14px;
     background: #d34946;
-    line-height: 10px;
+    line-height: 14px;
     text-align: center;
-    font-size: 6px;
+    font-size: 12px;
+    padding: 1px 5px 0;
 }
