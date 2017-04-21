@@ -3786,14 +3786,14 @@ var MediaChat = (function(){
                             (hours < 10 && hours > 0 ? '0' + hours + ':' : (hours === 0 && days > 0 ? '00:' : '')))
                             + (minutes < 10 ? '0' + minutes + ':' : minutes + ':')
                             + (seconds < 10 ? '0' + seconds : seconds);
-            counter.innerHTML = displayText;
+            counter.text(displayText);
         }, 1000);
     }
 
     function stopTimer() {
         clearInterval(timer);
         startTime = 0;
-        counter.innerHTML = '00:00';
+        counter.text('00:00');
     }
 
     function hidePopupMenu(){
@@ -3880,7 +3880,7 @@ var MediaChat = (function(){
         if (typeof agentName !== 'undefined') {
             var nameEles = $('.agentName');
             Array.prototype.forEach.call(nameEles, function (item) {
-                item.innerHTML = agentName;
+                $(item).text(agentName)
             });
         }
     }
@@ -3994,7 +3994,7 @@ var MediaChat = (function(){
     function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
         var mediaChat = {};
         chat_window_handler = chatWindowHandler;
-        media_chat_window = $('#media-chat-window').get(0);
+        media_chat_window = $('#media-chat-window');
         serverOrigin = serverorigin;
         //install events
         if (ifEnableAudioChat && $('#btn-audio-chat')) {
@@ -4007,6 +4007,7 @@ var MediaChat = (function(){
                 onRequestChatClick(this);
             });
         }
+        counter = $('.chattingDuration');
         
         chat_window_handler.bottom_tabs.addTab('media-chat-window', 'icon-video');
         
