@@ -4125,6 +4125,6 @@ var MediaChat = (function(){
     }
 })();
 
-var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.comm100_get_server);
+var media_chat = MediaChat.initialize(window.comm100_siteId, window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.comm100_get_server);
 
 window.comm100_media_chat_loaded();
