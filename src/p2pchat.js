@@ -387,6 +387,7 @@ function P2PChat(args) {
   var remoteStream;
   var useRelayOnly = false;
   var wakeLock = new WakeLock();
+  var signalingServiceUrl;
 
   function handleSignal(conn, signal) {
     // console.log(signal);
@@ -572,17 +573,16 @@ function P2PChat(args) {
     connection = null;
   }
 
-  function start(url, relayOnly) {
+  function start() {
     fireEvent('start');
     console.log('start');
-    useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
       reset(connection);
 
     var conn = {};
     var chan = new SignalingChannel({
       chat: chat,
-      url: url,
+      url: signalingServiceUrl,
     });
     conn.signalingChannel = chan;
     chan.onError(function () {
@@ -672,7 +672,11 @@ function P2PChat(args) {
 
   this.requirePermission = requirePermission;
   this.getPeerConnectionStats = getStats;
-  this.start = start;
+  this.start = function (url, relayOnly) {
+    signalingServiceUrl = url;
+    useRelayOnly = relayOnly;
+    start();
+  };
   this.onevent = onevent;
   this.stop = stop;
 
