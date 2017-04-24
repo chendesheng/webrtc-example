@@ -1182,13 +1182,14 @@ function initconfigs(configs) {
         style.type = 'text/css';
         document.head.appendChild(style);
 
+        window.comm100_siteId = siteId;
         window.comm100_media_chat_loaded = main;
         window.comm100_chat_window = chat_window;
         window.comm100_embedded_window = embedded_window;
         window.if_can_audio_chat = init_data.if_can_audio_chat;
         window.if_can_video_chat = init_data.if_can_video_chat;
         window.if_popup_window = is_popup_window;
-        window.comm100_server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
+        window.comm100_get_server = server.get_server_host;
     }
     else {
         main();
@@ -1372,6 +1373,14 @@ function initServer() {
         }
     }
 
+    function get_server_host() {
+        if (current_server === 0) {
+            return standby_server.split('/')[0];
+        } else {
+            return main_server.split('/')[0];
+        }
+    }
+
     function switch_server(s) {
         if (current_server != s) {
             var old_server = current_server;
@@ -1429,7 +1438,8 @@ function initServer() {
     return {
         setup: setup,
         post: post,
-        get_url: get_url
+        get_url: get_url,
+        get_server_host: get_server_host
     };
 }
 
@@ -1879,6 +1889,7 @@ var embedded_window = (function () {
     }
 
     xd.receive_message(function (msg) {
+        console.log('receive_message: ', msg);
         if (msg.data === 'minimize') {
             if (current_window != visitor_window.chat)
                 xd.post_message('close');
@@ -1897,6 +1908,10 @@ var embedded_window = (function () {
                 '/Date(' + (new Date).getTime() + ')/'
             );
             show_notification(content, sender);
+        } else if (msg.data.indexOf('setMainWidth_') == 0) {
+            var width = parseInt(msg.data.substr(13, msg.data.length - 13));
+            document.getElementById('main').style.width = width + 'px';
+            console.log(msg);
         }
     });
 
@@ -4423,6 +4438,8 @@ var chat_window = (function () {
                         var lastPlaySoundMessageId_key = 'lastPlaySoundMessageId' + chatId;
                         var lastPlaySoundMessageId = parseInt(cookie.get(lastPlaySoundMessageId_key) || 0);
 
+                        if (ifMediaChatEnd(code))
+                            sound.stop();
                         if (message_id > lastPlaySoundMessageId) {
                             cookie.setSessionCookie(lastPlaySoundMessageId_key, message_id);                      
                             if(ifSupportWebrtc && (code == message_code.visitor_audio_chat_request ||
@@ -4431,27 +4448,7 @@ var chat_window = (function () {
                                 code == message_code.agent_video_chat_request)) {
                                 sound.play(sound_type.mediaChatWaiting, true);
                             }
-                            else if (ifSupportWebrtc && (code == message_code.server_audio_chat_end ||
-                                code == message_code.server_video_chat_end ||
-                                code == message_code.server_audio_chat_no_answer ||
-                                code == message_code.server_video_chat_no_answer ||
-                                code == message_code.visitor_audio_chat_accept ||
-                                code == message_code.visitor_audio_chat_cancel_request ||
-                                code == message_code.visitor_audio_chat_refuse ||
-                                code == message_code.visitor_audio_chat_stop ||
-                                code == message_code.agent_audio_chat_accept ||
-                                code == message_code.agent_audio_chat_cancel_request ||
-                                code == message_code.agent_audio_chat_refuse ||
-                                code == message_code.agent_audio_chat_stop ||
-                                code == message_code.visitor_video_chat_accept ||
-                                code == message_code.visitor_video_chat_cancel_request ||
-                                code == message_code.visitor_video_chat_refuse ||
-                                code == message_code.visitor_video_chat_stop ||
-                                code == message_code.agent_video_chat_accept ||
-                                code == message_code.agent_video_chat_cancel_request ||
-                                code == message_code.agent_video_chat_refuse ||
-                                code == message_code.agent_video_chat_stop)) {
-                                    sound.stop();
+                            else if (ifMediaChatEnd(code)) {                                    
                                     sound.play(sound_type.mediaChatEnd);
                                 }
                             else
@@ -4560,6 +4557,30 @@ var chat_window = (function () {
         } catch (e) {
             handle_exception(e, 'handle_message');
         }
+    }
+
+    function ifMediaChatEnd(code) {
+        return (ifSupportWebrtc &&
+            (code == message_code.server_audio_chat_end ||
+             code == message_code.server_video_chat_end ||
+             code == message_code.server_audio_chat_no_answer ||
+             code == message_code.server_video_chat_no_answer ||
+             code == message_code.visitor_audio_chat_accept ||
+             code == message_code.visitor_audio_chat_cancel_request ||
+             code == message_code.visitor_audio_chat_refuse ||
+             code == message_code.visitor_audio_chat_stop ||
+             code == message_code.agent_audio_chat_accept ||
+             code == message_code.agent_audio_chat_cancel_request ||
+             code == message_code.agent_audio_chat_refuse ||
+             code == message_code.agent_audio_chat_stop ||
+             code == message_code.visitor_video_chat_accept ||
+             code == message_code.visitor_video_chat_cancel_request ||
+             code == message_code.visitor_video_chat_refuse ||
+             code == message_code.visitor_video_chat_stop ||
+             code == message_code.agent_video_chat_accept ||
+             code == message_code.agent_video_chat_cancel_request ||
+             code == message_code.agent_video_chat_refuse ||
+             code == message_code.agent_video_chat_stop));
     }
 
     function handle_request_chat(message) {
