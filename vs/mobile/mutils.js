@@ -286,6 +286,14 @@ function initServer() {
         }
     }
 
+    function get_server_host() {
+        if (current_server === 0) {
+            return standby_server.substr(0, standby_server.indexOf('/'));
+        } else {
+            return main_server.substr(0, main_server.indexOf('/'));
+        }
+    }
+
     function switch_server(s) {
         if (current_server != s) {
             var old_server = current_server;
@@ -338,7 +346,8 @@ function initServer() {
     return {
         setup: setup,
         post: post,
-        get_url: get_url
+        get_url: get_url,
+        get_server_host: get_server_host
     };
 }
 
