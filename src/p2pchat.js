@@ -382,7 +382,6 @@ function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
-  var url = args.url;
   var eventHandler;
   var connection = null;
   var remoteStream;
@@ -573,7 +572,7 @@ function P2PChat(args) {
     connection = null;
   }
 
-  function start(relayOnly) {
+  function start(url, relayOnly) {
     fireEvent('start');
     console.log('start');
     useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
