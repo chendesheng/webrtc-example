@@ -3411,12 +3411,12 @@ function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
-  var url = args.url;
   var eventHandler;
   var connection = null;
   var remoteStream;
   var useRelayOnly = false;
   var wakeLock = new WakeLock();
+  var signalingServiceUrl;
 
   function handleSignal(conn, signal) {
     // console.log(signal);
@@ -3602,17 +3602,16 @@ function P2PChat(args) {
     connection = null;
   }
 
-  function start(relayOnly) {
+  function start() {
     fireEvent('start');
     console.log('start');
-    useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
       reset(connection);
 
     var conn = {};
     var chan = new SignalingChannel({
       chat: chat,
-      url: url,
+      url: signalingServiceUrl,
     });
     conn.signalingChannel = chan;
     chan.onError(function () {
@@ -3702,7 +3701,11 @@ function P2PChat(args) {
 
   this.requirePermission = requirePermission;
   this.getPeerConnectionStats = getStats;
-  this.start = start;
+  this.start = function (url, relayOnly) {
+    signalingServiceUrl = url;
+    useRelayOnly = relayOnly;
+    start();
+  };
   this.onevent = onevent;
   this.stop = stop;
 
@@ -3754,7 +3757,7 @@ var MediaChat = (function(){
         system_if_supportWebrtc: 344
     };
 
-    var serverOrigin = '';
+    var siteId = 0;
     var chatGuid = '';
     var agentName = '';
     var agentAvatarSrc = '';
@@ -3762,6 +3765,7 @@ var MediaChat = (function(){
     var ifVideoChat = false;
     var embedded_window_handler = {};
     var chat_window_handler = {};
+    var server_handler = null;
     var currentStatus = enumStatus.notStart;
     var oldStatus = enumStatus.notStart;
     var media_chat_window = null;
@@ -3785,7 +3789,7 @@ var MediaChat = (function(){
             minutes = parseInt(((elapsed % 86400) % 3600) / 60, 10);
             seconds = parseInt(((elapsed % 86400) % 3600) % 60, 10);
             displayText = (days > 0 ? days + '.' : '')
-                            + (hours > 10 ? hours + ':' :
+                            + (hours >= 10 ? hours + ':' :
                             (hours < 10 && hours > 0 ? '0' + hours + ':' : (hours === 0 && days > 0 ? '00:' : '')))
                             + (minutes < 10 ? '0' + minutes + ':' : minutes + ':')
                             + (seconds < 10 ? '0' + seconds : seconds);
@@ -3823,7 +3827,7 @@ var MediaChat = (function(){
             enumActionCode.visitor_video_chat_request : enumActionCode.visitor_audio_chat_request;
         chat_window_handler.add_message(actionCode, '');
     }
-    
+
     function accept() {
         var actionCode = ifVideoChat ? enumActionCode.visitor_video_chat_accept : enumActionCode.visitor_audio_chat_accept;
         if (ifActiveMediaChatWindow()) {   
@@ -3862,13 +3866,15 @@ var MediaChat = (function(){
     
     /* handle p2pChat */
     function prepareP2PChat() {
-        localStorage.setItem('Comm100_MediaChat_' + chatGuid, window.location.hash);
+        localStorage.setItem('Comm100_MediaChat_' + siteId, JSON.stringify({
+            chatguid: chatGuid,
+            id: window.location.hash
+        }));
         if (p2pChat === null) {
             p2pChat = new P2PChat ({
                 chat: chat_window_handler.get_chatguid(),
                 localVideo: localVideo,
                 remoteVideo: remoteVideo,
-                url: serverOrigin + '/webrtcSignalingService/signaling.ashx',
             });            
             p2pChat.onevent(function onVideoChatEvent(type, data) {
                 console.log('type: ', type);
@@ -3892,14 +3898,14 @@ var MediaChat = (function(){
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
         startTime = new Date(seconds - chat_window_handler.get_time_delay());
-        p2pChat.start();
+        p2pChat.start(server_handler() + '/webrtcSignalingService/signaling.ashx');
         startTimer();
     }
 
     function stopP2PChat() {
         if(p2pChat !== null) {
             p2pChat.stop();
-            localStorage.removeItem('Comm100_MediaChat_' + chatGuid);
+            localStorage.removeItem('Comm100_MediaChat_' + siteId);
         }
         stopTimer();
     }
@@ -3934,7 +3940,6 @@ var MediaChat = (function(){
     
     function restoreWindow() {
         media_chat_window.className = 'media-chat-window';
-        document.getElementById('main').style.width = '100%';
     }
     
     function updateUI() {
@@ -3943,9 +3948,11 @@ var MediaChat = (function(){
             default:
                 enableIconButtons();
                 setWindowSize(false);
+                var timeout = isPopupWindow ? 0 : 200;
                 setTimeout(function(){
-                    restoreWindow();    
-                }, 200);
+                    restoreWindow();
+                    add_class(media_chat_window, 'hidden');  
+                }, timeout);
                 stopTimer();
                 break;
             case enumStatus.audioIncoming:
@@ -3982,11 +3989,17 @@ var MediaChat = (function(){
     }
     
     function ifActiveMediaChatWindow() {
-        var localWindowId = localStorage.getItem('Comm100_MediaChat_' + chatGuid);       
-        if (localWindowId) {
-            console.log('localWindowId: ', localWindowId);
-            console.log('window.location.hash: ', window.location.hash);
-            return localWindowId === window.location.hash;
+        var localWindow = JSON.parse(localStorage.getItem('Comm100_MediaChat_' + siteId));       
+        if (localWindow) {
+            if (localWindow.chatguid !== chatGuid) {
+                localStorage.setItem('Comm100_MediaChat_' + siteId, JSON.stringify({
+                    chatguid: chatguid,
+                    id: window.location.hash
+                }));
+                return true;
+            }
+            else
+                return localWindow.id === window.location.hash;
         }
         else
             return true;
@@ -4003,7 +4016,7 @@ var MediaChat = (function(){
     }
 
     function updateIfLargeWindow(ifLarge) {
-        if(this.isPopupWindow) {
+        if(isPopupWindow) {
             localStorage.setItem('Comm100_IfLargeWindow', JSON.stringify(ifLarge));
         }
         else
@@ -4017,12 +4030,13 @@ var MediaChat = (function(){
     function setWindowSize(ifEnlarge) {      
         if(!isPopupWindow) {
             if (ifEnlarge && !getIfLargeWindow()) {
-                // duration: 100ms
-                resizeAnimationEmbed(500, 100, 10);
+                var mainWindowWidth = document.getElementById('main').clientWidth;
+                media_chat_window.style.width = 'calc(100% - ' + mainWindowWidth + 'px)';                   
+                embedded_window_handler.resize(500, 0);
                 updateIfLargeWindow(true);
             }
             else if (!ifEnlarge && getIfLargeWindow()) {
-                resizeAnimationEmbed(-500, 100, 10);
+                embedded_window_handler.resize(-500, 0);
                 updateIfLargeWindow(false);
             }
         }
@@ -4036,18 +4050,6 @@ var MediaChat = (function(){
                 updateIfLargeWindow(false);
             }
         }
-    }
-
-    function resizeAnimationEmbed(width, duration, span) {
-        var wstep = width / span;
-        var mainWindowWidth = document.getElementById('main').clientWidth;
-        document.getElementById('main').style.width = mainWindowWidth + 'px';
-        media_chat_window.style.width = 'calc(100% - ' + mainWindowWidth + 'px)';
-        var interval = setInterval(function() {
-            embedded_window_handler.resize(wstep, 0);
-            width -= wstep;
-            if (width === 0) clearInterval(interval);
-        }, duration / span);
     }
 
     function showLoading() {
@@ -4072,13 +4074,14 @@ var MediaChat = (function(){
         currentStatus = status;
     }
 
-    function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, ifPopupWindow, embeddedWindowHandler, serverorigin) {
+    function initialize(siteid, chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, ifPopupWindow, embeddedWindowHandler, getServerHandler) {
         var mediaChat = {};
+        siteId = siteid;
         chat_window_handler = chatWindowHandler;
         isPopupWindow = ifPopupWindow;
         embedded_window_handler = embeddedWindowHandler;
         media_chat_window = document.getElementById('media-chat-window');
-        serverOrigin = serverorigin;
+        server_handler = getServerHandler;
         //install events
         if (ifEnableAudioChat && document.getElementById('btn-audio-chat'))
             document.getElementById('btn-audio-chat').onclick = onRequestChatClick;
@@ -4091,7 +4094,6 @@ var MediaChat = (function(){
         if (window.location.hash === '') {
             resetIfLargeWindow();
             window.location.hash = Date.now().toString();
-            console.log('window.location.hash: ', window.location.hash);
         }
         return mediaChat;
     }
@@ -4195,9 +4197,10 @@ var MediaChat = (function(){
     }    
 
     function deleteBeforeUnload() {
-        var localWindowId = localStorage.getItem('Comm100_MediaChat_' + chatGuid);
-        if (localWindowId !== null && localWindowId === window.location.hash)
-            localStorage.removeItem('Comm100_MediaChat_' + chatGuid);
+        var localWindow = JSON.parse(localStorage.getItem('Comm100_MediaChat_' + siteId));
+        if (localWindow !== null
+            && (localWindow.chatguid !== chatGuid || localWindow.id === window.location.hash))
+            localStorage.removeItem('Comm100_MediaChat_' + siteId);
     }
 
     //utils
@@ -4222,7 +4225,7 @@ var MediaChat = (function(){
     }
 })();
 
-var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat,
-                    window.if_popup_window, window.comm100_embedded_window, window.comm100_server_origin);
+var media_chat = MediaChat.initialize(window.comm100_siteId, window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat,
+                    window.if_popup_window, window.comm100_embedded_window, window.comm100_get_server);
 
 window.comm100_media_chat_loaded();

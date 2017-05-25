@@ -1628,6 +1628,11 @@ object {
     position: absolute;
     left: 0;
     overflow: hidden;
+    max-width: 500px;
+}
+.popup-window .media-chat-window {
+    flex: 0 0 500px;
+    position: relative;
 }
 .media-chat-window.hidden {
     display: none;
@@ -1639,3 +1644,7 @@ object {
     right: 0;
     top: 0;
 }
+.popup-window #main {
+    position: relative;
+}
+

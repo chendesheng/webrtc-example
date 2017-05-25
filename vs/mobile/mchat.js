@@ -2620,7 +2620,7 @@ function initconfigs(configs) {
         window.comm100_chat_window = chat_window;
         window.if_can_audio_chat = init_data.if_can_audio_chat;
         window.if_can_video_chat = init_data.if_can_video_chat;
-        window.comm100_server_origin = init_data.server.substring(0, init_data.server.indexOf('/'));
+        window.comm100_get_server = server.get_server_host;
         $('#popupMenu').addClass('high');
     }
     else {

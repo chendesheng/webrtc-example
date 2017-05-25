@@ -1143,6 +1143,7 @@ var Comm100API = (Comm100API || { loaded: false });
                     } else if (d == 'restore') {
                         ifrbox.style.cssText = frame_css;
                         $u.set_ele_size(ifrbox, window_size);
+                        $u.ifrLastPosition = null;
 
                         $u.show_ele(dh, 'block');
 
@@ -1223,6 +1224,7 @@ var Comm100API = (Comm100API || { loaded: false });
                         onEmbeddedWindowLoaded();
                         //sso??????loaded???????,???????
                         onEmbeddedWindowLoaded = function () { };
+                        $x.postMessage('setMainWidth_' + window_size.w, ifr.src, ifr.contentWindow);
                     } else if (d.indexOf('resize_') == 0) {
                         var size = JSON.parse(d.replace('resize_', ''));
                         var posLeft = ifrbox.style.left.indexOf('px') > 0 ?
@@ -1232,12 +1234,26 @@ var Comm100API = (Comm100API || { loaded: false });
                             ifrbox.style.right = screen.width - ifrbox.clientWidth - posLeft + 'px';
                             ifrbox.style.left = 'auto';
                         }
-                        else if(size.width < 0) {
-                            $u.restoreifrPosition(ifrbox);
-                        }
-                        window_size.w += size.width;
+                        // else if(size.width < 0) {
+                        //     $u.restoreifrPosition(ifrbox);
+                        // }
+                        // window_size.w += size.width;
                         window_size.h += size.height;
-                        $u.set_ele_size(ifrbox, window_size);
+                        var wstep = size.width / 10, width = size.width;
+                        var interval = setInterval(function() {
+                            if (ifrbox.clientWidth > 0) {
+                                window_size.w += wstep;
+                                $u.set_ele_size(ifrbox, window_size);
+                                width -= wstep;
+                                if (width === 0) {
+                                    clearInterval(interval);
+                                    if(size.width < 0) {
+                                        $u.restoreifrPosition(ifrbox);
+                                    }
+                                }
+                            }
+                        }, 10);   
+                        
                     }
                 }, server);
 
@@ -2480,7 +2496,7 @@ Comm100API.custom_variable_helper = (function () {
 /*
  * Comm100 Live Chat
  * version: 1.0.0
- * compiled: 2017-04-21T17:40:39.794Z
+ * compiled: 2017-04-24T20:25:50.953Z
  */
  
  

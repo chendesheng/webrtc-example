@@ -3411,12 +3411,12 @@ function P2PChat(args) {
   var chat = args.chat;
   var localVideo = args.localVideo;
   var remoteVideo = args.remoteVideo;
-  var url = args.url;
   var eventHandler;
   var connection = null;
   var remoteStream;
   var useRelayOnly = false;
   var wakeLock = new WakeLock();
+  var signalingServiceUrl;
 
   function handleSignal(conn, signal) {
     // console.log(signal);
@@ -3602,17 +3602,16 @@ function P2PChat(args) {
     connection = null;
   }
 
-  function start(relayOnly) {
+  function start() {
     fireEvent('start');
     console.log('start');
-    useRelayOnly = relayOnly == null ? useRelayOnly : relayOnly;
     if (connection)
       reset(connection);
 
     var conn = {};
     var chan = new SignalingChannel({
       chat: chat,
-      url: url,
+      url: signalingServiceUrl,
     });
     conn.signalingChannel = chan;
     chan.onError(function () {
@@ -3702,7 +3701,11 @@ function P2PChat(args) {
 
   this.requirePermission = requirePermission;
   this.getPeerConnectionStats = getStats;
-  this.start = start;
+  this.start = function (url, relayOnly) {
+    signalingServiceUrl = url;
+    useRelayOnly = relayOnly;
+    start();
+  };
   this.onevent = onevent;
   this.stop = stop;
 
@@ -3754,13 +3757,13 @@ var MediaChat = (function(){
         system_if_supportWebrtc: 344
     };
 
-    var serverOrigin = '';
     var chatGuid = '';
     var agentName = '';
     var agentAvatarSrc = '';
     var p2pChat = null;
     var ifVideoChat = false;
     var chat_window_handler = {};
+    var server_handler = null;
     var currentStatus = enumStatus.notStart;
     var oldStatus = enumStatus.notStart;
     var media_chat_window = null;
@@ -3859,7 +3862,6 @@ var MediaChat = (function(){
                 chat: chat_window_handler.get_chatguid(),
                 localVideo: localVideo.get(0),
                 remoteVideo: remoteVideo.get(0),
-                url: serverOrigin + '/webrtcSignalingService/signaling.ashx',
             });            
             p2pChat.onevent(function onVideoChatEvent(type, data) {
                 console.log('type: ', type);
@@ -3881,7 +3883,7 @@ var MediaChat = (function(){
         var seconds = parseInt(time.match(/Date\((\d+)\)/)[1]);
 	    seconds -= (new Date).getTimezoneOffset() * 60;
         startTime = new Date(seconds - chat_window_handler.get_time_delay());  
-        p2pChat.start();
+        p2pChat.start(server_handler() + '/webrtcSignalingService/signaling.ashx');
         startTimer();
     }
 
@@ -3993,11 +3995,11 @@ var MediaChat = (function(){
         currentStatus = status;
     }
 
-    function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, serverorigin) {
+    function initialize(chatWindowHandler, ifEnableAudioChat, ifEnableVideoChat, getServerHandler) {
         var mediaChat = {};
         chat_window_handler = chatWindowHandler;
         media_chat_window = $('#media-chat-window');
-        serverOrigin = serverorigin;
+        server_handler = getServerHandler;
         //install events
         if (ifEnableAudioChat && $('#btn-audio-chat')) {
             $('#btn-audio-chat').click(function() {
@@ -4123,6 +4125,6 @@ var MediaChat = (function(){
     }
 })();
 
-var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.comm100_server_origin);
+var media_chat = MediaChat.initialize(window.comm100_chat_window, window.if_can_audio_chat, window.if_can_video_chat, window.comm100_get_server);
 
 window.comm100_media_chat_loaded();
