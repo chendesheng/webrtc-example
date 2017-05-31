@@ -329,7 +329,7 @@
         "spread": false,
         "optional": false,
         "name": "type",
-        "description": "Type of invitation, possible options are:\n+ image - image invitation\n+ adaptive - adaptive invitation\n+ mobile - mobile invitation"
+        "description": "Type of invitation, possible options are:\n+ image - image invitation\n+ adaptive - adaptive invitation\n+ embedded-window - popup embedded chat window directly\n+ mobile - mobile invitation"
       },
       {
         "nullable": null,
@@ -411,7 +411,7 @@
     "longname": "src/api.js~Comm100API#onInvitationWillDisplay",
     "access": null,
     "description": "API that will be triggered before certain invitation is rendered, providing useful API to get/set\nthe invitation, also provide feature to prevent rendering if necessary.",
-    "lineNumber": 83,
+    "lineNumber": 84,
     "params": [
       {
         "nullable": null,
@@ -1439,7 +1439,7 @@
     "longname": "src/api.js~Comm100API#onWindowWillDisplay",
     "access": null,
     "description": "API that will be triggered before chat window is rendered, providing useful API to get/set\nthe chat window, also provide feature to prevent rendering if necessary.",
-    "lineNumber": 294,
+    "lineNumber": 295,
     "params": [
       {
         "nullable": null,

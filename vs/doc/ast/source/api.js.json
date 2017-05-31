@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 11740,
+  "end": 11801,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 296,
+      "line": 297,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 11740,
+    "end": 11801,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 296,
+        "line": 297,
         "column": 0
       }
     },
@@ -31,28 +31,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 22,
-        "end": 11739,
+        "end": 11800,
         "loc": {
           "start": {
             "line": 3,
             "column": 0
           },
           "end": {
-            "line": 295,
+            "line": 296,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 37,
-          "end": 11739,
+          "end": 11800,
           "loc": {
             "start": {
               "line": 3,
               "column": 15
             },
             "end": {
-              "line": 295,
+              "line": 296,
               "column": 1
             }
           },
@@ -78,14 +78,14 @@
           "body": {
             "type": "ClassBody",
             "start": 54,
-            "end": 11739,
+            "end": 11800,
             "loc": {
               "start": {
                 "line": 3,
                 "column": 32
               },
               "end": {
-                "line": 295,
+                "line": 296,
                 "column": 1
               }
             },
@@ -414,16 +414,16 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
+                    "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + embedded-window - popup embedded chat window directly\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
                     "start": 2089,
-                    "end": 2909,
+                    "end": 2970,
                     "loc": {
                       "start": {
                         "line": 61,
                         "column": 2
                       },
                       "end": {
-                        "line": 75,
+                        "line": 76,
                         "column": 4
                       }
                     }
@@ -431,15 +431,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * API that will be triggered before certain invitation is rendered, providing useful API to get/set\n   * the invitation, also provide feature to prevent rendering if necessary.\n   * @param {Invitation} invitation - Useful api to get/set information of specific invitation.\n   * @return {boolean} Return true will prevent rendering current invitation.\n   ",
-                    "start": 2913,
-                    "end": 3276,
+                    "start": 2974,
+                    "end": 3337,
                     "loc": {
                       "start": {
-                        "line": 77,
+                        "line": 78,
                         "column": 2
                       },
                       "end": {
-                        "line": 82,
+                        "line": 83,
                         "column": 5
                       }
                     }
@@ -448,30 +448,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3279,
-                "end": 3318,
+                "start": 3340,
+                "end": 3379,
                 "loc": {
                   "start": {
-                    "line": 83,
+                    "line": 84,
                     "column": 2
                   },
                   "end": {
-                    "line": 83,
+                    "line": 84,
                     "column": 41
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3279,
-                  "end": 3302,
+                  "start": 3340,
+                  "end": 3363,
                   "loc": {
                     "start": {
-                      "line": 83,
+                      "line": 84,
                       "column": 2
                     },
                     "end": {
-                      "line": 83,
+                      "line": 84,
                       "column": 25
                     },
                     "identifierName": "onInvitationWillDisplay"
@@ -488,15 +488,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3303,
-                    "end": 3313,
+                    "start": 3364,
+                    "end": 3374,
                     "loc": {
                       "start": {
-                        "line": 83,
+                        "line": 84,
                         "column": 26
                       },
                       "end": {
-                        "line": 83,
+                        "line": 84,
                         "column": 36
                       },
                       "identifierName": "invitation"
@@ -506,15 +506,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3315,
-                  "end": 3318,
+                  "start": 3376,
+                  "end": 3379,
                   "loc": {
                     "start": {
-                      "line": 83,
+                      "line": 84,
                       "column": 38
                     },
                     "end": {
-                      "line": 83,
+                      "line": 84,
                       "column": 41
                     }
                   },
@@ -542,16 +542,16 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
+                    "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + embedded-window - popup embedded chat window directly\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
                     "start": 2089,
-                    "end": 2909,
+                    "end": 2970,
                     "loc": {
                       "start": {
                         "line": 61,
                         "column": 2
                       },
                       "end": {
-                        "line": 75,
+                        "line": 76,
                         "column": 4
                       }
                     }
@@ -559,15 +559,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * API that will be triggered before certain invitation is rendered, providing useful API to get/set\n   * the invitation, also provide feature to prevent rendering if necessary.\n   * @param {Invitation} invitation - Useful api to get/set information of specific invitation.\n   * @return {boolean} Return true will prevent rendering current invitation.\n   ",
-                    "start": 2913,
-                    "end": 3276,
+                    "start": 2974,
+                    "end": 3337,
                     "loc": {
                       "start": {
-                        "line": 77,
+                        "line": 78,
                         "column": 2
                       },
                       "end": {
-                        "line": 82,
+                        "line": 83,
                         "column": 5
                       }
                     }
@@ -577,15 +577,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Message\n   * @property {string} type - Type of message\n   * @property {{type:string,name:string}} sender - Sender of message, possible types of sender are:\n   * + 'visitor'\n   * + 'agent'\n   * + 'system'\n   * @property {Date} time - Creating time of this message\n   * @property {string|object} content - Detailed content of message\n   ",
-                    "start": 3322,
-                    "end": 3686,
+                    "start": 3383,
+                    "end": 3747,
                     "loc": {
                       "start": {
-                        "line": 85,
+                        "line": 86,
                         "column": 2
                       },
                       "end": {
-                        "line": 94,
+                        "line": 95,
                         "column": 5
                       }
                     }
@@ -593,15 +593,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} MessagesTransform\n   * @param {Array<Message>} messages - Current version of messages\n   * @return {Array<Message>} messages that should be displayed\n   ",
-                    "start": 3690,
-                    "end": 3874,
+                    "start": 3751,
+                    "end": 3935,
                     "loc": {
                       "start": {
-                        "line": 96,
+                        "line": 97,
                         "column": 2
                       },
                       "end": {
-                        "line": 100,
+                        "line": 101,
                         "column": 5
                       }
                     }
@@ -609,15 +609,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} SingleMessageTransform\n   * @param {Message} message - Current version of message\n   * @param {number} index - Index of current message (in messasge list)\n   * @param {Array<Message>} messages - The complete message list\n   * @return {Message|null|Array<Message>} The transformed message. If `null` is provided, this\n   * message will be removed from list; if a list of message is provided, all of them will be rendered\n   * in list.\n   ",
-                    "start": 3878,
-                    "end": 4346,
+                    "start": 3939,
+                    "end": 4407,
                     "loc": {
                       "start": {
-                        "line": 102,
+                        "line": 103,
                         "column": 2
                       },
                       "end": {
-                        "line": 110,
+                        "line": 111,
                         "column": 5
                       }
                     }
@@ -625,15 +625,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Message list is different from form fields, as the original list of messages is uncertain and can\n   * grow larger and larger. It might be inconvenient, if only `MessagesTransform` is provided as API.\n   * Here, `MessageTransformVisitor` allows to register specific transform for certain types.\n   * @typedef {Object} MessageTransformVisitor\n   * @property {string} type - Any type of `Message`, for example:\n   * + 'system-message'\n   * + 'agent-text-message'\n   * + 'visitor-text-message'\n   * + 'waiting-queue'\n   * + etc.\n   * @property {SingleMessageTransform} transform - Message transform\n   ",
-                    "start": 4350,
-                    "end": 4960,
+                    "start": 4411,
+                    "end": 5021,
                     "loc": {
                       "start": {
-                        "line": 112,
+                        "line": 113,
                         "column": 2
                       },
                       "end": {
-                        "line": 124,
+                        "line": 125,
                         "column": 5
                       }
                     }
@@ -641,15 +641,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Messages\n   * @property {MessagesTransform|MessageTransformVisitor} onChange - Register callback function to\n   * transform message in list.\n   ",
-                    "start": 4964,
-                    "end": 5137,
+                    "start": 5025,
+                    "end": 5198,
                     "loc": {
                       "start": {
-                        "line": 126,
+                        "line": 127,
                         "column": 2
                       },
                       "end": {
-                        "line": 130,
+                        "line": 131,
                         "column": 5
                       }
                     }
@@ -657,15 +657,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Field\n   * @property {string} type - Type of field, possible types are:\n   * + input\n   * + textarea\n   * + select\n   * + radiobox\n   * + checkbox\n   * + file\n   * + custom\n   * @property {string} name - Label name of field\n   * @property {string|number} value - Value of current field\n   * @property {boolean} isSystem - Whether the field is system field\n   * @property {string} error - Potential error of this field with current value. This error might\n   * or might not be displayed, usually it will be displayed after field blur or before form submit.\n   * @property {Array<{type:string,name:string}>} options - Possible options of current field, only\n   * valid when type is `select`, `radiobox` or `checkbox`.\n   * @property {HTMLElement} element - Extended element, only valid when type is `custom`\n   ",
-                    "start": 5141,
-                    "end": 5979,
+                    "start": 5202,
+                    "end": 6040,
                     "loc": {
                       "start": {
-                        "line": 132,
+                        "line": 133,
                         "column": 2
                       },
                       "end": {
-                        "line": 150,
+                        "line": 151,
                         "column": 5
                       }
                     }
@@ -673,15 +673,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FieldTransform\n   * @param {Array<Field>} prevFields - Previous version of fields. For initial run, this will be\n   * default value.\n   * @param {Array<Field>} fields - Current version of fields.\n   * @return {Array<Field>} fields that should be displayed.\n   ",
-                    "start": 5983,
-                    "end": 6274,
+                    "start": 6044,
+                    "end": 6335,
                     "loc": {
                       "start": {
-                        "line": 152,
+                        "line": 153,
                         "column": 2
                       },
                       "end": {
-                        "line": 158,
+                        "line": 159,
                         "column": 5
                       }
                     }
@@ -689,15 +689,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FieldOnClickTransform\n   * @param {string} id - Field id.\n   * @param {Array<Field>} fields - Current version of fields\n   * @return {Array<Field>} fields that should be displayed\n   ",
-                    "start": 6278,
-                    "end": 6492,
+                    "start": 6339,
+                    "end": 6553,
                     "loc": {
                       "start": {
-                        "line": 160,
+                        "line": 161,
                         "column": 2
                       },
                       "end": {
-                        "line": 165,
+                        "line": 166,
                         "column": 5
                       }
                     }
@@ -705,15 +705,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} FormData\n   * @property {string} name\n   * @property {string} email\n   * @property {string} phone\n   * @property {string} company\n   * @property {int} ticketId\n   * @property {int} departmentId\n   * @property {string} productService\n   * @property {Array<{name:string,value:string}>} customFields\n   ",
-                    "start": 6496,
-                    "end": 6825,
+                    "start": 6557,
+                    "end": 6886,
                     "loc": {
                       "start": {
-                        "line": 167,
+                        "line": 168,
                         "column": 2
                       },
                       "end": {
-                        "line": 177,
+                        "line": 178,
                         "column": 5
                       }
                     }
@@ -721,15 +721,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FormSubmitTransform\n   * @param {FormData} formData - Current form data.\n   * @return {Object} form data that should be submitted.\n   ",
-                    "start": 6829,
-                    "end": 6994,
+                    "start": 6890,
+                    "end": 7055,
                     "loc": {
                       "start": {
-                        "line": 179,
+                        "line": 180,
                         "column": 2
                       },
                       "end": {
-                        "line": 183,
+                        "line": 184,
                         "column": 5
                       }
                     }
@@ -737,15 +737,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} onError\n   * @param {Error} error - Occured error.\n   ",
-                    "start": 6998,
-                    "end": 7083,
+                    "start": 7059,
+                    "end": 7144,
                     "loc": {
                       "start": {
-                        "line": 185,
+                        "line": 186,
                         "column": 2
                       },
                       "end": {
-                        "line": 188,
+                        "line": 189,
                         "column": 5
                       }
                     }
@@ -753,15 +753,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Form\n   * @property {function(callback:FieldTransform):Form} onChange - Transform original fields to match\n   * situation.\n   * @property {function(callback:FieldOnClickTransform):Form} onClick - Transform\n   * list of fields on click event of any provided field\n   * @property {function(callback:FormSubmitTransform):Form} onSubmit - Transform original submit\n   * data, use this API if you would like to provide field data programatically.\n   * @property {function(callback:onError):Form} onError - Trigger callback when error\n   * occurs. For example, when providing incorrect submit data.\n   * @property {function(formData:FormData):Promise<void,Error>} submit - Submit form with provided data.\n   ",
-                    "start": 7087,
-                    "end": 7818,
+                    "start": 7148,
+                    "end": 7879,
                     "loc": {
                       "start": {
-                        "line": 190,
+                        "line": 191,
                         "column": 2
                       },
                       "end": {
-                        "line": 201,
+                        "line": 202,
                         "column": 5
                       }
                     }
@@ -769,15 +769,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} RenderCallback\n   * @return {HTMLElement|null} If provides an HTMLElement, original component will not be rendered;\n   * if provides null, use original component instead.\n   ",
-                    "start": 7822,
-                    "end": 8027,
+                    "start": 7883,
+                    "end": 8088,
                     "loc": {
                       "start": {
-                        "line": 203,
+                        "line": 204,
                         "column": 2
                       },
                       "end": {
-                        "line": 207,
+                        "line": 208,
                         "column": 5
                       }
                     }
@@ -785,15 +785,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} RenderCallbackVisitor\n   * @property {string} type - Any valid type\n   * @property {RenderCallback} callback - Render callback function\n   ",
-                    "start": 8031,
-                    "end": 8199,
+                    "start": 8092,
+                    "end": 8260,
                     "loc": {
                       "start": {
-                        "line": 209,
+                        "line": 210,
                         "column": 2
                       },
                       "end": {
-                        "line": 213,
+                        "line": 214,
                         "column": 5
                       }
                     }
@@ -801,15 +801,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} ChatWindowOnVisitor\n   * @property {string} type - Any valid type\n   * @property {function():void} callback - Callback function for this specific type\n   ",
-                    "start": 8203,
-                    "end": 8386,
+                    "start": 8264,
+                    "end": 8447,
                     "loc": {
                       "start": {
-                        "line": 215,
+                        "line": 216,
                         "column": 2
                       },
                       "end": {
-                        "line": 219,
+                        "line": 220,
                         "column": 5
                       }
                     }
@@ -817,15 +817,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} AttachTabCallback\n   * @param {object} param - Parameters used to render tab\n   * @return {HTMLElement|null} If `null` is provided, this tab will be hide temporarily; otherwise,\n   * HTMLElement will be append to this tab.\n   ",
-                    "start": 8390,
-                    "end": 8647,
+                    "start": 8451,
+                    "end": 8708,
                     "loc": {
                       "start": {
-                        "line": 221,
+                        "line": 222,
                         "column": 2
                       },
                       "end": {
-                        "line": 226,
+                        "line": 227,
                         "column": 5
                       }
                     }
@@ -833,15 +833,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {object} AttachTabVisitor\n   * @property {string} type - Any display name of tab\n   * @property {AttachTabCallback} callback - Render callback function\n   ",
-                    "start": 8651,
-                    "end": 8826,
+                    "start": 8712,
+                    "end": 8887,
                     "loc": {
                       "start": {
-                        "line": 228,
+                        "line": 229,
                         "column": 2
                       },
                       "end": {
-                        "line": 232,
+                        "line": 233,
                         "column": 5
                       }
                     }
@@ -849,15 +849,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {object} ExtendedWindow\n   * @property {function(tab:string,callback:AttachTabCallback):ExtendedWindow|function(visitor:AttachTabVisitor):ExtendedWindow} attachTab -\n   * Extends extra window with one more tab.\n   * @property {function(tab:?string,param:?object):Promise<void,Error>} show - Display specific\n   * extended tab, rendering the tab with given parameters. If none `tab` is provided, it will\n   * display default tab if there is any.\n   * @property {function():Promise<void,Error>} hide - Hide extra extended window.\n   ",
-                    "start": 8830,
-                    "end": 9381,
+                    "start": 8891,
+                    "end": 9442,
                     "loc": {
                       "start": {
-                        "line": 234,
+                        "line": 235,
                         "column": 2
                       },
                       "end": {
-                        "line": 242,
+                        "line": 243,
                         "column": 5
                       }
                     }
@@ -865,15 +865,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} ChatWindow\n   * @property {function():Promise<void,Error>} minimize - Minimize current chat window\n   * @property {function():Promise<void,Error>} close - Close current chat window\n   * @property {function():Promise<void,Error>} endChat - End current chat\n   *\n   * @property {function(type:string,callback:function):ChatWindow|function(visitor:ChatWindowOnVisitor):ChatWindow} on -\n   * Register callback for specific events. Accepted events are:\n   * + minimize - Trigger when chat window is minimized\n   * + close - Trigger when chat window is closed\n   * + endchat - Trigger when chat is ended\n   *\n   * In short, function can also provide a visitor object containing key-value pairs, where key is the type\n   * string and value is the callback function for that specific type.\n   * @property {function(type:string,callback:RenderCallback):ChatWindow|function(visitor:RenderCallbackVisitor):ChatWindow} render -\n   * Render customized element. If callback provies an HTMLElement, original component will not be\n   * rendered; if provides null, use original component instead.\n   *\n   * Function also accepts a visitor for multiple callback registration.\n   *\n   * Possible render types are:\n   * + 'prechat.header'\n   * + 'prechat.content'\n   * + 'prechat.footer'\n   * + 'chat.header'\n   * + 'chat.content'\n   * + 'chat.input'\n   * + 'chat.footer'\n   * + 'postchat.header'\n   * + 'postchat.content'\n   * + 'postchat.footer'\n   * + 'offline.header'\n   * + 'offline.content'\n   * + 'offline.footer'\n   * + '*.header'\n   * + '*.content'\n   * + '*.footer'\n   * @property {Form} prechat - Useful api to get/set prechat form\n   * @property {Form} postchat - Useful api to get/set postchat form\n   * @property {Form} offline - Useful api to get/set offline message form\n   * @property {Messages} messages - Useful api to get/set chat messages\n   * @property {ExtendedWindow} extendedWindow - Useful api to get/set extended window\n   ",
-                    "start": 9385,
-                    "end": 11344,
+                    "start": 9446,
+                    "end": 11405,
                     "loc": {
                       "start": {
-                        "line": 244,
+                        "line": 245,
                         "column": 2
                       },
                       "end": {
-                        "line": 286,
+                        "line": 287,
                         "column": 5
                       }
                     }
@@ -881,15 +881,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * API that will be triggered before chat window is rendered, providing useful API to get/set\n   * the chat window, also provide feature to prevent rendering if necessary.\n   * @param {ChatWindow} window - Useful api to get/set information of specific chat window.\n   * @return {boolean} Return true will prevent rendering current chat window.\n   ",
-                    "start": 11348,
-                    "end": 11703,
+                    "start": 11409,
+                    "end": 11764,
                     "loc": {
                       "start": {
-                        "line": 288,
+                        "line": 289,
                         "column": 2
                       },
                       "end": {
-                        "line": 293,
+                        "line": 294,
                         "column": 5
                       }
                     }
@@ -898,30 +898,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 11706,
-                "end": 11737,
+                "start": 11767,
+                "end": 11798,
                 "loc": {
                   "start": {
-                    "line": 294,
+                    "line": 295,
                     "column": 2
                   },
                   "end": {
-                    "line": 294,
+                    "line": 295,
                     "column": 33
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 11706,
-                  "end": 11725,
+                  "start": 11767,
+                  "end": 11786,
                   "loc": {
                     "start": {
-                      "line": 294,
+                      "line": 295,
                       "column": 2
                     },
                     "end": {
-                      "line": 294,
+                      "line": 295,
                       "column": 21
                     },
                     "identifierName": "onWindowWillDisplay"
@@ -938,15 +938,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 11726,
-                    "end": 11732,
+                    "start": 11787,
+                    "end": 11793,
                     "loc": {
                       "start": {
-                        "line": 294,
+                        "line": 295,
                         "column": 22
                       },
                       "end": {
-                        "line": 294,
+                        "line": 295,
                         "column": 28
                       },
                       "identifierName": "window"
@@ -956,15 +956,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 11734,
-                  "end": 11737,
+                  "start": 11795,
+                  "end": 11798,
                   "loc": {
                     "start": {
-                      "line": 294,
+                      "line": 295,
                       "column": 30
                     },
                     "end": {
-                      "line": 294,
+                      "line": 295,
                       "column": 33
                     }
                   },
@@ -975,15 +975,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Message\n   * @property {string} type - Type of message\n   * @property {{type:string,name:string}} sender - Sender of message, possible types of sender are:\n   * + 'visitor'\n   * + 'agent'\n   * + 'system'\n   * @property {Date} time - Creating time of this message\n   * @property {string|object} content - Detailed content of message\n   ",
-                    "start": 3322,
-                    "end": 3686,
+                    "start": 3383,
+                    "end": 3747,
                     "loc": {
                       "start": {
-                        "line": 85,
+                        "line": 86,
                         "column": 2
                       },
                       "end": {
-                        "line": 94,
+                        "line": 95,
                         "column": 5
                       }
                     }
@@ -991,15 +991,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} MessagesTransform\n   * @param {Array<Message>} messages - Current version of messages\n   * @return {Array<Message>} messages that should be displayed\n   ",
-                    "start": 3690,
-                    "end": 3874,
+                    "start": 3751,
+                    "end": 3935,
                     "loc": {
                       "start": {
-                        "line": 96,
+                        "line": 97,
                         "column": 2
                       },
                       "end": {
-                        "line": 100,
+                        "line": 101,
                         "column": 5
                       }
                     }
@@ -1007,15 +1007,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} SingleMessageTransform\n   * @param {Message} message - Current version of message\n   * @param {number} index - Index of current message (in messasge list)\n   * @param {Array<Message>} messages - The complete message list\n   * @return {Message|null|Array<Message>} The transformed message. If `null` is provided, this\n   * message will be removed from list; if a list of message is provided, all of them will be rendered\n   * in list.\n   ",
-                    "start": 3878,
-                    "end": 4346,
+                    "start": 3939,
+                    "end": 4407,
                     "loc": {
                       "start": {
-                        "line": 102,
+                        "line": 103,
                         "column": 2
                       },
                       "end": {
-                        "line": 110,
+                        "line": 111,
                         "column": 5
                       }
                     }
@@ -1023,15 +1023,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Message list is different from form fields, as the original list of messages is uncertain and can\n   * grow larger and larger. It might be inconvenient, if only `MessagesTransform` is provided as API.\n   * Here, `MessageTransformVisitor` allows to register specific transform for certain types.\n   * @typedef {Object} MessageTransformVisitor\n   * @property {string} type - Any type of `Message`, for example:\n   * + 'system-message'\n   * + 'agent-text-message'\n   * + 'visitor-text-message'\n   * + 'waiting-queue'\n   * + etc.\n   * @property {SingleMessageTransform} transform - Message transform\n   ",
-                    "start": 4350,
-                    "end": 4960,
+                    "start": 4411,
+                    "end": 5021,
                     "loc": {
                       "start": {
-                        "line": 112,
+                        "line": 113,
                         "column": 2
                       },
                       "end": {
-                        "line": 124,
+                        "line": 125,
                         "column": 5
                       }
                     }
@@ -1039,15 +1039,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Messages\n   * @property {MessagesTransform|MessageTransformVisitor} onChange - Register callback function to\n   * transform message in list.\n   ",
-                    "start": 4964,
-                    "end": 5137,
+                    "start": 5025,
+                    "end": 5198,
                     "loc": {
                       "start": {
-                        "line": 126,
+                        "line": 127,
                         "column": 2
                       },
                       "end": {
-                        "line": 130,
+                        "line": 131,
                         "column": 5
                       }
                     }
@@ -1055,15 +1055,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Field\n   * @property {string} type - Type of field, possible types are:\n   * + input\n   * + textarea\n   * + select\n   * + radiobox\n   * + checkbox\n   * + file\n   * + custom\n   * @property {string} name - Label name of field\n   * @property {string|number} value - Value of current field\n   * @property {boolean} isSystem - Whether the field is system field\n   * @property {string} error - Potential error of this field with current value. This error might\n   * or might not be displayed, usually it will be displayed after field blur or before form submit.\n   * @property {Array<{type:string,name:string}>} options - Possible options of current field, only\n   * valid when type is `select`, `radiobox` or `checkbox`.\n   * @property {HTMLElement} element - Extended element, only valid when type is `custom`\n   ",
-                    "start": 5141,
-                    "end": 5979,
+                    "start": 5202,
+                    "end": 6040,
                     "loc": {
                       "start": {
-                        "line": 132,
+                        "line": 133,
                         "column": 2
                       },
                       "end": {
-                        "line": 150,
+                        "line": 151,
                         "column": 5
                       }
                     }
@@ -1071,15 +1071,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FieldTransform\n   * @param {Array<Field>} prevFields - Previous version of fields. For initial run, this will be\n   * default value.\n   * @param {Array<Field>} fields - Current version of fields.\n   * @return {Array<Field>} fields that should be displayed.\n   ",
-                    "start": 5983,
-                    "end": 6274,
+                    "start": 6044,
+                    "end": 6335,
                     "loc": {
                       "start": {
-                        "line": 152,
+                        "line": 153,
                         "column": 2
                       },
                       "end": {
-                        "line": 158,
+                        "line": 159,
                         "column": 5
                       }
                     }
@@ -1087,15 +1087,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FieldOnClickTransform\n   * @param {string} id - Field id.\n   * @param {Array<Field>} fields - Current version of fields\n   * @return {Array<Field>} fields that should be displayed\n   ",
-                    "start": 6278,
-                    "end": 6492,
+                    "start": 6339,
+                    "end": 6553,
                     "loc": {
                       "start": {
-                        "line": 160,
+                        "line": 161,
                         "column": 2
                       },
                       "end": {
-                        "line": 165,
+                        "line": 166,
                         "column": 5
                       }
                     }
@@ -1103,15 +1103,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} FormData\n   * @property {string} name\n   * @property {string} email\n   * @property {string} phone\n   * @property {string} company\n   * @property {int} ticketId\n   * @property {int} departmentId\n   * @property {string} productService\n   * @property {Array<{name:string,value:string}>} customFields\n   ",
-                    "start": 6496,
-                    "end": 6825,
+                    "start": 6557,
+                    "end": 6886,
                     "loc": {
                       "start": {
-                        "line": 167,
+                        "line": 168,
                         "column": 2
                       },
                       "end": {
-                        "line": 177,
+                        "line": 178,
                         "column": 5
                       }
                     }
@@ -1119,15 +1119,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} FormSubmitTransform\n   * @param {FormData} formData - Current form data.\n   * @return {Object} form data that should be submitted.\n   ",
-                    "start": 6829,
-                    "end": 6994,
+                    "start": 6890,
+                    "end": 7055,
                     "loc": {
                       "start": {
-                        "line": 179,
+                        "line": 180,
                         "column": 2
                       },
                       "end": {
-                        "line": 183,
+                        "line": 184,
                         "column": 5
                       }
                     }
@@ -1135,15 +1135,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} onError\n   * @param {Error} error - Occured error.\n   ",
-                    "start": 6998,
-                    "end": 7083,
+                    "start": 7059,
+                    "end": 7144,
                     "loc": {
                       "start": {
-                        "line": 185,
+                        "line": 186,
                         "column": 2
                       },
                       "end": {
-                        "line": 188,
+                        "line": 189,
                         "column": 5
                       }
                     }
@@ -1151,15 +1151,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} Form\n   * @property {function(callback:FieldTransform):Form} onChange - Transform original fields to match\n   * situation.\n   * @property {function(callback:FieldOnClickTransform):Form} onClick - Transform\n   * list of fields on click event of any provided field\n   * @property {function(callback:FormSubmitTransform):Form} onSubmit - Transform original submit\n   * data, use this API if you would like to provide field data programatically.\n   * @property {function(callback:onError):Form} onError - Trigger callback when error\n   * occurs. For example, when providing incorrect submit data.\n   * @property {function(formData:FormData):Promise<void,Error>} submit - Submit form with provided data.\n   ",
-                    "start": 7087,
-                    "end": 7818,
+                    "start": 7148,
+                    "end": 7879,
                     "loc": {
                       "start": {
-                        "line": 190,
+                        "line": 191,
                         "column": 2
                       },
                       "end": {
-                        "line": 201,
+                        "line": 202,
                         "column": 5
                       }
                     }
@@ -1167,15 +1167,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} RenderCallback\n   * @return {HTMLElement|null} If provides an HTMLElement, original component will not be rendered;\n   * if provides null, use original component instead.\n   ",
-                    "start": 7822,
-                    "end": 8027,
+                    "start": 7883,
+                    "end": 8088,
                     "loc": {
                       "start": {
-                        "line": 203,
+                        "line": 204,
                         "column": 2
                       },
                       "end": {
-                        "line": 207,
+                        "line": 208,
                         "column": 5
                       }
                     }
@@ -1183,15 +1183,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} RenderCallbackVisitor\n   * @property {string} type - Any valid type\n   * @property {RenderCallback} callback - Render callback function\n   ",
-                    "start": 8031,
-                    "end": 8199,
+                    "start": 8092,
+                    "end": 8260,
                     "loc": {
                       "start": {
-                        "line": 209,
+                        "line": 210,
                         "column": 2
                       },
                       "end": {
-                        "line": 213,
+                        "line": 214,
                         "column": 5
                       }
                     }
@@ -1199,15 +1199,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} ChatWindowOnVisitor\n   * @property {string} type - Any valid type\n   * @property {function():void} callback - Callback function for this specific type\n   ",
-                    "start": 8203,
-                    "end": 8386,
+                    "start": 8264,
+                    "end": 8447,
                     "loc": {
                       "start": {
-                        "line": 215,
+                        "line": 216,
                         "column": 2
                       },
                       "end": {
-                        "line": 219,
+                        "line": 220,
                         "column": 5
                       }
                     }
@@ -1215,15 +1215,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {function} AttachTabCallback\n   * @param {object} param - Parameters used to render tab\n   * @return {HTMLElement|null} If `null` is provided, this tab will be hide temporarily; otherwise,\n   * HTMLElement will be append to this tab.\n   ",
-                    "start": 8390,
-                    "end": 8647,
+                    "start": 8451,
+                    "end": 8708,
                     "loc": {
                       "start": {
-                        "line": 221,
+                        "line": 222,
                         "column": 2
                       },
                       "end": {
-                        "line": 226,
+                        "line": 227,
                         "column": 5
                       }
                     }
@@ -1231,15 +1231,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {object} AttachTabVisitor\n   * @property {string} type - Any display name of tab\n   * @property {AttachTabCallback} callback - Render callback function\n   ",
-                    "start": 8651,
-                    "end": 8826,
+                    "start": 8712,
+                    "end": 8887,
                     "loc": {
                       "start": {
-                        "line": 228,
+                        "line": 229,
                         "column": 2
                       },
                       "end": {
-                        "line": 232,
+                        "line": 233,
                         "column": 5
                       }
                     }
@@ -1247,15 +1247,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {object} ExtendedWindow\n   * @property {function(tab:string,callback:AttachTabCallback):ExtendedWindow|function(visitor:AttachTabVisitor):ExtendedWindow} attachTab -\n   * Extends extra window with one more tab.\n   * @property {function(tab:?string,param:?object):Promise<void,Error>} show - Display specific\n   * extended tab, rendering the tab with given parameters. If none `tab` is provided, it will\n   * display default tab if there is any.\n   * @property {function():Promise<void,Error>} hide - Hide extra extended window.\n   ",
-                    "start": 8830,
-                    "end": 9381,
+                    "start": 8891,
+                    "end": 9442,
                     "loc": {
                       "start": {
-                        "line": 234,
+                        "line": 235,
                         "column": 2
                       },
                       "end": {
-                        "line": 242,
+                        "line": 243,
                         "column": 5
                       }
                     }
@@ -1263,15 +1263,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @typedef {Object} ChatWindow\n   * @property {function():Promise<void,Error>} minimize - Minimize current chat window\n   * @property {function():Promise<void,Error>} close - Close current chat window\n   * @property {function():Promise<void,Error>} endChat - End current chat\n   *\n   * @property {function(type:string,callback:function):ChatWindow|function(visitor:ChatWindowOnVisitor):ChatWindow} on -\n   * Register callback for specific events. Accepted events are:\n   * + minimize - Trigger when chat window is minimized\n   * + close - Trigger when chat window is closed\n   * + endchat - Trigger when chat is ended\n   *\n   * In short, function can also provide a visitor object containing key-value pairs, where key is the type\n   * string and value is the callback function for that specific type.\n   * @property {function(type:string,callback:RenderCallback):ChatWindow|function(visitor:RenderCallbackVisitor):ChatWindow} render -\n   * Render customized element. If callback provies an HTMLElement, original component will not be\n   * rendered; if provides null, use original component instead.\n   *\n   * Function also accepts a visitor for multiple callback registration.\n   *\n   * Possible render types are:\n   * + 'prechat.header'\n   * + 'prechat.content'\n   * + 'prechat.footer'\n   * + 'chat.header'\n   * + 'chat.content'\n   * + 'chat.input'\n   * + 'chat.footer'\n   * + 'postchat.header'\n   * + 'postchat.content'\n   * + 'postchat.footer'\n   * + 'offline.header'\n   * + 'offline.content'\n   * + 'offline.footer'\n   * + '*.header'\n   * + '*.content'\n   * + '*.footer'\n   * @property {Form} prechat - Useful api to get/set prechat form\n   * @property {Form} postchat - Useful api to get/set postchat form\n   * @property {Form} offline - Useful api to get/set offline message form\n   * @property {Messages} messages - Useful api to get/set chat messages\n   * @property {ExtendedWindow} extendedWindow - Useful api to get/set extended window\n   ",
-                    "start": 9385,
-                    "end": 11344,
+                    "start": 9446,
+                    "end": 11405,
                     "loc": {
                       "start": {
-                        "line": 244,
+                        "line": 245,
                         "column": 2
                       },
                       "end": {
-                        "line": 286,
+                        "line": 287,
                         "column": 5
                       }
                     }
@@ -1279,15 +1279,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * API that will be triggered before chat window is rendered, providing useful API to get/set\n   * the chat window, also provide feature to prevent rendering if necessary.\n   * @param {ChatWindow} window - Useful api to get/set information of specific chat window.\n   * @return {boolean} Return true will prevent rendering current chat window.\n   ",
-                    "start": 11348,
-                    "end": 11703,
+                    "start": 11409,
+                    "end": 11764,
                     "loc": {
                       "start": {
-                        "line": 288,
+                        "line": 289,
                         "column": 2
                       },
                       "end": {
-                        "line": 293,
+                        "line": 294,
                         "column": 5
                       }
                     }
@@ -1469,16 +1469,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
+      "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + embedded-window - popup embedded chat window directly\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
       "start": 2089,
-      "end": 2909,
+      "end": 2970,
       "loc": {
         "start": {
           "line": 61,
           "column": 2
         },
         "end": {
-          "line": 75,
+          "line": 76,
           "column": 4
         }
       }
@@ -1486,15 +1486,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * API that will be triggered before certain invitation is rendered, providing useful API to get/set\n   * the invitation, also provide feature to prevent rendering if necessary.\n   * @param {Invitation} invitation - Useful api to get/set information of specific invitation.\n   * @return {boolean} Return true will prevent rendering current invitation.\n   ",
-      "start": 2913,
-      "end": 3276,
+      "start": 2974,
+      "end": 3337,
       "loc": {
         "start": {
-          "line": 77,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 82,
+          "line": 83,
           "column": 5
         }
       }
@@ -1502,15 +1502,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Message\n   * @property {string} type - Type of message\n   * @property {{type:string,name:string}} sender - Sender of message, possible types of sender are:\n   * + 'visitor'\n   * + 'agent'\n   * + 'system'\n   * @property {Date} time - Creating time of this message\n   * @property {string|object} content - Detailed content of message\n   ",
-      "start": 3322,
-      "end": 3686,
+      "start": 3383,
+      "end": 3747,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 86,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 95,
           "column": 5
         }
       }
@@ -1518,15 +1518,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} MessagesTransform\n   * @param {Array<Message>} messages - Current version of messages\n   * @return {Array<Message>} messages that should be displayed\n   ",
-      "start": 3690,
-      "end": 3874,
+      "start": 3751,
+      "end": 3935,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 2
         },
         "end": {
-          "line": 100,
+          "line": 101,
           "column": 5
         }
       }
@@ -1534,15 +1534,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} SingleMessageTransform\n   * @param {Message} message - Current version of message\n   * @param {number} index - Index of current message (in messasge list)\n   * @param {Array<Message>} messages - The complete message list\n   * @return {Message|null|Array<Message>} The transformed message. If `null` is provided, this\n   * message will be removed from list; if a list of message is provided, all of them will be rendered\n   * in list.\n   ",
-      "start": 3878,
-      "end": 4346,
+      "start": 3939,
+      "end": 4407,
       "loc": {
         "start": {
-          "line": 102,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 110,
+          "line": 111,
           "column": 5
         }
       }
@@ -1550,15 +1550,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Message list is different from form fields, as the original list of messages is uncertain and can\n   * grow larger and larger. It might be inconvenient, if only `MessagesTransform` is provided as API.\n   * Here, `MessageTransformVisitor` allows to register specific transform for certain types.\n   * @typedef {Object} MessageTransformVisitor\n   * @property {string} type - Any type of `Message`, for example:\n   * + 'system-message'\n   * + 'agent-text-message'\n   * + 'visitor-text-message'\n   * + 'waiting-queue'\n   * + etc.\n   * @property {SingleMessageTransform} transform - Message transform\n   ",
-      "start": 4350,
-      "end": 4960,
+      "start": 4411,
+      "end": 5021,
       "loc": {
         "start": {
-          "line": 112,
+          "line": 113,
           "column": 2
         },
         "end": {
-          "line": 124,
+          "line": 125,
           "column": 5
         }
       }
@@ -1566,15 +1566,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Messages\n   * @property {MessagesTransform|MessageTransformVisitor} onChange - Register callback function to\n   * transform message in list.\n   ",
-      "start": 4964,
-      "end": 5137,
+      "start": 5025,
+      "end": 5198,
       "loc": {
         "start": {
-          "line": 126,
+          "line": 127,
           "column": 2
         },
         "end": {
-          "line": 130,
+          "line": 131,
           "column": 5
         }
       }
@@ -1582,15 +1582,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Field\n   * @property {string} type - Type of field, possible types are:\n   * + input\n   * + textarea\n   * + select\n   * + radiobox\n   * + checkbox\n   * + file\n   * + custom\n   * @property {string} name - Label name of field\n   * @property {string|number} value - Value of current field\n   * @property {boolean} isSystem - Whether the field is system field\n   * @property {string} error - Potential error of this field with current value. This error might\n   * or might not be displayed, usually it will be displayed after field blur or before form submit.\n   * @property {Array<{type:string,name:string}>} options - Possible options of current field, only\n   * valid when type is `select`, `radiobox` or `checkbox`.\n   * @property {HTMLElement} element - Extended element, only valid when type is `custom`\n   ",
-      "start": 5141,
-      "end": 5979,
+      "start": 5202,
+      "end": 6040,
       "loc": {
         "start": {
-          "line": 132,
+          "line": 133,
           "column": 2
         },
         "end": {
-          "line": 150,
+          "line": 151,
           "column": 5
         }
       }
@@ -1598,15 +1598,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FieldTransform\n   * @param {Array<Field>} prevFields - Previous version of fields. For initial run, this will be\n   * default value.\n   * @param {Array<Field>} fields - Current version of fields.\n   * @return {Array<Field>} fields that should be displayed.\n   ",
-      "start": 5983,
-      "end": 6274,
+      "start": 6044,
+      "end": 6335,
       "loc": {
         "start": {
-          "line": 152,
+          "line": 153,
           "column": 2
         },
         "end": {
-          "line": 158,
+          "line": 159,
           "column": 5
         }
       }
@@ -1614,15 +1614,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FieldOnClickTransform\n   * @param {string} id - Field id.\n   * @param {Array<Field>} fields - Current version of fields\n   * @return {Array<Field>} fields that should be displayed\n   ",
-      "start": 6278,
-      "end": 6492,
+      "start": 6339,
+      "end": 6553,
       "loc": {
         "start": {
-          "line": 160,
+          "line": 161,
           "column": 2
         },
         "end": {
-          "line": 165,
+          "line": 166,
           "column": 5
         }
       }
@@ -1630,15 +1630,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} FormData\n   * @property {string} name\n   * @property {string} email\n   * @property {string} phone\n   * @property {string} company\n   * @property {int} ticketId\n   * @property {int} departmentId\n   * @property {string} productService\n   * @property {Array<{name:string,value:string}>} customFields\n   ",
-      "start": 6496,
-      "end": 6825,
+      "start": 6557,
+      "end": 6886,
       "loc": {
         "start": {
-          "line": 167,
+          "line": 168,
           "column": 2
         },
         "end": {
-          "line": 177,
+          "line": 178,
           "column": 5
         }
       }
@@ -1646,15 +1646,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FormSubmitTransform\n   * @param {FormData} formData - Current form data.\n   * @return {Object} form data that should be submitted.\n   ",
-      "start": 6829,
-      "end": 6994,
+      "start": 6890,
+      "end": 7055,
       "loc": {
         "start": {
-          "line": 179,
+          "line": 180,
           "column": 2
         },
         "end": {
-          "line": 183,
+          "line": 184,
           "column": 5
         }
       }
@@ -1662,15 +1662,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} onError\n   * @param {Error} error - Occured error.\n   ",
-      "start": 6998,
-      "end": 7083,
+      "start": 7059,
+      "end": 7144,
       "loc": {
         "start": {
-          "line": 185,
+          "line": 186,
           "column": 2
         },
         "end": {
-          "line": 188,
+          "line": 189,
           "column": 5
         }
       }
@@ -1678,15 +1678,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Form\n   * @property {function(callback:FieldTransform):Form} onChange - Transform original fields to match\n   * situation.\n   * @property {function(callback:FieldOnClickTransform):Form} onClick - Transform\n   * list of fields on click event of any provided field\n   * @property {function(callback:FormSubmitTransform):Form} onSubmit - Transform original submit\n   * data, use this API if you would like to provide field data programatically.\n   * @property {function(callback:onError):Form} onError - Trigger callback when error\n   * occurs. For example, when providing incorrect submit data.\n   * @property {function(formData:FormData):Promise<void,Error>} submit - Submit form with provided data.\n   ",
-      "start": 7087,
-      "end": 7818,
+      "start": 7148,
+      "end": 7879,
       "loc": {
         "start": {
-          "line": 190,
+          "line": 191,
           "column": 2
         },
         "end": {
-          "line": 201,
+          "line": 202,
           "column": 5
         }
       }
@@ -1694,15 +1694,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} RenderCallback\n   * @return {HTMLElement|null} If provides an HTMLElement, original component will not be rendered;\n   * if provides null, use original component instead.\n   ",
-      "start": 7822,
-      "end": 8027,
+      "start": 7883,
+      "end": 8088,
       "loc": {
         "start": {
-          "line": 203,
+          "line": 204,
           "column": 2
         },
         "end": {
-          "line": 207,
+          "line": 208,
           "column": 5
         }
       }
@@ -1710,15 +1710,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} RenderCallbackVisitor\n   * @property {string} type - Any valid type\n   * @property {RenderCallback} callback - Render callback function\n   ",
-      "start": 8031,
-      "end": 8199,
+      "start": 8092,
+      "end": 8260,
       "loc": {
         "start": {
-          "line": 209,
+          "line": 210,
           "column": 2
         },
         "end": {
-          "line": 213,
+          "line": 214,
           "column": 5
         }
       }
@@ -1726,15 +1726,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} ChatWindowOnVisitor\n   * @property {string} type - Any valid type\n   * @property {function():void} callback - Callback function for this specific type\n   ",
-      "start": 8203,
-      "end": 8386,
+      "start": 8264,
+      "end": 8447,
       "loc": {
         "start": {
-          "line": 215,
+          "line": 216,
           "column": 2
         },
         "end": {
-          "line": 219,
+          "line": 220,
           "column": 5
         }
       }
@@ -1742,15 +1742,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} AttachTabCallback\n   * @param {object} param - Parameters used to render tab\n   * @return {HTMLElement|null} If `null` is provided, this tab will be hide temporarily; otherwise,\n   * HTMLElement will be append to this tab.\n   ",
-      "start": 8390,
-      "end": 8647,
+      "start": 8451,
+      "end": 8708,
       "loc": {
         "start": {
-          "line": 221,
+          "line": 222,
           "column": 2
         },
         "end": {
-          "line": 226,
+          "line": 227,
           "column": 5
         }
       }
@@ -1758,15 +1758,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {object} AttachTabVisitor\n   * @property {string} type - Any display name of tab\n   * @property {AttachTabCallback} callback - Render callback function\n   ",
-      "start": 8651,
-      "end": 8826,
+      "start": 8712,
+      "end": 8887,
       "loc": {
         "start": {
-          "line": 228,
+          "line": 229,
           "column": 2
         },
         "end": {
-          "line": 232,
+          "line": 233,
           "column": 5
         }
       }
@@ -1774,15 +1774,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {object} ExtendedWindow\n   * @property {function(tab:string,callback:AttachTabCallback):ExtendedWindow|function(visitor:AttachTabVisitor):ExtendedWindow} attachTab -\n   * Extends extra window with one more tab.\n   * @property {function(tab:?string,param:?object):Promise<void,Error>} show - Display specific\n   * extended tab, rendering the tab with given parameters. If none `tab` is provided, it will\n   * display default tab if there is any.\n   * @property {function():Promise<void,Error>} hide - Hide extra extended window.\n   ",
-      "start": 8830,
-      "end": 9381,
+      "start": 8891,
+      "end": 9442,
       "loc": {
         "start": {
-          "line": 234,
+          "line": 235,
           "column": 2
         },
         "end": {
-          "line": 242,
+          "line": 243,
           "column": 5
         }
       }
@@ -1790,15 +1790,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} ChatWindow\n   * @property {function():Promise<void,Error>} minimize - Minimize current chat window\n   * @property {function():Promise<void,Error>} close - Close current chat window\n   * @property {function():Promise<void,Error>} endChat - End current chat\n   *\n   * @property {function(type:string,callback:function):ChatWindow|function(visitor:ChatWindowOnVisitor):ChatWindow} on -\n   * Register callback for specific events. Accepted events are:\n   * + minimize - Trigger when chat window is minimized\n   * + close - Trigger when chat window is closed\n   * + endchat - Trigger when chat is ended\n   *\n   * In short, function can also provide a visitor object containing key-value pairs, where key is the type\n   * string and value is the callback function for that specific type.\n   * @property {function(type:string,callback:RenderCallback):ChatWindow|function(visitor:RenderCallbackVisitor):ChatWindow} render -\n   * Render customized element. If callback provies an HTMLElement, original component will not be\n   * rendered; if provides null, use original component instead.\n   *\n   * Function also accepts a visitor for multiple callback registration.\n   *\n   * Possible render types are:\n   * + 'prechat.header'\n   * + 'prechat.content'\n   * + 'prechat.footer'\n   * + 'chat.header'\n   * + 'chat.content'\n   * + 'chat.input'\n   * + 'chat.footer'\n   * + 'postchat.header'\n   * + 'postchat.content'\n   * + 'postchat.footer'\n   * + 'offline.header'\n   * + 'offline.content'\n   * + 'offline.footer'\n   * + '*.header'\n   * + '*.content'\n   * + '*.footer'\n   * @property {Form} prechat - Useful api to get/set prechat form\n   * @property {Form} postchat - Useful api to get/set postchat form\n   * @property {Form} offline - Useful api to get/set offline message form\n   * @property {Messages} messages - Useful api to get/set chat messages\n   * @property {ExtendedWindow} extendedWindow - Useful api to get/set extended window\n   ",
-      "start": 9385,
-      "end": 11344,
+      "start": 9446,
+      "end": 11405,
       "loc": {
         "start": {
-          "line": 244,
+          "line": 245,
           "column": 2
         },
         "end": {
-          "line": 286,
+          "line": 287,
           "column": 5
         }
       }
@@ -1806,15 +1806,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * API that will be triggered before chat window is rendered, providing useful API to get/set\n   * the chat window, also provide feature to prevent rendering if necessary.\n   * @param {ChatWindow} window - Useful api to get/set information of specific chat window.\n   * @return {boolean} Return true will prevent rendering current chat window.\n   ",
-      "start": 11348,
-      "end": 11703,
+      "start": 11409,
+      "end": 11764,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 289,
           "column": 2
         },
         "end": {
-          "line": 293,
+          "line": 294,
           "column": 5
         }
       }
@@ -2390,16 +2390,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
+      "value": "*\n   * @typedef {Object} Invitation\n   * @property {string} type - Type of invitation, possible options are:\n   * + image - image invitation\n   * + adaptive - adaptive invitation\n   * + embedded-window - popup embedded chat window directly\n   * + mobile - mobile invitation\n    * @property {string} message - Message of current invitation.\n  * @property {AgentInfo} agentInfo - Agent info, will only be provided if it's a manual invitation.\n  * @property {function():Promise<void,Error>} accept - Accept invitation manually\n  * @property {function():Promise<void,Error>} refuse - Refuse invitation manually\n  * @property {function(callback:function)} onAccept - Register callback function when invitation is\n  * accepted (either by visitor or programatically).\n  * @property {function(callback:function)} onRefuse - Register callback function when invitation is\n  * refused.\n  ",
       "start": 2089,
-      "end": 2909,
+      "end": 2970,
       "loc": {
         "start": {
           "line": 61,
           "column": 2
         },
         "end": {
-          "line": 75,
+          "line": 76,
           "column": 4
         }
       }
@@ -2407,15 +2407,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * API that will be triggered before certain invitation is rendered, providing useful API to get/set\n   * the invitation, also provide feature to prevent rendering if necessary.\n   * @param {Invitation} invitation - Useful api to get/set information of specific invitation.\n   * @return {boolean} Return true will prevent rendering current invitation.\n   ",
-      "start": 2913,
-      "end": 3276,
+      "start": 2974,
+      "end": 3337,
       "loc": {
         "start": {
-          "line": 77,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 82,
+          "line": 83,
           "column": 5
         }
       }
@@ -2433,15 +2433,15 @@
         "binop": null
       },
       "value": "onInvitationWillDisplay",
-      "start": 3279,
-      "end": 3302,
+      "start": 3340,
+      "end": 3363,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 2
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 25
         }
       }
@@ -2458,15 +2458,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3302,
-      "end": 3303,
+      "start": 3363,
+      "end": 3364,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 25
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 26
         }
       }
@@ -2484,15 +2484,15 @@
         "binop": null
       },
       "value": "invitation",
-      "start": 3303,
-      "end": 3313,
+      "start": 3364,
+      "end": 3374,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 26
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 36
         }
       }
@@ -2509,15 +2509,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3313,
-      "end": 3314,
+      "start": 3374,
+      "end": 3375,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 36
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 37
         }
       }
@@ -2534,15 +2534,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3315,
-      "end": 3316,
+      "start": 3376,
+      "end": 3377,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 38
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 39
         }
       }
@@ -2559,15 +2559,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3317,
-      "end": 3318,
+      "start": 3378,
+      "end": 3379,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 84,
           "column": 40
         },
         "end": {
-          "line": 83,
+          "line": 84,
           "column": 41
         }
       }
@@ -2575,15 +2575,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Message\n   * @property {string} type - Type of message\n   * @property {{type:string,name:string}} sender - Sender of message, possible types of sender are:\n   * + 'visitor'\n   * + 'agent'\n   * + 'system'\n   * @property {Date} time - Creating time of this message\n   * @property {string|object} content - Detailed content of message\n   ",
-      "start": 3322,
-      "end": 3686,
+      "start": 3383,
+      "end": 3747,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 86,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 95,
           "column": 5
         }
       }
@@ -2591,15 +2591,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} MessagesTransform\n   * @param {Array<Message>} messages - Current version of messages\n   * @return {Array<Message>} messages that should be displayed\n   ",
-      "start": 3690,
-      "end": 3874,
+      "start": 3751,
+      "end": 3935,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 2
         },
         "end": {
-          "line": 100,
+          "line": 101,
           "column": 5
         }
       }
@@ -2607,15 +2607,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} SingleMessageTransform\n   * @param {Message} message - Current version of message\n   * @param {number} index - Index of current message (in messasge list)\n   * @param {Array<Message>} messages - The complete message list\n   * @return {Message|null|Array<Message>} The transformed message. If `null` is provided, this\n   * message will be removed from list; if a list of message is provided, all of them will be rendered\n   * in list.\n   ",
-      "start": 3878,
-      "end": 4346,
+      "start": 3939,
+      "end": 4407,
       "loc": {
         "start": {
-          "line": 102,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 110,
+          "line": 111,
           "column": 5
         }
       }
@@ -2623,15 +2623,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Message list is different from form fields, as the original list of messages is uncertain and can\n   * grow larger and larger. It might be inconvenient, if only `MessagesTransform` is provided as API.\n   * Here, `MessageTransformVisitor` allows to register specific transform for certain types.\n   * @typedef {Object} MessageTransformVisitor\n   * @property {string} type - Any type of `Message`, for example:\n   * + 'system-message'\n   * + 'agent-text-message'\n   * + 'visitor-text-message'\n   * + 'waiting-queue'\n   * + etc.\n   * @property {SingleMessageTransform} transform - Message transform\n   ",
-      "start": 4350,
-      "end": 4960,
+      "start": 4411,
+      "end": 5021,
       "loc": {
         "start": {
-          "line": 112,
+          "line": 113,
           "column": 2
         },
         "end": {
-          "line": 124,
+          "line": 125,
           "column": 5
         }
       }
@@ -2639,15 +2639,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Messages\n   * @property {MessagesTransform|MessageTransformVisitor} onChange - Register callback function to\n   * transform message in list.\n   ",
-      "start": 4964,
-      "end": 5137,
+      "start": 5025,
+      "end": 5198,
       "loc": {
         "start": {
-          "line": 126,
+          "line": 127,
           "column": 2
         },
         "end": {
-          "line": 130,
+          "line": 131,
           "column": 5
         }
       }
@@ -2655,15 +2655,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Field\n   * @property {string} type - Type of field, possible types are:\n   * + input\n   * + textarea\n   * + select\n   * + radiobox\n   * + checkbox\n   * + file\n   * + custom\n   * @property {string} name - Label name of field\n   * @property {string|number} value - Value of current field\n   * @property {boolean} isSystem - Whether the field is system field\n   * @property {string} error - Potential error of this field with current value. This error might\n   * or might not be displayed, usually it will be displayed after field blur or before form submit.\n   * @property {Array<{type:string,name:string}>} options - Possible options of current field, only\n   * valid when type is `select`, `radiobox` or `checkbox`.\n   * @property {HTMLElement} element - Extended element, only valid when type is `custom`\n   ",
-      "start": 5141,
-      "end": 5979,
+      "start": 5202,
+      "end": 6040,
       "loc": {
         "start": {
-          "line": 132,
+          "line": 133,
           "column": 2
         },
         "end": {
-          "line": 150,
+          "line": 151,
           "column": 5
         }
       }
@@ -2671,15 +2671,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FieldTransform\n   * @param {Array<Field>} prevFields - Previous version of fields. For initial run, this will be\n   * default value.\n   * @param {Array<Field>} fields - Current version of fields.\n   * @return {Array<Field>} fields that should be displayed.\n   ",
-      "start": 5983,
-      "end": 6274,
+      "start": 6044,
+      "end": 6335,
       "loc": {
         "start": {
-          "line": 152,
+          "line": 153,
           "column": 2
         },
         "end": {
-          "line": 158,
+          "line": 159,
           "column": 5
         }
       }
@@ -2687,15 +2687,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FieldOnClickTransform\n   * @param {string} id - Field id.\n   * @param {Array<Field>} fields - Current version of fields\n   * @return {Array<Field>} fields that should be displayed\n   ",
-      "start": 6278,
-      "end": 6492,
+      "start": 6339,
+      "end": 6553,
       "loc": {
         "start": {
-          "line": 160,
+          "line": 161,
           "column": 2
         },
         "end": {
-          "line": 165,
+          "line": 166,
           "column": 5
         }
       }
@@ -2703,15 +2703,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} FormData\n   * @property {string} name\n   * @property {string} email\n   * @property {string} phone\n   * @property {string} company\n   * @property {int} ticketId\n   * @property {int} departmentId\n   * @property {string} productService\n   * @property {Array<{name:string,value:string}>} customFields\n   ",
-      "start": 6496,
-      "end": 6825,
+      "start": 6557,
+      "end": 6886,
       "loc": {
         "start": {
-          "line": 167,
+          "line": 168,
           "column": 2
         },
         "end": {
-          "line": 177,
+          "line": 178,
           "column": 5
         }
       }
@@ -2719,15 +2719,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} FormSubmitTransform\n   * @param {FormData} formData - Current form data.\n   * @return {Object} form data that should be submitted.\n   ",
-      "start": 6829,
-      "end": 6994,
+      "start": 6890,
+      "end": 7055,
       "loc": {
         "start": {
-          "line": 179,
+          "line": 180,
           "column": 2
         },
         "end": {
-          "line": 183,
+          "line": 184,
           "column": 5
         }
       }
@@ -2735,15 +2735,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} onError\n   * @param {Error} error - Occured error.\n   ",
-      "start": 6998,
-      "end": 7083,
+      "start": 7059,
+      "end": 7144,
       "loc": {
         "start": {
-          "line": 185,
+          "line": 186,
           "column": 2
         },
         "end": {
-          "line": 188,
+          "line": 189,
           "column": 5
         }
       }
@@ -2751,15 +2751,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} Form\n   * @property {function(callback:FieldTransform):Form} onChange - Transform original fields to match\n   * situation.\n   * @property {function(callback:FieldOnClickTransform):Form} onClick - Transform\n   * list of fields on click event of any provided field\n   * @property {function(callback:FormSubmitTransform):Form} onSubmit - Transform original submit\n   * data, use this API if you would like to provide field data programatically.\n   * @property {function(callback:onError):Form} onError - Trigger callback when error\n   * occurs. For example, when providing incorrect submit data.\n   * @property {function(formData:FormData):Promise<void,Error>} submit - Submit form with provided data.\n   ",
-      "start": 7087,
-      "end": 7818,
+      "start": 7148,
+      "end": 7879,
       "loc": {
         "start": {
-          "line": 190,
+          "line": 191,
           "column": 2
         },
         "end": {
-          "line": 201,
+          "line": 202,
           "column": 5
         }
       }
@@ -2767,15 +2767,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} RenderCallback\n   * @return {HTMLElement|null} If provides an HTMLElement, original component will not be rendered;\n   * if provides null, use original component instead.\n   ",
-      "start": 7822,
-      "end": 8027,
+      "start": 7883,
+      "end": 8088,
       "loc": {
         "start": {
-          "line": 203,
+          "line": 204,
           "column": 2
         },
         "end": {
-          "line": 207,
+          "line": 208,
           "column": 5
         }
       }
@@ -2783,15 +2783,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} RenderCallbackVisitor\n   * @property {string} type - Any valid type\n   * @property {RenderCallback} callback - Render callback function\n   ",
-      "start": 8031,
-      "end": 8199,
+      "start": 8092,
+      "end": 8260,
       "loc": {
         "start": {
-          "line": 209,
+          "line": 210,
           "column": 2
         },
         "end": {
-          "line": 213,
+          "line": 214,
           "column": 5
         }
       }
@@ -2799,15 +2799,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} ChatWindowOnVisitor\n   * @property {string} type - Any valid type\n   * @property {function():void} callback - Callback function for this specific type\n   ",
-      "start": 8203,
-      "end": 8386,
+      "start": 8264,
+      "end": 8447,
       "loc": {
         "start": {
-          "line": 215,
+          "line": 216,
           "column": 2
         },
         "end": {
-          "line": 219,
+          "line": 220,
           "column": 5
         }
       }
@@ -2815,15 +2815,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {function} AttachTabCallback\n   * @param {object} param - Parameters used to render tab\n   * @return {HTMLElement|null} If `null` is provided, this tab will be hide temporarily; otherwise,\n   * HTMLElement will be append to this tab.\n   ",
-      "start": 8390,
-      "end": 8647,
+      "start": 8451,
+      "end": 8708,
       "loc": {
         "start": {
-          "line": 221,
+          "line": 222,
           "column": 2
         },
         "end": {
-          "line": 226,
+          "line": 227,
           "column": 5
         }
       }
@@ -2831,15 +2831,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {object} AttachTabVisitor\n   * @property {string} type - Any display name of tab\n   * @property {AttachTabCallback} callback - Render callback function\n   ",
-      "start": 8651,
-      "end": 8826,
+      "start": 8712,
+      "end": 8887,
       "loc": {
         "start": {
-          "line": 228,
+          "line": 229,
           "column": 2
         },
         "end": {
-          "line": 232,
+          "line": 233,
           "column": 5
         }
       }
@@ -2847,15 +2847,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {object} ExtendedWindow\n   * @property {function(tab:string,callback:AttachTabCallback):ExtendedWindow|function(visitor:AttachTabVisitor):ExtendedWindow} attachTab -\n   * Extends extra window with one more tab.\n   * @property {function(tab:?string,param:?object):Promise<void,Error>} show - Display specific\n   * extended tab, rendering the tab with given parameters. If none `tab` is provided, it will\n   * display default tab if there is any.\n   * @property {function():Promise<void,Error>} hide - Hide extra extended window.\n   ",
-      "start": 8830,
-      "end": 9381,
+      "start": 8891,
+      "end": 9442,
       "loc": {
         "start": {
-          "line": 234,
+          "line": 235,
           "column": 2
         },
         "end": {
-          "line": 242,
+          "line": 243,
           "column": 5
         }
       }
@@ -2863,15 +2863,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @typedef {Object} ChatWindow\n   * @property {function():Promise<void,Error>} minimize - Minimize current chat window\n   * @property {function():Promise<void,Error>} close - Close current chat window\n   * @property {function():Promise<void,Error>} endChat - End current chat\n   *\n   * @property {function(type:string,callback:function):ChatWindow|function(visitor:ChatWindowOnVisitor):ChatWindow} on -\n   * Register callback for specific events. Accepted events are:\n   * + minimize - Trigger when chat window is minimized\n   * + close - Trigger when chat window is closed\n   * + endchat - Trigger when chat is ended\n   *\n   * In short, function can also provide a visitor object containing key-value pairs, where key is the type\n   * string and value is the callback function for that specific type.\n   * @property {function(type:string,callback:RenderCallback):ChatWindow|function(visitor:RenderCallbackVisitor):ChatWindow} render -\n   * Render customized element. If callback provies an HTMLElement, original component will not be\n   * rendered; if provides null, use original component instead.\n   *\n   * Function also accepts a visitor for multiple callback registration.\n   *\n   * Possible render types are:\n   * + 'prechat.header'\n   * + 'prechat.content'\n   * + 'prechat.footer'\n   * + 'chat.header'\n   * + 'chat.content'\n   * + 'chat.input'\n   * + 'chat.footer'\n   * + 'postchat.header'\n   * + 'postchat.content'\n   * + 'postchat.footer'\n   * + 'offline.header'\n   * + 'offline.content'\n   * + 'offline.footer'\n   * + '*.header'\n   * + '*.content'\n   * + '*.footer'\n   * @property {Form} prechat - Useful api to get/set prechat form\n   * @property {Form} postchat - Useful api to get/set postchat form\n   * @property {Form} offline - Useful api to get/set offline message form\n   * @property {Messages} messages - Useful api to get/set chat messages\n   * @property {ExtendedWindow} extendedWindow - Useful api to get/set extended window\n   ",
-      "start": 9385,
-      "end": 11344,
+      "start": 9446,
+      "end": 11405,
       "loc": {
         "start": {
-          "line": 244,
+          "line": 245,
           "column": 2
         },
         "end": {
-          "line": 286,
+          "line": 287,
           "column": 5
         }
       }
@@ -2879,15 +2879,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * API that will be triggered before chat window is rendered, providing useful API to get/set\n   * the chat window, also provide feature to prevent rendering if necessary.\n   * @param {ChatWindow} window - Useful api to get/set information of specific chat window.\n   * @return {boolean} Return true will prevent rendering current chat window.\n   ",
-      "start": 11348,
-      "end": 11703,
+      "start": 11409,
+      "end": 11764,
       "loc": {
         "start": {
-          "line": 288,
+          "line": 289,
           "column": 2
         },
         "end": {
-          "line": 293,
+          "line": 294,
           "column": 5
         }
       }
@@ -2905,15 +2905,15 @@
         "binop": null
       },
       "value": "onWindowWillDisplay",
-      "start": 11706,
-      "end": 11725,
+      "start": 11767,
+      "end": 11786,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 2
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 21
         }
       }
@@ -2930,15 +2930,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 11725,
-      "end": 11726,
+      "start": 11786,
+      "end": 11787,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 21
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 22
         }
       }
@@ -2956,15 +2956,15 @@
         "binop": null
       },
       "value": "window",
-      "start": 11726,
-      "end": 11732,
+      "start": 11787,
+      "end": 11793,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 22
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 28
         }
       }
@@ -2981,15 +2981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 11732,
-      "end": 11733,
+      "start": 11793,
+      "end": 11794,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 28
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 29
         }
       }
@@ -3006,15 +3006,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 11734,
-      "end": 11735,
+      "start": 11795,
+      "end": 11796,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 30
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 31
         }
       }
@@ -3031,15 +3031,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 11736,
-      "end": 11737,
+      "start": 11797,
+      "end": 11798,
       "loc": {
         "start": {
-          "line": 294,
+          "line": 295,
           "column": 32
         },
         "end": {
-          "line": 294,
+          "line": 295,
           "column": 33
         }
       }
@@ -3056,15 +3056,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 11738,
-      "end": 11739,
+      "start": 11799,
+      "end": 11800,
       "loc": {
         "start": {
-          "line": 295,
+          "line": 296,
           "column": 0
         },
         "end": {
-          "line": 295,
+          "line": 296,
           "column": 1
         }
       }
@@ -3082,15 +3082,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 11740,
-      "end": 11740,
+      "start": 11801,
+      "end": 11801,
       "loc": {
         "start": {
-          "line": 296,
+          "line": 297,
           "column": 0
         },
         "end": {
-          "line": 296,
+          "line": 297,
           "column": 0
         }
       }
