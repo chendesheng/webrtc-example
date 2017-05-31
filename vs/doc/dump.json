@@ -1,0 +1,2126 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/api.js",
+    "content": "",
+    "static": true,
+    "longname": "src/api.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "name": "Comm100API",
+    "memberof": "src/api.js",
+    "static": true,
+    "longname": "src/api.js~Comm100API",
+    "access": null,
+    "export": true,
+    "importPath": "livechat/src/api.js",
+    "importStyle": "Comm100API",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "typedef",
+    "name": "CustomVariable",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.CustomVariable",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Name of custom variable"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "Value of custom variable"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "CustomVariable"
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "typedef",
+    "name": "App",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.App",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "isMobile",
+        "description": "Weather current running environment is mobile device."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(list:CustomVariable[]):void"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "setCustomVariable",
+        "description": "Set custom variable."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "App"
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "method",
+    "name": "onAppReady",
+    "memberof": "src/api.js~Comm100API",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api.js~Comm100API#onAppReady",
+    "access": null,
+    "description": "API that will be triggered when live chat app is ready, which is after JavaScript has been\ndownloaded and initialized.",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "App"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "app",
+        "description": "Useful api to get/set global information of current live chat app"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "typedef",
+    "name": "onStatusChangeCallback",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.onStatusChangeCallback",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "online",
+        "description": "Whether current status is online"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "onStatusChangeCallback"
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "typedef",
+    "name": "Button",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Button",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Type of button, possible options are:\n+ monitor - monitor button\n+ text - text button\n+ static - static image button\n+ float - float image button\n+ mobile-image - mobile image button\n+ mobile-text - mobile text button\n+ adaptive - adaptive button"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "Campaign id of button"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "click",
+        "description": "Simulate click behavior, the same as user click on this chat\nbutton."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:onStatusChangeCallback):void"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onStatusChange",
+        "description": "Register callback,\nwhich will be notified when status of current campaign changed."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Button"
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "method",
+    "name": "onButtonWillDisplay",
+    "memberof": "src/api.js~Comm100API",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api.js~Comm100API#onButtonWillDisplay",
+    "access": null,
+    "description": "API that will be triggered before certain button is rendered, providing useful API to get/set\nthe button, also provide feature to prevent rendering if necessary.",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Button"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "button",
+        "description": "Useful api to get/set information of specific button"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Return true will prevent rendering current button."
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "typedef",
+    "name": "AgentInfo",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.AgentInfo",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "Uniq of agent"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Display name of agent"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "AgentInfo"
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "typedef",
+    "name": "Invitation",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Invitation",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Type of invitation, possible options are:\n+ image - image invitation\n+ adaptive - adaptive invitation\n+ mobile - mobile invitation"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Message of current invitation."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "AgentInfo"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "agentInfo",
+        "description": "Agent info, will only be provided if it's a manual invitation."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "accept",
+        "description": "Accept invitation manually"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "refuse",
+        "description": "Refuse invitation manually"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:function)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onAccept",
+        "description": "Register callback function when invitation is\naccepted (either by visitor or programatically)."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:function)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onRefuse",
+        "description": "Register callback function when invitation is\nrefused."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Invitation"
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "method",
+    "name": "onInvitationWillDisplay",
+    "memberof": "src/api.js~Comm100API",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api.js~Comm100API#onInvitationWillDisplay",
+    "access": null,
+    "description": "API that will be triggered before certain invitation is rendered, providing useful API to get/set\nthe invitation, also provide feature to prevent rendering if necessary.",
+    "lineNumber": 83,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Invitation"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "invitation",
+        "description": "Useful api to get/set information of specific invitation."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Return true will prevent rendering current invitation."
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "typedef",
+    "name": "Message",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Message",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Type of message"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "{type:string,name:string}"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "sender",
+        "description": "Sender of message, possible types of sender are:\n+ 'visitor'\n+ 'agent'\n+ 'system'"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "time",
+        "description": "Creating time of this message"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "content",
+        "description": "Detailed content of message"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Message"
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "typedef",
+    "name": "MessagesTransform",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.MessagesTransform",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Message>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "messages",
+        "description": "Current version of messages"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array<Message>"
+      ],
+      "spread": false,
+      "description": "messages that should be displayed"
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "MessagesTransform"
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "typedef",
+    "name": "SingleMessageTransform",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.SingleMessageTransform",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Message"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Current version of message"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "index",
+        "description": "Index of current message (in messasge list)"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<Message>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "messages",
+        "description": "The complete message list"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Message",
+        "null",
+        "Array<Message>"
+      ],
+      "spread": false,
+      "description": "The transformed message. If `null` is provided, this\nmessage will be removed from list; if a list of message is provided, all of them will be rendered\nin list."
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "SingleMessageTransform"
+    }
+  },
+  {
+    "__docId__": 14,
+    "kind": "typedef",
+    "name": "MessageTransformVisitor",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.MessageTransformVisitor",
+    "access": null,
+    "description": "Message list is different from form fields, as the original list of messages is uncertain and can\ngrow larger and larger. It might be inconvenient, if only `MessagesTransform` is provided as API.\nHere, `MessageTransformVisitor` allows to register specific transform for certain types.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Any type of `Message`, for example:\n+ 'system-message'\n+ 'agent-text-message'\n+ 'visitor-text-message'\n+ 'waiting-queue'\n+ etc."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "SingleMessageTransform"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "transform",
+        "description": "Message transform"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "MessageTransformVisitor"
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "typedef",
+    "name": "Messages",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Messages",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "MessagesTransform",
+          "MessageTransformVisitor"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onChange",
+        "description": "Register callback function to\ntransform message in list."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Messages"
+    }
+  },
+  {
+    "__docId__": 16,
+    "kind": "typedef",
+    "name": "Field",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Field",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Type of field, possible types are:\n+ input\n+ textarea\n+ select\n+ radiobox\n+ checkbox\n+ file\n+ custom"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Label name of field"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "Value of current field"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "isSystem",
+        "description": "Whether the field is system field"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error",
+        "description": "Potential error of this field with current value. This error might\nor might not be displayed, usually it will be displayed after field blur or before form submit."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<{type:string,name:string}>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "Possible options of current field, only\nvalid when type is `select`, `radiobox` or `checkbox`."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "HTMLElement"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": "Extended element, only valid when type is `custom`"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Field"
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "typedef",
+    "name": "FieldTransform",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.FieldTransform",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array<Field>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "prevFields",
+        "description": "Previous version of fields. For initial run, this will be\ndefault value."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<Field>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fields",
+        "description": "Current version of fields."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array<Field>"
+      ],
+      "spread": false,
+      "description": "fields that should be displayed."
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "FieldTransform"
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "typedef",
+    "name": "FieldOnClickTransform",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.FieldOnClickTransform",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "Field id."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<Field>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fields",
+        "description": "Current version of fields"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array<Field>"
+      ],
+      "spread": false,
+      "description": "fields that should be displayed"
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "FieldOnClickTransform"
+    }
+  },
+  {
+    "__docId__": 19,
+    "kind": "typedef",
+    "name": "FormData",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.FormData",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "email",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "phone",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "company",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "int"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ticketId",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "int"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "departmentId",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "productService",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<{name:string,value:string}>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "customFields",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "FormData"
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "typedef",
+    "name": "FormSubmitTransform",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.FormSubmitTransform",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "FormData"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formData",
+        "description": "Current form data."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "form data that should be submitted."
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "FormSubmitTransform"
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "typedef",
+    "name": "onError",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.onError",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Error"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error",
+        "description": "Occured error."
+      }
+    ],
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "onError"
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "typedef",
+    "name": "Form",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.Form",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:FieldTransform):Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onChange",
+        "description": "Transform original fields to match\nsituation."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:FieldOnClickTransform):Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onClick",
+        "description": "Transform\nlist of fields on click event of any provided field"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:FormSubmitTransform):Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onSubmit",
+        "description": "Transform original submit\ndata, use this API if you would like to provide field data programatically."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(callback:onError):Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onError",
+        "description": "Trigger callback when error\noccurs. For example, when providing incorrect submit data."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(formData:FormData):Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "submit",
+        "description": "Submit form with provided data."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "Form"
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "typedef",
+    "name": "RenderCallback",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.RenderCallback",
+    "access": null,
+    "description": "",
+    "return": {
+      "nullable": null,
+      "types": [
+        "HTMLElement",
+        "null"
+      ],
+      "spread": false,
+      "description": "If provides an HTMLElement, original component will not be rendered;\nif provides null, use original component instead."
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "RenderCallback"
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "typedef",
+    "name": "RenderCallbackVisitor",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.RenderCallbackVisitor",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Any valid type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "RenderCallback"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "Render callback function"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "RenderCallbackVisitor"
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "typedef",
+    "name": "ChatWindowOnVisitor",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.ChatWindowOnVisitor",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Any valid type"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():void"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "Callback function for this specific type"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "ChatWindowOnVisitor"
+    }
+  },
+  {
+    "__docId__": 26,
+    "kind": "typedef",
+    "name": "AttachTabCallback",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.AttachTabCallback",
+    "access": null,
+    "description": "",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "param",
+        "description": "Parameters used to render tab"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "HTMLElement",
+        "null"
+      ],
+      "spread": false,
+      "description": "If `null` is provided, this tab will be hide temporarily; otherwise,\nHTMLElement will be append to this tab."
+    },
+    "type": {
+      "types": [
+        "function"
+      ],
+      "optional": false,
+      "name": "AttachTabCallback"
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "typedef",
+    "name": "AttachTabVisitor",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.AttachTabVisitor",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Any display name of tab"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "AttachTabCallback"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "Render callback function"
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "AttachTabVisitor"
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "typedef",
+    "name": "ExtendedWindow",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.ExtendedWindow",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "function(tab:string,callback:AttachTabCallback):ExtendedWindow",
+          "function(visitor:AttachTabVisitor):ExtendedWindow"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "attachTab",
+        "description": "Extends extra window with one more tab."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(tab:?string,param:?object):Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "show",
+        "description": "Display specific\nextended tab, rendering the tab with given parameters. If none `tab` is provided, it will\ndisplay default tab if there is any."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "hide",
+        "description": "Hide extra extended window."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "ExtendedWindow"
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "typedef",
+    "name": "ChatWindow",
+    "memberof": "src/api.js~Comm100API",
+    "static": true,
+    "longname": "src/api.js~Comm100API.ChatWindow",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "minimize",
+        "description": "Minimize current chat window"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "close",
+        "description": "Close current chat window"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<void,Error>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endChat",
+        "description": "End current chat"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(type:string,callback:function):ChatWindow",
+          "function(visitor:ChatWindowOnVisitor):ChatWindow"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "on",
+        "description": "Register callback for specific events. Accepted events are:\n+ minimize - Trigger when chat window is minimized\n+ close - Trigger when chat window is closed\n+ endchat - Trigger when chat is ended\n\nIn short, function can also provide a visitor object containing key-value pairs, where key is the type\nstring and value is the callback function for that specific type."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(type:string,callback:RenderCallback):ChatWindow",
+          "function(visitor:RenderCallbackVisitor):ChatWindow"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "render",
+        "description": "Render customized element. If callback provies an HTMLElement, original component will not be\nrendered; if provides null, use original component instead.\n\nFunction also accepts a visitor for multiple callback registration.\n\nPossible render types are:\n+ 'prechat.header'\n+ 'prechat.content'\n+ 'prechat.footer'\n+ 'chat.header'\n+ 'chat.content'\n+ 'chat.input'\n+ 'chat.footer'\n+ 'postchat.header'\n+ 'postchat.content'\n+ 'postchat.footer'\n+ 'offline.header'\n+ 'offline.content'\n+ 'offline.footer'\n+ '*.header'\n+ '*.content'\n+ '*.footer'"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "prechat",
+        "description": "Useful api to get/set prechat form"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "postchat",
+        "description": "Useful api to get/set postchat form"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Form"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "offline",
+        "description": "Useful api to get/set offline message form"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Messages"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "messages",
+        "description": "Useful api to get/set chat messages"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "ExtendedWindow"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "extendedWindow",
+        "description": "Useful api to get/set extended window"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "ChatWindow"
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "method",
+    "name": "onWindowWillDisplay",
+    "memberof": "src/api.js~Comm100API",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/api.js~Comm100API#onWindowWillDisplay",
+    "access": null,
+    "description": "API that will be triggered before chat window is rendered, providing useful API to get/set\nthe chat window, also provide feature to prevent rendering if necessary.",
+    "lineNumber": 294,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "ChatWindow"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "window",
+        "description": "Useful api to get/set information of specific chat window."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Return true will prevent rendering current chat window."
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 49,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "lineNumber": 193,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "external",
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "external",
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "external",
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "external",
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "external",
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "external",
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "external",
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "external",
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "lineNumber": 34,
+    "builtinExternal": true
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "name": "livechat",
+  "version": "1.0.0",
+  "description": "visitor side live chat code",
+  "main": "src/index.js",
+  "author": "Comm100",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c build/rollup.config.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "story": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook",
+    "doc": "esdoc",
+    "start": "node ./build/server.dev.js",
+    "lint": "eslint src/. --ext .js,.jsx --fix --quiet"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "esdoc": "^0.5.2",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0",
+    "jest": "^20.0.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-alias": "^1.3.1",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.2",
+    "webpack": "^2.6.0",
+    "webpack-browser-plugin": "^1.0.20",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "@storybook/react": "^3.0.0",
+    "babel-plugin-transform-string-join": "^1.0.1",
+    "babel-runtime": "^6.23.0",
+    "preact": "^8.1.0",
+    "preact-compat": "^3.16.0",
+    "promise-polyfill": "^6.0.2",
+    "redux": "^3.6.0"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**.js",
+      "src/**.jsx",
+      "!src/jest.setup.js",
+      "!src/**.story.jsx",
+      "!src/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "cacheDirectory": "./.cache"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "ie >= 9"
+  ]
+}
