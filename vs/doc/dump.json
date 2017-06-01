@@ -676,7 +676,7 @@
         "spread": false,
         "optional": false,
         "name": "type",
-        "description": "Type of field, possible types are:\n+ input\n+ textarea\n+ select\n+ radiobox\n+ checkbox\n+ file\n+ custom"
+        "description": "Type of field, possible types are:\n+ input - single line input field\n+ textarea - Multiple line input field\n+ radiolist - Group of radio buttons\n+ checkbox - Single checkbox field\n+ select - Dropdown list field\n+ checkboxlist - Group of checkbox\n+ file - Attachment upload field\n+ email - Input field that accept email address\n+ ticket - Input field that accept Comm100 Ticket number\n+ department - Dropdown list that display available department\n+ stars - Field for user to rate the chat (select from 1 to 5 stars by default)\n+ custom - Custom field that display whatever user provide in element property"
       },
       {
         "nullable": null,
@@ -1439,7 +1439,7 @@
     "longname": "src/api.js~Comm100API#onWindowWillDisplay",
     "access": null,
     "description": "API that will be triggered before chat window is rendered, providing useful API to get/set\nthe chat window, also provide feature to prevent rendering if necessary.",
-    "lineNumber": 295,
+    "lineNumber": 300,
     "params": [
       {
         "nullable": null,
