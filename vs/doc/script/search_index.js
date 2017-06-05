@@ -1,9 +1,9 @@
 window.esdocSearchIndex = [
   [
     "livechat/src/api.js~comm100api",
-    "class/src/api.js~Comm100API.html",
+    "variable/index.html#static-variable-Comm100API",
     "<span>Comm100API</span> <span class=\"search-result-import-path\">livechat/src/api.js</span>",
-    "class"
+    "variable"
   ],
   [
     "builtinexternal/ecmascriptexternal.js~array",
@@ -342,177 +342,141 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/api.js~comm100api#onappready",
-    "class/src/api.js~Comm100API.html#instance-method-onAppReady",
-    "src/api.js~Comm100API#onAppReady",
-    "method"
-  ],
-  [
-    "src/api.js~comm100api#onbuttonwilldisplay",
-    "class/src/api.js~Comm100API.html#instance-method-onButtonWillDisplay",
-    "src/api.js~Comm100API#onButtonWillDisplay",
-    "method"
-  ],
-  [
-    "src/api.js~comm100api#oninvitationwilldisplay",
-    "class/src/api.js~Comm100API.html#instance-method-onInvitationWillDisplay",
-    "src/api.js~Comm100API#onInvitationWillDisplay",
-    "method"
-  ],
-  [
-    "src/api.js~comm100api#onwindowwilldisplay",
-    "class/src/api.js~Comm100API.html#instance-method-onWindowWillDisplay",
-    "src/api.js~Comm100API#onWindowWillDisplay",
-    "method"
-  ],
-  [
-    "src/api.js~comm100api.agentinfo",
-    "typedef/index.html#static-typedef-AgentInfo",
-    "src/api.js~Comm100API.AgentInfo",
+    "src/api.js~agent",
+    "typedef/index.html#static-typedef-Agent",
+    "src/api.js~Agent",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.app",
+    "src/api.js~app",
     "typedef/index.html#static-typedef-App",
-    "src/api.js~Comm100API.App",
+    "src/api.js~App",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.attachtabcallback",
+    "src/api.js~attachtabcallback",
     "typedef/index.html#static-typedef-AttachTabCallback",
-    "src/api.js~Comm100API.AttachTabCallback",
+    "src/api.js~AttachTabCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.attachtabvisitor",
+    "src/api.js~attachtabvisitor",
     "typedef/index.html#static-typedef-AttachTabVisitor",
-    "src/api.js~Comm100API.AttachTabVisitor",
+    "src/api.js~AttachTabVisitor",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.button",
+    "src/api.js~button",
     "typedef/index.html#static-typedef-Button",
-    "src/api.js~Comm100API.Button",
+    "src/api.js~Button",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.chatwindow",
+    "src/api.js~chatcontent",
+    "typedef/index.html#static-typedef-ChatContent",
+    "src/api.js~ChatContent",
+    "typedef"
+  ],
+  [
+    "src/api.js~chatwindow",
     "typedef/index.html#static-typedef-ChatWindow",
-    "src/api.js~Comm100API.ChatWindow",
+    "src/api.js~ChatWindow",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.chatwindowonvisitor",
-    "typedef/index.html#static-typedef-ChatWindowOnVisitor",
-    "src/api.js~Comm100API.ChatWindowOnVisitor",
-    "typedef"
-  ],
-  [
-    "src/api.js~comm100api.customvariable",
+    "src/api.js~customvariable",
     "typedef/index.html#static-typedef-CustomVariable",
-    "src/api.js~Comm100API.CustomVariable",
+    "src/api.js~CustomVariable",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.extendedwindow",
+    "src/api.js~extendedwindow",
     "typedef/index.html#static-typedef-ExtendedWindow",
-    "src/api.js~Comm100API.ExtendedWindow",
+    "src/api.js~ExtendedWindow",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.field",
+    "src/api.js~field",
     "typedef/index.html#static-typedef-Field",
-    "src/api.js~Comm100API.Field",
+    "src/api.js~Field",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.fieldonclicktransform",
-    "typedef/index.html#static-typedef-FieldOnClickTransform",
-    "src/api.js~Comm100API.FieldOnClickTransform",
+    "src/api.js~fieldonchangecallback",
+    "typedef/index.html#static-typedef-FieldOnChangeCallback",
+    "src/api.js~FieldOnChangeCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.fieldtransform",
-    "typedef/index.html#static-typedef-FieldTransform",
-    "src/api.js~Comm100API.FieldTransform",
+    "src/api.js~fieldonclickcallback",
+    "typedef/index.html#static-typedef-FieldOnClickCallback",
+    "src/api.js~FieldOnClickCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.form",
+    "src/api.js~form",
     "typedef/index.html#static-typedef-Form",
-    "src/api.js~Comm100API.Form",
+    "src/api.js~Form",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.formdata",
+    "src/api.js~formdata",
     "typedef/index.html#static-typedef-FormData",
-    "src/api.js~Comm100API.FormData",
+    "src/api.js~FormData",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.formsubmittransform",
-    "typedef/index.html#static-typedef-FormSubmitTransform",
-    "src/api.js~Comm100API.FormSubmitTransform",
-    "typedef"
-  ],
-  [
-    "src/api.js~comm100api.invitation",
+    "src/api.js~invitation",
     "typedef/index.html#static-typedef-Invitation",
-    "src/api.js~Comm100API.Invitation",
+    "src/api.js~Invitation",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.message",
+    "src/api.js~message",
     "typedef/index.html#static-typedef-Message",
-    "src/api.js~Comm100API.Message",
+    "src/api.js~Message",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.messagetransformvisitor",
-    "typedef/index.html#static-typedef-MessageTransformVisitor",
-    "src/api.js~Comm100API.MessageTransformVisitor",
+    "src/api.js~messagesonchange",
+    "typedef/index.html#static-typedef-MessagesOnChange",
+    "src/api.js~MessagesOnChange",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.messages",
-    "typedef/index.html#static-typedef-Messages",
-    "src/api.js~Comm100API.Messages",
+    "src/api.js~messagesonchangecallback",
+    "typedef/index.html#static-typedef-MessagesOnChangeCallback",
+    "src/api.js~MessagesOnChangeCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.messagestransform",
-    "typedef/index.html#static-typedef-MessagesTransform",
-    "src/api.js~Comm100API.MessagesTransform",
+    "src/api.js~onerrorcallback",
+    "typedef/index.html#static-typedef-OnErrorCallback",
+    "src/api.js~OnErrorCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.rendercallback",
+    "src/api.js~onsubmitcallback",
+    "typedef/index.html#static-typedef-OnSubmitCallback",
+    "src/api.js~OnSubmitCallback",
+    "typedef"
+  ],
+  [
+    "src/api.js~rendercallback",
     "typedef/index.html#static-typedef-RenderCallback",
-    "src/api.js~Comm100API.RenderCallback",
+    "src/api.js~RenderCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.rendercallbackvisitor",
-    "typedef/index.html#static-typedef-RenderCallbackVisitor",
-    "src/api.js~Comm100API.RenderCallbackVisitor",
+    "src/api.js~singlemessageonchangecallback",
+    "typedef/index.html#static-typedef-SingleMessageOnChangeCallback",
+    "src/api.js~SingleMessageOnChangeCallback",
     "typedef"
   ],
   [
-    "src/api.js~comm100api.singlemessagetransform",
-    "typedef/index.html#static-typedef-SingleMessageTransform",
-    "src/api.js~Comm100API.SingleMessageTransform",
-    "typedef"
-  ],
-  [
-    "src/api.js~comm100api.onerror",
-    "typedef/index.html#static-typedef-onError",
-    "src/api.js~Comm100API.onError",
-    "typedef"
-  ],
-  [
-    "src/api.js~comm100api.onstatuschangecallback",
+    "src/api.js~onstatuschangecallback",
     "typedef/index.html#static-typedef-onStatusChangeCallback",
-    "src/api.js~Comm100API.onStatusChangeCallback",
+    "src/api.js~onStatusChangeCallback",
     "typedef"
   ]
 ]
