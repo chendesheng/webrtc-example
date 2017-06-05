@@ -438,12 +438,6 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
-    "src/api.js~messagesonchange",
-    "typedef/index.html#static-typedef-MessagesOnChange",
-    "src/api.js~MessagesOnChange",
-    "typedef"
-  ],
-  [
     "src/api.js~messagesonchangecallback",
     "typedef/index.html#static-typedef-MessagesOnChangeCallback",
     "src/api.js~MessagesOnChangeCallback",

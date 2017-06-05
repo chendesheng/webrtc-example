@@ -49,7 +49,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FormData">FormData</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Invitation">Invitation</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Message">Message</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessagesOnChange">MessagesOnChange</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-OnErrorCallback">OnErrorCallback</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-OnSubmitCallback">OnSubmitCallback</a></span></span></li>
@@ -484,33 +483,6 @@
           
           
           <span data-ice="name"><span><a href="typedef/index.html#static-typedef-Message">Message</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          <span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessagesOnChange">MessagesOnChange</a></span></span><span data-ice="signature">(callback: <span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
@@ -1112,7 +1084,7 @@ which will be notified when status of current campaign changed.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" data-depth="0">onChange</td>
-      <td data-ice="type"><span><a href="typedef/index.html#static-typedef-MessagesOnChange">MessagesOnChange</a></span> | {type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="typedef/index.html#static-typedef-SingleMessageOnChangeCallback">SingleMessageOnChangeCallback</a></span>}</td>
+      <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(callback: <span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span>)</span>: <span>void</span></span> | {type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="typedef/index.html#static-typedef-SingleMessageOnChangeCallback">SingleMessageOnChangeCallback</a></span>}</td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>Register callback function to
 transform message in list.</p>
@@ -1239,7 +1211,7 @@ be called when chat window is restored</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">onJoinChat</td>
+      <td data-ice="name" data-depth="0">onAgentJoinChat</td>
       <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>: <span><a href="typedef/index.html#static-typedef-ChatWindow">ChatWindow</a></span></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>Register callback which will
@@ -2118,66 +2090,6 @@ refused.</p>
       <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>Detailed content of message</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-typedef-MessagesOnChange">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span data-ice="name">MessagesOnChange</span><span data-ice="signature">(callback: <span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/api.js.html#lineNumberundefined">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">callback</td>
-      <td data-ice="type"><span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Callback</p>
 </td>
     </tr>
 </tbody>
