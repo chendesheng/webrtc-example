@@ -36,7 +36,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Agent">Agent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-App">App</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabVisitor">AttachTabVisitor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Button">Button</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ChatContent">ChatContent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ChatWindow">ChatWindow</a></span></span></li>
@@ -59,7 +58,52 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h2 id="ui">UI</h2>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h2 id="-">&#x5305;&#x7BA1;&#x7406;</h2>
+<p>&#x4E3B;&#x8981;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF0C;&#x5220;&#x9664;&#x6216;&#x8005;&#x65B0;&#x52A0;&#x4F9D;&#x8D56;&#xFF0C;&#x5E94;&#x4F7F;&#x7528; <a href="https://yarnpkg.com/zh-Hans/">yarn</a><ul>
+<li>&#x521D;&#x59CB;&#x5316;&#xFF1A;<code>yarn init</code></li>
+<li>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF1A;<code>yarn add xxxx --save</code> &#x6216; <code>yarn add xxxx --dev</code> &#x524D;&#x8005;&#x589E;&#x52A0; <code>dependencies</code> &#x540E;&#x8005;&#x547D;&#x4EE4;&#x589E;&#x52A0; <code>devDependencies</code> </li>
+<li>&#x5220;&#x9664;&#x4F9D;&#x8D56;&#xFF1A;<code>yarn remove xxxx</code></li>
+</ul>
+</li>
+<li>&#x4E3A;&#x4FDD;&#x8BC1;&#x9879;&#x76EE;&#x6700;&#x7EC8;&#x4EE3;&#x7801;&#x5C3D;&#x91CF;&#x7684;&#x5C0F;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x4E0D;&#x589E;&#x52A0;&#x5176;&#x4ED6;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#xFF08;<code>dependencies</code> &#x90E8;&#x5206;&#xFF09;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x589E;&#x52A0;&#x4F9D;&#x8D56;&#xFF0C;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x8BA8;&#x8BBA;&#x3002;</li>
+</ol>
+<h2 id="javascript">JavaScript</h2>
+<ol>
+<li><p>&#x679A;&#x4E3E;&#x5E94;&#x8BE5;&#x5199;&#x5728; constants/enums &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x5404;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x800C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4EE5;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x5F62;&#x5F0F;&#x5199;&#x5728; constants &#x4E0B;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x679A;&#x4E3E;&#x533A;&#x5206;&#x6309;&#x94AE;&#x7684;&#x79CD;&#x7C7B;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728; constants/enums &#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; buttonType.js &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">export const monitor = 0;
+export const text = 1;
+export const image = 2;
+// ...</code>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import * as buttonType from &apos;./constants/enums/buttonType&apos;;
+
+// ...
+if (button.type === buttonType.text) {
+  // ...
+}</code>
+</code></pre>
+<p>&#x800C;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">export const buttonType = {
+  monitor: 0,
+  text: 1,
+  image: 2,
+  // ...
+}</code>
+</code></pre>
+<p>&#x867D;&#x7136;&#x4E0A;&#x9762;&#x4E24;&#x8005;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5199;&#x6CD5;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x5F15;&#x7528; <code>buttonType.text</code>&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x672C;&#x8D28;&#x4E0A;&#x6765;&#x8BF4;&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x524D;&#x8005;&#xFF0C;&#x7531;&#x4E8E;&#x6A21;&#x5757;&#x672C;&#x8EAB;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x7F16;&#x8BD1;&#x5668;&#x53EF;&#x4EE5;&#x505A;&#x7F16;&#x8BD1;&#x5206;&#x6790;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x538B;&#x7F29;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x53D8;&#x91CF;&#x540D;&#x538B;&#x7F29;&#x6389;&#x3002;&#x6BD4;&#x5982;&#x539F;&#x6765;&#x662F; <code>buttonType.text</code>&#x7684;&#x53D8;&#x91CF;&#x540D;&#xFF0C;&#x538B;&#x7F29;&#x540E;&#x5C31;&#x53D8;&#x6210;<code>a</code>&#x4E86;&#xFF1B;&#x800C;&#x5BF9;&#x4E8E;&#x540E;&#x8005;&#xFF0C;&#x7531;&#x4E8E;&#x5B57;&#x9762;&#x91CF;&#x4E0D;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x65E0;&#x6CD5;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x538B;&#x7F29;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x5927;&#x4E0D;&#x5C11;&#x3002;</p>
+</li>
+</ol>
+<h2 id="css">CSS</h2>
+<ol>
+<li>&#x53EA;&#x6709;&#x9700;&#x8981;&#x5728; iframe &#x4E2D;&#x5F15;&#x7528;&#x7684; CSS &#x624D;&#x5199;&#x5728;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E3B;&#x8981;&#x5305;&#x62EC; adaptive button &#x548C; chat window &#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x90E8;&#x4EF6;&#xFF0C;&#x5982; chat button&#xFF0C;image invitation &#x7B49;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528; inline style&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53E6;&#x5199;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x3002;</li>
+<li>CSS &#x4F7F;&#x7528; <a href="http://lesscss.org/">Less</a> &#x7F16;&#x8BD1;&#xFF0C;&#x76F4;&#x63A5;&#x5199; CSS &#x8BED;&#x6CD5;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;</li>
+<li>CSS &#x6587;&#x4EF6;&#x5199;&#x5728; <code>./css/style.less</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</li>
+<li>CSS &#x901A;&#x8FC7; <code>npm run css</code> &#x7F16;&#x8BD1;&#x6210; <code>./css/style.css</code> &#x6587;&#x4EF6;&#xFF1B;&#x5982;&#x679C;&#x9700;&#x8981;&#x7ECF;&#x5E38;&#x4FEE;&#x6539;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>npm run css:watch</code> &#x547D;&#x4EE4;&#x3002;</li>
+</ol>
+<h2 id="ui">UI</h2>
 <h3 id="-">&#x5E93;</h3>
 <p>&#x4F7F;&#x7528; <a href="https://preactjs.com/">Preact</a>&#xFF0C;&#x76F8;&#x5E94; <a href="https://preactjs.com/guide/getting-started">&#x6587;&#x6863;</a>&#x3002;Preact &#x662F;&#x4E00;&#x4E2A;&#x7C7B; React &#x5E93;&#xFF0C;&#x652F;&#x6301;&#x7EDD;&#x5927;&#x90E8;&#x5206; React &#x8BED;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x7CBE;&#x7B80;&#x4F53;&#x79EF;&#xFF0C;&#x524D;&#x8005;&#x53EA;&#x6709;&#x540E;&#x8005;&#x7684;&#x5341;&#x5206;&#x4E4B;&#x4E00;&#x4E0D;&#x5230;&#x3002;&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;React &#x7684;&#x77E5;&#x8BC6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5E94;&#x7528;&#x5230; Preact &#x7684;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5C11;&#x91CF;&#x4E0D;&#x540C;&#x89C1;&#x8FD9;&#x91CC;&#x7684; <a href="https://preactjs.com/guide/differences-to-react">&#x6587;&#x6863;</a>&#x3002;</p>
 <h3 id="-">&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h3>
@@ -75,6 +119,10 @@
 <pre><code class="lang-javascript"><code class="source-code prettyprint">import { h, Component } from &apos;preact&apos;;</code>
 </code></pre>
 </li>
+</ol>
+<h3 id="-">&#x6269;&#x5C55;&#x9605;&#x8BFB;</h3>
+<ol>
+<li><a href="">https://preactjs.com/guide/getting-started</a></li>
 </ol>
 <h2 id="ui-">UI &#x5C55;&#x793A;</h2>
 <h3 id="-">&#x5E93;</h3>
@@ -170,7 +218,8 @@ if (process.env.NODE_ENV !== &apos;production&apos;) {
 </ol>
 <h3 id="-">&#x6269;&#x5C55;&#x9605;&#x8BFB;</h3>
 <ol>
-<li><a href="">https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d</a>&#x200B;</li>
+<li><a href="">https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d</a></li>
+<li><a href="">https://facebook.github.io/jest/blog/2016/07/27/jest-14.html</a></li>
 </ol>
 </div>
 </div>

@@ -360,12 +360,6 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
-    "src/api.js~attachtabvisitor",
-    "typedef/index.html#static-typedef-AttachTabVisitor",
-    "src/api.js~AttachTabVisitor",
-    "typedef"
-  ],
-  [
     "src/api.js~button",
     "typedef/index.html#static-typedef-Button",
     "src/api.js~Button",

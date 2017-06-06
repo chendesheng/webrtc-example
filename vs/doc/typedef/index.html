@@ -36,7 +36,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Agent">Agent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-App">App</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabVisitor">AttachTabVisitor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Button">Button</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ChatContent">ChatContent</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ChatWindow">ChatWindow</a></span></span></li>
@@ -132,33 +131,6 @@
           
           
           <span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span></span><span data-ice="signature">(param: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span>HTMLElement</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          <span data-ice="name"><span><a href="typedef/index.html#static-typedef-AttachTabVisitor">AttachTabVisitor</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
         </p>
       </div>
       <div>
@@ -893,73 +865,6 @@ HTMLElement will be append to this tab.</p>
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-typedef-AttachTabVisitor">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span data-ice="name">AttachTabVisitor</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/api.js.html#lineNumberundefined">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Properties:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">type</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Any display name of tab</p>
-</td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">callback</td>
-      <td data-ice="type"><span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Render callback function</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-typedef-Button">
     <span class="access" data-ice="access">public</span>
     
@@ -1087,7 +992,15 @@ which will be notified when status of current campaign changed.</p>
       <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(callback: <span><a href="typedef/index.html#static-typedef-MessagesOnChangeCallback">MessagesOnChangeCallback</a></span>)</span>: <span>void</span></span> | {type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="typedef/index.html#static-typedef-SingleMessageOnChangeCallback">SingleMessageOnChangeCallback</a></span>}</td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>Register callback function to
-transform message in list.</p>
+transform message in list.  possible message types are:</p>
+<ul>
+<li>waiting-queue</li>
+<li>agent-join</li>
+<li>agent-leave</li>
+<li>agent-text</li>
+<li>visitor-text</li>
+<li>end-chat</li>
+</ul>
 </td>
     </tr>
 </tbody>
@@ -1214,8 +1127,8 @@ be called when chat window is restored</p>
       <td data-ice="name" data-depth="0">onAgentJoinChat</td>
       <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>)</span>: <span><a href="typedef/index.html#static-typedef-ChatWindow">ChatWindow</a></span></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Register callback which will
-be called when agent joins the chat. Agent info will be provided.</p>
+      <td data-ice="description"><p>Register callback which
+will be called when agent joins the chat. Agent info will be provided.</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
@@ -1232,7 +1145,6 @@ rendered; if provides null, use original component instead.</p>
 <li>&apos;prechat.footer&apos;</li>
 <li>&apos;chat.header&apos;</li>
 <li>&apos;chat.content&apos;</li>
-<li>&apos;chat.input&apos;</li>
 <li>&apos;chat.footer&apos;</li>
 <li>&apos;postchat.header&apos;</li>
 <li>&apos;postchat.content&apos;</li>
@@ -1403,7 +1315,7 @@ rendered; if provides null, use original component instead.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" data-depth="0">attachTab</td>
-      <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(tab: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span>)</span>: <span><a href="typedef/index.html#static-typedef-ExtendedWindow">ExtendedWindow</a></span></span> | <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(visitor: <span><a href="typedef/index.html#static-typedef-AttachTabVisitor">AttachTabVisitor</a></span>)</span>: <span><a href="typedef/index.html#static-typedef-ExtendedWindow">ExtendedWindow</a></span></span></td>
+      <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(tab: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, callback: <span><a href="typedef/index.html#static-typedef-AttachTabCallback">AttachTabCallback</a></span>)</span>: <span><a href="typedef/index.html#static-typedef-ExtendedWindow">ExtendedWindow</a></span></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>Extends extra window with one more tab.</p>
 </td>
