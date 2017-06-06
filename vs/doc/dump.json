@@ -143,7 +143,7 @@
         "spread": false,
         "optional": false,
         "name": "type",
-        "description": "Type of button, possible options are:\n+ monitor - monitor button\n+ text - text button\n+ static - static image button\n+ float - float image button\n+ mobile-image - mobile image button\n+ mobile-text - mobile text button\n+ adaptive - adaptive button"
+        "description": "Type of button, possible options are:\n+ 'monitor' - monitor button\n+ 'text' - text button\n+ 'static' - static image button\n+ 'float' - float image button\n+ 'mobile-image' - mobile image button\n+ 'mobile-text' - mobile text button\n+ 'adaptive' - adaptive button"
       },
       {
         "nullable": null,
@@ -271,7 +271,7 @@
         "spread": false,
         "optional": false,
         "name": "type",
-        "description": "Type of invitation, possible options are:\n+ image - image invitation\n+ adaptive - adaptive invitation\n+ embedded-window - popup embedded chat window directly\n+ mobile - mobile invitation"
+        "description": "Type of invitation, possible options are:\n+ 'image' - image invitation\n+ 'adaptive' - adaptive invitation\n+ 'embedded-window' - popup embedded chat window directly\n+ 'mobile' - mobile invitation"
       },
       {
         "nullable": null,
@@ -517,7 +517,7 @@
         "spread": false,
         "optional": false,
         "name": "onChange",
-        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ waiting-queue\n+ agent-join\n+ agent-leave\n+ agent-text\n+ visitor-text\n+ end-chat"
+        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ 'waiting-queue'\n+ 'agent-join'\n+ 'agent-leave'\n+ 'agent-text'\n+ 'visitor-text'\n+ 'end-chat'\n+ ..."
       }
     ],
     "type": {
@@ -546,7 +546,7 @@
         "spread": false,
         "optional": false,
         "name": "type",
-        "description": "Type of field, possible types are:\n+ input - single line input field\n+ textarea - Multiple line input field\n+ radiolist - Group of radio buttons\n+ checkbox - Single checkbox field\n+ select - Dropdown list field\n+ checkboxlist - Group of checkbox\n+ file - Attachment upload field\n+ email - Input field that accept email address\n+ ticket - Input field that accept Comm100 Ticket number\n+ department - Dropdown list that display available department\n+ stars - Field for user to rate the chat (select from 1 to 5 stars by default)\n+ custom - Custom field that display whatever user provide in element property"
+        "description": "Type of field, possible types are:\n+ 'input' - single line input field\n+ 'textarea' - Multiple line input field\n+ 'radiolist' - Group of radio buttons\n+ 'checkbox' - Single checkbox field\n+ 'select' - Dropdown list field\n+ 'checkboxlist' - Group of checkbox\n+ 'file' - Attachment upload field\n+ 'email' - Input field that accept email address\n+ 'ticket' - Input field that accept Comm100 Ticket number\n+ 'department' - Dropdown list that display available department\n+ 'stars' - Field for user to rate the chat (select from 1 to 5 stars by default)\n+ 'custom' - Custom field that display whatever user provide in element property"
       },
       {
         "nullable": null,
