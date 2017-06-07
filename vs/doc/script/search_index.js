@@ -444,6 +444,12 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
+    "src/api.js~onstatuschangecallback",
+    "typedef/index.html#static-typedef-OnStatusChangeCallback",
+    "src/api.js~OnStatusChangeCallback",
+    "typedef"
+  ],
+  [
     "src/api.js~onsubmitcallback",
     "typedef/index.html#static-typedef-OnSubmitCallback",
     "src/api.js~OnSubmitCallback",
@@ -459,12 +465,6 @@ window.esdocSearchIndex = [
     "src/api.js~singlemessageonchangecallback",
     "typedef/index.html#static-typedef-SingleMessageOnChangeCallback",
     "src/api.js~SingleMessageOnChangeCallback",
-    "typedef"
-  ],
-  [
-    "src/api.js~onstatuschangecallback",
-    "typedef/index.html#static-typedef-onStatusChangeCallback",
-    "src/api.js~onStatusChangeCallback",
     "typedef"
   ]
 ]

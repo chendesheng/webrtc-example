@@ -55,6 +55,7 @@
     "@types/jest": "^19.2.3",
     "babel-plugin-transform-string-join": "^1.0.1",
     "babel-runtime": "^6.23.0",
+    "lodash": "^4.17.4",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "preact-redux": "^2.0.1",
