@@ -24,7 +24,7 @@
     "importPath": "livechat/src/api.js",
     "importStyle": null,
     "description": "███████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗\n██╔════╝╚██╗██╔╝██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝\n█████╗   ╚███╔╝ ███████║██╔████╔██║██████╔╝██║     █████╗\n██╔══╝   ██╔██╗ ██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝\n███████╗██╔╝ ██╗██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗\n╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝",
-    "lineNumber": 274,
+    "lineNumber": 275,
     "params": [
       {
         "name": "chatWindow",
@@ -742,7 +742,7 @@
       {
         "nullable": null,
         "types": [
-          "int"
+          "number"
         ],
         "spread": false,
         "optional": false,
@@ -752,7 +752,7 @@
       {
         "nullable": null,
         "types": [
-          "int"
+          "number"
         ],
         "spread": false,
         "optional": false,
@@ -767,6 +767,26 @@
         "spread": false,
         "optional": false,
         "name": "productService",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "grade:number, comment:string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rating",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "messageContent",
         "description": ""
       },
       {
@@ -1144,7 +1164,7 @@
         "spread": false,
         "optional": false,
         "name": "onRender",
-        "description": "Render customized element. If callback provies an HTMLElement, original component will not be\nrendered; if provides null, use original component instead.\n\nPossible render types are:\n+ 'prechat.header'\n+ 'prechat.greeting'\n+ 'prechat.content'\n+ 'prechat.footer'\n+ 'chat.header'\n+ 'chat.greeting'\n+ 'chat.content'\n+ 'chat.footer'\n+ 'postchat.header'\n+ 'postchat.greeting'\n+ 'postchat.content'\n+ 'postchat.footer'\n+ 'offline.header'\n+ 'offline.greeting'\n+ 'offline.content'\n+ 'offline.footer'\n+ 'login.header'\n+ 'login.greeting'\n+ 'login.content'\n+ 'login.footer'\n+ 'ban.header'\n+ 'ban.greeting'\n+ 'ban.content'\n+ 'ban.footer'"
+        "description": "Render customized element. If callback provies an HTMLElement, original component will not be\nrendered; if provides null, use original component instead.\n\nPossible render types are:\n+ 'prechat.header'\n+ 'prechat.greeting'\n+ 'prechat.content'\n+ 'prechat.footer'\n+ 'chat.header'\n+ 'chat.greeting'\n+ 'chat.content'\n+ 'chat.footer'\n+ 'postchat.header'\n+ 'postchat.greeting'\n+ 'postchat.content'\n+ 'postchat.footer'\n+ 'offline.header'\n+ 'offline.greeting'\n+ 'offline.content'\n+ 'offline.footer'\n+ 'login.header'\n+ 'login.greeting'\n+ 'login.content'\n+ 'login.footer'\n+ 'ban.header'\n+ 'ban.content'\n+ 'ban.footer'"
       },
       {
         "nullable": null,
@@ -1220,7 +1240,7 @@
     "examples": [
       ""
     ],
-    "lineNumber": 261,
+    "lineNumber": 262,
     "properties": [
       {
         "nullable": null,
