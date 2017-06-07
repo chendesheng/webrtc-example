@@ -24,7 +24,7 @@
     "importPath": "livechat/src/api.js",
     "importStyle": null,
     "description": "███████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗\n██╔════╝╚██╗██╔╝██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝\n█████╗   ╚███╔╝ ███████║██╔████╔██║██████╔╝██║     █████╗\n██╔══╝   ██╔██╗ ██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝\n███████╗██╔╝ ██╗██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗\n╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝",
-    "lineNumber": 275,
+    "lineNumber": 276,
     "params": [
       {
         "name": "chatWindow",
@@ -1240,7 +1240,7 @@
     "examples": [
       ""
     ],
-    "lineNumber": 262,
+    "lineNumber": 263,
     "properties": [
       {
         "nullable": null,
@@ -1289,8 +1289,18 @@
         ],
         "spread": false,
         "optional": false,
-        "name": "siteId",
+        "name": "site_id",
         "description": "Site Id"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dynamic",
+        "description": "if dynamic campaign"
       }
     ],
     "type": {
