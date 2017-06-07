@@ -402,12 +402,6 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
-    "src/api.js~fieldonclickcallback",
-    "typedef/index.html#static-typedef-FieldOnClickCallback",
-    "src/api.js~FieldOnClickCallback",
-    "typedef"
-  ],
-  [
     "src/api.js~form",
     "typedef/index.html#static-typedef-Form",
     "src/api.js~Form",
