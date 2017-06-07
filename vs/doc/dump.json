@@ -24,7 +24,7 @@
     "importPath": "livechat/src/api.js",
     "importStyle": null,
     "description": "███████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗\n██╔════╝╚██╗██╔╝██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝\n█████╗   ╚███╔╝ ███████║██╔████╔██║██████╔╝██║     █████╗\n██╔══╝   ██╔██╗ ██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝\n███████╗██╔╝ ██╗██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗\n╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝",
-    "lineNumber": 276,
+    "lineNumber": 274,
     "params": [
       {
         "name": "chatWindow",
@@ -1139,16 +1139,6 @@
       {
         "nullable": null,
         "types": [
-          "function(callback:function):ChatWindow"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "onAgentJoinChat",
-        "description": "Register callback which\nwill be called when agent joins the chat. Agent info will be provided."
-      },
-      {
-        "nullable": null,
-        "types": [
           "function(type:string,callback:RenderCallback):ChatWindow"
         ],
         "spread": false,
@@ -1230,7 +1220,7 @@
     "examples": [
       ""
     ],
-    "lineNumber": 263,
+    "lineNumber": 261,
     "properties": [
       {
         "nullable": null,
