@@ -53,32 +53,7 @@
     <span>&#xBB;</span>
     <span data-ice="title">Example</span>
   </div>
-  <div data-ice="content"><pre><code class="lang-javascript"><code class="source-code prettyprint">// &#x5B9A;&#x5236;prechat/postchat&#x76F8;&#x5173;&#x7684;&#x4F8B;&#x5B50;
-Comm100API.onWindowWillDisplay = function (chatWindow) {
-  // &#x5982;&#x679C;&#x4E0D;&#x662F;&#x6253;5&#x661F;&#x65F6;, &#x8BA9;&#x7528;&#x6237;&#x7559;comment
-  chatWindow.postChatForm.onChange(function (oldFields, newFields) {
-    const rating = newFields[0];
-    if (parseInt(rating.value) &lt; 5) {
-      return newFields.slice(0, 1).concat([{
-        name: &apos;Comment&apos;,
-        type: &apos;textarea&apos;,
-        isRequired: true,
-      }]);
-    } else {
-      return newFields.slice(0, 1);
-    }
-  });
-
-  chatWindow.onRender(&apos;prechat.header&apos;, function () {
-    const header = document.createElement(&apos;div&apos;);
-    const img = document.createElement(&apos;img&apos;);
-    img.src = &apos;https://www.comm100.com/logo.svg&apos;;
-    header.appendChild(img);
-    return header;
-  });
-};
-
-// chat&#x76F8;&#x5173;&#x7684;&#x4F8B;&#x5B50;
+  <div data-ice="content"><pre><code class="lang-javascript"><code class="source-code prettyprint">// chat&#x76F8;&#x5173;&#x7684;&#x4F8B;&#x5B50;
 Comm100API.onWindowWillDisplay = function (chatWindow) {
   const chatContent = chatWindow.chatContent;
 
@@ -242,6 +217,31 @@ Comm100API.onWindowWillDisplay = function (chatWindow) {
         message: `Your email address ${email} has been recorded, we will keep you updated!`,
       }
     ]);
+  });
+};
+
+// prechat/postchat&#x76F8;&#x5173;&#x7684;&#x4F8B;&#x5B50;
+Comm100API.onWindowWillDisplay = function (chatWindow) {
+  // &#x5982;&#x679C;&#x4E0D;&#x662F;&#x6253;5&#x661F;&#x65F6;, &#x8BA9;&#x7528;&#x6237;&#x7559;comment
+  chatWindow.postChatForm.onChange(function (oldFields, newFields) {
+    const rating = newFields[0];
+    if (parseInt(rating.value) &lt; 5) {
+      return newFields.slice(0, 1).concat([{
+        name: &apos;Comment&apos;,
+        type: &apos;textarea&apos;,
+        isRequired: true,
+      }]);
+    } else {
+      return newFields.slice(0, 1);
+    }
+  });
+
+  chatWindow.onRender(&apos;prechat.header&apos;, function () {
+    const header = document.createElement(&apos;div&apos;);
+    const img = document.createElement(&apos;img&apos;);
+    img.src = &apos;https://www.comm100.com/logo.svg&apos;;
+    header.appendChild(img);
+    return header;
   });
 };</code>
 </code></pre>
