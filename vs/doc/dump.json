@@ -24,7 +24,7 @@
     "importPath": "livechat/src/api.js",
     "importStyle": null,
     "description": "███████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗\n██╔════╝╚██╗██╔╝██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝\n█████╗   ╚███╔╝ ███████║██╔████╔██║██████╔╝██║     █████╗\n██╔══╝   ██╔██╗ ██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝\n███████╗██╔╝ ██╗██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗\n╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝",
-    "lineNumber": 309,
+    "lineNumber": 311,
     "params": [
       {
         "name": "chatWindow",
@@ -541,7 +541,7 @@
         "spread": false,
         "optional": false,
         "name": "onChange",
-        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ 'waiting-queue'\n+ 'agent-join'\n+ 'agent-leave'\n+ 'agent-transfer'\n+ 'agent-text-message'\n+ 'agent-accept-transfer'\n+ 'agent-refuse-transfer'\n+ 'agent-url'\n+ 'agent-file'\n+ 'agent-image'\n+ 'prompt-offline-message'\n+ 'visitor-text-message'\n+ 'visitor-set-email'\n+ 'visitor-not-respond'\n+ 'visitor-not-respond-and-end-chat'\n+ 'visitor-file'\n+ 'visitor-image'\n+ 'secure-form'\n+ 'audio'\n+ 'video'\n+ 'end-chat'\n+ 'bot-chat-start'\n+ 'bot-confident-answer'\n+ 'bot-potential-answer'\n+ 'bot-no-answer'"
+        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ 'waiting-queue'\n+ 'agent-join'\n+ 'agent-leave'\n+ 'agent-transfer'\n+ 'agent-text'\n+ 'agent-url'\n+ 'agent-image'\n+ 'agent-file'\n+ 'agent-typing'\n+ 'prompt-offline-message'\n+ 'visitor-text'\n+ 'visitor-file'\n+ 'visitor-image'\n+ 'visitor-url'\n+ 'visitor-email-transcript'\n+ 'visitor-rating'\n+ 'visitor-not-respond'\n+ 'secure-form'\n+ 'audio-start'\n+ 'audio-end'\n+ 'video-start'\n+ 'video-end'\n+ 'end-chat'\n+ 'bot-chat-start'\n+ 'bot-confident-answer'\n+ 'bot-potential-answer'\n+ 'bot-no-answer'"
       }
     ],
     "type": {
@@ -1240,7 +1240,7 @@
     "examples": [
       ""
     ],
-    "lineNumber": 296,
+    "lineNumber": 298,
     "properties": [
       {
         "nullable": null,
