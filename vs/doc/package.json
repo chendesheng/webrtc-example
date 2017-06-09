@@ -32,7 +32,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
-    "jest": "^20.0.0",
+    "jest": "^20.0.4",
     "less": "^2.7.2",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
@@ -75,7 +75,8 @@
       "!src/**.story.jsx",
       "!src/index.js",
       "!src/polyfill.js",
-      "!src/api.js"
+      "!src/api.js",
+      "!src/**/propTypes.js"
     ],
     "coverageThreshold": {
       "global": {

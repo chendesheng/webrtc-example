@@ -969,10 +969,28 @@ transform message in list.  possible message types are:</p>
 <li>&apos;waiting-queue&apos;</li>
 <li>&apos;agent-join&apos;</li>
 <li>&apos;agent-leave&apos;</li>
-<li>&apos;agent-text&apos;</li>
-<li>&apos;visitor-text&apos;</li>
+<li>&apos;agent-transfer&apos;</li>
+<li>&apos;agent-text-message&apos;</li>
+<li>&apos;agent-accept-transfer&apos;</li>
+<li>&apos;agent-refuse-transfer&apos;</li>
+<li>&apos;agent-url&apos;</li>
+<li>&apos;agent-file&apos;</li>
+<li>&apos;agent-image&apos;</li>
+<li>&apos;prompt-offline-message&apos;</li>
+<li>&apos;visitor-text-message&apos;</li>
+<li>&apos;visitor-set-email&apos;</li>
+<li>&apos;visitor-not-respond&apos;</li>
+<li>&apos;visitor-not-respond-and-end-chat&apos;</li>
+<li>&apos;visitor-file&apos;</li>
+<li>&apos;visitor-image&apos;</li>
+<li>&apos;secure-form&apos;</li>
+<li>&apos;audio&apos;</li>
+<li>&apos;video&apos;</li>
 <li>&apos;end-chat&apos;</li>
-<li>...</li>
+<li>&apos;bot-chat-start&apos;</li>
+<li>&apos;bot-confident-answer&apos;</li>
+<li>&apos;bot-potential-answer&apos;</li>
+<li>&apos;bot-no-answer&apos;</li>
 </ul>
 </td>
     </tr>
@@ -1104,29 +1122,44 @@ be called when chat window is restored</p>
 rendered; if provides null, use original component instead.</p>
 <p>Possible render types are:</p>
 <ul>
-<li>&apos;prechat.header&apos;</li>
-<li>&apos;prechat.greeting&apos;</li>
-<li>&apos;prechat.content&apos;</li>
-<li>&apos;prechat.footer&apos;</li>
-<li>&apos;chat.header&apos;</li>
-<li>&apos;chat.greeting&apos;</li>
-<li>&apos;chat.content&apos;</li>
-<li>&apos;chat.footer&apos;</li>
-<li>&apos;postchat.header&apos;</li>
-<li>&apos;postchat.greeting&apos;</li>
-<li>&apos;postchat.content&apos;</li>
-<li>&apos;postchat.footer&apos;</li>
-<li>&apos;offline.header&apos;</li>
-<li>&apos;offline.greeting&apos;</li>
-<li>&apos;offline.content&apos;</li>
-<li>&apos;offline.footer&apos;</li>
-<li>&apos;login.header&apos;</li>
-<li>&apos;login.greeting&apos;</li>
-<li>&apos;login.content&apos;</li>
-<li>&apos;login.footer&apos;</li>
-<li>&apos;ban.header&apos;</li>
-<li>&apos;ban.content&apos;</li>
-<li>&apos;ban.footer&apos;</li>
+<li>&apos;windowButtons&apos; - include minimize button, restore button
+, popout buttons, close button</li>
+<li>&apos;prechat.header&apos; - prechat header area</li>
+<li>&apos;prechat.greeting&apos; - prechat greeting message area</li>
+<li>&apos;prechat.social&apos; - prechat social login area, including the <code>-or-</code> seperator</li>
+<li>&apos;prechat.fields&apos; - prechat fields area</li>
+<li>&apos;prechat.submit&apos; - prechat submit button area</li>
+<li>&apos;prechat.footer&apos; - prechat footer area</li>
+<li>&apos;prechat.footer.poweredby&apos; - prechat footer pwoeredby area</li>
+<li>&apos;chat.header&apos; - chat header area</li>
+<li>&apos;chat.greeting&apos; - chat greeting message area</li>
+<li>&apos;chat.content&apos; - chat messages list area</li>
+<li>&apos;chat.input&apos; - chat input message area</li>
+<li>&apos;chat.footer&apos; - chat footer area</li>
+<li>&apos;chat.footer.tools&apos; - chat tools area</li>
+<li>&apos;chat.footer.poweredby&apos; - chat powered by area</li>
+<li>&apos;postchat.header&apos; - post chat header area</li>
+<li>&apos;postchat.greeting&apos; - post chat greeting message area</li>
+<li>&apos;postchat.fields&apos; - post chat fields area</li>
+<li>&apos;postchat.submit&apos; - post chat submit button area</li>
+<li>&apos;postchat.footer&apos; - post chat footer area</li>
+<li>&apos;postchat.footer.tools&apos; - post chat footer tools area</li>
+<li>&apos;postchat.footer.poweredby&apos; - post chat footer poweredby area</li>
+<li>&apos;offline.header&apos; - offline message header area</li>
+<li>&apos;offline.greeting&apos; - offline message greeting message area</li>
+<li>&apos;offline.fields&apos; - offline message fields area</li>
+<li>&apos;offline.submit&apos; - offline message submit button area</li>
+<li>&apos;offline.footer&apos; - offline message footer area</li>
+<li>&apos;offline.footer.poweredby&apos; - offline message footer poweredby area</li>
+<li>&apos;login.header&apos; - login form header area</li>
+<li>&apos;login.greeting&apos; - login form greeting area</li>
+<li>&apos;login.submit&apos; - login form submit area, including tow buttons: <code>Login</code> or <code>Continue as Visitor</code></li>
+<li>&apos;login.footer&apos; - login footer area</li>
+<li>&apos;login.footer.poweredby&apos; - login footer poweredby area</li>
+<li>&apos;ban.header&apos; - ban header area</li>
+<li>&apos;ban.content&apos; - ban content area</li>
+<li>&apos;ban.footer&apos; - ban footer area</li>
+<li>&apos;ban.footer.poweredby&apos; - ban footer poweredby area</li>
 </ul>
 </td>
     </tr>

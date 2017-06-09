@@ -24,7 +24,7 @@
     "importPath": "livechat/src/api.js",
     "importStyle": null,
     "description": "███████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗ ██╗     ███████╗\n██╔════╝╚██╗██╔╝██╔══██╗████╗ ████║██╔══██╗██║     ██╔════╝\n█████╗   ╚███╔╝ ███████║██╔████╔██║██████╔╝██║     █████╗\n██╔══╝   ██╔██╗ ██╔══██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝\n███████╗██╔╝ ██╗██║  ██║██║ ╚═╝ ██║██║     ███████╗███████╗\n╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝",
-    "lineNumber": 276,
+    "lineNumber": 309,
     "params": [
       {
         "name": "chatWindow",
@@ -541,7 +541,7 @@
         "spread": false,
         "optional": false,
         "name": "onChange",
-        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ 'waiting-queue'\n+ 'agent-join'\n+ 'agent-leave'\n+ 'agent-text'\n+ 'visitor-text'\n+ 'end-chat'\n+ ..."
+        "description": "Register callback function to\ntransform message in list.  possible message types are:\n+ 'waiting-queue'\n+ 'agent-join'\n+ 'agent-leave'\n+ 'agent-transfer'\n+ 'agent-text-message'\n+ 'agent-accept-transfer'\n+ 'agent-refuse-transfer'\n+ 'agent-url'\n+ 'agent-file'\n+ 'agent-image'\n+ 'prompt-offline-message'\n+ 'visitor-text-message'\n+ 'visitor-set-email'\n+ 'visitor-not-respond'\n+ 'visitor-not-respond-and-end-chat'\n+ 'visitor-file'\n+ 'visitor-image'\n+ 'secure-form'\n+ 'audio'\n+ 'video'\n+ 'end-chat'\n+ 'bot-chat-start'\n+ 'bot-confident-answer'\n+ 'bot-potential-answer'\n+ 'bot-no-answer'"
       }
     ],
     "type": {
@@ -1164,7 +1164,7 @@
         "spread": false,
         "optional": false,
         "name": "onRender",
-        "description": "Render customized element. If callback provies an HTMLElement, original component will not be\nrendered; if provides null, use original component instead.\n\nPossible render types are:\n+ 'prechat.header'\n+ 'prechat.greeting'\n+ 'prechat.content'\n+ 'prechat.footer'\n+ 'chat.header'\n+ 'chat.greeting'\n+ 'chat.content'\n+ 'chat.footer'\n+ 'postchat.header'\n+ 'postchat.greeting'\n+ 'postchat.content'\n+ 'postchat.footer'\n+ 'offline.header'\n+ 'offline.greeting'\n+ 'offline.content'\n+ 'offline.footer'\n+ 'login.header'\n+ 'login.greeting'\n+ 'login.content'\n+ 'login.footer'\n+ 'ban.header'\n+ 'ban.content'\n+ 'ban.footer'"
+        "description": "Render customized element. If callback provies an HTMLElement, original component will not be\nrendered; if provides null, use original component instead.\n\nPossible render types are:\n+ 'windowButtons' - include minimize button, restore button\n, popout buttons, close button\n+ 'prechat.header' - prechat header area\n+ 'prechat.greeting' - prechat greeting message area\n+ 'prechat.social' - prechat social login area, including the `-or-` seperator\n+ 'prechat.fields' - prechat fields area\n+ 'prechat.submit' - prechat submit button area\n+ 'prechat.footer' - prechat footer area\n+ 'prechat.footer.poweredby' - prechat footer pwoeredby area\n+ 'chat.header' - chat header area\n+ 'chat.greeting' - chat greeting message area\n+ 'chat.content' - chat messages list area\n+ 'chat.input' - chat input message area\n+ 'chat.footer' - chat footer area\n+ 'chat.footer.tools' - chat tools area\n+ 'chat.footer.poweredby' - chat powered by area\n+ 'postchat.header' - post chat header area\n+ 'postchat.greeting' - post chat greeting message area\n+ 'postchat.fields' - post chat fields area\n+ 'postchat.submit' - post chat submit button area\n+ 'postchat.footer' - post chat footer area\n+ 'postchat.footer.tools' - post chat footer tools area\n+ 'postchat.footer.poweredby' - post chat footer poweredby area\n+ 'offline.header' - offline message header area\n+ 'offline.greeting' - offline message greeting message area\n+ 'offline.fields' - offline message fields area\n+ 'offline.submit' - offline message submit button area\n+ 'offline.footer' - offline message footer area\n+ 'offline.footer.poweredby' - offline message footer poweredby area\n+ 'login.header' - login form header area\n+ 'login.greeting' - login form greeting area\n+ 'login.submit' - login form submit area, including tow buttons: `Login` or `Continue as Visitor`\n+ 'login.footer' - login footer area\n+ 'login.footer.poweredby' - login footer poweredby area\n+ 'ban.header' - ban header area\n+ 'ban.content' - ban content area\n+ 'ban.footer' - ban footer area\n+ 'ban.footer.poweredby' - ban footer poweredby area"
       },
       {
         "nullable": null,
@@ -1240,7 +1240,7 @@
     "examples": [
       ""
     ],
-    "lineNumber": 263,
+    "lineNumber": 296,
     "properties": [
       {
         "nullable": null,
