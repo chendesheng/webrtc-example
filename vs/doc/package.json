@@ -26,6 +26,7 @@
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "docsify-cli": "^4.1.8",
     "esdoc": "^0.5.2",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -48,9 +49,11 @@
     "rollup-plugin-uglify": "^1.0.2",
     "webpack": "^2.6.0",
     "webpack-browser-plugin": "^1.0.20",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "xhr-mock": "^1.9.0"
   },
   "dependencies": {
+    "@storybook/addon-actions": "3.0.0-alpha.4",
     "@storybook/react": "^3.0.0",
     "@types/jest": "^19.2.3",
     "babel-plugin-transform-string-join": "^1.0.1",
